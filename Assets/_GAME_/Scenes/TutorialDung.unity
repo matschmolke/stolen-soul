@@ -34441,7 +34441,6 @@ GameObject:
   - component: {fileID: 2145198886}
   - component: {fileID: 2145198888}
   - component: {fileID: 2145198887}
-  - component: {fileID: 2145198889}
   m_Layer: 0
   m_Name: Chests/etc
   m_TagString: Untagged
@@ -36661,21 +36660,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &2145198889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145198885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60a8adc5ad9c681ba981ac3682019d83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemName: Skull
-  quantity: 1
-  sprite: {fileID: 8544442090194193557, guid: 80b3e212e0c096fac9b86971f5183897, type: 3}
 --- !u!1001 &632857670936645148
 PrefabInstance:
   m_ObjectHideFlags: 0
