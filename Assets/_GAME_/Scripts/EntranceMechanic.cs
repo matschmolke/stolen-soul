@@ -8,6 +8,8 @@ public class EntranceMechanic : MonoBehaviour
     private Animator entranceAnim;
     private bool playerInRange = false;
 
+    private bool isOpen = false;
+
     private BoxCollider2D entranceColl;
 
     private void Awake()
@@ -28,7 +30,7 @@ public class EntranceMechanic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !isOpen)
         {
             gameInfo.enabled = true;
             playerInRange = true;
@@ -51,6 +53,8 @@ public class EntranceMechanic : MonoBehaviour
             entranceAnim.SetTrigger("open");
             if (entranceColl != null)
                 entranceColl.enabled = false;
+            isOpen = true;
+            gameInfo.enabled = false;
         }
     }
 }

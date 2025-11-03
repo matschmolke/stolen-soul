@@ -15,6 +15,8 @@ public class PlayerStats : MonoBehaviour
     private int currentHealthScore;
     private int currentManaScore;
 
+    private Movements playerScript;
+
     // Events for the future
     //public event Action<int, int> OnHealthChanged; // (current, max)
     //public event Action<int, int> OnManaChanged;
@@ -24,12 +26,20 @@ public class PlayerStats : MonoBehaviour
     {
         currentHealthScore = maxScore;
         currentManaScore = maxScore;
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        playerScript = player.GetComponent<Movements>();
     }
 
     void UpdateText()
     {
         healthText.text = $"{currentHealthScore}%";
         manaText.text = $"{currentManaScore}%";
+
+        if (currentHealthScore == 0)
+        {
+            playerScript.Dead();
+        }
     }
 
     // Skrypty napisane pod skrypty z damagem np. PlayerStats.TakeDamage
@@ -122,6 +132,7 @@ public class PlayerStats : MonoBehaviour
         if (currentHealthScore < 0)
         {
             currentHealthScore = 0;
+
         }
         else if (currentManaScore < 0)
         {

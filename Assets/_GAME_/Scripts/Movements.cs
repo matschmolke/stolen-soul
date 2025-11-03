@@ -27,7 +27,7 @@ public class Movements : MonoBehaviour
         MovePlayer();
         HandleAttack();
         Hurt();
-        Dead();
+        Kill();
     }
 
     void MovePlayer()
@@ -79,13 +79,18 @@ public class Movements : MonoBehaviour
         }
     }
 
-    void Dead()
+    private void Kill()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            anim.SetTrigger("isDead");
-            isDead = true;
+            Dead();
         }
+    }
+
+    public void Dead()
+    {
+        anim.SetTrigger("isDead");
+        isDead = true;
     }
 
 }
