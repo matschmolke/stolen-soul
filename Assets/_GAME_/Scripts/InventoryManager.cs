@@ -2,10 +2,23 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    public static InventoryManager Instance { get; private set; }
     public GameObject InventoryMenu;
-
-    private bool menuActivated;
     public ItemSlot[] itemSlot;
+    
+    private bool menuActivated;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,13 +44,24 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(string itemName, int quantity, Sprite itemSprite)
     {
+        Debug.Log("itemName = " + itemName +  ", quantity = " + quantity);
+
         for (int i = 0; i < itemSlot.Length; i++)
         {
-            if(itemSlot[i].isFull == false)
+            if (itemSlot[i].isFull == false)
             {
                 itemSlot[i].AddItem(itemName, quantity, itemSprite);
                 return;
             }
+        }
+    }
+
+    public void DeselectAllSlots()
+    {
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            itemSlot[i].selectedShader.SetActive(false);
+            itemSlot[i].thisItemSelected = false;
         }
     }
 }
