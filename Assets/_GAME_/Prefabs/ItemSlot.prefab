@@ -172,6 +172,8 @@ MonoBehaviour:
   isFull: 0
   quantityText: {fileID: 416763626358135796}
   itemImage: {fileID: 8768891496589498469}
+  selectedShader: {fileID: 6794156326390522757}
+  thisItemSelected: 0
 --- !u!1 &6794156326390522757
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +324,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 2264924159
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5254902}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
