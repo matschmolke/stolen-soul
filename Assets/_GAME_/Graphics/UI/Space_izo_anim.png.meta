@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 93b8acb895f5be946a31ce0fa1289916
+guid: becfc61f918cf6846ae59664565be072
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5903255056553457164
-    second: walls_floor-80x291-34x45_0
+      213: -1256366714512004952
+    second: Space_izo_anim_0
+  - first:
+      213: 5064077225573293977
+    second: Space_izo_anim_1
+  - first:
+      213: 3147945117598315559
+    second: Space_izo_anim_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,17 +52,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 7
-  spritePivot: {x: 0.5, y: 0}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walls_floor-80x291-34x45_0
+      name: Space_izo_anim_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 34
-        height: 41
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,35 +121,75 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f94a978dcc631ea0800000000000000
-      internalID: -5903255056553457164
+      spriteID: 8a823e1312d709ee0800000000000000
+      internalID: -1256366714512004952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_izo_anim_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f1171f767374640800000000000000
+      internalID: 5064077225573293977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_izo_anim_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7247fdae76fbfab20800000000000000
+      internalID: 3147945117598315559
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
     customData: 
-    physicsShape:
-    - - {x: -17, y: -15.5}
-      - {x: -9, y: -15.5}
-      - {x: -9, y: -6.5}
-      - {x: -17, y: -6.5}
-    - - {x: 8, y: -15.5}
-      - {x: 17, y: -15.5}
-      - {x: 17, y: -6.5}
-      - {x: 8, y: -6.5}
+    physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 02dcfbf3e60a0214fb523fa6ddc3450f
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      walls_floor-80x291-34x45_0: -5903255056553457164
+      Space_izo_anim_0: -1256366714512004952
+      Space_izo_anim_1: 5064077225573293977
+      Space_izo_anim_2: 3147945117598315559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
