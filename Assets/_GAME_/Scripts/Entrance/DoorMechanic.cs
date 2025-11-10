@@ -1,0 +1,93 @@
+using UnityEngine;
+
+public class DoorMechanic : MonoBehaviour
+{
+    private Animator doorAnim;
+    [SerializeField] private Collider2D doorColl;
+    [SerializeField] private GameEventChannel DoorChannel;
+    [SerializeField] private int keyId = -1;
+
+    private bool playerInRange = false;
+    private bool isOpen = false;
+    private bool canOpen = false;
+
+    private void Awake()
+    {
+        doorAnim = GetComponent<Animator>();
+
+        canOpen = keyId < 0;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
+        {
+            if (!isOpen && canOpen)
+            {
+                OpenDoor();
+            }
+            else if (isOpen)
+            {
+                CloseDoor();
+            }
+        }
+    }
+
+    private void OpenDoor()
+    {
+        isOpen = true;
+        doorAnim.SetBool("open", true);
+        doorColl.enabled = false;
+        DoorChannel.RaiseEvent(false,false);
+    }
+
+    private void CloseDoor()
+    {
+        isOpen = false;
+        doorAnim.SetBool("open", false);
+        doorColl.enabled = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            playerInRange = true;
+
+            if (!isOpen && !canOpen)
+            {
+                if (HasHey())
+                {
+                    canOpen = true;
+
+                    DoorChannel.RaiseEvent(true, false);
+                }
+                else
+                {
+                    DoorChannel.RaiseEvent(true, true); 
+                    canOpen = false;
+                }
+            }
+            else if (!isOpen)
+            {
+                DoorChannel.RaiseEvent(true, false);
+                canOpen = true;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            playerInRange = false;
+            DoorChannel.RaiseEvent(false,false);
+        }
+    }
+
+    private bool HasHey()
+    {
+        //checking if the key is in invetory
+        return false; //for test
+    }
+}
