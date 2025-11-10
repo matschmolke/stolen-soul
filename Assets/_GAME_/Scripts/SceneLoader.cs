@@ -13,6 +13,9 @@ public class SceneLoader : MonoBehaviour
 =======
         SceneManager.LoadSceneAsync("mod1", LoadSceneMode.Additive);
         SceneManager.LoadSceneAsync("GuideScene", LoadSceneMode.Additive); //comment this
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }
