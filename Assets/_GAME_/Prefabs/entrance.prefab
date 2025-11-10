@@ -1,7 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &5503168124153211751
+=======
+--- !u!1 &7267996637653195075
+>>>>>>> Stashed changes
 =======
 --- !u!1 &7267996637653195075
 >>>>>>> Stashed changes
@@ -13,6 +17,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - component: {fileID: 5837405025634937288}
   - component: {fileID: 6202836329444557809}
   - component: {fileID: 6102214929784872401}
@@ -20,6 +25,8 @@ GameObject:
   m_Layer: 0
   m_Name: entrance
 =======
+=======
+>>>>>>> Stashed changes
   - component: {fileID: 4206668628619832718}
   - component: {fileID: 8942030722454904849}
   - component: {fileID: 2047049457325776124}
@@ -29,6 +36,9 @@ GameObject:
   - component: {fileID: 5293316241660433378}
   m_Layer: 0
   m_Name: Entrance
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +46,11 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!4 &5837405025634937288
+=======
+--- !u!4 &4206668628619832718
+>>>>>>> Stashed changes
 =======
 --- !u!4 &4206668628619832718
 >>>>>>> Stashed changes
@@ -56,6 +70,9 @@ Transform:
 =======
   m_Children:
   - {fileID: 8997903625554732977}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -218,8 +235,13 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     oldSize: {x: 2.0625, y: 3.0625}
     newSize: {x: 2.0625, y: 3.0625}
+=======
+    oldSize: {x: 2, y: 3}
+    newSize: {x: 2, y: 3}
+>>>>>>> Stashed changes
 =======
     oldSize: {x: 2, y: 3}
     newSize: {x: 2, y: 3}
@@ -240,7 +262,10 @@ PolygonCollider2D:
       - {x: 0.625, y: 1.1875}
   m_UseDelaunayMesh: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!61 &5293316241660433378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -365,4 +390,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.2061768, y: 0.56030273}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
