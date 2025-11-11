@@ -15,7 +15,7 @@ public class PlayerStats : MonoBehaviour
     private int currentHealthScore;
     private int currentManaScore;
 
-    //private Movements playerScript;
+    private Movements playerScript;
 
     // Events for the future
     //public event Action<int, int> OnHealthChanged; // (current, max)
@@ -27,8 +27,8 @@ public class PlayerStats : MonoBehaviour
         currentHealthScore = maxScore;
         currentManaScore = maxScore;
 
-        //GameObject player = GameObject.FindGameObjectWithTag("Player");
-        //playerScript = player.GetComponent<Movements>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        playerScript = player.GetComponent<Movements>();
     }
 
     void UpdateText()
@@ -38,7 +38,7 @@ public class PlayerStats : MonoBehaviour
 
         if (currentHealthScore == 0)
         {
-            //playerScript.Dead();
+            playerScript.Dead();
         }
     }
 
