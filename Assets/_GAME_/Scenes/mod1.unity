@@ -288,7 +288,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -4440771782028376394, guid: 88fd9f5362eb5cc4281175b7119aa1fa, type: 3}
-  m_Sprite: {fileID: -4440771782028376394, guid: ea386c2b88bd761499c14e33fdc88b8c, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -443,7 +442,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 5519138906600935837, guid: 72f9f10931441234bab798e2711a2d9e, type: 3}
-  m_Sprite: {fileID: 5519138906600935837, guid: 57050814b20a410468bd47dfa5167e98, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -520,7 +518,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -4440771782028376394, guid: 88fd9f5362eb5cc4281175b7119aa1fa, type: 3}
-  m_Sprite: {fileID: -4440771782028376394, guid: ea386c2b88bd761499c14e33fdc88b8c, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -733,7 +730,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1002280354}
-  - component: {fileID: 1002280353}
   - component: {fileID: 1002280355}
   m_Layer: 0
   m_Name: HudManager
@@ -742,23 +738,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1002280353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002280352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d993b74f9abfc3b4c90d1d0357435ea9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  maxScore: 100
-  healthImage: {fileID: 2145591459}
-  manaImage: {fileID: 673491562}
-  healthText: {fileID: 296599099}
-  manaText: {fileID: 2046759279}
 --- !u!4 &1002280354
 Transform:
   m_ObjectHideFlags: 0
@@ -1023,7 +1002,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 5519138906600935837, guid: 72f9f10931441234bab798e2711a2d9e, type: 3}
-  m_Sprite: {fileID: 5519138906600935837, guid: 57050814b20a410468bd47dfa5167e98, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
