@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4757907980488175819}
   - component: {fileID: 1219737782953171779}
   - component: {fileID: 7031680252234749758}
+  - component: {fileID: 8518190455079732353}
   m_Layer: 0
   m_Name: small pile of gold
   m_TagString: Untagged
@@ -79,6 +80,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -974269111
   m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 8284690431070618562, guid: f58ac5e770a9b5d479ecee83d16d0939, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -92,6 +94,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &7031680252234749758
+--- !u!61 &8518190455079732353
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,14 +129,18 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.000656724, y: -1.1229694}
+  m_Offset: {x: 0, y: 0.1747064}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
     oldSize: {x: 0.625, y: 1.3125}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.625, y: 0.4375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 0.37943435, y: 0.06850052}
+  m_Size: {x: 0.37588644, y: 0.09226334}
   m_EdgeRadius: 0
