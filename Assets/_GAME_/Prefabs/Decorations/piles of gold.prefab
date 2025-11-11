@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5192225020055579971}
   - component: {fileID: 2331344328658474803}
   - component: {fileID: 2707778943215870878}
+  - component: {fileID: 6794072451329305035}
   m_Layer: 0
   m_Name: piles of gold
   m_TagString: Untagged
@@ -79,6 +80,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -974269111
   m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2969016694365801900, guid: f58ac5e770a9b5d479ecee83d16d0939, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -92,6 +94,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!60 &2707778943215870878
+--- !u!60 &6794072451329305035
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,6 +133,8 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
     oldSize: {x: 1.375, y: 1.9375}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.375, y: 1.0625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -146,4 +151,10 @@ PolygonCollider2D:
       - {x: -0.4375, y: -1.6875}
       - {x: -0.4375, y: -1.75}
       - {x: -0.0625, y: -1.75}
+    - - {x: -0.2267785, y: 0.8342185}
+      - {x: -0.53141, y: 0.5784933}
+      - {x: -0.43190265, y: 0.13462755}
+      - {x: -0.07148695, y: 0.12682307}
+      - {x: 0.5450678, y: 0.42026007}
+      - {x: 0.08031607, y: 0.67227536}
   m_UseDelaunayMesh: 0
