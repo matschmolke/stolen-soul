@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: -454}
+  m_AnchoredPosition: {x: 475, y: -420}
   m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &83421884
@@ -635,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 8770029939807343647, guid: b2a7e12b89b193daeb7f0eb98759ab6b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8797615125318107055, guid: 8e22a9a3c96329a3d8b532dc023438b6, type: 3}
+      objectReference: {fileID: 4971734851904434038, guid: ad5b5e611903e8f51ba16a74ac80c3af, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -666,9 +666,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32409df3dfb1af0009c49a528d0bed5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpellSlotUI
-  icon: {fileID: 0}
-  keyText: {fileID: 0}
+  icon: {fileID: 566066505}
+  keyText: {fileID: 566066504}
   cooldownOverlay: {fileID: 0}
+--- !u!114 &566066504 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6101004509483503964, guid: b2a7e12b89b193daeb7f0eb98759ab6b, type: 3}
+  m_PrefabInstance: {fileID: 566066500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &566066505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8770029939807343647, guid: b2a7e12b89b193daeb7f0eb98759ab6b, type: 3}
+  m_PrefabInstance: {fileID: 566066500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &641027311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,9 +1262,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32409df3dfb1af0009c49a528d0bed5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpellSlotUI
-  icon: {fileID: 0}
-  keyText: {fileID: 0}
+  icon: {fileID: 751845865}
+  keyText: {fileID: 751845866}
   cooldownOverlay: {fileID: 0}
+--- !u!114 &751845865 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8770029939807343647, guid: b2a7e12b89b193daeb7f0eb98759ab6b, type: 3}
+  m_PrefabInstance: {fileID: 751845861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &751845866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6101004509483503964, guid: b2a7e12b89b193daeb7f0eb98759ab6b, type: 3}
+  m_PrefabInstance: {fileID: 751845861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1002280352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,9 +1762,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32409df3dfb1af0009c49a528d0bed5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpellSlotUI
-  icon: {fileID: 0}
-  keyText: {fileID: 0}
+  icon: {fileID: 1414271840}
+  keyText: {fileID: 1414271839}
   cooldownOverlay: {fileID: 0}
+--- !u!114 &1414271839 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6101004509483503964, guid: b2a7e12b89b193daeb7f0eb98759ab6b, type: 3}
+  m_PrefabInstance: {fileID: 1414271835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1414271840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8770029939807343647, guid: b2a7e12b89b193daeb7f0eb98759ab6b, type: 3}
+  m_PrefabInstance: {fileID: 1414271835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1491127551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,7 +2053,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpellHUD
   spellCaster: {fileID: 0}
   slots:
-  - {fileID: 566066503}
   - {fileID: 6718439695004683808}
   - {fileID: 1414271838}
   - {fileID: 751845864}
@@ -2407,9 +2472,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32409df3dfb1af0009c49a528d0bed5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpellSlotUI
-  icon: {fileID: 0}
-  keyText: {fileID: 0}
+  icon: {fileID: 6718439695004683810}
+  keyText: {fileID: 6718439695004683809}
   cooldownOverlay: {fileID: 0}
+--- !u!114 &6718439695004683809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6101004509483503964, guid: b2a7e12b89b193daeb7f0eb98759ab6b, type: 3}
+  m_PrefabInstance: {fileID: 6718439695004683806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &6718439695004683810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8770029939807343647, guid: b2a7e12b89b193daeb7f0eb98759ab6b, type: 3}
+  m_PrefabInstance: {fileID: 6718439695004683806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
