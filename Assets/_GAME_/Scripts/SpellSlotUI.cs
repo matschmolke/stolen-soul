@@ -18,6 +18,7 @@ public class SpellSlotUI : MonoBehaviour
     {
         if (cooldownOverlay != null)
         {
+            Debug.LogWarning("cooldown overlay is set to: " + fillAmount);
             cooldownOverlay.fillAmount = fillAmount;
         }
     }
