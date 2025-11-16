@@ -15,8 +15,9 @@ MonoBehaviour:
   spellName: Invisibility
   icon: {fileID: 338793532501073182, guid: 567473407b4822031a06114261d304d7, type: 3}
   castKey: 2
-  cooldown: 60
+  cooldown: 0
   manaCost: 45
+  duration: 10
   spellPrefab: {fileID: 0}
   damage: 0
   speed: 0
