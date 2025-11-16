@@ -56,73 +56,79 @@ public class SpellCaster : MonoBehaviour
 
     void Cast(int index)
     {
-        if (spells == null || spells.Length <= index || spells[index] == null) return;
-
         Spell spell = spells[index];
         cooldownTimers[index] = spell.cooldown;
 
-        // 🔥 ОНОВЛЮЄМО targetLocation кожного разу
-        targetLocation = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        targetLocation.z = transform.position.z;
+        Vector3 target = GetMouseWorld();
 
-        if (spell.isProjectile && spell.spellPrefab != null)
-        {
-            GameObject proj = Instantiate(spell.spellPrefab, transform.position, Quaternion.identity);
-
-            // ROTATION
-            Vector3 dir = targetLocation - transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-
-            if (spell.spellName == "Fireball")
-                angle += 90f;
-            
-            proj.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            
-            var sr = proj.GetComponent<SpriteRenderer>();
-            if (sr != null)
-            {
-                if (spell.spellName == "Fireball")
-                {
-                    // Fireball: flip тільки коли вниз
-                    sr.flipX = dir.y < 0;
-                }
-                else if (spell.spellName == "Ice Shard")
-                {
-                    if (dir.y >= 0) 
-                    {
-                        // ВГОРУ
-                        sr.flipX = true;
-                        sr.flipY = false;
-                    }
-                    else 
-                    {
-                        // ВНИЗ
-                        sr.flipX = true;
-                        sr.flipY = true;
-                    }
-                }
-            }
-            
-            // SHOOT
-            Projectile p = proj.GetComponent<Projectile>();
-            if (p != null)
-            {
-                p.Shoot(targetLocation, spell.speed);
-            }
-            else
-            {
-                Debug.LogWarning($"Prefab {spell.spellName} does not have a Projectile!");
-            }
-        }
-        else if (!spell.isProjectile)
-        {
-            if (spell.spellName == "Invisibility")
-                StartCoroutine(ActivateInvisibility(spell.cooldown / 2));
-            else if (spell.spellName == "Heal")
-                Heal(spell.manaCost);
-        }
+        if (spell.isProjectile)
+            CastProjectileSpell(spell, target);
+        else
+            CastUtilitySpell(spell);
     }
 
+    Vector3 GetMouseWorld()
+    {
+        Vector3 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = transform.position.z;
+        return mousePos;
+    }
+    
+    void CastProjectileSpell(Spell spell, Vector3 target)
+    {
+        GameObject proj = Instantiate(spell.spellPrefab, transform.position, Quaternion.identity);
+
+        RotateProjectile(proj, spell, target);
+        FlipProjectileSprite(proj, spell, target);
+
+        Projectile p = proj.GetComponent<Projectile>();
+        if (p != null)
+            p.Shoot(target, spell.speed);
+    }
+
+    void RotateProjectile(GameObject proj, Spell spell, Vector3 target)
+    {
+        Vector3 dir = target - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        if (spell.spellName == "Fireball")
+            angle += 90;
+
+        proj.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    void FlipProjectileSprite(GameObject proj, Spell spell, Vector3 target)
+    {
+        SpriteRenderer sr = proj.GetComponent<SpriteRenderer>();
+        if (sr == null) return;
+
+        Vector3 dir = target - transform.position;
+
+        if (spell.spellName == "Fireball")
+        {
+            sr.flipX = dir.y < 0;
+            return;
+        }
+        
+        if (spell.spellName == "Ice Shard")
+        {
+            sr.flipX = true;     
+            sr.flipY = dir.y < 0;
+            return;
+        }
+    }
+    
+    void CastUtilitySpell(Spell spell)
+    {
+        if (spell.spellName == "Invisibility")
+        {
+            StartCoroutine(ActivateInvisibility(spell.cooldown / 2));
+        }
+        else if (spell.spellName == "Heal")
+        {
+            Heal(spell.manaCost);
+        }
+    }
 
     IEnumerator ActivateInvisibility(float duration)
     {
