@@ -66,9 +66,10 @@ public class SpellCaster : MonoBehaviour
         if (PlayerStats.Instance.CurrentManaScore >= spells[index].manaCost)
         {
             Spell spell = spells[index];
-            cooldownTimers[index] = spell.cooldown;
             
             if (spell.spellName == "Heal" && PlayerStats.Instance.CurrentHealthScore == PlayerStats.Instance.maxScore) return;
+
+            cooldownTimers[index] = spell.cooldown;
             
             PlayerStats.Instance.UseMana((int)spell.manaCost);
 
