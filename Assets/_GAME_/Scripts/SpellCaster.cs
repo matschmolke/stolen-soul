@@ -67,6 +67,9 @@ public class SpellCaster : MonoBehaviour
         {
             Spell spell = spells[index];
             cooldownTimers[index] = spell.cooldown;
+            
+            if (spell.spellName == "Heal" && PlayerStats.Instance.CurrentHealthScore == PlayerStats.Instance.maxScore) return;
+            
             PlayerStats.Instance.UseMana((int)spell.manaCost);
 
             Vector3 target = GetMouseWorld();
@@ -173,4 +176,10 @@ public class SpellCaster : MonoBehaviour
         }
     }
 
+    public float GetCooldownFill(int index)
+    {
+        if (index < 0 || index >= cooldownTimers.Length) return 0f;
+        Debug.Log("Cooldown fill: " + cooldownTimers[index] / spells[index].cooldown);
+        return cooldownTimers[index] / spells[index].cooldown;
+    }
 }

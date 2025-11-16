@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -22,6 +23,23 @@ public class SpellHUD : MonoBehaviour
         for (int i = 0; i < slots.Length; i++)
         {
             slots[i].SetSpell(spellCaster.spells[i], i + 1);
+        }
+    }
+
+    private void Update()
+    {
+        UpdateCooldowns();
+    }
+
+    void UpdateCooldowns()
+    {
+        Debug.Log("Updating cooldowns");
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (i >= spellCaster.spells.Length) continue;
+
+            float fill = spellCaster.GetCooldownFill(i);
+            slots[i].SetCooldown(fill);
         }
     }
 }
