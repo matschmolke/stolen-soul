@@ -7,9 +7,16 @@ public class SpellCaster : MonoBehaviour
     private float[] cooldownTimers;
     private Camera mainCam;
     private Vector3 targetLocation;
+    private PlayerStats playerStats;
     
     void Start()
     {
+        playerStats = GetComponent<PlayerStats>();
+        if (playerStats == null)
+        {
+            Debug.LogError("PlayerStats not found on the player!");
+        }
+        
         if (spells == null || spells.Length == 0)
         {
             Debug.LogError("No spells assigned in SpellCaster!");
@@ -56,15 +63,19 @@ public class SpellCaster : MonoBehaviour
 
     void Cast(int index)
     {
-        Spell spell = spells[index];
-        cooldownTimers[index] = spell.cooldown;
+        if (PlayerStats.Instance.CurrentManaScore >= spells[index].manaCost)
+        {
+            Spell spell = spells[index];
+            cooldownTimers[index] = spell.cooldown;
+            PlayerStats.Instance.UseMana((int)spell.manaCost);
 
-        Vector3 target = GetMouseWorld();
+            Vector3 target = GetMouseWorld();
 
-        if (spell.isProjectile)
-            CastProjectileSpell(spell, target);
-        else
-            CastUtilitySpell(spell);
+            if (spell.isProjectile)
+                CastProjectileSpell(spell, target);
+            else
+                CastUtilitySpell(spell);   
+        }
     }
 
     Vector3 GetMouseWorld()
@@ -109,7 +120,6 @@ public class SpellCaster : MonoBehaviour
             sr.flipX = dir.y < 0;
             return;
         }
-        
         if (spell.spellName == "Ice Shard")
         {
             sr.flipX = true;     
@@ -122,7 +132,7 @@ public class SpellCaster : MonoBehaviour
     {
         if (spell.spellName == "Invisibility")
         {
-            StartCoroutine(ActivateInvisibility(spell.cooldown / 2));
+            StartCoroutine(ActivateInvisibility(spell.duration, spell.manaCost));
         }
         else if (spell.spellName == "Heal")
         {
@@ -130,15 +140,37 @@ public class SpellCaster : MonoBehaviour
         }
     }
 
-    IEnumerator ActivateInvisibility(float duration)
+    IEnumerator ActivateInvisibility(float duration, float amount)
     {
         Debug.Log("Invisibility activated!");
+        
+        SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
+        
+        Color[] originalColors = new Color[renderers.Length];
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            originalColors[i] = renderers[i].color;
+            Color c = renderers[i].color;
+            c.a = 0.5f;
+            renderers[i].color = c;
+        }
         yield return new WaitForSeconds(duration);
+        
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            renderers[i].color = originalColors[i];
+        }
+        
         Debug.Log("Invisibility ended!");
     }
 
     void Heal(float amount)
     {
-        Debug.Log($"Heal {amount} HP!");
+        if (PlayerStats.Instance != null)
+        {
+            PlayerStats.Instance.Heal((int)amount);
+            Debug.Log($"Healed {amount} HP!");
+        }
     }
+
 }

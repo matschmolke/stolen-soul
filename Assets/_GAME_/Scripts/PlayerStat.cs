@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
+    public static PlayerStats Instance;
+    
     public int maxScore = 100;
 
     public Image healthImage; // Image with Type = Filled
@@ -14,13 +16,26 @@ public class PlayerStats : MonoBehaviour
 
     private int currentHealthScore;
     private int currentManaScore;
-
+    
+    public int CurrentHealthScore {get => currentHealthScore;}
+    public int CurrentManaScore {get => currentManaScore;}
+    
     private Movements playerScript;
 
     // Events for the future
     //public event Action<int, int> OnHealthChanged; // (current, max)
     //public event Action<int, int> OnManaChanged;
 
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -99,7 +114,7 @@ public class PlayerStats : MonoBehaviour
         healthFillValue = Mathf.Clamp01(healthFillValue);
         manaFillValue = Mathf.Clamp01(manaFillValue);
 
-        // ustawiamy fill (Image.Type musi byæ Filled)
+        // ustawiamy fill (Image.Type musi byï¿½ Filled)
         if (healthImage != null) healthImage.fillAmount = healthFillValue;
         if (manaImage != null) manaImage.fillAmount = manaFillValue;
     }

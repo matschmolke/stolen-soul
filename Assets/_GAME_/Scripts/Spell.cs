@@ -11,6 +11,7 @@ public class Spell : ScriptableObject
     [Header("Cost and Cooldown")]
     public float cooldown;
     public float manaCost;
+    public float duration;
     
     [Header("Projectile Info")]
     public GameObject spellPrefab;
