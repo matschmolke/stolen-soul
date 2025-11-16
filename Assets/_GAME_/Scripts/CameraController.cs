@@ -4,8 +4,18 @@ using UnityEngine.SceneManagement;
 public class CameraController : MonoBehaviour
 {
     private GameObject player;
-    public Vector3 offset;
-    public float smoothSpeed = 5f;
+
+    [SerializeField] private Vector3 offset;
+
+    [SerializeField] private float smoothSpeed = 5f;
+
+    [SerializeField] private bool constrain = true;
+
+    Vector3 desiredPos;
+
+    private float minY = -4.8f;
+    private float minX = -5.7f;
+    private float maxX = 11.7f;
 
     void Start()
     {
@@ -25,14 +35,20 @@ public class CameraController : MonoBehaviour
     void TryFindPlayer()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        
+
     }
 
     void LateUpdate()
     {
         if (player == null) return;
 
-        Vector3 desiredPos = player.transform.position + offset;
+        desiredPos = player.transform.position + offset;
+
+        if (constrain)
+        {
+            Constrain();
+        }
+
         transform.position = Vector3.Lerp(transform.position, desiredPos, smoothSpeed * Time.deltaTime);
     }
 
@@ -40,5 +56,10 @@ public class CameraController : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-}
 
+    private void Constrain()
+    {
+        desiredPos.y = Mathf.Max(desiredPos.y, minY);
+        desiredPos.x = Mathf.Clamp(desiredPos.x, minX, maxX);
+    }
+}
