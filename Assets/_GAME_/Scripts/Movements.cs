@@ -27,7 +27,7 @@ public class Movements : MonoBehaviour
         MovePlayer();
         HandleAttack();
         Hurt();
-        Dead();
+        Kill();
     }
 
     void MovePlayer()
@@ -55,8 +55,7 @@ public class Movements : MonoBehaviour
 
     void HandleAttack()
     {
-        
-        if (Input.GetKeyDown(KeyCode.Space) && canAttack)
+        if (Input.GetMouseButtonDown(0) && canAttack)
         {
             anim.SetTrigger("isAttacking");
             canAttack = false;
@@ -72,20 +71,25 @@ public class Movements : MonoBehaviour
     //for testing purposes
     void Hurt()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             //add slowing down player for a second
             anim.SetTrigger("isHurt");
         }
     }
 
-    void Dead()
+    private void Kill()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            anim.SetTrigger("isDead");
-            isDead = true;
+            Dead();
         }
+    }
+
+    public void Dead()
+    {
+        anim.SetTrigger("isDead");
+        isDead = true;
     }
 
 }

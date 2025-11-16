@@ -7,7 +7,10 @@ public class SceneLoader : MonoBehaviour
     {
         //loads all scenes together
         SceneManager.LoadSceneAsync("TutorialDung", LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync("InventoryScene", LoadSceneMode.Additive);
         SceneManager.LoadSceneAsync("PlayerScene", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("InventoryScene", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("mod1", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("EnemyScene", LoadSceneMode.Additive);
+        //SceneManager.LoadSceneAsync("GuideScene", LoadSceneMode.Additive);
     }
 }

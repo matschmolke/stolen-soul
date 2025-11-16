@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc0ff4cea80a994e86e41b33d61eef9, type: 3}
+  m_Name: Gem
+  m_EditorClassIdentifier: Assembly-CSharp::Default
+  Id: f442d796-6451-486a-9281-3d3cba40f00e
+  itemType: 16
+  itemName: Gem
+  itemSprite: {fileID: -1549634533363687302, guid: d2bb89144ffbdcb36951d8def3572f0e, type: 3}
+  isStackable: 1
+  maxStackSize: 3
+  isUnique: 0
+  dropChance: 70
