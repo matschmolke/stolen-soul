@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe065101cf112643bc2a9f868004e0b, type: 3}
+  m_Name: Small Health Potion
+  m_EditorClassIdentifier: Assembly-CSharp::Consumable
+  Id: fa3dbc74-583d-4bca-964e-79454612c64e
+  itemType: 2
+  itemName: Small Health Potion
+  itemSprite: {fileID: -9019701275521734822, guid: 2106fc92ba30254fbaf1db8761191c19, type: 3}
+  description: Restores 5 of Health
+  isStackable: 1
+  maxStackSize: 5
+  isUnique: 0
+  dropChance: 75
+  restoreAmount: 5
+  resourceType: 0
