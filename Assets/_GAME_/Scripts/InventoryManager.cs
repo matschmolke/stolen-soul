@@ -1,9 +1,9 @@
 using UnityEngine;
-
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
     public GameObject InventoryMenu;
+    public GameObject spellsHUD;
     public ItemSlot[] itemSlot;
     
     private bool menuActivated;
@@ -19,28 +19,54 @@ public class InventoryManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        
-    }
+        if (spellsHUD == null)
+        {
+            spellsHUD = GameObject.Find("SpellsHUD");
+        }
 
+        if (spellsHUD != null)
+        {
+            spellsHUD.SetActive(!InventoryMenu.activeSelf);
+        }
+    }
+    
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && menuActivated)
+        if (Input.GetButtonDown("Inventory"))
         {
-            Time.timeScale = 1;
-            InventoryMenu.SetActive(false);
-            menuActivated = false;
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && !menuActivated)
-        {
-            Time.timeScale = 0;
-            InventoryMenu.SetActive(true);
-            menuActivated = true;
+            if (menuActivated)
+            {
+                Time.timeScale = 1;
+                InventoryMenu.SetActive(false);
+
+                if (spellsHUD == null)
+                    spellsHUD = GameObject.Find("SpellsHUD");
+
+                if (spellsHUD != null)
+                    spellsHUD.SetActive(true);
+
+                menuActivated = false;
+            }
+            else
+            {
+                Time.timeScale = 0;
+                InventoryMenu.SetActive(true);
+
+                if (spellsHUD == null)
+                    spellsHUD = GameObject.Find("SpellsHUD");
+
+                if (spellsHUD != null)
+                    spellsHUD.SetActive(false);
+
+                menuActivated = true;
+            }
         }
     }
+
 
     public void AddItem(string itemName, int quantity, Sprite itemSprite)
     {

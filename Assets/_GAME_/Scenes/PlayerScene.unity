@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 2091299002}
   - component: {fileID: 2091299004}
   m_Layer: 6
+  - component: {fileID: 2091299001}
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -400,6 +401,14 @@ MonoBehaviour:
   maxHealth: 20
   maxMana: 20
   currentHealth: 0
+  m_Script: {fileID: 11500000, guid: d8d7ff7d9e07795f5810ca5cf18d42f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  spells:
+  - {fileID: 11400000, guid: cf50b91f04710dedbb5f737221bd5243, type: 2}
+  - {fileID: 11400000, guid: ec0956d226b6df576b4d476cf4dd9fd9, type: 2}
+  - {fileID: 11400000, guid: c20681d4eab62a4d7a856cf72f5110ed, type: 2}
+  - {fileID: 11400000, guid: 761941908e37f7e289b4436e8633417d, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

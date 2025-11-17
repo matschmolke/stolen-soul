@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3abac2d680ce76b6aa2a5e776370394f, type: 3}
+  m_Name: Fireball
+  m_EditorClassIdentifier: Assembly-CSharp::Spell
+  spellName: Fireball
+  icon: {fileID: 396921133626115911, guid: 5646a03da40a820eea351f4184e86efc, type: 3}
+  castKey: 1
+  cooldown: 5
+  manaCost: 10
+  duration: 0
+  spellPrefab: {fileID: 5842135501919683830, guid: 2a110f1bd0620296fadbed4a86ba25eb, type: 3}
+  damage: 25
+  speed: 10
+  isProjectile: 1

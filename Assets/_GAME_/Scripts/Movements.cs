@@ -15,22 +15,22 @@ public class Movements : MonoBehaviour
 
     private bool isDead = false;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
-    void Update()
+    private void Update()
     {
         if (isDead) return;
         MovePlayer();
         HandleAttack();
         Hurt();
-        Kill();
+        KillPlayer();
     }
 
-    void MovePlayer()
+    private void MovePlayer()
     {
         float xInput = Input.GetAxisRaw("Horizontal");
         float yInput = Input.GetAxisRaw("Vertical");
@@ -53,9 +53,10 @@ public class Movements : MonoBehaviour
         anim.SetFloat("speed", velocity.magnitude);
     }
 
-    void HandleAttack()
+    private void HandleAttack()
     {
-        if (Input.GetMouseButtonDown(0) && canAttack)
+        
+        if (Input.GetKeyDown(KeyCode.B) && canAttack)
         {
             anim.SetTrigger("isAttacking");
             canAttack = false;
@@ -69,7 +70,7 @@ public class Movements : MonoBehaviour
     }
 
     //for testing purposes
-    void Hurt()
+    public void Hurt()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -78,18 +79,19 @@ public class Movements : MonoBehaviour
         }
     }
 
-    private void Kill()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Dead();
-        }
-    }
-
     public void Dead()
     {
         anim.SetTrigger("isDead");
         isDead = true;
     }
+
+    private void KillPlayer()
+    {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Dead();
+        }
+    }
+
 
 }
