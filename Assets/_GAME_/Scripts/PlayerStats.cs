@@ -53,10 +53,10 @@ public class PlayerStats : MonoBehaviour
             OnDefenceChanged?.Invoke(value);
         }
     }
-
     public int currentHealth;
     public int currentMana;
 
+    private Coroutine manaRegenRoutine;
     private Movements playerScript;
 
     
@@ -97,9 +97,22 @@ public class PlayerStats : MonoBehaviour
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerScript = player.GetComponent<Movements>();
+
+        manaRegenRoutine = StartCoroutine(RegenerateMana());
     }
 
-    // Skrypty napisane pod skrypty z damagem np. PlayerStats.TakeDamage
+    private IEnumerator RegenerateMana()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(2f);
+
+            if (canRegenerateMana && currentMana < maxMana)
+            {
+                RestoreMana(1);
+            }
+        }
+    }
     public void SetHealth(int newHealth)
     {
         //currentHealth = Mathf.Clamp(newHealth, 0, maxHealth);
@@ -164,6 +177,7 @@ public class PlayerStats : MonoBehaviour
         playerScript.Dead();
         currentHealth = 0;
         currentMana = 0;
+        canRegenerateMana = false;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnManaChanged?.Invoke(currentMana, maxMana);
     }
