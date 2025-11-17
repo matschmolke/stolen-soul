@@ -21970,7 +21970,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 727379061240227710, guid: d289acb4918df22468e9a262107dfa9d, type: 3}
       propertyPath: keyId
-      value: 2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2005776659424261623, guid: d289acb4918df22468e9a262107dfa9d, type: 3}
       propertyPath: m_Layer

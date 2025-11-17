@@ -82,7 +82,7 @@ public class SpellCaster : MonoBehaviour
 
         Projectile p = proj.GetComponent<Projectile>();
         if (p != null)
-            p.Shoot(target, spell.speed);
+            p.Shoot(target, spell.speed, spell.damage);
     }
     void FlipProjectileSprite(GameObject proj, Spell spell, Vector3 target)
     {

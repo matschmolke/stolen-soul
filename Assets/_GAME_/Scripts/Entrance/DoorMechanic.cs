@@ -37,7 +37,6 @@ public class DoorMechanic : MonoBehaviour
     {
         isOpen = true;
         doorAnim.SetBool("open", true);
-        doorColl.enabled = false;
         DoorChannel.RaiseEvent(false,false);
     }
 
@@ -45,7 +44,6 @@ public class DoorMechanic : MonoBehaviour
     {
         isOpen = false;
         doorAnim.SetBool("open", false);
-        doorColl.enabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -89,5 +87,17 @@ public class DoorMechanic : MonoBehaviour
     {
         //checking if the key is in invetory
         return false; //for test
+    }
+
+    public void EnableDoor()
+    {
+        if (doorColl.isActiveAndEnabled)
+        {
+            doorColl.enabled =false;
+        }
+        else
+        {
+            doorColl.enabled = true;
+        }
     }
 }
