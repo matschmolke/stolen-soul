@@ -33,7 +33,6 @@ public class SpellHUD : MonoBehaviour
 
     void UpdateCooldowns()
     {
-        Debug.Log("Updating cooldowns");
         for (int i = 0; i < slots.Length; i++)
         {
             if (i >= spellCaster.spells.Length) continue;
