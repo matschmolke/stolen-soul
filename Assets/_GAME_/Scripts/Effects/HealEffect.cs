@@ -6,7 +6,7 @@ public static class HealEffect
     {
         Debug.Log("HealEffect: Apply");
         
-        if (PlayerStats.Instance.CurrentHealthScore >= PlayerStats.Instance.maxScore) return;
+        if (PlayerStats.Instance.currentHealth >= PlayerStats.Instance.MaxHealth) return;
         PlayerStats.Instance.Heal(amount);
         Debug.Log($"Healed {amount} HP!");
     }

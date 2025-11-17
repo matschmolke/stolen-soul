@@ -15,6 +15,10 @@ public static class InvisibilityEffect
         SpriteRenderer[] renderers = target.GetComponentsInChildren<SpriteRenderer>();
         Color[] originalColors = new Color[renderers.Length];
 
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<BreadcrumbTrail>().dropCrumbTrail = false;
+        player.transform.GetChild(0).gameObject.SetActive(false);
+
         for (int i = 0; i < renderers.Length; i++)
         {
             originalColors[i] = renderers[i].color;
@@ -27,6 +31,9 @@ public static class InvisibilityEffect
 
         for (int i = 0; i < renderers.Length; i++)
             renderers[i].color = originalColors[i];
+
+        player.GetComponent<BreadcrumbTrail>().dropCrumbTrail = true;
+        player.transform.GetChild(0).gameObject.SetActive(true);
 
         Debug.Log("Invisibility ended!");
     }
