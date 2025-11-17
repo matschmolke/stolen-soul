@@ -21,4 +21,19 @@ public class Spell : ScriptableObject
     public float speed = 10f;
 
     public bool isProjectile = true;
+    public Effect effect;
+
+    public void ApplyEffect(GameObject target)
+    {
+        switch (spellName)
+        {
+            case "Heal":
+                HealEffect.Apply((int)manaCost);
+                break;
+            case "Invisibility":
+                InvisibilityEffect.Apply(target, duration);
+                break;
+        }
+    }
 }
+

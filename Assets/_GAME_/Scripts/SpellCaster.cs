@@ -1,22 +1,17 @@
 using System.Collections;
 using UnityEngine;
 
+using System.Collections;
+using UnityEngine;
+
 public class SpellCaster : MonoBehaviour
 {
     public Spell[] spells;
     private float[] cooldownTimers;
     private Camera mainCam;
-    private Vector3 targetLocation;
-    private PlayerStats playerStats;
-    
+
     void Start()
     {
-        playerStats = GetComponent<PlayerStats>();
-        if (playerStats == null)
-        {
-            Debug.LogError("PlayerStats not found on the player!");
-        }
-        
         if (spells == null || spells.Length == 0)
         {
             Debug.LogError("No spells assigned in SpellCaster!");
@@ -25,14 +20,8 @@ public class SpellCaster : MonoBehaviour
 
         cooldownTimers = new float[spells.Length];
         mainCam = Camera.main;
-        
         if (mainCam == null)
-        {
             Debug.LogError("No MainCamera found in the scene!");
-        }
-
-        targetLocation = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        targetLocation.z = transform.position.z;
     }
 
     void Update()
@@ -56,6 +45,7 @@ public class SpellCaster : MonoBehaviour
             if (cooldownTimers[i] > 0) continue;
             if (Input.GetKeyDown(spells[i].castKey))
             {
+                Debug.Log("Spell casting!!!");
                 Cast(i);
             }
         }
@@ -63,23 +53,20 @@ public class SpellCaster : MonoBehaviour
 
     void Cast(int index)
     {
-        if (PlayerStats.Instance.CurrentManaScore >= spells[index].manaCost)
-        {
-            Spell spell = spells[index];
-            
-            if (spell.spellName == "Heal" && PlayerStats.Instance.CurrentHealthScore == PlayerStats.Instance.maxScore) return;
+        Debug.Log("void CAST");
+        Spell spell = spells[index];
 
-            cooldownTimers[index] = spell.cooldown;
-            
-            PlayerStats.Instance.UseMana((int)spell.manaCost);
+        if (PlayerStats.Instance.CurrentManaScore < spell.manaCost) return;
 
-            Vector3 target = GetMouseWorld();
+        cooldownTimers[index] = spell.cooldown;
+        PlayerStats.Instance.UseMana((int)spell.manaCost);
 
-            if (spell.isProjectile)
-                CastProjectileSpell(spell, target);
-            else
-                CastUtilitySpell(spell);   
-        }
+        Vector3 target = GetMouseWorld();
+
+        if (spell.isProjectile)
+            CastProjectileSpell(spell, target);
+        else
+            CastUtilitySpell(spell);
     }
 
     Vector3 GetMouseWorld()
@@ -88,7 +75,7 @@ public class SpellCaster : MonoBehaviour
         mousePos.z = transform.position.z;
         return mousePos;
     }
-    
+
     void CastProjectileSpell(Spell spell, Vector3 target)
     {
         GameObject proj = Instantiate(spell.spellPrefab, transform.position, Quaternion.identity);
@@ -100,18 +87,6 @@ public class SpellCaster : MonoBehaviour
         if (p != null)
             p.Shoot(target, spell.speed);
     }
-
-    void RotateProjectile(GameObject proj, Spell spell, Vector3 target)
-    {
-        Vector3 dir = target - transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-
-        if (spell.spellName == "Fireball")
-            angle += 90;
-
-        proj.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-    }
-
     void FlipProjectileSprite(GameObject proj, Spell spell, Vector3 target)
     {
         SpriteRenderer sr = proj.GetComponent<SpriteRenderer>();
@@ -132,55 +107,28 @@ public class SpellCaster : MonoBehaviour
         }
     }
     
+    void RotateProjectile(GameObject proj, Spell spell, Vector3 target)
+    {
+        Vector3 dir = target - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        if (spell.spellName == "Fireball")
+            angle += 90;
+
+        proj.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
     void CastUtilitySpell(Spell spell)
     {
-        if (spell.spellName == "Invisibility")
-        {
-            StartCoroutine(ActivateInvisibility(spell.duration, spell.manaCost));
-        }
-        else if (spell.spellName == "Heal")
-        {
-            Heal(spell.manaCost);
-        }
-    }
+        Debug.Log("Cast Utility Spell " +  spell.spellName);
+        if (spell.effect != null)
+            EffectsManager.Instance.AddEffect(spell.effect);
 
-    IEnumerator ActivateInvisibility(float duration, float amount)
-    {
-        Debug.Log("Invisibility activated!");
-        
-        SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
-        
-        Color[] originalColors = new Color[renderers.Length];
-        for (int i = 0; i < renderers.Length; i++)
-        {
-            originalColors[i] = renderers[i].color;
-            Color c = renderers[i].color;
-            c.a = 0.5f;
-            renderers[i].color = c;
-        }
-        yield return new WaitForSeconds(duration);
-        
-        for (int i = 0; i < renderers.Length; i++)
-        {
-            renderers[i].color = originalColors[i];
-        }
-        
-        Debug.Log("Invisibility ended!");
-    }
-
-    void Heal(float amount)
-    {
-        if (PlayerStats.Instance != null)
-        {
-            PlayerStats.Instance.Heal((int)amount);
-            Debug.Log($"Healed {amount} HP!");
-        }
+        spell.ApplyEffect(this.gameObject);
     }
 
     public float GetCooldownFill(int index)
     {
         if (index < 0 || index >= cooldownTimers.Length) return 0f;
-        Debug.Log("Cooldown fill: " + cooldownTimers[index] / spells[index].cooldown);
         return cooldownTimers[index] / spells[index].cooldown;
     }
 }
