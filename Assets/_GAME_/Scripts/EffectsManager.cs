@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ public class EffectsManager : MonoBehaviour
         UpdateUI();
     }
 
-    public void AddEffect(Effect effect)
+    public void AddEffect(Effect effect, float duration)
     {
         Debug.Log("EffectsManager void AddEffect");
         
@@ -38,6 +39,8 @@ public class EffectsManager : MonoBehaviour
         Debug.Log("Added effect " + effect.effectName);
         
         UpdateUI();
+        
+        StartCoroutine(RemoveAfterDuration(effect, duration));
     }
 
     public void RemoveEffect(Effect effect)
@@ -46,6 +49,12 @@ public class EffectsManager : MonoBehaviour
         
         activeEffects.Remove(effect);
         UpdateUI();
+    }
+    
+    private IEnumerator RemoveAfterDuration(Effect effect, float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        RemoveEffect(effect);
     }
 
     private void UpdateUI()

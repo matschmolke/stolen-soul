@@ -121,7 +121,7 @@ public class SpellCaster : MonoBehaviour
     {
         Debug.Log("Cast Utility Spell " +  spell.spellName);
         if (spell.effect != null)
-            EffectsManager.Instance.AddEffect(spell.effect);
+            EffectsManager.Instance.AddEffect(spell.effect, spell.duration);
 
         spell.ApplyEffect(this.gameObject);
     }
