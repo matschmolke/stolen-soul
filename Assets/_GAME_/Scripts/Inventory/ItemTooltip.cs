@@ -21,7 +21,7 @@ public class ItemTooltip : MonoBehaviour
         titleText.text = item.itemName;
         descriptionText.text = item.description;
 
-        tooltipObject.transform.position = pos + new Vector3(150, -50, 0); // offset from slot
+        tooltipObject.transform.position = pos + new Vector3(320, -50, 0); // offset from slot
         tooltipObject.SetActive(true);
     }
 
