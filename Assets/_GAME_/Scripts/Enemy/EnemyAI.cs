@@ -138,6 +138,16 @@ public class EnemyAI : MonoBehaviour
 
             if (crumb != null)
             {
+                float dist = Vector2.Distance(GetMyPos(), crumb.position);
+
+                // Jeœli dotar³ do ostatniego znanego punktu
+                if (dist < 0.2f)
+                {
+                    currentState = State.Idle;
+                    targetBreadcrumb = null;
+                    return;
+                }
+
                 targetPos = crumb.position;
             }
             else

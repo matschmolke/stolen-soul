@@ -6,13 +6,13 @@ public class StatUI : MonoBehaviour
     [SerializeField] private TMP_Text statText;
     [SerializeField] private string statName;
 
-    private PlayerStats1 playerStats;
+    private PlayerStats playerStats;
 
     private void Start()
     {
         statText = GetComponent<TMP_Text>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        playerStats = player.GetComponent<PlayerStats1>();
+        playerStats = player.GetComponent<PlayerStats>();
 
         switch (statName)
         {

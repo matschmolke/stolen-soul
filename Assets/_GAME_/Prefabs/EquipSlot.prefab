@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 6597664113134532020}
   - component: {fileID: 195926802973341746}
   - component: {fileID: 178081259936938584}
-  - component: {fileID: 2150698375608635110}
   - component: {fileID: 8716792712366493885}
   m_Layer: 5
   m_Name: EquipSlot
@@ -155,26 +154,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2150698375608635110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2753622367139211671}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c785594a9a763ccf9b36f35dbbadd7be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemSlot
-  itemName: 
-  quantity: 0
-  itemSprite: {fileID: 0}
-  isFull: 0
-  quantityText: {fileID: 416763626358135796}
-  itemImage: {fileID: 8768891496589498469}
-  selectedShader: {fileID: 6794156326390522757}
-  thisItemSelected: 0
 --- !u!114 &8716792712366493885
 MonoBehaviour:
   m_ObjectHideFlags: 0

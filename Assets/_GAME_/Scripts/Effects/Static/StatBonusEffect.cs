@@ -8,7 +8,7 @@ public class StatBonusEffect : StaticEffect
 
     public ResourceType statType;
 
-    public override void Apply(PlayerStats1 stats)
+    public override void Apply(PlayerStats stats)
     {
         switch (statType) 
         {
@@ -21,7 +21,7 @@ public class StatBonusEffect : StaticEffect
         }
     }
 
-    public override void Remove(PlayerStats1 stats)
+    public override void Remove(PlayerStats stats)
     {
         switch (statType)
         {

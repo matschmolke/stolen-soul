@@ -161,12 +161,12 @@ SpriteRenderer:
   m_SortingLayerID: -974269111
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7037913220295985936, guid: f13c49f5181dd774b8a083357d6ccf58, type: 3}
+  m_Sprite: {fileID: -7037913220295985936, guid: 1608694f46ae18d4ebccb64f6e8191ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -233,7 +233,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 2, y: 3}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1461466798229265347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4818801ca31ef4ca77beb240039be0, type: 3}
+  m_Script: {fileID: 11500000, guid: 71ec4b764c4ad2f4690ab7bd2d10ac29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntranceMechanic
   entranceColl: {fileID: 1092799939020963466}

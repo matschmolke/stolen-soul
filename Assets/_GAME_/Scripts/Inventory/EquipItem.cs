@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class EquipItem : MonoBehaviour
 {
-    private PlayerStats1 playerStats;
+    private PlayerStats playerStats;
     private ItemBase previousItem = null;
-    private ItemSlot1 slot;
+    private ItemSlot slot;
 
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        playerStats = player.GetComponent<PlayerStats1>();
+        playerStats = player.GetComponent<PlayerStats>();
 
-        slot = transform.GetComponent<ItemSlot1>();
+        slot = transform.GetComponent<ItemSlot>();
 
         slot.OnItemChanged += HandleEquip;
     }

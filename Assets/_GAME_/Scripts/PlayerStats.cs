@@ -2,45 +2,101 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int maxScore = 100;
+    public static PlayerStats Instance;
 
-    public Image healthImage; // Image with Type = Filled
-    public Image manaImage; // Image with Type = Filled
-    public Text healthText;
-    public Text manaText;
+    private int maxHealth = 20;
 
-    [SerializeField]
-    private int currentHealthScore;
-    private int currentManaScore;
+    public int MaxHealth 
+    {
+        get => maxHealth;
+        set 
+        {
+            maxHealth = value;
+            OnHealthChanged?.Invoke(currentHealth, MaxHealth);
+        }
+    }
+
+    private int maxMana = 20;
+
+    public int MaxMana
+    {
+        get => maxMana;
+        set
+        {
+            maxMana = value;
+            OnManaChanged?.Invoke(currentMana, MaxMana);
+        }
+    }
+
+    private int attack = 5;
+    public int Attack
+    {
+        get => attack;
+        set
+        {
+            attack = value;
+            OnAttackDamageChanged?.Invoke(value);
+        }
+    }
+    private int defence = 5;
+
+    public int Defence
+    {
+        get => defence;
+        set
+        {
+            defence = value;
+            OnDefenceChanged?.Invoke(value);
+        }
+    }
+
+    public int currentHealth;
+    public int currentMana;
 
     private Movements playerScript;
 
-    // Events for the future
-    //public event Action<int, int> OnHealthChanged; // (current, max)
-    //public event Action<int, int> OnManaChanged;
+    
+    public event Action<int, int> OnHealthChanged; // (current, max)
+    public event Action<int, int> OnManaChanged;
+
+    public event Action<int> OnAttackDamageChanged;
+    public event Action<int> OnDefenceChanged;
+
+    public bool canRegenerateMana = true;
+
+    public float attackDamageMultiplier = 1f;
+
+    public float spellEffectMultiplier = 1f;
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentHealthScore = maxScore;
-        currentManaScore = maxScore;
+        currentHealth = maxHealth;
+        currentMana = maxMana;
+
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        OnManaChanged?.Invoke(currentMana, maxMana);
+
+        //OnAttackDamageChanged?.Invoke(attack);
+        //OnDefenceChanged?.Invoke(defence);
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerScript = player.GetComponent<Movements>();
-    }
-
-    void UpdateText()
-    {
-        healthText.text = $"{currentHealthScore}%";
-        manaText.text = $"{currentManaScore}%";
-
-        if (currentHealthScore == 0)
-        {
-            playerScript.Dead();
-        }
     }
 
     // Skrypty napisane pod skrypty z damagem np. PlayerStats.TakeDamage
@@ -58,51 +114,58 @@ public class PlayerStats : MonoBehaviour
 
     public void Heal(int amount)
     {
-        currentHealthScore += amount;
+        currentHealth += amount;
+
+        if (currentHealth > maxHealth) currentHealth = maxHealth;
+
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
     public void TakeDamage(int dmg)
     {
-        currentHealthScore -= dmg;
+        currentHealth -= dmg;
+
+        if (currentHealth <= 0) KillPlayer();
+
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
     public void UseMana(int spellCost)
     {
-        currentManaScore -= spellCost;
+        currentMana -= spellCost;
+
+        if (currentMana < 0) currentMana = 0;
+
+        OnManaChanged?.Invoke(currentMana, maxMana);
     }
 
     public void RestoreMana(int amount)
     {
+        if (!canRegenerateMana) return;
+
         if (amount <= 0) return;
-        SetMana(currentManaScore + amount);
+        currentMana += amount;
+
+        if (currentMana > maxMana) currentMana = maxMana;
+
+        OnManaChanged?.Invoke(currentMana, maxMana);
     }
 
     public void RefillAll()
     {
-        currentHealthScore = maxScore;
-        currentManaScore = maxScore;
+        currentHealth = maxHealth;
+        currentMana = maxMana;
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        OnManaChanged?.Invoke(currentMana, maxMana);
     }
 
     public void KillPlayer()
     {
-        currentHealthScore = 0;
-        currentManaScore = 0;
-    }
-
-    private void UpdateUI()
-    {
-        UpdateText();
-
-        float healthFillValue = (float)currentHealthScore / (float)maxScore;
-        float manaFillValue = (float)currentManaScore / (float)maxScore;
-
-        // defensywnie dopilnujemy zakresu 0..1
-        healthFillValue = Mathf.Clamp01(healthFillValue);
-        manaFillValue = Mathf.Clamp01(manaFillValue);
-
-        // ustawiamy fill (Image.Type musi byæ Filled)
-        if (healthImage != null) healthImage.fillAmount = healthFillValue;
-        if (manaImage != null) manaImage.fillAmount = manaFillValue;
+        playerScript.Dead();
+        currentHealth = 0;
+        currentMana = 0;
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        OnManaChanged?.Invoke(currentMana, maxMana);
     }
 
     // Update is called once per frame
@@ -111,7 +174,7 @@ public class PlayerStats : MonoBehaviour
         // Temporary
         if (Keyboard.current.rKey.wasPressedThisFrame)
         {
-            TakeDamage(10);
+            TakeDamage(1);
         }
         else if (Keyboard.current.pKey.wasPressedThisFrame)
         {
@@ -119,36 +182,15 @@ public class PlayerStats : MonoBehaviour
         }
         else if (Keyboard.current.tKey.wasPressedThisFrame)
         {
-            Heal(10);
+            Heal(1);
         }
         else if (Keyboard.current.fKey.wasPressedThisFrame)
         {
-            UseMana(10);
+            UseMana(1);
         }
         else if (Keyboard.current.zKey.wasPressedThisFrame)
         {
             KillPlayer();
         }
-
-        if (currentHealthScore < 0)
-        {
-            currentHealthScore = 0;
-
-        }
-        else if (currentManaScore < 0)
-        {
-            currentManaScore = 0;
-        }
-
-        if (currentHealthScore > maxScore)
-        {
-            currentHealthScore = maxScore;
-        }
-        else if (currentManaScore > maxScore)
-        {
-            currentManaScore = maxScore;
-        }
-
-        this.UpdateUI();
     }
 }

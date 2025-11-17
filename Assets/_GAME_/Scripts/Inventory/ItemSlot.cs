@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 
-public class ItemSlot1 : MonoBehaviour,
+public class ItemSlot : MonoBehaviour,
     IPointerClickHandler,
     IBeginDragHandler,
     IDragHandler,
@@ -28,7 +28,7 @@ public class ItemSlot1 : MonoBehaviour,
     public ItemType acceptableTypes;
     public EquipmentType accaptableEquipmentTypes = EquipmentType.Weapon | EquipmentType.Armor;
 
-    private InventoryManager1 inventoryManager;
+    private InventoryManager inventoryManager;
     private Canvas canvas;
     private Image dragImage;
 
@@ -36,7 +36,7 @@ public class ItemSlot1 : MonoBehaviour,
 
     private void Start()
     {
-        inventoryManager = InventoryManager1.Instance;
+        inventoryManager = InventoryManager.Instance;
         canvas = GetComponentInParent<Canvas>();
     }
 
@@ -166,7 +166,7 @@ public class ItemSlot1 : MonoBehaviour,
 
     public void OnDrop(PointerEventData eventData)
     {
-        var originSlot = eventData.pointerDrag?.GetComponent<ItemSlot1>();
+        var originSlot = eventData.pointerDrag?.GetComponent<ItemSlot>();
         if (originSlot == null || originSlot == this) return;
 
         if (!CanAcceptItem(originSlot.Item))

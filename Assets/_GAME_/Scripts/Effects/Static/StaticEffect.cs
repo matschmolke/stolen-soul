@@ -5,8 +5,8 @@ public abstract class StaticEffect : ScriptableObject
     [TextArea]
     public string description;
 
-    public abstract void Apply(PlayerStats1 stats);
-    public abstract void Remove(PlayerStats1 stats);
+    public abstract void Apply(PlayerStats stats);
+    public abstract void Remove(PlayerStats stats);
 
     protected void OnValidate()
     {

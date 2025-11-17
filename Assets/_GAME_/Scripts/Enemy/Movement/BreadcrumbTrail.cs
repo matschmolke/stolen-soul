@@ -4,6 +4,7 @@ using UnityEngine;
 public class BreadcrumbTrail : MonoBehaviour
 {
     public bool enableGismos = true;
+    public bool dropCrumbTrail = true;
 
     [Tooltip("How far the player must move before dropping the next breadcrumb.")]
     public float dropDistance = 2f;
@@ -29,6 +30,7 @@ public class BreadcrumbTrail : MonoBehaviour
     {
         float distanceMoved = Vector2.Distance(playerCollider.bounds.center, lastDropPosition);
 
+        if (!dropCrumbTrail) return;
         if (distanceMoved >= dropDistance)
         {
             DropBreadcrumb();
