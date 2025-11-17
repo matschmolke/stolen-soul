@@ -23118,9 +23118,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 868694952}
     m_Modifications:
+    - target: {fileID: 457753009607119765, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1461466798229265347, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
       propertyPath: m_Name
       value: EntranceBars
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461466798229265347, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3223965445555749022, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24534,9 +24542,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2140176330}
     m_Modifications:
+    - target: {fileID: 457753009607119765, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1461466798229265347, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
       propertyPath: m_Name
       value: EntranceBars
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461466798229265347, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3223965445555749022, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25192,9 +25208,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1412790637}
     m_Modifications:
+    - target: {fileID: 457753009607119765, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1461466798229265347, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
       propertyPath: m_Name
       value: EntranceBars
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461466798229265347, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3223965445555749022, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
       propertyPath: m_LocalPosition.x
