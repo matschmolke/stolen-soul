@@ -13,15 +13,10 @@ public class DialogueNew : MonoBehaviour
 
     private int index;
 
-    //private bool triggerDialogue = true;
-
-    /*private bool timeUp = false;
-    private float time = 3f;*/
-
+    [SerializeField] private DialogueTransition transition;
     void Start()
     {
         text.text = string.Empty;
-        StartDialogue();
     }
 
     void Update()
@@ -40,29 +35,17 @@ public class DialogueNew : MonoBehaviour
             }
         }
 
-        /*if (timeUp) {
-
-            time -= Time.deltaTime;
-
-            if (time < 0)
-            {
-                timeUp = false;
-                StartDialogue();
-            }
-        }*/
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
         index = 0;
         StartCoroutine(TypeLine());
-        
-        //triggerDialogue = false;
     }
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index].ToCharArray())
+        foreach (char c in lines[index])
         {
             text.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -79,12 +62,11 @@ public class DialogueNew : MonoBehaviour
         }
         else
         {
-            //koniec dialogu
-            gameObject.SetActive(false);
+            //The end of the dialogue
+            transition.hideDialogueWin();
             text.text = string.Empty;
             
         }
     }
 
-    
 }

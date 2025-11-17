@@ -33,7 +33,7 @@ public class CameraController : MonoBehaviour
     void TryFindPlayer()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        
+
     }
 
     void LateUpdate()
@@ -53,4 +53,3 @@ public class CameraController : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
-
