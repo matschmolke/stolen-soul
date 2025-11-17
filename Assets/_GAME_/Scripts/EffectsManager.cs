@@ -8,7 +8,11 @@ public class EffectsManager : MonoBehaviour
     public List<Effect> activeEffects = new();
     public EffectSlotUI[] slots;
 
-    private void Awake() => Instance = this;
+    private void Awake()
+    {
+        Instance = this;
+        UpdateUI();
+    }
 
     public void AddEffect(Effect effect)
     {
@@ -16,9 +20,16 @@ public class EffectsManager : MonoBehaviour
         
         if (activeEffects.Contains(effect)) return;
         
+        Debug.Log("Slots Length: " + slots.Length);
+        
         if (activeEffects.Count >= slots.Length)
         {
             Debug.Log("No free effect slots!");
+            Debug.Log(activeEffects.Count);
+            
+            foreach(var  e in activeEffects)
+                Debug.Log(e.effectName);
+            
             return;
         }
         
@@ -39,6 +50,7 @@ public class EffectsManager : MonoBehaviour
 
     private void UpdateUI()
     {
+        Debug.Log("EffectsManager UpdateUI!!!!!");
         for (int i = 0; i < slots.Length; i++)
         {
             slots[i].SetEffect(i < activeEffects.Count ? activeEffects[i] : null);
