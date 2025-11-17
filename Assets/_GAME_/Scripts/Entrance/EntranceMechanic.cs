@@ -16,13 +16,22 @@ public class EntranceMechanic : MonoBehaviour
     public void EntranceOpen()
     {
         entranceAnim.SetBool("open",true);
-        entranceColl.enabled = false;
     }
 
     public void EntranceClose()
     {
         entranceAnim.SetBool("open", false);
-        entranceColl.enabled = true;
     }
 
+    public void EnableEntrance()
+    {
+        if (entranceColl.isActiveAndEnabled)
+        {
+            entranceColl.enabled = false;
+        }
+        else
+        {
+            entranceColl.enabled = true;
+        }
+    }
 }

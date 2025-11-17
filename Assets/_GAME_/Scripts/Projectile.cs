@@ -5,15 +5,18 @@ public class Projectile : MonoBehaviour
     private Vector2 direction;
     public float speed;
     private Animator animator;
-    
+
+    private float damage;
+
     void Awake()
     {
       animator = GetComponent<Animator>();  
     }
-    public void Shoot(Vector3 target, float spellSpeed)
+    public void Shoot(Vector3 target, float spellSpeed, float dmg)
     {
         direction = (target - transform.position).normalized;
         speed = spellSpeed;
+        damage = dmg;
 
         if (animator != null)
         {
@@ -24,5 +27,26 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         transform.position += (Vector3)direction * speed * Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            EnemyAI enemy = collision.GetComponent<EnemyAI>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
+
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Map"))
+        {
+            Destroy(gameObject);
+            Debug.Log("layer Map");
+            return;
+        }
     }
 }
