@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 3016834292326944445}
   - component: {fileID: 4633806251816357235}
   - component: {fileID: 7778351593508098805}
+  - component: {fileID: 4742769470251183109}
   m_Layer: 5
   m_Name: EffectSlot
   m_TagString: Untagged
@@ -165,3 +166,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
   m_ShowMaskGraphic: 1
+--- !u!114 &4742769470251183109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870084322550834252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce660e153c0ce31a4a019399d2d7d485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EffectSlotUI
+  iconImage: {fileID: 2421824896470076833}
