@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class InventoryManager1 : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager1 Instance { get; private set; }
+    public static InventoryManager Instance { get; private set; }
     public GameObject InventoryMenu;
-    public ItemSlot1[] itemSlot;
+    public ItemSlot[] itemSlot;
     
     private bool menuActivated;
 
-    private PlayerStats1 playerStats;
+    private PlayerStats playerStats;
 
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class InventoryManager1 : MonoBehaviour
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        playerStats = player.GetComponent<PlayerStats1>();
+        playerStats = player.GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame

@@ -5,15 +5,15 @@ public class PickUpLogic : MonoBehaviour
 {
     public ItemBase item;
 
-    private InventoryManager1 inventoryManager;
+    private InventoryManager inventoryManager;
 
     IEnumerator Start()
     {
         // InventoryManager initialization
-        while (InventoryManager1.Instance == null)
+        while (InventoryManager.Instance == null)
             yield return null;
 
-        inventoryManager = InventoryManager1.Instance;
+        inventoryManager = InventoryManager.Instance;
 
         transform.GetComponent<SpriteRenderer>().sprite = item.itemSprite;
     }

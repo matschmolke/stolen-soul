@@ -1667,10 +1667,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1002280352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f405174636380524496518ce1e7dfd06, type: 3}
+  m_Script: {fileID: 11500000, guid: a73b7f15742f6ef48b10a9af0cbe9a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStat
-  maxScore: 100
   healthImage: {fileID: 2145591459}
   manaImage: {fileID: 673491562}
   healthText: {fileID: 296599099}
