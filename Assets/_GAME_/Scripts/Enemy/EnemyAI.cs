@@ -163,6 +163,8 @@ public class EnemyAI : MonoBehaviour
         move(toTargetDir, Data.runSpeed);
     }
 
+    public static event System.Action<EnemyAI> OnEnemyAttack;
+
     private void HandleAttacking()
     {
         if (!canAttack) return;
@@ -178,7 +180,9 @@ public class EnemyAI : MonoBehaviour
         anim.SetFloat("xVelocity", attackDir.x);
         anim.SetFloat("yVelocity", attackDir.y);
         anim.SetTrigger("isAttacking");
+
         // Attack logic here
+        OnEnemyAttack?.Invoke(this);
 
         canAttack = false;
     }

@@ -197,6 +197,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0300765, y: 1.583953}
   m_EdgeRadius: 0
+--- !u!1 &1884425866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1884425867}
+  m_Layer: 2
+  m_Name: DamageRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1884425867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884425866}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.011, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2091298997}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091298994
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +245,7 @@ GameObject:
   - component: {fileID: 2091299002}
   - component: {fileID: 2091299004}
   - component: {fileID: 2091299005}
+  - component: {fileID: 2091299006}
   m_Layer: 2
   m_Name: player
   m_TagString: Player
@@ -320,6 +352,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 610602653}
+  - {fileID: 1884425867}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2091298998
@@ -334,6 +367,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3bc702ba2837264c816b4fb7085d6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movements
+  attackOrigin: {fileID: 1884425867}
+  attackRadius: 1.2
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 128
+  attackDamage: 10
 --- !u!95 &2091298999
 Animator:
   serializedVersion: 7
@@ -415,6 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreadcrumbTrail
   enableGismos: 1
+  dropCrumbTrail: 1
   dropDistance: 1
   maxBreadcrumbs: 100
   breadcrumbLifetime: 10
@@ -452,6 +492,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ec0956d226b6df576b4d476cf4dd9fd9, type: 2}
   - {fileID: 11400000, guid: c20681d4eab62a4d7a856cf72f5110ed, type: 2}
   - {fileID: 11400000, guid: 761941908e37f7e289b4436e8633417d, type: 2}
+--- !u!114 &2091299006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091298994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbb6673d80bf584296aa8456c312469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerTakeDamage
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -15,6 +15,12 @@ public class Movements : MonoBehaviour
 
     private bool isDead = false;
 
+    public Transform attackOrigin;
+    public float attackRadius = 1.5f;
+    public LayerMask enemyMask;
+
+    public int attackDamage = 15;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,11 +29,14 @@ public class Movements : MonoBehaviour
 
     private void Update()
     {
-        if (isDead) return;
+        if (isDead)
+        {
+            rb.linearVelocity = Vector2.zero; 
+            return;
+        }
+
         MovePlayer();
         HandleAttack();
-        Hurt();
-        KillPlayer();
     }
 
     private void MovePlayer()
@@ -55,10 +64,12 @@ public class Movements : MonoBehaviour
 
     private void HandleAttack()
     {
-        
-        if (Input.GetKeyDown(KeyCode.B) && canAttack)
+        if (Input.GetMouseButtonDown(0) && canAttack)
         {
             anim.SetTrigger("isAttacking");
+
+            DealDamage();
+
             canAttack = false;
         }
     }
@@ -72,26 +83,27 @@ public class Movements : MonoBehaviour
     //for testing purposes
     public void Hurt()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            //add slowing down player for a second
-            anim.SetTrigger("isHurt");
-        }
+        //add slowing down player for a second
+        anim.SetTrigger("isHurt");
     }
 
     public void Dead()
     {
         anim.SetTrigger("isDead");
+        rb.linearVelocity = Vector2.zero;
         isDead = true;
     }
 
-    private void KillPlayer()
+    //deal damage to enemy
+    public void DealDamage()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
+
+        foreach (Collider2D enemyCollider in enemiesInRange)
         {
-            Dead();
+            EnemyAI enemy = enemyCollider.GetComponent<EnemyAI>();
+            if (enemy != null)
+                enemy.TakeDamage(attackDamage);
         }
     }
-
-
 }
