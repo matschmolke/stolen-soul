@@ -1,9 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-using System.Collections;
-using UnityEngine;
-
 public class SpellCaster : MonoBehaviour
 {
     public Spell[] spells;
@@ -56,7 +53,7 @@ public class SpellCaster : MonoBehaviour
         Debug.Log("void CAST");
         Spell spell = spells[index];
 
-        if (PlayerStats.Instance.CurrentManaScore < spell.manaCost) return;
+        if (PlayerStats.Instance.currentMana < spell.manaCost) return;
 
         cooldownTimers[index] = spell.cooldown;
         PlayerStats.Instance.UseMana((int)spell.manaCost);

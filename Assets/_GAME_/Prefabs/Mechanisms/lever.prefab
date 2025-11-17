@@ -170,12 +170,11 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088173158381661633}
   m_Enabled: 1
-  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c78e4dceb3c942f4c8f2c99dd8e01c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeverMechanic
-  targetDoor: {fileID: 0}
+  targetDoor: {fileID: 7676989036758862941, guid: cbc4c57b0974f524a870645d9ca872ee, type: 3}
   EntranceChannel: {fileID: 11400000, guid: 3088b53fcd62ce442b38e3d2d5e4ac76, type: 2}
 --- !u!1 &4122239182891334472
 GameObject:
