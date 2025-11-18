@@ -271,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   offset: {x: 0, y: 0, z: -20}
   smoothSpeed: 5
+  constrain: 1
 --- !u!1 &713257216
 GameObject:
   m_ObjectHideFlags: 0

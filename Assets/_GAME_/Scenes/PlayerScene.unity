@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movements
   attackOrigin: {fileID: 1884425867}
-  attackRadius: 1.2
+  attackRadius: 1.5
   enemyMask:
     serializedVersion: 2
     m_Bits: 128

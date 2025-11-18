@@ -35,7 +35,7 @@ public class PlayerTakeDamage : MonoBehaviour
         if (distance <= enemy.Data.attackRange)
         {
            
-            DealDamageWithDelay(enemy, 0.4f); 
+            DealDamageWithDelay(enemy, 0.1f); 
         }
     }
 
