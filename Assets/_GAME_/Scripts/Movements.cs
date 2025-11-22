@@ -1,9 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class Movements : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
+    private SpriteRenderer playerRenderer;
+
+    private PlayerStats playerStats;
 
     private float walkSpeed = 3f;
     private float runSpeed = 6f;
@@ -11,20 +15,21 @@ public class Movements : MonoBehaviour
     //remembers the direction
     private Vector2 lastDirection = Vector2.down;
 
-    private bool canAttack = true;
+    public bool canAttack = true;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     public Transform attackOrigin;
     public float attackRadius = 1.5f;
     public LayerMask enemyMask;
 
-    public int attackDamage = 15;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        playerRenderer = GetComponent<SpriteRenderer>();
+
+        playerStats = GetComponent<PlayerStats>();
     }
 
     private void Update()
@@ -67,24 +72,23 @@ public class Movements : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
             anim.SetTrigger("isAttacking");
-
             DealDamage();
-
-            canAttack = false;
         }
     }
 
-    //function called at the end of the attack animation
-    public void EndAttack()
-    {
-        canAttack = true;
-    }
-
-    //for testing purposes
     public void Hurt()
     {
-        //add slowing down player for a second
-        anim.SetTrigger("isHurt");
+        StartCoroutine(HurtAnim(playerRenderer));
+    }
+
+    private IEnumerator HurtAnim(SpriteRenderer sprite)
+    {
+        sprite.color = new Color(1f, 0.523f, 0.612f, 1f);
+
+        yield return new WaitForSeconds(0.3f);
+
+        sprite.color = Color.white;
+
     }
 
     public void Dead()
@@ -103,7 +107,7 @@ public class Movements : MonoBehaviour
         {
             EnemyAI enemy = enemyCollider.GetComponent<EnemyAI>();
             if (enemy != null)
-                enemy.TakeDamage(attackDamage);
+                enemy.TakeDamage(playerStats.Attack);
         }
     }
 }

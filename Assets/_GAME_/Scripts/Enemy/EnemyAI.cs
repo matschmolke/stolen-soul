@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour
     // Combat and Data
     private float currentHealth;
     private float attackdmg;
-    private bool canAttack = true;
+    public bool canAttack = true;
     private bool hasDied = false;
 
     // Death Animation
@@ -167,9 +167,13 @@ public class EnemyAI : MonoBehaviour
 
     private void HandleAttacking()
     {
-        if (!canAttack) return;
+        if (!canAttack)
+        {
+            currentState = State.Chasing;
+            return;
+        }
 
-        if (Vector2.Distance(GetMyPos(), GetPlayerPos()) > Data.attackRange)
+            if (Vector2.Distance(GetMyPos(), GetPlayerPos()) > Data.attackRange)
         {
             currentState = State.Chasing;
             return;
@@ -184,7 +188,6 @@ public class EnemyAI : MonoBehaviour
         // Attack logic here
         OnEnemyAttack?.Invoke(this);
 
-        canAttack = false;
     }
 
     private void HandleDeath()
@@ -220,7 +223,7 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        anim.SetTrigger("isHurt");
+        StartCoroutine(Damage(spriteRenderer));
 
         currentHealth -= amount;
 
@@ -230,9 +233,14 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    public void OnAttackEnd()
+    private IEnumerator Damage(SpriteRenderer spr)
     {
-        canAttack = true;
+        spr.color = new Color(1f, 0.5f, 0.5f, 1f);
+
+        yield return new WaitForSeconds(0.3f);
+
+        spr.color = Color.white;
+
     }
 
     private Breadcrumb FindNextBreadcrumb()
