@@ -14,12 +14,13 @@ public class ItemSlot : MonoBehaviour,
     IPointerExitHandler
 
 {
-    public ItemBase Item;
+    public int slotId;
 
-    //public string itemName;
-    public int quantity;
-    //public Sprite itemSprite;
-    public bool IsFull => Item != null && quantity >= Item.maxStackSize;
+    public ItemBase Item => playerInventory.GetItem(slotId).Item;
+
+    public int quantity => playerInventory.GetItem(slotId).Quantity;
+
+    //public bool IsFull => Item != null && quantity >= Item.maxStackSize;
 
     [SerializeField] private TMP_Text quantityText;
     [SerializeField] private Image itemImage;
@@ -28,33 +29,19 @@ public class ItemSlot : MonoBehaviour,
     public ItemType acceptableTypes;
     public EquipmentType accaptableEquipmentTypes = EquipmentType.Weapon | EquipmentType.Armor;
 
+    private PlayerInventory playerInventory;
     private InventoryManager inventoryManager;
     private Canvas canvas;
     private Image dragImage;
 
     public event Action<ItemBase> OnItemChanged;
 
-    private void Start()
+    public void Initialize(int id)
     {
         inventoryManager = InventoryManager.Instance;
+        playerInventory = PlayerInventory.Instance;
         canvas = GetComponentInParent<Canvas>();
-    }
-
-    public void AddItem(ItemBase item, int qty)
-    {
-        Item = item;
-        quantity += qty;
-
-        itemImage.enabled = true;
-        itemImage.sprite = Item.itemSprite;
-
-        if (Item.isStackable)
-        {
-            quantityText.text = qty.ToString();
-            quantityText.enabled = true;
-        }
-        RefreshUI();
-        OnItemChanged?.Invoke(Item);
+        slotId = id;
     }
 
     public bool CanAcceptItem(ItemBase item)
@@ -78,8 +65,7 @@ public class ItemSlot : MonoBehaviour,
 
     public void ClearSlot()
     {
-        Item = null;
-        quantity = 0;
+        playerInventory.RemoveItemAt(slotId);
 
         itemImage.sprite = null;
         itemImage.enabled = false;
@@ -119,7 +105,7 @@ public class ItemSlot : MonoBehaviour,
                 if (Item != null && Item.itemType == ItemType.Consumable)
                 {
                     inventoryManager.UseItem(Item);
-                    this.quantity -= 1;
+                    playerInventory.ChangeQuantity(slotId, quantity-1);
                     if (this.quantity <= 0)
                     {
                         ClearSlot();
@@ -175,51 +161,14 @@ public class ItemSlot : MonoBehaviour,
             return;
         }
 
-
-        if (Item == null)
+        if (Item != null && !originSlot.CanAcceptItem(Item))
         {
-            Item = originSlot.Item;
-            quantity = originSlot.quantity;
-
-            originSlot.ClearSlot();
+            Debug.Log("Swap not possible – origin slot does not accept this item.");
+            return;
         }
-        else if (Item.Id == originSlot.Item.Id) 
-        {
-            int totalQuantity = quantity + originSlot.quantity;
-            int maxStack = Item.maxStackSize;
 
-            if (totalQuantity <= maxStack)
-            {
-                
-                quantity = totalQuantity;
-                originSlot.ClearSlot();
-            }
-            else
-            {
-
-                quantity = maxStack;
-                originSlot.quantity = totalQuantity - maxStack;
-            }
-        }
-        else 
-        {
-            if (!CanAcceptItem(originSlot.Item) || !originSlot.CanAcceptItem(Item))
-            {
-                Debug.Log("Swap not possible – one of the slots does not accept the item.");
-                return;
-            }
-
-            ItemBase tempItem = Item;
-            int tempQty = quantity;
-
-            Item = originSlot.Item;
-            quantity = originSlot.quantity;
-
-            originSlot.Item = tempItem;
-            originSlot.quantity = tempQty;
-
-            
-        }
+        // Wykorzystanie metody MoveItem
+        playerInventory.MoveItem(slotId, originSlot.slotId);
 
         OnItemChanged?.Invoke(Item);
         originSlot.OnItemChanged?.Invoke(originSlot.Item);

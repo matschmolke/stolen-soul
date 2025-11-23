@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Better Sword
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: ddec91eb-d30d-4439-9bc0-556ea4428e5e
+  Id: 69f0e382-fe23-4ad7-84a1-02c51eae2fc4
   itemType: 4
   itemName: Better Sword
   itemSprite: {fileID: 6155229623095598686, guid: 05a1ca93518204493b4180a2ab9ab906, type: 3}
@@ -23,6 +23,7 @@ MonoBehaviour:
   maxStackSize: 1
   isUnique: 0
   dropChance: 25
+  value: 40
   equipmentType: 1
   attackDmg: 20
   armorValue: 0

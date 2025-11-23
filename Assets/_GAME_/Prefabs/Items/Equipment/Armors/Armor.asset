@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Armor
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: 7d44847a-d262-494a-b0a5-fcfd6f9aac73
+  Id: de33d57b-0423-49de-846f-7c0cbd2bbefc
   itemType: 4
   itemName: Armor
   itemSprite: {fileID: 7397270247603054716, guid: 6af47418e7d76ee3ca678c54482ab860, type: 3}
@@ -23,6 +23,7 @@ MonoBehaviour:
   maxStackSize: 1
   isUnique: 0
   dropChance: 30
+  value: 20
   equipmentType: 2
   attackDmg: 0
   armorValue: 10

@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc0ff4cea80a994e86e41b33d61eef9, type: 3}
   m_Name: Gem
   m_EditorClassIdentifier: Assembly-CSharp::Default
-  Id: f442d796-6451-486a-9281-3d3cba40f00e
+  Id: 78b14ab3-9edf-4d2b-a0fd-eaaefb262e58
   itemType: 16
   itemName: Gem
-  itemSprite: {fileID: -1549634533363687302, guid: d2bb89144ffbdcb36951d8def3572f0e, type: 3}
+  itemSprite: {fileID: 348551329206509291, guid: fdbf73462bad3523b8c53f7b70c9bd4c, type: 3}
+  description: Shiny bit or not so shiny
   isStackable: 1
-  maxStackSize: 3
+  maxStackSize: 100
   isUnique: 0
   dropChance: 70
+  value: 1

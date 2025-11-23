@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202138ce68f267141a12a3b5141394bf, type: 3}
   m_Name: Basic Scroll
   m_EditorClassIdentifier: Assembly-CSharp::Scroll
-  Id: de2c32ad-be43-4e18-aa16-675d1734b1d2
+  Id: ca242e95-7cc2-4e3c-94cf-98d1a9caf8f4
   itemType: 8
   itemName: Basic Scroll
   itemSprite: {fileID: -5734204000053065432, guid: bdee8af3a7bce72499f71cadec5f69c1, type: 3}
+  description: Grants player /spell name/ spell. How cool is that?
   isStackable: 0
   maxStackSize: 1
   isUnique: 0
   dropChance: 25
+  value: 60

@@ -32,9 +32,14 @@ public abstract class ItemBase : ScriptableObject
     public bool isUnique;
     public int dropChance;
 
+    [Header("Trade")]
+    public int value;
+
     protected void OnValidate()
     {
         GenerateDescription();
+
+        if (!isStackable) maxStackSize = 1;
     }
 
     protected abstract void GenerateDescription();
