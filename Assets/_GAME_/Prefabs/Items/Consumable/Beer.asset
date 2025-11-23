@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe065101cf112643bc2a9f868004e0b, type: 3}
   m_Name: Beer
   m_EditorClassIdentifier: Assembly-CSharp::Consumable
-  Id: 98600c66-ecf8-4042-a2ff-0467964f8cd9
+  Id: c038ae76-8c94-4736-9fb3-a41be677fe5a
   itemType: 2
   itemName: Beer
   itemSprite: {fileID: -7491102165410956120, guid: 963ff487d69ef2b50ab299d9d1652878, type: 3}
+  description: Restores 5 of Mana
   isStackable: 1
   maxStackSize: 5
   isUnique: 0
   dropChance: 75
+  value: 5
   restoreAmount: 5
   resourceType: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe065101cf112643bc2a9f868004e0b, type: 3}
   m_Name: Small Health Potion
   m_EditorClassIdentifier: Assembly-CSharp::Consumable
-  Id: fa3dbc74-583d-4bca-964e-79454612c64e
+  Id: fdb57a5b-d58e-4ffc-a28f-4185439d0ba6
   itemType: 2
   itemName: Small Health Potion
   itemSprite: {fileID: -9019701275521734822, guid: 2106fc92ba30254fbaf1db8761191c19, type: 3}
@@ -21,5 +21,6 @@ MonoBehaviour:
   maxStackSize: 5
   isUnique: 0
   dropChance: 75
+  value: 5
   restoreAmount: 5
   resourceType: 0

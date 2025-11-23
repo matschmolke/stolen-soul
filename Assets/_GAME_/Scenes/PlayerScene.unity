@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 2091299004}
   - component: {fileID: 2091299005}
   - component: {fileID: 2091299006}
+  - component: {fileID: 2091299007}
   m_Layer: 2
   m_Name: player
   m_TagString: Player
@@ -504,6 +505,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fbb6673d80bf584296aa8456c312469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerTakeDamage
+--- !u!114 &2091299007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091298994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b7031de9e865d41b0fd53b67fcb1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

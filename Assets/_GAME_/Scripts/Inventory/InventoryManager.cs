@@ -1,14 +1,19 @@
+using System.ComponentModel;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
     public GameObject InventoryMenu;
+
+    [Header("IMPORTANT!! \nequip and quick slots should be at the end of list")]
     public ItemSlot[] itemSlot;
     
     private bool menuActivated;
 
     private PlayerStats playerStats;
+
+    private PlayerInventory playerInventory;
 
     private void Awake()
     {
@@ -20,6 +25,16 @@ public class InventoryManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        playerInventory = PlayerInventory.Instance;
+
+        playerInventory.Initialize(itemSlot.Length);
+
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            itemSlot[i].Initialize(i);
+        }
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,46 +59,15 @@ public class InventoryManager : MonoBehaviour
             Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActivated = true;
+            RefreshUI();
         }
     }
 
     public bool AddItem(ItemBase item, int quantity)
     {
-        Debug.Log("itemName = " + item.itemName + ", type = " + item.itemType + ", quantity = " + quantity);
+       Debug.Log("itemName = " + item.itemName + ", type = " + item.itemType + ", quantity = " + quantity);
 
-        for(int i = 0; i < itemSlot.Length; i++)
-        {
-            if (itemSlot[i].Item == null) continue;                     
-            if (itemSlot[i].Item.Id != item.Id) continue;               
-            if (itemSlot[i].IsFull) continue;
-            if (!itemSlot[i].CanAcceptItem(item)) continue;
-
-            int totalQuantity = itemSlot[i].quantity + quantity;
-
-            if (totalQuantity <= item.maxStackSize)
-            {
-                itemSlot[i].AddItem(item, quantity);
-                return true;
-            }
-            else
-            {
-                int quantityToAdd = item.maxStackSize - itemSlot[i].quantity;
-                itemSlot[i].AddItem(item, quantityToAdd);
-                quantity -= quantityToAdd;
-            }
-        }
-
-        for (int i = 0; i < itemSlot.Length; i++)
-        {
-            if(itemSlot[i].Item != null) continue;
-            if (!itemSlot[i].CanAcceptItem(item)) continue;
-
-            itemSlot[i].AddItem(item, quantity);
-            return true;
-        }
-
-        Debug.Log("Inventory Full!");
-        return false;
+       return playerInventory.AddItem(item, quantity);
     }
 
     public void UseItem(ItemBase item)
@@ -102,6 +86,14 @@ public class InventoryManager : MonoBehaviour
                     Debug.Log("Invalid resource Type");
                     break;
             }
+        }
+    }
+
+    public void RefreshUI()
+    {
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            itemSlot[i].RefreshUI();
         }
     }
 

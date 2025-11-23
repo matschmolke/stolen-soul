@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Better Armor
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: cd3b4350-a83c-42a8-aec7-d217de6bd57b
+  Id: d0a62474-7273-497c-ac17-69b3e6b27911
   itemType: 4
   itemName: Better Armor
   itemSprite: {fileID: -4180139947637045329, guid: c039c930ccc58fd7791e954bd84b4a66, type: 3}
@@ -23,6 +23,7 @@ MonoBehaviour:
   maxStackSize: 1
   isUnique: 0
   dropChance: 25
+  value: 50
   equipmentType: 2
   attackDmg: 0
   armorValue: 20

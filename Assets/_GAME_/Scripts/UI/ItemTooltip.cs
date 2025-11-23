@@ -9,6 +9,7 @@ public class ItemTooltip : MonoBehaviour
     [SerializeField] private GameObject tooltipObject;
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text descriptionText;
+    [SerializeField] private TMP_Text valueText;
 
     private void Awake()
     {
@@ -20,8 +21,9 @@ public class ItemTooltip : MonoBehaviour
     {
         titleText.text = item.itemName;
         descriptionText.text = item.description;
+        valueText.text = $"{item.value}";
 
-        tooltipObject.transform.position = pos + new Vector3(320, -50, 0); // offset from slot
+        tooltipObject.transform.position = pos + new Vector3(200, -50, 0); // offset from slot
         tooltipObject.SetActive(true);
     }
 
