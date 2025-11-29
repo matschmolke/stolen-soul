@@ -13,7 +13,7 @@ public class Movements : MonoBehaviour
 
     private bool canAttack = true;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     public Transform attackOrigin;
     public float attackRadius = 1.5f;
@@ -92,6 +92,7 @@ public class Movements : MonoBehaviour
         anim.SetTrigger("isDead");
         rb.linearVelocity = Vector2.zero;
         isDead = true;
+        transform.GetChild(0).gameObject.SetActive(false); //Disable Trigger Collider
     }
 
     //deal damage to enemy

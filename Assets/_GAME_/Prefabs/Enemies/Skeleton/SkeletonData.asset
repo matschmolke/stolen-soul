@@ -16,7 +16,7 @@ MonoBehaviour:
   sprite: {fileID: 7446186087880272030, guid: ddd5d3ad660c688408ebf5eb5a1999ad, type: 3}
   animatorController: {fileID: 9100000, guid: eb0b7bc955fa6954bb066f653191e4fd, type: 2}
   maxHealth: 100
-  attackDamage: 10
+  attackDamage: 2
   walkSpeed: 6
   runSpeed: 9
   visionRange: 8

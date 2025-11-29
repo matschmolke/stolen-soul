@@ -30,7 +30,7 @@ public class EnemyAI : MonoBehaviour
     private float currentHealth;
     private float attackdmg;
     private bool canAttack = true;
-    private bool hasDied = false;
+    public bool hasDied = false;
 
     // Death Animation
     public float deathBlinkDuration = 0.8f;
@@ -61,6 +61,11 @@ public class EnemyAI : MonoBehaviour
         anim = GetComponent<Animator>();
         lootBag = GetComponent<LootBag>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (Data)
+        {
+            Init(Data);
+        }
 
         contextSteering = new ContextSteering(this.gameObject, obsticleLayerMask | enemyLayerMask);
     }
@@ -169,6 +174,12 @@ public class EnemyAI : MonoBehaviour
     {
         if (!canAttack) return;
 
+        if (player.GetComponent<Movements>().isDead)
+        {
+            currentState = State.Idle;
+            return;
+        }
+
         if (Vector2.Distance(GetMyPos(), GetPlayerPos()) > Data.attackRange)
         {
             currentState = State.Chasing;
@@ -220,6 +231,7 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        if(hasDied) return;
         anim.SetTrigger("isHurt");
 
         currentHealth -= amount;
@@ -308,7 +320,7 @@ public class EnemyAI : MonoBehaviour
         anim.SetFloat("speed", moveSpeed);
     }
 
-    private bool CanSeePlayer()
+    public bool CanSeePlayer()
     {
         float distanceToPlayer = Vector2.Distance(GetMyPos(), GetPlayerPos());
 
@@ -317,6 +329,8 @@ public class EnemyAI : MonoBehaviour
             Vector2 direction = (GetPlayerPos() - GetMyPos());
 
             RaycastHit2D hit = Physics2D.Raycast(GetMyPos(), direction, Data.visionRange, playerLayerMask | obsticleLayerMask);
+
+            Debug.Log(hit.collider);
 
             if (hit.collider != null && hit.collider.CompareTag("Player"))
             {
