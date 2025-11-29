@@ -29,7 +29,7 @@ public class EnemyAttackState : CharacterState
 
         if (enemy.canAttack)
         {
-            enemy.TriggerAttack(); // <-- тепер законно
+            enemy.TriggerAttack();
 
             enemy.ChangeState(enemy.chaseState);
         }

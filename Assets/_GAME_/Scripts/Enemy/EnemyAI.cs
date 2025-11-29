@@ -53,7 +53,7 @@ public class EnemyAI : CharacterAI
     {
         Data = enemyData;
 
-        base.Init(enemyData); // <-- головне
+        base.Init(enemyData);
 
         currentHealth = Data.maxHealth;
     }
@@ -104,5 +104,10 @@ public class EnemyAI : CharacterAI
         {
             ChangeState(deadState);
         }
+    }
+    
+    public void SetPlayer(Transform p)
+    {
+        player = p;
     }
 }
