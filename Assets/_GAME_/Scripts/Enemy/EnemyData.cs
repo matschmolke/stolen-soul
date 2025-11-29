@@ -3,8 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Enemy/Enemy Data")]
 public class EnemyData : CharacterData
 {
-    public float runSpeed;
-    public float attackRange;
-    public float attackDamage;
-    public float visionRange;
+    [Header("Combat")]
+    public float attackRange = 1.0f;
+    public float attackDamage = 10f;
+
+    [Header("AI")]
+    public float visionRange = 5f;
 }
