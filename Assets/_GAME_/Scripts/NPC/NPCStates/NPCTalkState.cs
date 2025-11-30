@@ -3,6 +3,7 @@ using UnityEngine;
 public class NPCTalkState : CharacterState
 {
     private NPCAI npc;
+    private bool isTradeOpen = false;
 
     public NPCTalkState(NPCAI npc) : base(npc)
     {
@@ -12,13 +13,48 @@ public class NPCTalkState : CharacterState
     public override void Enter()
     {
         npc.anim.SetTrigger("isTalking");
-        Debug.Log("NPC: Hello traveler!");
+        
+        string message = npc.Data.isTrader ? "NPC: Hello traveler! Want to trade?" : "NPC: Hello traveler!";
+        Debug.Log(message);
     }
 
     public override void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Vector2.Distance(npc.transform.position, npc.player.position) > npc.interactionDistance)
         {
+            npc.ChangeState(npc.idleState);
+            return;
+        }
+
+        if (npc.Data.isTrader && Input.GetKeyDown(KeyCode.Space))
+        {
+            ToggleTradeWindow();
+        }
+    }
+
+    private void ToggleTradeWindow()
+    {
+        if (!isTradeOpen)
+        {
+            // Відкрити трейд
+            if (TradeManager.Instance != null)
+            {
+                TradeManager.Instance.TradeWindow.SetActive(true);
+                Time.timeScale = 0;
+                TradeManager.Instance.RefreshUI();
+            }
+            isTradeOpen = true;
+        }
+        else
+        {
+            // Закрити трейд
+            if (TradeManager.Instance != null)
+            {
+                TradeManager.Instance.TradeWindow.SetActive(false);
+                Time.timeScale = 1;
+                TradeManager.Instance.DeselectAllSlots();
+            }
+            isTradeOpen = false;
             npc.ChangeState(npc.idleState);
         }
     }
