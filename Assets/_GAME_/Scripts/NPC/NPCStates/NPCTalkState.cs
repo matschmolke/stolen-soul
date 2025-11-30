@@ -43,6 +43,9 @@ public class NPCTalkState : CharacterState
                 Time.timeScale = 0;
                 TradeManager.Instance.RefreshUI();
             }
+            
+            npc.player.GetComponent<Movements>().canAttack = false;
+            
             isTradeOpen = true;
         }
         else
@@ -54,6 +57,9 @@ public class NPCTalkState : CharacterState
                 Time.timeScale = 1;
                 TradeManager.Instance.DeselectAllSlots();
             }
+            
+            npc.player.GetComponent<Movements>().canAttack = true;
+            
             isTradeOpen = false;
             npc.ChangeState(npc.idleState);
         }

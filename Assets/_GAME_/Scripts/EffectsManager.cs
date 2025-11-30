@@ -59,7 +59,6 @@ public class EffectsManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        Debug.Log("EffectsManager UpdateUI!!!!!");
         for (int i = 0; i < slots.Length; i++)
         {
             slots[i].SetEffect(i < activeEffects.Count ? activeEffects[i] : null);
