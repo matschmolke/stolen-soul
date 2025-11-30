@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movements : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class Movements : MonoBehaviour
 
     private bool canAttack = true;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     public Transform attackOrigin;
     public float attackRadius = 1.5f;
@@ -21,12 +23,18 @@ public class Movements : MonoBehaviour
 
     public int attackDamage = 15;
 
+    private bool deadScreen = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void Update()
     {
         if (isDead)
@@ -92,6 +100,17 @@ public class Movements : MonoBehaviour
         anim.SetTrigger("isDead");
         rb.linearVelocity = Vector2.zero;
         isDead = true;
+
+        if(deadScreen) return;
+        deadScreen = true;
+        StartCoroutine(WaitforDiedScene());
+    }
+
+    private IEnumerator WaitforDiedScene()
+    {
+        yield return new WaitForSeconds(5f);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("PlayerDied");
     }
 
     //deal damage to enemy

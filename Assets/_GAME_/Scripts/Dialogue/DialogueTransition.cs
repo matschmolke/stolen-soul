@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,15 +7,19 @@ public class DialogueTransition : MonoBehaviour
     [SerializeField] private Animator dialogeWin;
     [SerializeField] private Animator dialogeImg;
 
-    private bool firstDialogue = true;
+    public bool firstDialogue = false;
+    public bool dialogueEnded = false;
 
-    private void Start()
+    private CharacterAppear characterAppear;
+
+    void Start()
     {
-        Debug.Log("To disable the dialog, go to the SceneLoader script and comment out the Guide line.");
+        characterAppear = FindFirstObjectByType<CharacterAppear>();
     }
+
     void Update()
     {
-        if (Input.anyKey && firstDialogue)
+        if (firstDialogue)
         {
             dialogeWin.SetBool("show", true);
             firstDialogue = false;
@@ -29,6 +34,7 @@ public class DialogueTransition : MonoBehaviour
     public void hideImg() 
     {
         dialogeImg.SetBool("show", false);
+        StartCoroutine(characterAppear.Disappear());
     }
 
     public void hideDialogueWin()

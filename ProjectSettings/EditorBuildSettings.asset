@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_GAME_/Scenes/StartScene.unity
+    guid: 8a47c57abf967f74eb6165d02cd6f63c
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/LoadingScene.unity
+    guid: fc1fb5e8d042d304489c4f3c1681debc
+  - enabled: 1
     path: Assets/_GAME_/Scenes/MainScene.unity
     guid: 3be489abda4884842b81edaee98af60c
   - enabled: 1
@@ -29,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME_/Scenes/TradeScene.unity
     guid: 0c410f62bf2e7d943a2bc0b46ede5869
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/PlayerDied.unity
+    guid: 5ebbfdaad1090304dbbb04d4a39f2897
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

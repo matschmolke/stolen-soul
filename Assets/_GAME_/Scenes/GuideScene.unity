@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 111.551636, y: -0.3525}
-  m_SizeDelta: {x: 564.3104, y: 86.507}
+  m_AnchoredPosition: {x: 111.551636, y: 0.3263}
+  m_SizeDelta: {x: 564.3104, y: 106.873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625218495
 MonoBehaviour:
@@ -178,11 +178,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b396677b96837aa24a108bb3169c4519, type: 3}
-    m_FontSize: 30
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 300
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -280,7 +280,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &1097852009
 RectTransform:
@@ -368,14 +368,14 @@ RectTransform:
   m_GameObject: {fileID: 1576776113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 2.8, y: 2.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1277222680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1134, y: -446}
+  m_AnchoredPosition: {x: -1134, y: -438.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1576776115
@@ -453,7 +453,20 @@ MonoBehaviour:
   text: {fileID: 625218495}
   lines:
   - Hello.
-  - How are you?
+  - You are free.
+  - You might feel a little lost right now and not really know what's going on.
+  - So let me summarize it for you.
+  - The wizard threw you into this dungeon and took the orb that contains your memories.
+  - "To get them back, you\u2019ll have to reach his fortress."
+  - "But before that, you\u2019ll need to fight his minions."
+  - "You do remember how to fight\u2026 don\u2019t you?"
+  - Press the left mouse button to attack.
+  - Pressing the appropriate number key will trigger your magic attack. It fires
+    toward your mouse cursor.
+  - Just remember. All magic uses mana.
+  - So drink beer when your mana gets low.
+  - And lastly, press E to open your inventory.
+  - Good luck.
   textSpeed: 0.05
   transition: {fileID: 1938538314}
 --- !u!1 &1938538308
@@ -493,8 +506,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1495.3448, y: -473}
-  m_SizeDelta: {x: 846.5785, y: 111}
+  m_AnchoredPosition: {x: -1495.3448, y: -458.7438}
+  m_SizeDelta: {x: 846.5785, y: 139.5124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938538310
 MonoBehaviour:
@@ -570,6 +583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTransition
   dialogeWin: {fileID: 1938538313}
   dialogeImg: {fileID: 1576776117}
+  firstDialogue: 0
+  dialogueEnded: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
