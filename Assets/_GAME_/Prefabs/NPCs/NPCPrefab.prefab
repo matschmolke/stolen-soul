@@ -194,7 +194,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -974269111
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -296,6 +296,11 @@ MonoBehaviour:
   obsticleLayerMask:
     serializedVersion: 2
     m_Bits: 8
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   currentHealth: 0
   canAttack: 1
   isDead: 0
+  deathBlinkDuration: 0.8
+  deathBlinkFrequency: 0.1
