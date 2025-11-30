@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyAI : CharacterAI, IDamageable
 {
@@ -7,6 +8,7 @@ public class EnemyAI : CharacterAI, IDamageable
     [Header("Layer Masks")]
     public LayerMask playerLayerMask;
     public LayerMask obsticleLayerMask;
+    public LayerMask enemyLayerMask;
 
     // States
     public CharacterState currentState;
@@ -18,12 +20,42 @@ public class EnemyAI : CharacterAI, IDamageable
     [HideInInspector] public float currentHealth;
     [HideInInspector] public bool canAttack = true;
     [HideInInspector] public bool isDead = false;
-    
+
     public static event System.Action<EnemyAI> OnEnemyAttack;
+
+    // Components
+    private Rigidbody2D rb;
+    private Animator anim;
+    private LootBag lootBag;
+    private SpriteRenderer spriteRenderer;
+
+    // Breadcrumbs for chasing
+    private ContextSteering contextSteering;
+    private BreadcrumbTrail breadcrumbTrail;
+    private Breadcrumb targetBreadcrumb = null;
+
+    // Target player
+    private Transform player;
+
+    // Death animation
+    public float deathBlinkDuration = 0.8f;
+    public float deathBlinkFrequency = 0.1f;
 
     protected override void Awake()
     {
         base.Awake();
+
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        lootBag = GetComponent<LootBag>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (Data)
+        {
+            Init(Data);
+        }
+
+        contextSteering = new ContextSteering(this.gameObject, obsticleLayerMask | enemyLayerMask);
     }
 
     void Start()
@@ -34,6 +66,21 @@ public class EnemyAI : CharacterAI, IDamageable
         deadState = new EnemyDeadState(this);
 
         ChangeState(idleState);
+
+        if (player == null)
+        {
+            GameObject playerObj = GameObject.FindWithTag("Player");
+            if (playerObj != null)
+            {
+                player = playerObj.transform;
+                breadcrumbTrail = playerObj.GetComponent<BreadcrumbTrail>();
+            }
+        }
+    }
+
+    void Update()
+    {
+        currentState?.Update();
     }
 
     public override void ChangeState(CharacterState newState)
@@ -43,22 +90,15 @@ public class EnemyAI : CharacterAI, IDamageable
         currentState.Enter();
     }
 
-    void Update()
-    {
-        EnsurePlayer();
-        if (player == null) return;
-        currentState?.Update();
-    }
-
-    // ----------- INIT -----------
     public void Init(EnemyData enemyData)
     {
         Data = enemyData;
-
         base.Init(enemyData);
-
         currentHealth = Data.maxHealth;
+        anim.runtimeAnimatorController = Data.animatorController;
+        lootBag.SetLoot(Data.lootTable);
     }
+
     public void OnAttackEnd()
     {
         canAttack = true;
@@ -69,7 +109,7 @@ public class EnemyAI : CharacterAI, IDamageable
         OnEnemyAttack?.Invoke(this);
     }
 
-    // ----------- VISION -----------
+    // ----------- VISION & MOVEMENT -----------
     public bool CanSeePlayer()
     {
         if (player == null) return false;
@@ -92,13 +132,31 @@ public class EnemyAI : CharacterAI, IDamageable
         return hit.collider != null && hit.collider.CompareTag("Player");
     }
 
+    private bool IsBlocked(Vector2 targetPos)
+    {
+        Vector2 origin = GetMyPos();
+        Vector2 dir = targetPos - origin;
+        float dist = dir.magnitude;
+
+        return Physics2D.Raycast(origin, dir.normalized, dist, obsticleLayerMask);
+    }
+
+    public void Move(Vector2 direction, float moveSpeed)
+    {
+        Vector2 desiredDirection = contextSteering.GetSteeringDirection(GetMyPos(), direction);
+        rb.MovePosition(rb.position + desiredDirection * moveSpeed * Time.deltaTime);
+
+        anim.SetFloat("xVelocity", desiredDirection.x);
+        anim.SetFloat("yVelocity", desiredDirection.y);
+        anim.SetFloat("speed", moveSpeed);
+    }
+
     public Vector2 GetMyPos() => transform.position;
     public Vector2 GetPlayerPos() => player.position;
 
-    // ----------- DAMAGE -----------
+    // ----------- DAMAGE & DEATH -----------
     public void TakeDamage(float dmg)
     {
-        Debug.LogWarning("Damage taken by enemy");
         if (isDead) return;
 
         currentHealth -= dmg;
@@ -109,7 +167,7 @@ public class EnemyAI : CharacterAI, IDamageable
             ChangeState(deadState);
         }
     }
-    
+
     public void SetPlayer(Transform p)
     {
         player = p;
