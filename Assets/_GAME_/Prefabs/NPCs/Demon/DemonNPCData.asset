@@ -19,8 +19,9 @@ MonoBehaviour:
   walkSpeed: 6
   runSpeed: 9
   lootTable: {fileID: 11400000, guid: 4cb635ecd1c21555682d37feac1224ee, type: 2}
-  talkRange: 1.5
+  talkRange: 2
   canBecomeHostile: 1
   hostileAttackRange: 1.5
   hostileDamage: 15
+  isTrader: 1
   enemyVersion: {fileID: 11400000, guid: 991fa42d817a56baeb230fad63c2ad52, type: 2}

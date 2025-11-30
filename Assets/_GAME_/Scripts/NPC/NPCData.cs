@@ -11,5 +11,7 @@ public class NPCData : CharacterData
     public float hostileAttackRange = 1.2f;
     public float hostileDamage = 5f;
     
+    public bool isTrader = false;
+    
     public EnemyData enemyVersion;
 }
