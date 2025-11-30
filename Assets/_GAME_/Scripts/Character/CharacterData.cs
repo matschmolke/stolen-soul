@@ -1,7 +1,17 @@
-namespace _GAME_.Scripts.Character
+using UnityEngine;
+
+public class CharacterData : ScriptableObject
 {
-    public class CharacterData
-    {
-        
-    }
+    [Header("General")] 
+    public string characterName;
+    public RuntimeAnimatorController animatorController;
+    public Sprite sprite;
+
+    [Header("Stats")]
+    public float maxHealth = 100f;
+    public float walkSpeed = 3f;
+    public float runSpeed = 5f;
+
+    [Header("Loot")]
+    public LootTable lootTable;
 }

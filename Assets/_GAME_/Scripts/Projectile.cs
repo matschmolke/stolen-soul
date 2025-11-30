@@ -31,22 +31,19 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        IDamageable damageable = collision.GetComponent<IDamageable>();
+        if (damageable != null)
         {
-            EnemyAI enemy = collision.GetComponent<EnemyAI>();
-            if (enemy != null)
-            {
-                enemy.TakeDamage(damage);
-            }
-
+            damageable.TakeDamage(damage);
             Destroy(gameObject);
+            return;
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Map"))
         {
             Destroy(gameObject);
-            Debug.Log("layer Map");
             return;
         }
     }
+
 }

@@ -1,7 +1,4 @@
-namespace _GAME_.Scripts.Interfaces
+public interface IDamageable
 {
-    public interface IDamageable
-    {
-        
-    }
+    void TakeDamage(float amount);
 }
