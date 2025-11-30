@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DemonNPCData
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   characterName: Demon
-  animatorController: {fileID: 0}
+  animatorController: {fileID: 9100000, guid: 45a6ac0c0f8af34cdb7997f7758fa28f, type: 2}
   sprite: {fileID: -5083414248682169519, guid: c7cbc140f42867b76a877b4d041d8fa7, type: 3}
   maxHealth: 200
   walkSpeed: 6
@@ -23,4 +23,4 @@ MonoBehaviour:
   canBecomeHostile: 1
   hostileAttackRange: 1.5
   hostileDamage: 15
-  enemyVersion: {fileID: 11400000, guid: 822281dbb2f124e4fbb5440263661043, type: 2}
+  enemyVersion: {fileID: 11400000, guid: 991fa42d817a56baeb230fad63c2ad52, type: 2}
