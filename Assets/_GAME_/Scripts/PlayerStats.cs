@@ -1,8 +1,9 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Collections;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -81,7 +82,6 @@ public class PlayerStats : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
