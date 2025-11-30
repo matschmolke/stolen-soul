@@ -11,7 +11,7 @@ public class Movements : MonoBehaviour
     //remembers the direction
     private Vector2 lastDirection = Vector2.down;
 
-    private bool canAttack = true;
+    public bool canAttack = true;
 
     public bool isDead = false;
 

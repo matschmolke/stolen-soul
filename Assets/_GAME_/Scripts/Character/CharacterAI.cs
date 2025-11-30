@@ -51,7 +51,6 @@ public abstract class CharacterAI : MonoBehaviour
         if (obj != null)
         {
             player = obj.transform;
-            Debug.Log($"{name} found player.");
         }
     }
 }
