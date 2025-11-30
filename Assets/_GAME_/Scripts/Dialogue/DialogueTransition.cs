@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class DialogueTransition : MonoBehaviour
 {
-    [SerializeField] private Animator dialogeWin;
+    [SerializeField] public Animator dialogeWin;
     [SerializeField] private Animator dialogeImg;
 
     private bool firstDialogue = true;

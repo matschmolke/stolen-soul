@@ -1,72 +1,102 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class DialogueNew : MonoBehaviour
 {
-    public Text text;
-    public string[] lines;
-    public float textSpeed = 0.08f;
-
-    private int index;
-
+    [Header("UI Elements")]
+    [SerializeField] private Text text;
     [SerializeField] private DialogueTransition transition;
-    void Start()
+
+    [Header("Dialogue Lines")]
+    [SerializeField] private string[] lines;
+    [SerializeField] private float textSpeed = 0.08f;
+
+    private int index = 0;
+    private bool isTyping = false;
+
+    private void Start()
     {
+        if (text == null)
+        {
+            Debug.LogError($"{name}: Text component is not assigned!");
+        }
+
+        if (transition == null)
+        {
+            Debug.LogWarning($"{name}: DialogueTransition not assigned.");
+        }
+
         text.text = string.Empty;
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (lines == null || lines.Length == 0) return;
 
-            if (text.text == lines[index])
+            if (!isTyping)
             {
                 NextLine();
             }
             else
             {
+                // закінчити набір рядка миттєво
                 StopAllCoroutines();
                 text.text = lines[index];
+                isTyping = false;
             }
         }
-
     }
 
-    public void StartDialogue()
+    public void StartDialogue(string[] dialogueLines)
     {
+        if (dialogueLines == null || dialogueLines.Length == 0) return;
+
+        lines = dialogueLines;
         index = 0;
+
+        if (transition != null)
+            transition.dialogeWin.SetBool("show", true);
+
         StartCoroutine(TypeLine());
     }
 
-    IEnumerator TypeLine()
+    private IEnumerator TypeLine()
     {
+        if (lines == null || index >= lines.Length) yield break;
+
+        isTyping = true;
+        text.text = "";
+
         foreach (char c in lines[index])
         {
             text.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+
+        isTyping = false;
     }
 
-    void NextLine()
+    private void NextLine()
     {
-        if (index < lines.Length-1)
+        index++;
+
+        if (index < lines.Length)
         {
-            index++;
-            text.text = string.Empty;
             StartCoroutine(TypeLine());
         }
         else
         {
-            //The end of the dialogue
-            transition.hideDialogueWin();
-            text.text = string.Empty;
-            
+            EndDialogue();
         }
     }
 
+    private void EndDialogue()
+    {
+        text.text = string.Empty;
+        if (transition != null)
+            transition.hideDialogueWin();
+    }
 }

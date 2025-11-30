@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Object = System.Object;
 
 public class SpellHUD : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class SpellHUD : MonoBehaviour
     {
         if (spellCaster == null)
         {
-            spellCaster = FindObjectOfType<SpellCaster>();
+            spellCaster = FindFirstObjectByType<SpellCaster>();
         }
 
         if (spellCaster == null)

@@ -97,13 +97,15 @@ public class Movements : MonoBehaviour
     //deal damage to enemy
     public void DealDamage()
     {
-        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
+        Collider2D[] targetsInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius);
 
-        foreach (Collider2D enemyCollider in enemiesInRange)
+        foreach (Collider2D collider in targetsInRange)
         {
-            EnemyAI enemy = enemyCollider.GetComponent<EnemyAI>();
-            if (enemy != null)
-                enemy.TakeDamage(attackDamage);
+            IDamageable damageable = collider.GetComponent<IDamageable>();
+            if (damageable != null)
+            {
+                damageable.TakeDamage(attackDamage);
+            }
         }
     }
 }

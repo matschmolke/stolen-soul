@@ -11,7 +11,8 @@ public class EnemyChaseState : CharacterState
 
     public override void Enter()
     {
-        character.moveSpeed = enemy.Data.runSpeed;
+        enemy.moveSpeed = enemy.Data.runSpeed;
+        Debug.Log("Enemy run speed:" + enemy.moveSpeed);
     }
 
     public override void Update()
@@ -21,9 +22,10 @@ public class EnemyChaseState : CharacterState
             enemy.ChangeState(enemy.idleState);
             return;
         }
-
+        
+        Debug.Log("Enemy sees player!");
         float distance = Vector2.Distance(enemy.GetMyPos(), enemy.GetPlayerPos());
-
+        
         if (distance <= enemy.Data.attackRange)
         {
             enemy.ChangeState(enemy.attackState);

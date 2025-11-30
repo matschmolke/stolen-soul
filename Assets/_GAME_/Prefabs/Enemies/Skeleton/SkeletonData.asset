@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34bbd8d7b68ae1e49a7f9f399504b4cc, type: 3}
   m_Name: SkeletonData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
-  enemyName: Skeleton
-  sprite: {fileID: 7446186087880272030, guid: ddd5d3ad660c688408ebf5eb5a1999ad, type: 3}
+  characterName: Skeleton
   animatorController: {fileID: 9100000, guid: eb0b7bc955fa6954bb066f653191e4fd, type: 2}
+  sprite: {fileID: 7446186087880272030, guid: ddd5d3ad660c688408ebf5eb5a1999ad, type: 3}
   maxHealth: 100
-  attackDamage: 10
   walkSpeed: 6
   runSpeed: 9
-  visionRange: 8
-  attackRange: 1.5
   lootTable: {fileID: 11400000, guid: 4f19dffd6bcbaad44b95fdca491192ab, type: 2}
+  attackRange: 1.5
+  attackDamage: 10
+  visionRange: 10

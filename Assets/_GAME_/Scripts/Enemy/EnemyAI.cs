@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyAI : CharacterAI
+public class EnemyAI : CharacterAI, IDamageable
 {
     public EnemyData Data;
 
@@ -45,6 +45,8 @@ public class EnemyAI : CharacterAI
 
     void Update()
     {
+        EnsurePlayer();
+        if (player == null) return;
         currentState?.Update();
     }
 
@@ -70,6 +72,8 @@ public class EnemyAI : CharacterAI
     // ----------- VISION -----------
     public bool CanSeePlayer()
     {
+        if (player == null) return false;
+
         Vector2 pos = GetMyPos();
         Vector2 target = GetPlayerPos();
         float dist = Vector2.Distance(pos, target);
