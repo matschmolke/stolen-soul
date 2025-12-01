@@ -24,7 +24,7 @@ public class NPCAggressiveState : CharacterState
         
         if (dist > npc.Data.hostileAttackRange * 1.2f)
         {
-            npc.Move(dir);
+            npc.Move(dir, npc.moveSpeed);
         }
     }
 }

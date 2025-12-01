@@ -5,11 +5,6 @@ public class EnemyAI : CharacterAI, IDamageable
 {
     public EnemyData Data;
 
-    [Header("Layer Masks")]
-    public LayerMask playerLayerMask;
-    public LayerMask obsticleLayerMask;
-    public LayerMask enemyLayerMask;
-
     // States
     public CharacterState currentState;
     public EnemyIdleState idleState;
@@ -23,24 +18,11 @@ public class EnemyAI : CharacterAI, IDamageable
 
     public static event System.Action<EnemyAI> OnEnemyAttack;
 
-    // Components
-    private Rigidbody2D rb;
-    private Animator anim;
-    private LootBag lootBag;
-    private SpriteRenderer spriteRenderer;
-
     // Breadcrumbs for chasing
     private ContextSteering contextSteering;
     private BreadcrumbTrail breadcrumbTrail;
     private Breadcrumb targetBreadcrumb = null;
-
-    // Target player
-    private Transform player;
-
-    // Death animation
-    public float deathBlinkDuration = 0.8f;
-    public float deathBlinkFrequency = 0.1f;
-
+    
     protected override void Awake()
     {
         base.Awake();
@@ -140,20 +122,7 @@ public class EnemyAI : CharacterAI, IDamageable
 
         return Physics2D.Raycast(origin, dir.normalized, dist, obsticleLayerMask);
     }
-
-    public void Move(Vector2 direction, float moveSpeed)
-    {
-        Vector2 desiredDirection = contextSteering.GetSteeringDirection(GetMyPos(), direction);
-        rb.MovePosition(rb.position + desiredDirection * moveSpeed * Time.deltaTime);
-
-        anim.SetFloat("xVelocity", desiredDirection.x);
-        anim.SetFloat("yVelocity", desiredDirection.y);
-        anim.SetFloat("speed", moveSpeed);
-    }
-
-    public Vector2 GetMyPos() => transform.position;
-    public Vector2 GetPlayerPos() => player.position;
-
+    
     // ----------- DAMAGE & DEATH -----------
     public void TakeDamage(float dmg)
     {
