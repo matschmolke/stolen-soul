@@ -29,6 +29,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME_/Scenes/NPCScene.unity
     guid: 7e0559e2d61511096babfb8cf59e00e7
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/TraidingScene.unity
+    guid: a677eb75cb3e9d944945086c8e067403
+  - enabled: 1
+    path: Assets/_GAME_/Scenes/ForestDung.unity
+    guid: 5b07372b7f39bb24f97be3726fd4b297
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
