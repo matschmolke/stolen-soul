@@ -129,7 +129,7 @@ public class EnemyAI : CharacterAI, IDamageable
             playerLayerMask | obsticleLayerMask
         );
 
-        return hit.collider != null && hit.collider.CompareTag("Player");
+        return hit.collider != null && hit.collider.CompareTag("PlayerTriggerCollider");
     }
 
     private bool IsBlocked(Vector2 targetPos)

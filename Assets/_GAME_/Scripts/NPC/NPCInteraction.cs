@@ -14,7 +14,7 @@ public class NPCInteraction : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        player = GameObject.FindGameObjectWithTag("PlayerTriggerCollider")?.transform;
 
         if (dialogueSystem == null)
         {

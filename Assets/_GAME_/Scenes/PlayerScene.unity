@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 610602654}
   m_Layer: 6
   m_Name: TriggerCollider
-  m_TagString: Player
+  m_TagString: PlayerTriggerCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,7 +326,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -974269111
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1321943522, guid: 61166a64c4c13194d9e9d4bf6214b8ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -368,6 +368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3bc702ba2837264c816b4fb7085d6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movements
+  canAttack: 1
+  isDead: 0
   attackOrigin: {fileID: 1884425867}
   attackRadius: 1.5
   enemyMask:

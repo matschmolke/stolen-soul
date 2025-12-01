@@ -6,9 +6,11 @@ public class Teleport : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("PlayerTriggerCollider"))
         {
-            collision.transform.position = destination.position;
+            var player = collision.transform.parent.gameObject;
+            //collision.transform.position = destination.position;
+            player.transform.position = destination.position;
         }
     }
 }
