@@ -15,10 +15,6 @@ public class NPCAI : CharacterAI, IDamageable
         public NPCIdleState idleState;
         public NPCAggressiveState aggressiveState;
         public NPCTalkState talkState;
-        
-        [Header("Layer Masks")]
-        public LayerMask playerLayerMask;
-        public LayerMask obsticleLayerMask;
 
         public bool isAggressive = false;
         
