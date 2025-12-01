@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 111.551636, y: -0.35250092}
-  m_SizeDelta: {x: 564.3104, y: 86.507}
+  m_AnchoredPosition: {x: 111.551636, y: 0.3263}
+  m_SizeDelta: {x: 564.3104, y: 106.873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625218495
 MonoBehaviour:
@@ -178,18 +178,20 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b396677b96837aa24a108bb3169c4519, type: 3}
-    m_FontSize: 30
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 300
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hello!
+  m_Text: '
+
+'
 --- !u!222 &625218496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -198,52 +200,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625218493}
   m_CullTransparentMesh: 1
---- !u!1 &650389515
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 650389517}
-  - component: {fileID: 650389516}
-  m_Layer: 0
-  m_Name: DialogueTransition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &650389516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650389515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e4c585152bdb6a4da3c255ff5ab4382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueTransition
-  dialogeWin: {fileID: 0}
-  dialogeImg: {fileID: 0}
---- !u!4 &650389517
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650389515}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1460.5554, y: -580.5432, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1277222680}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1097852005
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +280,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &1097852009
 RectTransform:
@@ -376,14 +332,13 @@ RectTransform:
   m_Children:
   - {fileID: 1938538309}
   - {fileID: 1576776114}
-  - {fileID: 650389517}
   m_Father: {fileID: 1097852009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 2189, y: 272}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 1, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1576776113
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,14 +368,14 @@ RectTransform:
   m_GameObject: {fileID: 1576776113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 2.8, y: 2.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1277222680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1807, y: -456}
+  m_AnchoredPosition: {x: -1134, y: -438.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1576776115
@@ -496,11 +451,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNew
   text: {fileID: 625218495}
-  transition: {fileID: 1938538314}
   lines:
   - Hello.
-  - How are you?
+  - You are free.
+  - You might feel a little lost right now and not really know what's going on.
+  - So let me summarize it for you.
+  - The wizard threw you into this dungeon and took the orb that contains your memories.
+  - "To get them back, you\u2019ll have to reach his fortress."
+  - "But before that, you\u2019ll need to fight his minions."
+  - "You do remember how to fight\u2026 don\u2019t you?"
+  - Press the left mouse button to attack.
+  - Pressing the appropriate number key will trigger your magic attack. It fires
+    toward your mouse cursor.
+  - Just remember. All magic uses mana.
+  - So drink beer when your mana gets low.
+  - And lastly, press E to open your inventory.
+  - Good luck.
   textSpeed: 0.05
+  transition: {fileID: 1938538314}
 --- !u!1 &1938538308
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +482,6 @@ GameObject:
   - component: {fileID: 1938538310}
   - component: {fileID: 1938538313}
   - component: {fileID: 1938538314}
-  - component: {fileID: 1938538315}
   m_Layer: 5
   m_Name: DialogueWindow
   m_TagString: Untagged
@@ -531,17 +498,17 @@ RectTransform:
   m_GameObject: {fileID: 1938538308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 625218494}
   m_Father: {fileID: 1277222680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1645, y: -449}
-  m_SizeDelta: {x: 846.5785, y: 111}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1495.3448, y: -458.7438}
+  m_SizeDelta: {x: 846.5785, y: 139.5124}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938538310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,22 +583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTransition
   dialogeWin: {fileID: 1938538313}
   dialogeImg: {fileID: 1576776117}
---- !u!114 &1938538315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938538308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bc580292a0de954d96e8d9b1109ac6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueNew
-  text: {fileID: 625218495}
-  transition: {fileID: 650389516}
-  lines: []
-  textSpeed: 0.08
+  firstDialogue: 0
+  dialogueEnded: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

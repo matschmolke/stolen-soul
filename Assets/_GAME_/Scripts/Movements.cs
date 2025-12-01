@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movements : MonoBehaviour
 {
@@ -11,7 +13,7 @@ public class Movements : MonoBehaviour
     //remembers the direction
     private Vector2 lastDirection = Vector2.down;
 
-    public bool canAttack = true;
+    private bool canAttack = true;
 
     public bool isDead = false;
 
@@ -21,12 +23,18 @@ public class Movements : MonoBehaviour
 
     public int attackDamage = 15;
 
+    private bool deadScreen = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void Update()
     {
         if (isDead)
@@ -92,21 +100,29 @@ public class Movements : MonoBehaviour
         anim.SetTrigger("isDead");
         rb.linearVelocity = Vector2.zero;
         isDead = true;
-        transform.GetChild(0).gameObject.SetActive(false); //Disable Trigger Collider
+
+        if(deadScreen) return;
+        deadScreen = true;
+        StartCoroutine(WaitforDiedScene());
+    }
+
+    private IEnumerator WaitforDiedScene()
+    {
+        yield return new WaitForSeconds(5f);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("PlayerDied");
     }
 
     //deal damage to enemy
     public void DealDamage()
     {
-        Collider2D[] targetsInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius);
+        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
 
-        foreach (Collider2D collider in targetsInRange)
+        foreach (Collider2D enemyCollider in enemiesInRange)
         {
-            IDamageable damageable = collider.GetComponent<IDamageable>();
-            if (damageable != null)
-            {
-                damageable.TakeDamage(attackDamage);
-            }
+            EnemyAI enemy = enemyCollider.GetComponent<EnemyAI>();
+            if (enemy != null)
+                enemy.TakeDamage(attackDamage);
         }
     }
 }
