@@ -33,7 +33,7 @@ public class NPCInteraction : MonoBehaviour
 
         if (isInRange && Input.GetKeyDown(KeyCode.Space))
         {
-            dialogueSystem.StartDialogue(dialogueLines);
+            //dialogueSystem.StartDialogue(dialogueLines);
         }
     }
 

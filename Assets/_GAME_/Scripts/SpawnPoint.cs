@@ -9,6 +9,9 @@ public class SpawnPoint : MonoBehaviour
         if (player != null)
         {
             player.transform.position = transform.position;
+
+            Camera.main.GetComponent<CameraController>().constrain = false;
+            Camera.main.GetComponent<CameraController>().Initialize();
         }
     }
 }

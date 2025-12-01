@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private float smoothSpeed = 5f;
 
-    [SerializeField] private bool constrain = true;
+    [SerializeField] public bool constrain = true;
 
     Vector3 desiredPos;
 
@@ -26,6 +26,11 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3(0f,-2f, transform.position.z);
+
+        if(SceneManager.GetActiveScene().name == "TraidingScene")
+        {
+            Camera.main.orthographicSize = 5f;
+        }
     }
 
     public void Initialize()
@@ -36,6 +41,7 @@ public class CameraController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+
         if (scene.name == "PlayerScene")
         {
             TryFindPlayer();
@@ -48,15 +54,29 @@ public class CameraController : MonoBehaviour
 
     }
 
+
     void LateUpdate()
     {
-        if (player == null) return;
+        if (player == null)
+        {
+                return; 
+        }
 
         desiredPos = player.transform.position + offset;
 
         if (constrain)
         {
             Constrain();
+        }
+
+        if (SceneManager.GetActiveScene().name == "TraidingScene")
+        {
+            ConstrainTraiding();
+        }
+
+        if (SceneManager.GetActiveScene().name == "ForestDung")
+        {
+            ConstrainForest();
         }
 
         transform.position = Vector3.Lerp(transform.position, desiredPos, smoothSpeed * Time.deltaTime);
@@ -69,6 +89,7 @@ public class CameraController : MonoBehaviour
 
     private void Constrain()
     {
+        
         float x = desiredPos.x;
         float y = desiredPos.y;
 
@@ -103,5 +124,17 @@ public class CameraController : MonoBehaviour
     {
         desiredPos.y = Mathf.Clamp(desiredPos.y, minY2, maxY2);
         desiredPos.x = Mathf.Clamp(desiredPos.x, minX2, maxX2);
+    }
+
+    private void ConstrainForest()
+    {
+        desiredPos.x = Mathf.Clamp(desiredPos.x, -12.3f, 15f);
+        desiredPos.y = Mathf.Max(desiredPos.y, -4.5f);
+    }
+
+    private void ConstrainTraiding()
+    {
+        desiredPos.x = Mathf.Clamp(desiredPos.x, -12.5f, 14f);
+        desiredPos.y = Mathf.Clamp(desiredPos.y, -7.5f, 7.5f);
     }
 }
