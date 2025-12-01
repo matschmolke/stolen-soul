@@ -4,7 +4,8 @@ public class SpawnPoint : MonoBehaviour
 {
     private void Start()
     {
-        GameObject player = GameObject.FindWithTag("Player");
+        GameObject playerTriggerCollider = GameObject.FindWithTag("PlayerTriggerCollider");
+        GameObject player = playerTriggerCollider.transform.parent.gameObject;
         if (player != null)
         {
             player.transform.position = transform.position;

@@ -37,7 +37,7 @@ public class ChestMechanic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("PlayerTriggerCollider"))
         {
             playerInRange = true; 
             if (!isOpen)
@@ -49,7 +49,7 @@ public class ChestMechanic : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("PlayerTriggerCollider"))
         {
             playerInRange = false;
             ChestChannel.RaiseEvent(false);

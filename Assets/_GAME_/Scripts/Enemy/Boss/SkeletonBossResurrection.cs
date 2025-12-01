@@ -11,12 +11,14 @@ public class SkeletonBossResurrection : MonoBehaviour
     {
         boss = GetComponent<EnemyAI>();
         anim = GetComponent<Animator>();
+        boss.isDead = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (hasResurected) return;
+        boss.currentState = boss.deadState;
 
         if (boss.CanSeePlayer())
         {

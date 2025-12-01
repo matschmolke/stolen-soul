@@ -10,6 +10,7 @@ TagManager:
   - SpawnPoint
   - NPC
   - NPCSpawnPoint
+  - PlayerTriggerCollider
   layers:
   - Default
   - TransparentFX

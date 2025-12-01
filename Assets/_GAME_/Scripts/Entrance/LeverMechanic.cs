@@ -51,7 +51,7 @@ public class LeverMechanic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("PlayerTriggerCollider"))
         {
             playerInRange = true;
 
@@ -64,7 +64,7 @@ public class LeverMechanic : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("PlayerTriggerCollider"))
         {
             playerInRange = false;
             EntranceChannel.RaiseEvent(false);
