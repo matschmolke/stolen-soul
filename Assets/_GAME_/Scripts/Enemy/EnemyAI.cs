@@ -20,8 +20,8 @@ public class EnemyAI : CharacterAI, IDamageable
 
     // Breadcrumbs for chasing
     private ContextSteering contextSteering;
-    private BreadcrumbTrail breadcrumbTrail;
-    private Breadcrumb targetBreadcrumb = null;
+    public BreadcrumbTrail breadcrumbTrail;
+    public Breadcrumb targetBreadcrumb = null;
     
     protected override void Awake()
     {
@@ -114,7 +114,7 @@ public class EnemyAI : CharacterAI, IDamageable
         return hit.collider != null && hit.collider.CompareTag("Player");
     }
 
-    private bool IsBlocked(Vector2 targetPos)
+    public bool IsBlocked(Vector2 targetPos)
     {
         Vector2 origin = GetMyPos();
         Vector2 dir = targetPos - origin;
