@@ -33,6 +33,6 @@ public class EnemyChaseState : CharacterState
         }
 
         Vector2 dir = (enemy.GetPlayerPos() - enemy.GetMyPos()).normalized;
-        character.Move(dir);
+        enemy.Move(dir, enemy.Data.walkSpeed);
     }
 }
