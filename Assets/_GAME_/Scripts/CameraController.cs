@@ -25,8 +25,12 @@ public class CameraController : MonoBehaviour
     private bool onlyZone2 = false;
     void Start()
     {
-        TryFindPlayer();
+        transform.position = new Vector3(0f,-2f, transform.position.z);
+    }
 
+    public void Initialize()
+    {
+        TryFindPlayer();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 

@@ -36,7 +36,7 @@ public class LeverMechanic : MonoBehaviour
             
         }
     }
-    private void TurnOnLever()
+    public void TurnOnLever()
     {
         isOpen = true;
         leverAnim.SetBool("turnOn", true);
