@@ -7,7 +7,14 @@ public abstract class CharacterAI : MonoBehaviour
     public Transform player;
     public SpriteRenderer spriteRenderer;
     public LootBag lootBag;
-
+    
+    [Header("Layer Masks")]
+    public LayerMask playerLayerMask;
+    public LayerMask obsticleLayerMask;
+    public LayerMask enemyLayerMask;
+    
+    private ContextSteering contextSteering;
+    
     public float moveSpeed = 2f;
 
     public virtual void Init(CharacterData data)
@@ -30,16 +37,22 @@ public abstract class CharacterAI : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         lootBag = GetComponent<LootBag>();
+        
+        contextSteering = new ContextSteering(this.gameObject, obsticleLayerMask | enemyLayerMask);
+    }
+    
+    public void Move(Vector2 direction, float moveSpeed)
+    {
+        Vector2 desiredDirection = contextSteering.GetSteeringDirection(GetMyPos(), direction);
+        rb.MovePosition(rb.position + desiredDirection * moveSpeed * Time.deltaTime);
+
+        anim.SetFloat("xVelocity", desiredDirection.x);
+        anim.SetFloat("yVelocity", desiredDirection.y);
+        anim.SetFloat("speed", moveSpeed);
     }
 
-    public void Move(Vector2 direction)
-    {
-        rb.MovePosition(rb.position + direction * moveSpeed * Time.deltaTime);
-        
-        anim.SetFloat("xVelocity", direction.x);
-        anim.SetFloat("yVelocity", direction.y);
-        anim.SetFloat("speed", moveSpeed);    
-    }
+    public Vector2 GetMyPos() => transform.position;
+    public Vector2 GetPlayerPos() => player.position;
 
     public abstract void ChangeState(CharacterState newState);
     
