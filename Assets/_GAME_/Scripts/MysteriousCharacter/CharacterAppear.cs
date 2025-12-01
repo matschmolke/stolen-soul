@@ -20,18 +20,33 @@ public class CharacterAppear : MonoBehaviour
     private DialogueTransition firstDialogue;
     private CameraController cam;
 
+    private Rigidbody2D playerRb;
+    private Animator playerAnim;
+
     void Start()
     {
         appearEffect = GetComponent<Animator>();
         character.enabled = false;
 
         cam = FindFirstObjectByType<CameraController>();
+        playerRb = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
+        playerAnim = GameObject.FindWithTag("Player").GetComponent<Animator>();
+
+        if (playerRb && playerAnim == null)
+        {
+            Debug.LogError("Player not found in the scene.");
+        }
     }
 
     void Update()
     {
         if (Input.anyKeyDown && !hasAppeared)
         {
+            playerRb.linearVelocity = Vector2.zero;
+
+            playerAnim.SetFloat("speed", 0f);      
+            playerAnim.SetFloat("yVelocity", -1f);
+
             FreezeScene();
 
             hasAppeared = true;

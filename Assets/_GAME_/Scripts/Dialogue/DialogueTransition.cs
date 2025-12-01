@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class DialogueTransition : MonoBehaviour
 {
-    [SerializeField] public Animator dialogeWin;
+    [SerializeField] private Animator dialogeWin;
     [SerializeField] private Animator dialogeImg;
 
     public bool firstDialogue = false;
@@ -31,7 +31,7 @@ public class DialogueTransition : MonoBehaviour
         dialogeImg.SetBool("show", true);
     }
 
-    public void hideImg() 
+    public void hideImg()
     {
         dialogeImg.SetBool("show", false);
         StartCoroutine(characterAppear.Disappear());
