@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Armor
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: de33d57b-0423-49de-846f-7c0cbd2bbefc
+  Id: a0ed22b9-eb35-48b6-b171-c1550d5579c4
   itemType: 4
-  itemName: Armor
+  itemName: Iron Armor
   itemSprite: {fileID: 7397270247603054716, guid: 6af47418e7d76ee3ca678c54482ab860, type: 3}
   description: 'Negates <b>+10</b> damage.
 
@@ -29,3 +29,4 @@ MonoBehaviour:
   armorValue: 10
   effects:
   - {fileID: 11400000, guid: 4933f9ec39ece8b42a2be8c9472e56a1, type: 2}
+  armorSpriteLibrary: {fileID: 7108339969198208228, guid: f12b16b5cdc34c940923b449d8aa898f, type: 3}

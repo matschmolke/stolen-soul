@@ -7222,7 +7222,7 @@ GameObject:
   - component: {fileID: 1970561140}
   m_Layer: 5
   m_Name: PlayerImage
-  m_TagString: Untagged
+  m_TagString: InvPlayerImg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7236,15 +7236,15 @@ RectTransform:
   m_GameObject: {fileID: 1970561138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 11, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1368113472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 119, y: -662}
-  m_SizeDelta: {x: 350, y: 450}
+  m_AnchoredPosition: {x: 141, y: -662}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970561140
 MonoBehaviour:
@@ -7266,7 +7266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2847181348054271617, guid: f252ccc7a3152c5309fc2df6436c618d, type: 3}
+  m_Sprite: {fileID: -1321943522, guid: 61166a64c4c13194d9e9d4bf6214b8ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

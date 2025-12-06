@@ -2,6 +2,7 @@ using Mono.Cecil;
 using System;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 [Flags]
 public enum EquipmentType
@@ -22,6 +23,9 @@ public class Equipment : ItemBase
 
     [Header("Special Effects")]
     public StaticEffect[] effects = null;
+
+    [Header("Sprites for Armor")]
+    public SpriteLibraryAsset armorSpriteLibrary;
 
     public void Awake()
     {

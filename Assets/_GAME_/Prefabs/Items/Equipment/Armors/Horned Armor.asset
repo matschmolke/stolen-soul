@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
+  m_Name: Horned Armor
+  m_EditorClassIdentifier: Assembly-CSharp::Equipment
+  Id: c5926ce3-67c3-4026-a932-870bcb381291
+  itemType: 4
+  itemName: Horned Armor
+  itemSprite: {fileID: -5101456979211111621, guid: 4264295ed41e0740bb3f03bc92ad4cf5, type: 3}
+  description: 'Negates <b>+25</b> damage.
+
+    Increases Spell Power by 25%'
+  isStackable: 0
+  maxStackSize: 1
+  isUnique: 0
+  dropChance: 10
+  value: 70
+  equipmentType: 2
+  attackDmg: 0
+  armorValue: 25
+  effects:
+  - {fileID: 11400000, guid: 320e280422db51341be6ab9936fe9af6, type: 2}
+  armorSpriteLibrary: {fileID: 7108339969198208228, guid: 572ef4c6882e73f4eb8d547b646b040e, type: 3}

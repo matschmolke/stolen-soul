@@ -6,10 +6,13 @@ public class EquipItem : MonoBehaviour
     private ItemBase previousItem = null;
     private ItemSlot slot;
 
+    private ChangeArmor armorChanger;
+
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerStats = player.GetComponent<PlayerStats>();
+        armorChanger = player.GetComponent<ChangeArmor>();
 
         slot = transform.GetComponent<ItemSlot>();
 
@@ -23,6 +26,7 @@ public class EquipItem : MonoBehaviour
         if(item == null && previousItem != null)
         {
             UnEquip(previousItem);
+            armorChanger.UpdateArmor(item);
             previousItem = null;
             return;
         }
@@ -31,6 +35,7 @@ public class EquipItem : MonoBehaviour
         {
             if(previousItem != null) UnEquip(previousItem);
             Equip(item);
+            armorChanger.UpdateArmor(item);
             previousItem = item;
         }
     }

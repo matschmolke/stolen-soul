@@ -77,15 +77,7 @@ public class Movements : MonoBehaviour
             anim.SetTrigger("isAttacking");
 
             DealDamage();
-
-            canAttack = false;
         }
-    }
-
-    //function called at the end of the attack animation
-    public void EndAttack()
-    {
-        canAttack = true;
     }
 
     //for testing purposes
