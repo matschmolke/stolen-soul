@@ -29,6 +29,8 @@ public class CharacterAppear : MonoBehaviour
         character.enabled = false;
 
         cam = FindFirstObjectByType<CameraController>();
+        cam.CutSceneCamera();
+
         playerRb = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
         playerAnim = GameObject.FindWithTag("Player").GetComponent<Animator>();
 

@@ -247,6 +247,9 @@ GameObject:
   - component: {fileID: 2091299005}
   - component: {fileID: 2091299006}
   - component: {fileID: 2091299007}
+  - component: {fileID: 2091299009}
+  - component: {fileID: 2091299008}
+  - component: {fileID: 2091299010}
   m_Layer: 2
   m_Name: player
   m_TagString: Player
@@ -328,7 +331,7 @@ SpriteRenderer:
   m_SortingLayerID: -974269111
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1321943522, guid: 61166a64c4c13194d9e9d4bf6214b8ec, type: 3}
+  m_Sprite: {fileID: -299975116, guid: a82a03c0877a6db4fa7b097b13253011, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -519,6 +522,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b7031de9e865d41b0fd53b67fcb1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+--- !u!114 &2091299008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091298994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 2.7029406e-16
+  m_labelHash: 2.2983657e-30
+  m_SpriteKey: 0
+  m_SpriteHash: 932841592
+--- !u!114 &2091299009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091298994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 2b4f647e9ee70154c9ebe57dfaa35495, type: 3}
+--- !u!114 &2091299010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091298994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658d1576e6743804690001e324e02756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeArmor
+  defaultArmorLibrary: {fileID: 7108339969198208228, guid: 2b4f647e9ee70154c9ebe57dfaa35495, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

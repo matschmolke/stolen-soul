@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,14 +24,20 @@ public class CameraController : MonoBehaviour
     private float maxX2 = 56f;
 
     private bool onlyZone2 = false;
-    void Start()
+    private void Start()
     {
-        transform.position = new Vector3(0f,-2f, transform.position.z);
+        Initialize();
 
-        if(SceneManager.GetActiveScene().name == "TraidingScene")
+        if (SceneManager.GetActiveScene().name == "TraidingScene")
         {
             Camera.main.orthographicSize = 5f;
         }
+    }
+
+    public void CutSceneCamera()
+    { 
+        player = null;
+        transform.position = new Vector3(0f, -2f, transform.position.z);
     }
 
     public void Initialize()
@@ -53,7 +60,6 @@ public class CameraController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
     }
-
 
     void LateUpdate()
     {
