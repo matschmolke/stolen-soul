@@ -36,7 +36,6 @@ public class NPCTalkState : CharacterState
     {
         if (!isTradeOpen)
         {
-            // Відкрити трейд
             if (TradeManager.Instance != null)
             {
                 TradeManager.Instance.TradeWindow.SetActive(true);
@@ -50,7 +49,6 @@ public class NPCTalkState : CharacterState
         }
         else
         {
-            // Закрити трейд
             if (TradeManager.Instance != null)
             {
                 TradeManager.Instance.TradeWindow.SetActive(false);
