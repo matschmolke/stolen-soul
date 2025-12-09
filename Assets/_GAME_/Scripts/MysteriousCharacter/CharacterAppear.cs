@@ -17,11 +17,13 @@ public class CharacterAppear : MonoBehaviour
     [SerializeField] private Transform destinationPoint;
     [SerializeField] private LeverMechanic lever;
 
-    private DialogueTransition firstDialogue;
+    private DialogueTrigger dialogue;
     private CameraController cam;
 
     private Rigidbody2D playerRb;
     private Animator playerAnim;
+
+    public DialogueEndEventChannel dialogueEndEvent;
 
     void Start()
     {
@@ -133,10 +135,10 @@ public class CharacterAppear : MonoBehaviour
             yield return null;
         }
 
-        firstDialogue = FindFirstObjectByType<DialogueTransition>();
+        dialogue = GetComponent<DialogueTrigger>();
 
         yield return new WaitForSeconds(3f);
-        firstDialogue.firstDialogue = true;
+        dialogue.StartDialogue();
     }
 
     public static void FreezeScene()
@@ -156,6 +158,23 @@ public class CharacterAppear : MonoBehaviour
          }
     }
 
+    private void HandleDialogueEnded()
+    {
+        StartCoroutine(Disappear());
+    }
+
+
+    private void OnEnable()
+    {
+        if (dialogueEndEvent != null)
+            dialogueEndEvent.OnEventRaised += HandleDialogueEnded;
+    }
+
+    private void OnDisable()
+    {
+        if (dialogueEndEvent != null)
+            dialogueEndEvent.OnEventRaised -= HandleDialogueEnded;
+    }
 
 
 }

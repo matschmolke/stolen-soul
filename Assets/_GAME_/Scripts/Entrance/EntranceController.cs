@@ -27,6 +27,9 @@ public class EntranceController : MonoBehaviour
     private void TogglePrompt(bool show)
     {
         //gameInfo.enabled = show;
-        keyInfo.enabled= show;
+        if (keyInfo != null)
+        {
+            keyInfo.enabled = show;
+        }
     }
 }

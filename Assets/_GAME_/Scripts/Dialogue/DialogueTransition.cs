@@ -10,12 +10,7 @@ public class DialogueTransition : MonoBehaviour
     public bool firstDialogue = false;
     public bool dialogueEnded = false;
 
-    private CharacterAppear characterAppear;
-
-    void Start()
-    {
-        characterAppear = FindFirstObjectByType<CharacterAppear>();
-    }
+    public DialogueEndEventChannel dialogueEndEvent;
 
     void Update()
     {
@@ -34,7 +29,7 @@ public class DialogueTransition : MonoBehaviour
     public void hideImg()
     {
         dialogeImg.SetBool("show", false);
-        StartCoroutine(characterAppear.Disappear());
+        dialogueEndEvent.RaiseEvent();
     }
 
     public void hideDialogueWin()

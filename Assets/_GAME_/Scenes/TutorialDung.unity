@@ -33104,9 +33104,9 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -974269111
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayerID: -1533075745
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -34252,6 +34252,7 @@ GameObject:
   - component: {fileID: 927722800}
   - component: {fileID: 927722799}
   - component: {fileID: 927722798}
+  - component: {fileID: 927722801}
   m_Layer: 0
   m_Name: effect
   m_TagString: Untagged
@@ -34290,6 +34291,7 @@ MonoBehaviour:
   character: {fileID: 1211583443}
   destinationPoint: {fileID: 915022258}
   lever: {fileID: 791713730}
+  dialogueEndEvent: {fileID: 11400000, guid: 5b18cab4f4ca07243b7943ca05da46bb, type: 2}
 --- !u!95 &927722799
 Animator:
   serializedVersion: 7
@@ -34370,6 +34372,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &927722801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927722796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac1ea93eb0737f4ba3d78df6d015bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue: {fileID: 11400000, guid: 461010ba162896c49b11b8350c162ce1, type: 2}
+  dialogueEvent: {fileID: 11400000, guid: e6a4d947f17cdb04db597937a317dfb3, type: 2}
+  startOnCollision: 0
 --- !u!1 &948721950
 GameObject:
   m_ObjectHideFlags: 0

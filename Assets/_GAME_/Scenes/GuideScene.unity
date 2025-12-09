@@ -119,6 +119,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &201421008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201421009}
+  - component: {fileID: 201421010}
+  m_Layer: 0
+  m_Name: DialogueControllerUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &201421009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201421008}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 91.47153, y: 507.9401, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &201421010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201421008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9f89f193bc1a643b06eb52f702c97e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  dialogueEvent: {fileID: 11400000, guid: e6a4d947f17cdb04db597937a317dfb3, type: 2}
+  dialogueNew: {fileID: 1576776118}
+  transition: {fileID: 1938538314}
 --- !u!1 &625218493
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,22 +498,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNew
   text: {fileID: 625218495}
-  lines:
-  - Hello.
-  - You are free.
-  - You might feel a little lost right now and not really know what's going on.
-  - So let me summarize it for you.
-  - The wizard threw you into this dungeon and took the orb that contains your memories.
-  - "To get them back, you\u2019ll have to reach his fortress."
-  - "But before that, you\u2019ll need to fight his minions."
-  - "You do remember how to fight\u2026 don\u2019t you?"
-  - Press the left mouse button to attack.
-  - Pressing the appropriate number key will trigger your magic attack. It fires
-    toward your mouse cursor.
-  - Just remember. All magic uses mana.
-  - So drink beer when your mana gets low.
-  - And lastly, press E to open your inventory.
-  - Good luck.
+  dialogueImg: {fileID: 0}
+  dialogue: {fileID: 0}
   textSpeed: 0.05
   transition: {fileID: 1938538314}
 --- !u!1 &1938538308
@@ -585,8 +618,10 @@ MonoBehaviour:
   dialogeImg: {fileID: 1576776117}
   firstDialogue: 0
   dialogueEnded: 0
+  dialogueEndEvent: {fileID: 11400000, guid: 5b18cab4f4ca07243b7943ca05da46bb, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1097852009}
+  - {fileID: 201421009}
