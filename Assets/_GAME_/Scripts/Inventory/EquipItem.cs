@@ -26,7 +26,12 @@ public class EquipItem : MonoBehaviour
         if(item == null && previousItem != null)
         {
             UnEquip(previousItem);
-            armorChanger.UpdateArmor(item);
+
+            if ((slot.accaptableEquipmentTypes & EquipmentType.Armor) != 0)
+            {
+                armorChanger.UpdateArmor(item);
+            }
+
             previousItem = null;
             return;
         }
@@ -35,7 +40,12 @@ public class EquipItem : MonoBehaviour
         {
             if(previousItem != null) UnEquip(previousItem);
             Equip(item);
-            armorChanger.UpdateArmor(item);
+
+            if ((slot.accaptableEquipmentTypes & EquipmentType.Armor) != 0)
+            {
+                armorChanger.UpdateArmor(item);
+            }
+
             previousItem = item;
         }
     }
