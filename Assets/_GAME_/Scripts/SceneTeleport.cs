@@ -10,6 +10,7 @@ public class SceneTeleport : MonoBehaviour
         if (collision.CompareTag("PlayerTriggerCollider"))
         {
             SceneManager.LoadScene(targetScene);
+            SceneManager.LoadSceneAsync("mod1", LoadSceneMode.Additive);
         }
     }
 }

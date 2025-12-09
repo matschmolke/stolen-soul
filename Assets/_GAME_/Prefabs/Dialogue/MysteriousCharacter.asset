@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c35a585777e99542b16f845392adef0, type: 3}
+  m_Name: MysteriousCharacter
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  image: {fileID: 21300000, guid: b97b775fd1edb394f910093394ef633e, type: 3}
+  lines:
+  - Hello.
+  - You are free.
+  - You might feel a little lost right now and not really know what's going on.
+  - So let me summarize it for you.
+  - The wizard threw you into this dungeon and took the orb that contains your memories.
+  - "To get them back, you\u2019ll have to reach his fortress."
+  - "But before that, you\u2019ll need to fight his minions."
+  - "You do remember how to fight\u2026 don\u2019t you?"
+  - Press the left mouse button to attack.
+  - Pressing the appropriate number key will trigger your magic attack. It fires
+    toward your mouse cursor.
+  - Just remember, all magic uses mana.
+  - So drink beer when your mana gets low.
+  - And lastly, press E to open your inventory.
+  - Good luck.

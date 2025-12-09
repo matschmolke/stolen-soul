@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DialogueNew : MonoBehaviour
 {
+    [Header("UI")]
     public Text text;
-    public string[] lines;
+    public Image dialogueImg;
+
+    [Header("Scriptable Object Dialogue")]
+    public DialogueData dialogue;
+
     public float textSpeed = 0.08f;
 
     private int index;
@@ -17,6 +22,11 @@ public class DialogueNew : MonoBehaviour
     void Start()
     {
         text.text = string.Empty;
+
+        if (dialogue != null)
+        {
+            LoadDialogue(dialogue);
+        }
     }
 
     void Update()
@@ -24,17 +34,28 @@ public class DialogueNew : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            if (text.text == lines[index])
+            if (text.text == dialogue.lines[index])
             {
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                text.text = lines[index];
+                text.text = dialogue.lines[index];
             }
         }
 
+    }
+
+    public void LoadDialogue(DialogueData data)
+    {
+        dialogue = data;
+
+        text.text = string.Empty;
+        if (dialogueImg != null && dialogue.image != null)
+        {
+            dialogueImg.sprite = dialogue.image;
+        }
     }
 
     public void StartDialogue()
@@ -45,7 +66,7 @@ public class DialogueNew : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index])
+        foreach (char c in dialogue.lines[index])
         {
             text.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -54,7 +75,7 @@ public class DialogueNew : MonoBehaviour
 
     void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < dialogue.lines.Count - 1)
         {
             index++;
             text.text = string.Empty;

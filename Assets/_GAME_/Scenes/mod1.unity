@@ -229,7 +229,7 @@ Animator:
   m_GameObject: {fileID: 83421882}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e6c4642421876b141a3b2b72ec78ed58, type: 2}
+  m_Controller: {fileID: 9100000, guid: 90b59d8321b6e6444a22d207f8c8c094, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -978,6 +978,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &570951538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 570951540}
+  - component: {fileID: 570951539}
+  m_Layer: 0
+  m_Name: DialogueControllerUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &570951539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570951538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fed2f50cef759548873d688b2d2b31a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntranceController
+  EntranceChannel: {fileID: 11400000, guid: 8e1d928f756276f499c4890c0511d527, type: 2}
+  gameInfo: {fileID: 700855854}
+  keyInfo: {fileID: 83421884}
+--- !u!4 &570951540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570951538}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.12098, y: 1.16488, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &641027311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2846,6 +2893,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 693217892}
   - {fileID: 1608469617}
+  - {fileID: 570951540}
   - {fileID: 1534192922}
   - {fileID: 1002280354}
   - {fileID: 666850920}
