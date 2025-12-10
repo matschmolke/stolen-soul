@@ -42,7 +42,6 @@ public class SpellCaster : MonoBehaviour
             if (cooldownTimers[i] > 0) continue;
             if (Input.GetKeyDown(spells[i].castKey))
             {
-                Debug.Log("Spell casting!!!");
                 Cast(i);
             }
         }
@@ -50,7 +49,6 @@ public class SpellCaster : MonoBehaviour
 
     void Cast(int index)
     {
-        Debug.Log("void CAST");
         Spell spell = spells[index];
 
         if (PlayerStats.Instance.currentMana < spell.manaCost) return;

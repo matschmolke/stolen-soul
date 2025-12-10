@@ -1,6 +1,9 @@
 using System.Collections;
 using UnityEngine;
+using System;
+using System.Diagnostics;
 using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class Movements : MonoBehaviour
 {
@@ -112,9 +115,24 @@ public class Movements : MonoBehaviour
 
         foreach (Collider2D enemyCollider in enemiesInRange)
         {
-            EnemyAI enemy = enemyCollider.GetComponent<EnemyAI>();
-            if (enemy != null)
-                enemy.TakeDamage(attackDamage);
+            IDamageable character;
+            
+            try
+            {
+                character = enemyCollider.GetComponent<IDamageable>();
+                if (character != null)
+                {
+                    character.TakeDamage(attackDamage);
+                }
+                else
+                {
+                    Debug.Log("Character not found");
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e.Message);
+            }
         }
     }
 }

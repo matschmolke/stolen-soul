@@ -143,7 +143,7 @@ public class CharacterAppear : MonoBehaviour
 
     public static void FreezeScene()
     {
-        foreach (MonoBehaviour mb in FindObjectsOfType<Movements>())
+        foreach (MonoBehaviour mb in FindObjectsByType<Movements>(FindObjectsSortMode.None))
         {
             if (mb is CharacterAppear) continue;
             mb.enabled = false;
@@ -152,7 +152,7 @@ public class CharacterAppear : MonoBehaviour
 
     public static void UnfreezeScene()
     {
-         foreach (MonoBehaviour mb in FindObjectsOfType<Movements>())
+         foreach (MonoBehaviour mb in FindObjectsByType<Movements>(FindObjectsSortMode.None))
          {
              mb.enabled = true;
          }

@@ -13,7 +13,6 @@ public class EnemyChaseState : CharacterState
     public override void Enter()
     {
         enemy.moveSpeed = enemy.Data.runSpeed;
-        Debug.Log("Enemy run speed:" + enemy.moveSpeed);
     }
 
     public override void Update()

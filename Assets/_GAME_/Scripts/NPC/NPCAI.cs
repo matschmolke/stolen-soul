@@ -49,6 +49,8 @@ public class NPCAI : CharacterAI, IDamageable
 
         public void TakeDamage(float damage)
         {
+                if (Data.isTrader) return;
+
                 Debug.Log($"NPC took {damage} damage");
                 if (!isAggressive)
                 {
@@ -79,5 +81,5 @@ public class NPCAI : CharacterAI, IDamageable
                 Debug.Log("NPC successfully converted to EnemyAI!");
         }
 
-
+        CharacterData IDamageable.Data => Data;
 }
