@@ -1,28 +1,31 @@
 using System.Collections;
 using UnityEngine;
-
+using System;
+using System.Collections.Generic;
 public class SpellCaster : MonoBehaviour
 {
-    public Spell[] spells;
+    public List<Spell> spells;
     private float[] cooldownTimers;
     private Camera mainCam;
+    public event Action OnSpellsChanged;
 
     void Start()
     {
-        if (spells == null || spells.Length == 0)
-        {
-            Debug.LogError("No spells assigned in SpellCaster!");
-            return;
-        }
-
-        cooldownTimers = new float[spells.Length];
+        cooldownTimers = new float[spells.Count];
         mainCam = Camera.main;
         if (mainCam == null)
             Debug.LogError("No MainCamera found in the scene!");
     }
 
+    public void AddSpell(Spell newSpell)
+    {
+        spells.Add(newSpell);
+        OnSpellsChanged?.Invoke();
+    }
+
     void Update()
     {
+        if (spells == null || spells.Count == 0) return;
         HandleCooldowns();
         HandleInput();
     }
@@ -37,7 +40,7 @@ public class SpellCaster : MonoBehaviour
 
     void HandleInput()
     {
-        for (int i = 0; i < spells.Length; i++)
+        for (int i = 0; i < spells.Count; i++)
         {
             if (cooldownTimers[i] > 0) continue;
             if (Input.GetKeyDown(spells[i].castKey))
