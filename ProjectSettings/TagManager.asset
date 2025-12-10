@@ -12,6 +12,8 @@ TagManager:
   - NPCSpawnPoint
   - PlayerTriggerCollider
   - InvPlayerImg
+  - DialogueWindow
+  - DialogueImage
   layers:
   - Default
   - TransparentFX
