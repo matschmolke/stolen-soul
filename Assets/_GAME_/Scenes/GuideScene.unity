@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 625218495}
   m_Layer: 5
   m_Name: Text (Legacy)
-  m_TagString: Untagged
+  m_TagString: DialogueWindow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 1576776118}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: DialogueImage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -497,8 +497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc580292a0de954d96e8d9b1109ac6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNew
-  text: {fileID: 625218495}
-  dialogueImg: {fileID: 0}
   dialogue: {fileID: 0}
   textSpeed: 0.05
   transition: {fileID: 1938538314}

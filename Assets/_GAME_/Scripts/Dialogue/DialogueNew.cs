@@ -7,9 +7,8 @@ using UnityEngine.UI;
 
 public class DialogueNew : MonoBehaviour
 {
-    [Header("UI")]
-    public Text text;
-    public Image dialogueImg;
+    private Text text;
+    private Image dialogueImg;
 
     [Header("Scriptable Object Dialogue")]
     public DialogueData dialogue;
@@ -19,13 +18,19 @@ public class DialogueNew : MonoBehaviour
     private int index;
 
     [SerializeField] private DialogueTransition transition;
+
+    private void Awake()
+    {
+        text = GameObject.FindGameObjectWithTag("DialogueWindow").GetComponent<Text>();
+        dialogueImg = GameObject.FindGameObjectWithTag("DialogueImage").GetComponent<Image>();
+    }
     void Start()
     {
         text.text = string.Empty;
 
         if (dialogue != null)
         {
-            LoadDialogue(dialogue);
+            //LoadDialogue(dialogue);
         }
     }
 
@@ -34,7 +39,7 @@ public class DialogueNew : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            if (text.text == dialogue.lines[index])
+            if (text.text == dialogue.lines[index] && dialogue != null)
             {
                 NextLine();
             }
