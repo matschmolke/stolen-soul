@@ -68,7 +68,7 @@ public class EnemyAI : CharacterAI, IDamageable
     public override void ChangeState(CharacterState newState)
     {
         currentState?.Exit();
-        currentState = newState;
+        currentState = newState;        
         currentState.Enter();
     }
 
@@ -141,4 +141,6 @@ public class EnemyAI : CharacterAI, IDamageable
     {
         player = p;
     }
+    
+    CharacterData IDamageable.Data => Data;
 }

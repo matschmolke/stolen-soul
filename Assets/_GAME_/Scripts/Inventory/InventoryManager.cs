@@ -65,7 +65,7 @@ public class InventoryManager : MonoBehaviour
 
     public bool AddItem(ItemBase item, int quantity)
     {
-       Debug.Log("itemName = " + item.itemName + ", type = " + item.itemType + ", quantity = " + quantity);
+       //Debug.Log("itemName = " + item.itemName + ", type = " + item.itemType + ", quantity = " + quantity);
 
        return playerInventory.AddItem(item, quantity);
     }
