@@ -36,16 +36,35 @@ public class EnemyChaseState : CharacterState
             var crumb = FindNextBreadcrumb();
             if (crumb != null)
             {
+                Debug.Log("Chasing breadcrumb at " + crumb.position);
                 targetPos = crumb.position;
             }
             else
             {
+                Debug.Log("Lost the player, switching to idle.");
                 enemy.ChangeState(enemy.idleState);
                 return;
             }
         }
 
-        Vector2 dir = (enemy.GetPlayerPos() - enemy.GetMyPos()).normalized;
+        // Destroy breadcrumb if close enough
+        if (targetBreadcrumb != null)
+        {
+            float distToCrumb = Vector2.Distance(enemy.GetMyPos(), targetBreadcrumb.position);
+
+            if (distToCrumb < 0.2f)
+            {
+                targetBreadcrumb = targetBreadcrumb.next;
+
+                if (targetBreadcrumb == null)
+                {
+                    enemy.ChangeState(enemy.idleState);
+                    return;
+                }
+            }
+        }
+
+        Vector2 dir = (targetPos - enemy.GetMyPos()).normalized;
         enemy.Move(dir, enemy.Data.walkSpeed);
     }
     
