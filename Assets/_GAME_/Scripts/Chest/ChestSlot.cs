@@ -4,14 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 
-public enum SlotOwner
-{
-    Player,
-    Trader,
-    Chest
-}
-
-public class TradeSlot : MonoBehaviour,
+public class ChestSlot : MonoBehaviour,
     IPointerClickHandler,
     IBeginDragHandler,
     IDragHandler,
@@ -28,7 +21,7 @@ public class TradeSlot : MonoBehaviour,
     public ItemBase Item => Inventory.GetItem(slotId).Item;
     public int quantity => Inventory.GetItem(slotId).Quantity;
 
-    public InventoryBase Inventory { get; private set; }
+    public InventoryBase Inventory { get; set; }
 
     [SerializeField] private TMP_Text quantityText;
     [SerializeField] private Image itemImage;
@@ -38,18 +31,6 @@ public class TradeSlot : MonoBehaviour,
     private TradeManager manager;
     private Canvas canvas;
     private Image dragImage;
-
-    private void Awake()
-    {
-        if (Owner == SlotOwner.Player)
-        {
-            Inventory = PlayerInventory.Instance;
-        }
-        else
-        {
-            Inventory = TraderInventory.Instance;
-        }
-    }
 
     private void Start()
     {
@@ -130,85 +111,84 @@ public class TradeSlot : MonoBehaviour,
 
     public void OnDrop(PointerEventData eventData)
     {
-        var originTradeSlot = eventData.pointerDrag?.GetComponent<TradeSlot>();
-        var originOfferSlot = eventData.pointerDrag?.GetComponent<OfferSlot>();
+        var originSlot = eventData.pointerDrag?.GetComponent<ChestSlot>();
 
-        // Nie ma źródła
-        if (originTradeSlot == null && originOfferSlot == null) return;
+        if (originSlot == null)
+            return;
 
-        // ===========================================
-        //  PRZYPADEK 1 — OfferSlot -> TradeSlot
-        //  (zwracamy item do inventory)
-        // ===========================================
-        if (originOfferSlot != null)
+        if (originSlot.Owner == this.Owner)
         {
-            if (originOfferSlot.Owner != this.Owner) return; // gracz nie może wrzucać do tradera i odwrotnie
-
-            // SLOT PUSTY → po prostu wstawiamy item z oferty do inventory
-            if (Item == null)
-            {
-                Inventory.AddItemAt(slotId, originOfferSlot.Item, originOfferSlot.quantity);
-                originOfferSlot.ClearSlot();
-
-                RefreshUI();
-                originOfferSlot.RefreshUI();
-                return;
-            }
-
-            // STACKOWANIE
-            if (Item.Id == originOfferSlot.Item.Id)
-            {
-                int maxStack = Item.maxStackSize;
-                int total = quantity + originOfferSlot.quantity;
-
-                if (total <= maxStack)
-                {
-                    Inventory.ChangeQuantity(slotId, total);
-                    originOfferSlot.ClearSlot();
-                }
-                else
-                {
-                    Inventory.ChangeQuantity(slotId, maxStack);
-                    originOfferSlot.quantity = total - maxStack;
-                }
-
-                RefreshUI();
-                originOfferSlot.RefreshUI();
-                return;
-            }
-
-            // RÓŻNY ITEM → swap Offer <-> Inventory
-            ItemBase offerItem = originOfferSlot.Item;
-            int offerQty = originOfferSlot.quantity;
-
-            // item z TradeSlot → do OfferSlot
-            originOfferSlot.Item = this.Item;
-            originOfferSlot.quantity = this.quantity;
-
-            // item z Offer → do inventory
-            Inventory.AddItemAt(slotId, offerItem, offerQty);
+            Inventory.MoveItem(slotId, originSlot.slotId);
 
             RefreshUI();
-            originOfferSlot.RefreshUI();
+            originSlot.RefreshUI();
             return;
         }
 
-        // ===========================================
-        //  PRZYPADEK 2 — TradeSlot -> TradeSlot
-        //  (normalne przenoszenie w inventory)
-        // ===========================================
-        if (originTradeSlot != null)
-        {
-            if (originTradeSlot == this) return;
-            if (originTradeSlot.Owner != this.Owner) return;
+        // ================================
+        //  PRZYPADEK 2 — różne ekwipunki
+        //  Player <-> Chest
+        // ================================
+        InventoryBase originInventory = originSlot.Inventory;
+        InventoryBase targetInventory = this.Inventory;
 
-            // Przenoszenie przez MoveItem
-            Inventory.MoveItem(slotId, originTradeSlot.slotId);
+        ItemBase originItem = originSlot.Item;
+        int originQty = originSlot.quantity;
+
+        // brak itemu — nic do zrobienia
+        if (originItem == null)
+            return;
+
+        // 1) JEŚLI slot docelowy pusty → po prostu przenieś item
+        if (this.Item == null)
+        {
+            // wstaw cały item do nowego ekwipunku
+            targetInventory.AddItemAt(slotId, originItem, originQty);
+
+            // usuń z poprzedniego ekwipunku
+            originSlot.Inventory.RemoveItemAt(originSlot.slotId);
 
             RefreshUI();
-            originTradeSlot.RefreshUI();
+            originSlot.RefreshUI();
+            return;
         }
+
+        // 2) JEŚLI item ten sam → stackowanie
+        if (this.Item.Id == originItem.Id)
+        {
+            int maxStack = this.Item.maxStackSize;
+            int total = this.quantity + originQty;
+
+            if (total <= maxStack)
+            {
+                // całość się zmieści
+                targetInventory.ChangeQuantity(slotId, total);
+                originInventory.RemoveItemAt(originSlot.slotId);
+            }
+            else
+            {
+                // tylko część się zmieści
+                targetInventory.ChangeQuantity(slotId, maxStack);
+                originInventory.ChangeQuantity(originSlot.slotId, total - maxStack);
+            }
+
+            RefreshUI();
+            originSlot.RefreshUI();
+            return;
+        }
+
+        // 3) RÓŻNE ITEMY → swap między ekwipunkami
+        ItemBase targetItem = this.Item;
+        int targetQty = this.quantity;
+
+        // zamiana
+        targetInventory.AddItemAt(slotId, originItem, originQty);
+        originInventory.AddItemAt(originSlot.slotId, targetItem, targetQty);
+
+        RefreshUI();
+        originSlot.RefreshUI();
     }
+
 
     public void OnPointerEnter(PointerEventData eventData)
     {

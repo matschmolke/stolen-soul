@@ -33482,6 +33482,74 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 214231749}
     m_Modifications:
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 949100d6ce2623e4db7665cc036d1c3c, type: 2}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[4].Item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[5].Item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[6].Item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[7].Item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[1].Quantity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[2].Quantity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[3].Quantity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[4].Quantity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[5].Quantity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[6].Quantity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[7].Quantity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4364982423459890554, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.1968327
@@ -33526,6 +33594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chest
       objectReference: {fileID: 0}
+    - target: {fileID: 7217355418848419980, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: ChestChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 3088b53fcd62ce442b38e3d2d5e4ac76, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37317,6 +37389,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 214231749}
     m_Modifications:
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: f5e705048de268e4eb7fb8dcde9212b9, type: 2}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[0].Quantity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: items.Array.data[1].Quantity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4364982423459890554, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2181222

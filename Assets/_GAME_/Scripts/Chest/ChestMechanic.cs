@@ -32,7 +32,7 @@ public class ChestMechanic : MonoBehaviour
         isOpen = true;
         chestAnim.SetBool("open", true);
         ChestChannel.RaiseEvent(false);
-
+        ShowChestUI();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -61,7 +61,8 @@ public class ChestMechanic : MonoBehaviour
     {
         Debug.Log("Chest UI is showing");
         Time.timeScale = 0;
-        //code to activate show chest UI
+        ChestManager.Instance.OpenChestUI(GetComponent<ChestInventory>());
+
     }
 
     private void HideChestUI()
@@ -70,6 +71,6 @@ public class ChestMechanic : MonoBehaviour
         Time.timeScale = 1;
         chestAnim.SetBool("open", false);
         isOpen = false;
-        //code to activate show chest UI
+        ChestManager.Instance.CloseChestUI();
     }
 }
