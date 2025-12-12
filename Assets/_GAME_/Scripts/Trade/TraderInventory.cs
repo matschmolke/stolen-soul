@@ -3,25 +3,30 @@ using UnityEngine;
 
 public class TraderInventory : InventoryBase
 {
-    public static TraderInventory Instance;
+    //public static TraderInventory Instance;
 
-    [SerializeField]
-    public List<InventoryItem> items = new List<InventoryItem>();
+    //[Header("List must contain 24 entries. Entries can be empty")]
+    private List<InventoryItem> items = new List<InventoryItem>();
 
-    private void Awake()
+    //private void Awake()
+    //{
+    //    if (Instance == null)
+    //    {
+    //        Instance = this;
+    //        Initalize();
+    //    } 
+    //    else
+    //        Destroy(gameObject);
+    //}
+
+    public void Initalize(TraderInventoryData inventoryData)
     {
-        if (Instance == null)
+        foreach (var item in inventoryData.startingItems)
         {
-            Instance = this;
-            Initalize();
-        } 
-        else
-            Destroy(gameObject);
-    }
+            items.Add(new InventoryItem(item));
+        }
 
-    private void Initalize()
-    {
-        for(int i = 0; i < items.Count; i++)
+        for (int i = 0; i < items.Count; i++)
         {
             slots.Add(i, items[i]);
         }

@@ -10,8 +10,10 @@ public class NPCData : CharacterData
     public bool canBecomeHostile = true;
     public float hostileAttackRange = 1.2f;
     public float hostileDamage = 5f;
-    
+
+    [Header("Trader")]
     public bool isTrader = false;
-    
+    public TraderInventoryData DefaultTraderInventory;
+
     public EnemyData enemyVersion;
 }

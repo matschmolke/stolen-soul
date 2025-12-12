@@ -744,10 +744,10 @@ RectTransform:
   - {fileID: 57179302}
   m_Father: {fileID: 1945885153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.00010157}
-  m_SizeDelta: {x: 340.8, y: 484}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.00012207031}
+  m_SizeDelta: {x: -565.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &77538810
 MonoBehaviour:
@@ -1225,8 +1225,8 @@ MonoBehaviour:
   traderOfferValueDisplay: {fileID: 532139763}
   playerCurrencyAmount: {fileID: 22395560}
   traderCurrencyAmount: {fileID: 854288362}
-  TradeWindow: {fileID: 1945885152}
   CurrencyItem: {fileID: 11400000, guid: f5e705048de268e4eb7fb8dcde9212b9, type: 2}
+  TradeWindow: {fileID: 1945885152}
 --- !u!1001 &148541130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2718,99 +2718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!1 &551809663
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 551809665}
-  - component: {fileID: 551809664}
-  m_Layer: 0
-  m_Name: Trader(For now)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &551809664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551809663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fea7a53ac932e7e44be2ebed8acbcd9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TraderInventory
-  items:
-  - Item: {fileID: 11400000, guid: d2c8ee196bae9714d8c6cd7e64aef2f2, type: 2}
-    Quantity: 1
-  - Item: {fileID: 11400000, guid: f5e705048de268e4eb7fb8dcde9212b9, type: 2}
-    Quantity: 100
-  - Item: {fileID: 11400000, guid: 5fbbf3643d9682e499e8486c0f93bfbb, type: 2}
-    Quantity: 1
-  - Item: {fileID: 11400000, guid: d2176e804573c664392c62e832844b61, type: 2}
-    Quantity: 1
-  - Item: {fileID: 11400000, guid: e5d47b903fbf95a4c8a5076b2f8baaec, type: 2}
-    Quantity: 5
-  - Item: {fileID: 11400000, guid: 95f446a5cb38b8145a4f2ac673504b0b, type: 2}
-    Quantity: 5
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
-  - Item: {fileID: 0}
-    Quantity: 0
---- !u!4 &551809665
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551809663}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 410.3857, y: 175.79524, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &588800322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2989,10 +2896,10 @@ RectTransform:
   - {fileID: 1833703323}
   m_Father: {fileID: 1945885153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -317.5, y: 2.8783}
-  m_SizeDelta: {x: 263, y: 478.24}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -317.5, y: 2.878296}
+  m_SizeDelta: {x: -643, y: -5.76001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &604744581
 MonoBehaviour:
@@ -5017,10 +4924,10 @@ RectTransform:
   - {fileID: 906830985}
   m_Father: {fileID: 1945885153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 317.5, y: 2.8788}
-  m_SizeDelta: {x: 263, y: 478.24}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 317.5, y: 2.8787842}
+  m_SizeDelta: {x: -643, y: -5.76001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &891351361
 MonoBehaviour:
@@ -8398,10 +8305,10 @@ RectTransform:
   - {fileID: 419840193}
   m_Father: {fileID: 1945885153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -1, y: -207}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: -746, y: -454}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1622017590
 MonoBehaviour:
@@ -10609,8 +10516,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945885152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8686408, y: 0.8686408, z: 0.8686408}
+  m_LocalPosition: {x: 0, y: 0, z: -0.53745}
+  m_LocalScale: {x: 1.9435837, y: 1.9435837, z: 1.9435837}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 604744580}
@@ -10623,10 +10530,10 @@ RectTransform:
   - {fileID: 854288361}
   m_Father: {fileID: 148529277}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: -13}
-  m_SizeDelta: {x: 906, y: 484}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -5, y: -24.701}
+  m_SizeDelta: {x: -1014, y: -596}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945885154
 MonoBehaviour:
@@ -11371,4 +11278,3 @@ SceneRoots:
   - {fileID: 1812193456}
   - {fileID: 899464729}
   - {fileID: 148529277}
-  - {fileID: 551809665}

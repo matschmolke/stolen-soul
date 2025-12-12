@@ -17,6 +17,8 @@ public class NPCAI : CharacterAI, IDamageable
         public NPCTalkState talkState;
 
         public bool isAggressive = false;
+
+        private TraderInventory traderInventory;
         
         protected override void Awake()
         {
@@ -25,11 +27,23 @@ public class NPCAI : CharacterAI, IDamageable
 
         void Start()
         {
-                idleState = new NPCIdleState(this);
-                aggressiveState = new NPCAggressiveState(this);
-                talkState = new NPCTalkState(this);
+            if (Data.isTrader)
+            {
+                
+                traderInventory = transform.AddComponent<TraderInventory>();
+                traderInventory.Initalize(Data.DefaultTraderInventory);
 
-                ChangeState(idleState);
+                if (traderInventory == null)
+                {
+                    Debug.LogError("Trader NPC is missing TraderInventory component!");
+                }
+            }
+
+            idleState = new NPCIdleState(this);
+            aggressiveState = new NPCAggressiveState(this);
+            talkState = new NPCTalkState(this, traderInventory);
+
+            ChangeState(idleState);
         }
 
         void Update()

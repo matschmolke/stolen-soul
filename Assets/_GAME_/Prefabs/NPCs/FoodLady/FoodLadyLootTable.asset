@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c556e9b12c782a448c70c85d084dd1e, type: 3}
+  m_Name: FoodLadyLootTable
+  m_EditorClassIdentifier: Assembly-CSharp::LootTable
+  items:
+  - {fileID: 11400000, guid: 5fbbf3643d9682e499e8486c0f93bfbb, type: 2}
+  - {fileID: 11400000, guid: 43fdf8906d72e144397029325b931294, type: 2}
+  - {fileID: 11400000, guid: 95f446a5cb38b8145a4f2ac673504b0b, type: 2}
