@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ChestInventory : InventoryBase
 {
-    [SerializeField]
+    [Header("List must contain 8 entries. Entries can be empty")]
     public List<InventoryItem> items = new List<InventoryItem>();
 
     private void Awake()

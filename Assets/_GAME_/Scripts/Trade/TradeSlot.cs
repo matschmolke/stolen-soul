@@ -28,7 +28,7 @@ public class TradeSlot : MonoBehaviour,
     public ItemBase Item => Inventory.GetItem(slotId).Item;
     public int quantity => Inventory.GetItem(slotId).Quantity;
 
-    public InventoryBase Inventory { get; private set; }
+    public InventoryBase Inventory { get; set; }
 
     [SerializeField] private TMP_Text quantityText;
     [SerializeField] private Image itemImage;
@@ -44,10 +44,6 @@ public class TradeSlot : MonoBehaviour,
         if (Owner == SlotOwner.Player)
         {
             Inventory = PlayerInventory.Instance;
-        }
-        else
-        {
-            Inventory = TraderInventory.Instance;
         }
     }
 
@@ -80,6 +76,11 @@ public class TradeSlot : MonoBehaviour,
             {
                 quantityText.text = quantity.ToString();
                 quantityText.enabled = true;
+            }
+            else
+            {
+                quantityText.text = "";
+                quantityText.enabled = false;
             }
         }
         else

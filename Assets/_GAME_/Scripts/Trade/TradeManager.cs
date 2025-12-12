@@ -18,9 +18,11 @@ public class TradeManager : MonoBehaviour
     public TMP_Text playerCurrencyAmount;
     public TMP_Text traderCurrencyAmount;
 
-    public GameObject TradeWindow;
+    [SerializeField]
+    private ItemBase CurrencyItem;
 
-    public ItemBase CurrencyItem;
+    [SerializeField]
+    private GameObject TradeWindow;
 
     private bool windowActivated;
     private List<TradeSlot> allTradeSlots = new List<TradeSlot>();
@@ -57,7 +59,6 @@ public class TradeManager : MonoBehaviour
         }
 
         playerInventory = PlayerInventory.Instance;
-        traderInventory = TraderInventory.Instance;
 
         allTradeSlots.AddRange(playerInventorySlots);
         allTradeSlots.AddRange(traderInventorySlots);
@@ -77,22 +78,43 @@ public class TradeManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B) && windowActivated)
-        {
-            ReturnAllItemsFromOffers();
-            Time.timeScale = 1;
-            TradeWindow.SetActive(false);
-            windowActivated = false;
-            if (ItemTooltip.Instance != null)
-                ItemTooltip.Instance.HideTooltip();
-        }
-        else if (Input.GetKeyDown(KeyCode.B) && !windowActivated)
-        {
-            Time.timeScale = 0;
-            TradeWindow.SetActive(true);
-            windowActivated = true;
-            RefreshUI();
-        }
+        //if (Input.GetKeyDown(KeyCode.B) && windowActivated)
+        //{
+        //    ReturnAllItemsFromOffers();
+        //    Time.timeScale = 1;
+        //    TradeWindow.SetActive(false);
+        //    windowActivated = false;
+        //    if (ItemTooltip.Instance != null)
+        //        ItemTooltip.Instance.HideTooltip();
+        //}
+        //else if (Input.GetKeyDown(KeyCode.B) && !windowActivated)
+        //{
+        //    Time.timeScale = 0;
+        //    TradeWindow.SetActive(true);
+        //    windowActivated = true;
+        //    RefreshUI();
+        //}
+    }
+
+    public void OpenWindow(TraderInventory inventory)
+    {
+        traderInventory = inventory;
+        SetTraderInventory();
+        Time.timeScale = 0;
+        TradeWindow.SetActive(true);
+        windowActivated = true;
+        RefreshUI();
+    }
+
+    public void CloseWindow()
+    {
+        ReturnAllItemsFromOffers();
+        RefreshUI();
+        Time.timeScale = 1;
+        TradeWindow.SetActive(false);
+        windowActivated = false;
+        if (ItemTooltip.Instance != null)
+            ItemTooltip.Instance.HideTooltip();
     }
 
     public void Trade()
@@ -242,6 +264,21 @@ public class TradeManager : MonoBehaviour
         {
             slot.selectedShader.SetActive(false);
             slot.thisItemSelected = false;
+        }
+    }
+
+    public void SetTraderInventory()
+    {
+        foreach( TradeSlot slot in traderInventorySlots)
+        {
+            if(slot.Owner == SlotOwner.Trader)
+                slot.Inventory = traderInventory;
+        }
+
+        foreach (OfferSlot slot in traderOfferSlots)
+        {
+            if (slot.Owner == SlotOwner.Trader)
+                slot.Inventory = traderInventory;
         }
     }
 

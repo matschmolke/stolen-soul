@@ -15,7 +15,6 @@ public class OfferSlot : MonoBehaviour,
 {
     public SlotOwner Owner;
 
-    // OfferSlot przechowuje *kopiê* przedmiotu (nie jest bezpoœrednio czêœci¹ inventory)
     public ItemBase Item;
     public int quantity;
 
@@ -24,8 +23,7 @@ public class OfferSlot : MonoBehaviour,
     public GameObject selectedShader;
     public bool thisItemSelected;
 
-    // referencja do inventory powi¹zanego z Owner (u¿ywana tylko przy zwracaniu przedmiotów)
-    private InventoryBase inventory;
+    public InventoryBase Inventory;
     private TradeManager manager;
     private Canvas canvas;
     private Image dragImage;
@@ -35,9 +33,7 @@ public class OfferSlot : MonoBehaviour,
     private void Start()
     {
         if (Owner == SlotOwner.Player)
-            inventory = PlayerInventory.Instance;
-        else
-            inventory = TraderInventory.Instance;
+            Inventory = PlayerInventory.Instance;
 
         manager = TradeManager.Instance;
         canvas = GetComponentInParent<Canvas>();

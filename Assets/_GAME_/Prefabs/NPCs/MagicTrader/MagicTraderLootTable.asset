@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c556e9b12c782a448c70c85d084dd1e, type: 3}
-  m_Name: TraderLootTable
+  m_Name: MagicTraderLootTable
   m_EditorClassIdentifier: Assembly-CSharp::LootTable
   items:
   - {fileID: 11400000, guid: 5fbbf3643d9682e499e8486c0f93bfbb, type: 2}

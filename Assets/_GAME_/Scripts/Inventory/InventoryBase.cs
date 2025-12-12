@@ -21,6 +21,12 @@ public class InventoryItem
         Item = item;
         Quantity = quantitiy;
     }
+
+    public InventoryItem(InventoryItem other)
+    {
+        Item = other.Item;
+        Quantity = other.Quantity;
+    }
 }
 
 public abstract class InventoryBase : MonoBehaviour

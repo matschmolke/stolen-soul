@@ -4,10 +4,12 @@ public class NPCTalkState : CharacterState
 {
     private NPCAI npc;
     private bool isTradeOpen = false;
+    private TraderInventory inventory;
 
-    public NPCTalkState(NPCAI npc) : base(npc)
+    public NPCTalkState(NPCAI npc, TraderInventory inventory) : base(npc)
     {
         this.npc = npc;
+        this.inventory = inventory;
     }
 
     public override void Enter()
@@ -38,9 +40,7 @@ public class NPCTalkState : CharacterState
         {
             if (TradeManager.Instance != null)
             {
-                TradeManager.Instance.TradeWindow.SetActive(true);
-                Time.timeScale = 0;
-                TradeManager.Instance.RefreshUI();
+                TradeManager.Instance.OpenWindow(inventory);
             }
             
             npc.player.GetComponent<Movements>().canAttack = false;
@@ -51,9 +51,7 @@ public class NPCTalkState : CharacterState
         {
             if (TradeManager.Instance != null)
             {
-                TradeManager.Instance.TradeWindow.SetActive(false);
-                Time.timeScale = 1;
-                TradeManager.Instance.DeselectAllSlots();
+                TradeManager.Instance.CloseWindow();
             }
             
             npc.player.GetComponent<Movements>().canAttack = true;
