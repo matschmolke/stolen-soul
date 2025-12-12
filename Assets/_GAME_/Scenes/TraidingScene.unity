@@ -1351,7 +1351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4508725109954388295, guid: b8752314bf16ccf4181bd1cffc6b2ab5, type: 3}
       propertyPath: customText
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4508725109954388295, guid: b8752314bf16ccf4181bd1cffc6b2ab5, type: 3}
       propertyPath: dialogueUI
@@ -1359,7 +1359,7 @@ PrefabInstance:
       objectReference: {fileID: 678032657}
     - target: {fileID: 4508725109954388295, guid: b8752314bf16ccf4181bd1cffc6b2ab5, type: 3}
       propertyPath: dialogueText
-      value: Hey! Want some fresh apples?
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4508725109954388295, guid: b8752314bf16ccf4181bd1cffc6b2ab5, type: 3}
       propertyPath: DialogueChannel
@@ -21223,7 +21223,7 @@ PrefabInstance:
       objectReference: {fileID: 274599929}
     - target: {fileID: 4508725109954388295, guid: b8752314bf16ccf4181bd1cffc6b2ab5, type: 3}
       propertyPath: dialogueText
-      value: "Hmm\u2026 This poison looks defective. I need to get rid of it."
+      value: Interested in magic? Take a look at what I have.
       objectReference: {fileID: 0}
     - target: {fileID: 4508725109954388295, guid: b8752314bf16ccf4181bd1cffc6b2ab5, type: 3}
       propertyPath: DialogueChannel
@@ -21738,7 +21738,7 @@ PrefabInstance:
       objectReference: {fileID: 1171296122}
     - target: {fileID: 4508725109954388295, guid: b8752314bf16ccf4181bd1cffc6b2ab5, type: 3}
       propertyPath: dialogueText
-      value: What a handsome young gentleman.
+      value: I have some pretty good potions. Want to buy one?
       objectReference: {fileID: 0}
     - target: {fileID: 4508725109954388295, guid: b8752314bf16ccf4181bd1cffc6b2ab5, type: 3}
       propertyPath: DialogueChannel
