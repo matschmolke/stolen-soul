@@ -134,7 +134,7 @@ public class CameraController : MonoBehaviour
 
     private void ConstrainForest()
     {
-        desiredPos.x = Mathf.Clamp(desiredPos.x, -12.3f, 15f);
+        desiredPos.x = Mathf.Clamp(desiredPos.x, -12.3f, 40f);
         desiredPos.y = Mathf.Max(desiredPos.y, -4.5f);
     }
 
