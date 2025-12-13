@@ -11,7 +11,4 @@ public class CharacterData : ScriptableObject
     public float maxHealth = 100f;
     public float walkSpeed = 3f;
     public float runSpeed = 5f;
-
-    [Header("Loot")]
-    public LootTable lootTable;
 }
