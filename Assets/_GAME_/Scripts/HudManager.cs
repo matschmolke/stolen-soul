@@ -36,4 +36,12 @@ public class HudManager : MonoBehaviour
         manaText.text = $"{currentMana}/{maxMana}";
         manaImage.fillAmount = Mathf.Clamp01((float)currentMana / maxMana);
     }
+    
+    private void OnDestroy()
+    {
+        if (playerStats == null) return;
+
+        playerStats.OnHealthChanged -= UpdateHealthUI;
+        playerStats.OnManaChanged -= UpdateManaUI;
+    }
 }

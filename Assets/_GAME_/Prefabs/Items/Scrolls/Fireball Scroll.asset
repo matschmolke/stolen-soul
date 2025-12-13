@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202138ce68f267141a12a3b5141394bf, type: 3}
   m_Name: Fireball Scroll
   m_EditorClassIdentifier: Assembly-CSharp::Scroll
-  Id: e33ad819-8b3c-4185-a699-34eaf3b2aa05
+  Id: aab0fa20-6e63-4020-976a-2fac095d01ce
   itemType: 8
   itemName: Fireball Scroll
   itemSprite: {fileID: -8101715851604848205, guid: 0b9881fb23a1e3fd68fd658d40e738de, type: 3}
@@ -23,3 +23,4 @@ MonoBehaviour:
   dropChance: 100
   value: 200
   spellName: Fireball
+  spellData: {fileID: 11400000, guid: cf50b91f04710dedbb5f737221bd5243, type: 2}
