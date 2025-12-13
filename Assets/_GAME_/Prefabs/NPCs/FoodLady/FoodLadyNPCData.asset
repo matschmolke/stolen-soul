@@ -18,10 +18,6 @@ MonoBehaviour:
   maxHealth: 200
   walkSpeed: 6
   runSpeed: 9
-  lootTable: {fileID: 11400000, guid: 9a1a9d7e4704c4844be5583d8a4a1bd3, type: 2}
   talkRange: 2
-  canBecomeHostile: 1
-  hostileAttackRange: 1.5
-  hostileDamage: 15
   isTrader: 0
-  enemyVersion: {fileID: 11400000, guid: 991fa42d817a56baeb230fad63c2ad52, type: 2}
+  DefaultTraderInventory: {fileID: 0}

@@ -31,10 +31,10 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IDamageable damageable = collision.GetComponent<IDamageable>();
-        if (damageable != null)
+        EnemyAI enemy = collision.GetComponent<EnemyAI>();
+        if (enemy != null)
         {
-            damageable.TakeDamage(damage);
+            enemy.TakeDamage(damage);
             Destroy(gameObject);
             return;
         }

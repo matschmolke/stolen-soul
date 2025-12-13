@@ -9,4 +9,7 @@ public class EnemyData : CharacterData
 
     [Header("AI")]
     public float visionRange = 5f;
+
+    [Header("Loot")]
+    public LootTable lootTable;
 }

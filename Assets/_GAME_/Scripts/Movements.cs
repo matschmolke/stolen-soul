@@ -115,14 +115,14 @@ public class Movements : MonoBehaviour
 
         foreach (Collider2D enemyCollider in enemiesInRange)
         {
-            IDamageable character;
+            EnemyAI enemy;
             
             try
             {
-                character = enemyCollider.GetComponent<IDamageable>();
-                if (character != null)
+                enemy = enemyCollider.GetComponent<EnemyAI>();
+                if (enemy != null)
                 {
-                    character.TakeDamage(attackDamage);
+                    enemy.TakeDamage(attackDamage);
                 }
                 else
                 {

@@ -24,11 +24,6 @@ public abstract class CharacterAI : MonoBehaviour
         // base stat setup
         anim.runtimeAnimatorController = data.animatorController;
         spriteRenderer.sprite = data.sprite;
-
-        if (lootBag != null)
-            lootBag.SetLoot(data.lootTable);
-        else
-            Debug.LogWarning($"{name} has no LootBag!");
     }
 
     protected virtual void Awake()

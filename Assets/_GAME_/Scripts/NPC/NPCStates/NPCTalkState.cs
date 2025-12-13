@@ -15,9 +15,6 @@ public class NPCTalkState : CharacterState
     public override void Enter()
     {
         npc.anim.SetTrigger("isTalking");
-        
-        string message = npc.Data.isTrader ? "NPC: Hello traveler! Want to trade?" : "NPC: Hello traveler!";
-        Debug.Log(message);
     }
 
     public override void Update()

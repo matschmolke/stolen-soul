@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class EnemyAI : CharacterAI, IDamageable
+public class EnemyAI : CharacterAI
 {
     public EnemyData Data;
 
@@ -78,7 +78,11 @@ public class EnemyAI : CharacterAI, IDamageable
         base.Init(enemyData);
         currentHealth = Data.maxHealth;
         anim.runtimeAnimatorController = Data.animatorController;
-        lootBag.SetLoot(Data.lootTable);
+
+        if (lootBag != null)
+            lootBag.SetLoot(Data.lootTable);
+        else
+            Debug.LogWarning($"{name} has no LootBag!");
     }
 
     public void OnAttackEnd()
@@ -141,6 +145,4 @@ public class EnemyAI : CharacterAI, IDamageable
     {
         player = p;
     }
-    
-    CharacterData IDamageable.Data => Data;
 }
