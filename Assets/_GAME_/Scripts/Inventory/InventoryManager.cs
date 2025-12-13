@@ -14,6 +14,7 @@ public class InventoryManager : MonoBehaviour
     private PlayerStats playerStats;
 
     private PlayerInventory playerInventory;
+    private SpellCaster spellCaster;
 
     private void Awake()
     {
@@ -41,6 +42,7 @@ public class InventoryManager : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerStats = player.GetComponent<PlayerStats>();
+        spellCaster = player.GetComponent<SpellCaster>();
     }
 
     // Update is called once per frame
@@ -72,7 +74,7 @@ public class InventoryManager : MonoBehaviour
 
     public void UseItem(ItemBase item)
     {
-        if(item is Consumable consumable)
+        if (item is Consumable consumable)
         {
             switch (consumable.resourceType)
             {
@@ -86,6 +88,11 @@ public class InventoryManager : MonoBehaviour
                     Debug.Log("Invalid resource Type");
                     break;
             }
+        }
+        else if (item is Scroll scroll)
+        {
+            Debug.Log("Using Scroll");
+            spellCaster.AddSpell(scroll.spellData);
         }
     }
 
