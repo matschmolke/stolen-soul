@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 202138ce68f267141a12a3b5141394bf, type: 3}
-  m_Name: Basic Scroll
+  m_Name: Fireball Scroll
   m_EditorClassIdentifier: Assembly-CSharp::Scroll
-  Id: 4e5285f6-eb46-4464-8248-d74f5169803b
+  Id: e33ad819-8b3c-4185-a699-34eaf3b2aa05
   itemType: 8
-  itemName: Basic Scroll
-  itemSprite: {fileID: -5734204000053065432, guid: bdee8af3a7bce72499f71cadec5f69c1, type: 3}
-  description: Grants player  spell. How cool is that?
+  itemName: Fireball Scroll
+  itemSprite: {fileID: -8101715851604848205, guid: 0b9881fb23a1e3fd68fd658d40e738de, type: 3}
+  description: Grants player Fireball spell. How cool is that?
   isStackable: 0
   maxStackSize: 1
   isUnique: 0
-  dropChance: 25
-  value: 60
-  spellName: 
+  dropChance: 100
+  value: 200
+  spellName: Fireball

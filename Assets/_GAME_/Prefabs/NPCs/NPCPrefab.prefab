@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: -6309646022957013912}
   - component: {fileID: 6000177618246012803}
   - component: {fileID: 4288376956532319763}
-  - component: {fileID: 7811241050891958424}
   m_Layer: 7
   m_Name: NPCPrefab
   m_TagString: NPC
@@ -259,37 +258,6 @@ MonoBehaviour:
   player: {fileID: 0}
   spriteRenderer: {fileID: 0}
   lootBag: {fileID: 0}
-  moveSpeed: 2
-  Data: {fileID: 0}
-  interactionDistance: 2
-  interactionKey: 32
-  enemyAIPrefab: {fileID: 2859642201778251962, guid: a7f3188662be1b74abc3d744fb52a9d4, type: 3}
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  obsticleLayerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  isAggressive: 0
---- !u!114 &7811241050891958424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2859642201778251962}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e4cdac66c6294f4b9c047f8e6b074e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  rb: {fileID: 0}
-  anim: {fileID: 0}
-  player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  lootBag: {fileID: 0}
-  moveSpeed: 2
-  Data: {fileID: 0}
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -299,8 +267,7 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 0
-  currentHealth: 0
-  canAttack: 1
-  isDead: 0
-  deathBlinkDuration: 0.8
-  deathBlinkFrequency: 0.1
+  moveSpeed: 2
+  Data: {fileID: 0}
+  interactionDistance: 2
+  interactionKey: 32

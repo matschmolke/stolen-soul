@@ -122,11 +122,12 @@ public class Movements : MonoBehaviour
                 enemy = enemyCollider.GetComponent<EnemyAI>();
                 if (enemy != null)
                 {
+                    Debug.Log("Found enemy!");
                     enemy.TakeDamage(attackDamage);
                 }
                 else
                 {
-                    Debug.Log("Character not found");
+                    Debug.Log("Enemy not found");
                 }
             }
             catch (Exception e)

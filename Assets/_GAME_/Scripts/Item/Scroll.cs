@@ -4,6 +4,7 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "New Scroll Item", menuName = "Items/New Scroll Item")]
 public class Scroll : ItemBase
 {
+    public string spellName;
     public void Awake()
     {
         Id = GenerateId();
@@ -12,6 +13,6 @@ public class Scroll : ItemBase
 
     protected override void GenerateDescription()
     {
-        description = "Grants player /spell name/ spell. How cool is that?";
+        description = $"Grants player {spellName} spell. How cool is that?";
     }
 }

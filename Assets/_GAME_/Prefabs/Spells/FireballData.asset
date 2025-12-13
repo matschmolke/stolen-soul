@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3abac2d680ce76b6aa2a5e776370394f, type: 3}
-  m_Name: Fireball
+  m_Name: FireballData
   m_EditorClassIdentifier: Assembly-CSharp::Spell
   spellName: Fireball
   icon: {fileID: 396921133626115911, guid: 5646a03da40a820eea351f4184e86efc, type: 3}

@@ -36,7 +36,6 @@ public class EnemyChaseState : CharacterState
             var crumb = FindNextBreadcrumb();
             if (crumb != null)
             {
-                Debug.Log("Chasing breadcrumb at " + crumb.position);
                 targetPos = crumb.position;
             }
             else
