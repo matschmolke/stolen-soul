@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 public class SpellCaster : MonoBehaviour
 {
     public List<Spell> spells;
@@ -11,7 +13,24 @@ public class SpellCaster : MonoBehaviour
 
     void Start()
     {
+        FindCamera();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        
         cooldownTimers = new float[spells.Count];
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        FindCamera();
+    }
+
+    void FindCamera()
+    {
         mainCam = Camera.main;
         if (mainCam == null)
             Debug.LogError("No MainCamera found in the scene!");
@@ -70,6 +89,9 @@ public class SpellCaster : MonoBehaviour
 
     Vector3 GetMouseWorld()
     {
+        if (mainCam == null)
+            return transform.position;
+        
         Vector3 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = transform.position.z;
         return mousePos;

@@ -28,12 +28,8 @@ public class NPCIdleState : CharacterState
         float dist = Vector2.Distance(npc.transform.position, npc.player.position);
 
         if (dist < npc.Data.talkRange)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                npc.ChangeState(npc.talkState);
-            }
-        }
+            npc.ChangeState(npc.talkState);
+
     }
     
     public override void Exit()

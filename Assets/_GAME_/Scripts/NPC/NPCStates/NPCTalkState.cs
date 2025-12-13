@@ -14,7 +14,7 @@ public class NPCTalkState : CharacterState
 
     public override void Enter()
     {
-        npc.anim.SetTrigger("isTalking");
+        Debug.Log($"{npc.Data.characterName} started talking.");
     }
 
     public override void Update()
@@ -60,6 +60,6 @@ public class NPCTalkState : CharacterState
 
     public override void Exit()
     {
-        Debug.Log("NPC stopped talking.");
+        Debug.Log($"{npc.Data.characterName} stopped talking.");
     }
 }
