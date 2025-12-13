@@ -102,7 +102,7 @@ public class ItemSlot : MonoBehaviour,
             if (thisItemSelected)
             {
                 
-                if (Item != null && Item.itemType == ItemType.Consumable)
+                if (Item != null && (Item.itemType == ItemType.Consumable || Item.itemType == ItemType.Scroll))
                 {
                     inventoryManager.UseItem(Item);
                     playerInventory.ChangeQuantity(slotId, quantity-1);

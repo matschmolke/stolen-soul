@@ -5,6 +5,7 @@ using UnityEditor;
 public class Scroll : ItemBase
 {
     public string spellName;
+    public Spell spellData;
     public void Awake()
     {
         Id = GenerateId();

@@ -20,6 +20,7 @@ public class SpellCaster : MonoBehaviour
     public void AddSpell(Spell newSpell)
     {
         spells.Add(newSpell);
+        cooldownTimers =  new float[spells.Count];
         OnSpellsChanged?.Invoke();
     }
 
