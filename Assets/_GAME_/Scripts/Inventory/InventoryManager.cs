@@ -91,8 +91,12 @@ public class InventoryManager : MonoBehaviour
         }
         else if (item is Scroll scroll)
         {
-            Debug.Log("Using Scroll");
-            spellCaster.AddSpell(scroll.spellData);
+            if (!scroll.isOneTimeUse)
+            {
+                Debug.Log($"Adding spell: {scroll.spellData.spellName}");
+                spellCaster.AddSpell(scroll.spellData);
+            }
+            else spellCaster.CastUtilitySpell(scroll.spellData);
         }
     }
 

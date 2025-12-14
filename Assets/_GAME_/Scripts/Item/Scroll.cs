@@ -6,6 +6,7 @@ public class Scroll : ItemBase
 {
     public string spellName;
     public Spell spellData;
+    public bool isOneTimeUse = false;
     public void Awake()
     {
         Id = GenerateId();
@@ -14,6 +15,7 @@ public class Scroll : ItemBase
 
     protected override void GenerateDescription()
     {
-        description = $"Grants player {spellName} spell. How cool is that?";
+        description = isOneTimeUse == false ? $"Grants player {spellName} spell. How cool is that?"
+            : $"Grants player {spellName} effect. One time use only!";
     }
 }

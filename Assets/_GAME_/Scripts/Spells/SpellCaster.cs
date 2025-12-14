@@ -139,7 +139,7 @@ public class SpellCaster : MonoBehaviour
 
         proj.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
-    void CastUtilitySpell(Spell spell)
+    public void CastUtilitySpell(Spell spell)
     {
         Debug.Log("Cast Utility Spell " +  spell.spellName);
         if (spell.effect != null)

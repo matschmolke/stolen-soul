@@ -33,6 +33,14 @@ public class Spell : ScriptableObject
             case "Invisibility":
                 InvisibilityEffect.Apply(target, duration);
                 break;
+            case "Haste":
+                HasteEffect.Apply(target, duration);
+                break;
+            case "Increased Damage":
+                break;
+            case "Increased Armor":
+                break;
+
         }
     }
 }
