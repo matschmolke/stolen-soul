@@ -37,8 +37,10 @@ public class Spell : ScriptableObject
                 HasteEffect.Apply(target, duration);
                 break;
             case "Damage Increase":
+                DamageIncreaseEffect.Apply(target, duration);
                 break;
-            case "Armor Increase":
+            case "Defence Increase":
+                DefenceIncreaseEffect.Apply(target, duration);
                 break;
 
         }
