@@ -32,12 +32,13 @@ public class NPCTalkState : CharacterState
     }
 
     private void ToggleTradeWindow()
-    {
+    {        
         if (!isTradeOpen)
         {
             if (TradeManager.Instance != null)
             {
                 TradeManager.Instance.OpenWindow(inventory);
+                InventoryManager.Instance.CanOpenInventory = false; 
             }
             
             npc.player.GetComponent<Movements>().canAttack = false;
@@ -49,6 +50,7 @@ public class NPCTalkState : CharacterState
             if (TradeManager.Instance != null)
             {
                 TradeManager.Instance.CloseWindow();
+                InventoryManager.Instance.CanOpenInventory = true;
             }
             
             npc.player.GetComponent<Movements>().canAttack = true;
