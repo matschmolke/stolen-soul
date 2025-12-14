@@ -136,4 +136,11 @@ public class Movements : MonoBehaviour
             }
         }
     }
+
+    public float GetWalkSpeed() => walkSpeed;
+    public float GetRunSpeed() => runSpeed;
+    public void SetWalkSpeed(float value) =>
+        walkSpeed = value;
+    public void SetRunSpeed(float value) =>
+        runSpeed = value;
 }

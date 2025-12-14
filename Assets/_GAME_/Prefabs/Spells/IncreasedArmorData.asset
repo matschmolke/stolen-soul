@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3abac2d680ce76b6aa2a5e776370394f, type: 3}
-  m_Name: InvisibilityData
+  m_Name: IncreasedArmorData
   m_EditorClassIdentifier: Assembly-CSharp::Spell
-  spellName: Invisibility
-  icon: {fileID: 338793532501073182, guid: 567473407b4822031a06114261d304d7, type: 3}
-  castKey: 1
-  cooldown: 5
-  manaCost: 10
-  duration: 10
+  spellName: Increased Armor
+  icon: {fileID: 8797615125318107055, guid: 8e22a9a3c96329a3d8b532dc023438b6, type: 3}
+  castKey: 0
+  cooldown: 0
+  manaCost: 0
+  duration: 15
   spellPrefab: {fileID: 0}
   damage: 0
   speed: 0
   isProjectile: 0
-  effect: {fileID: 11400000, guid: f922a5a22cbb3bff793f4d9bacade081, type: 2}
+  effect: {fileID: 11400000, guid: 508d51f7cbe66610aafb5eaca626de39, type: 2}

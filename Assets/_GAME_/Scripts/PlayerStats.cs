@@ -58,7 +58,7 @@ public class PlayerStats : MonoBehaviour
     public int currentMana;
 
     private Coroutine manaRegenRoutine;
-    private Movements playerScript;
+    public Movements playerScript;
 
     
     public event Action<int, int> OnHealthChanged; // (current, max)
