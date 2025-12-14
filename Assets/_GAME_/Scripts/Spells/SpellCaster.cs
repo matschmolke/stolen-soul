@@ -38,6 +38,7 @@ public class SpellCaster : MonoBehaviour
 
     public void AddSpell(Spell newSpell)
     {
+        newSpell.castKey = (spells.Count + 1).ToString();
         spells.Add(newSpell);
         cooldownTimers =  new float[spells.Count];
         OnSpellsChanged?.Invoke();
