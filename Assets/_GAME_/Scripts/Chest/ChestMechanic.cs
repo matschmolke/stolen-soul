@@ -59,6 +59,7 @@ public class ChestMechanic : MonoBehaviour
 
     private void ShowChestUI()
     {
+        InventoryManager.Instance.CanOpenInventory = false; 
         Debug.Log("Chest UI is showing");
         Time.timeScale = 0;
         ChestManager.Instance.OpenChestUI(GetComponent<ChestInventory>());
@@ -67,6 +68,7 @@ public class ChestMechanic : MonoBehaviour
 
     private void HideChestUI()
     {
+        InventoryManager.Instance.CanOpenInventory = true; 
         Debug.Log("Chest UI hidden");
         Time.timeScale = 1;
         chestAnim.SetBool("open", false);

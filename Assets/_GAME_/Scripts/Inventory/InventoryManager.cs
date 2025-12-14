@@ -4,6 +4,8 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
+    public bool CanOpenInventory { get; set; } = true;
+
     public GameObject InventoryMenu;
 
     [Header("IMPORTANT!! \nequip and quick slots should be at the end of list")]
@@ -48,6 +50,8 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!CanOpenInventory) return; 
+        
         if (Input.GetKeyDown(KeyCode.E) && menuActivated)
         {
             Time.timeScale = 1;
