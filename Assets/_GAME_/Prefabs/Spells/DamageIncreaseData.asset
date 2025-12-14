@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3abac2d680ce76b6aa2a5e776370394f, type: 3}
   m_Name: DamageIncreaseData
   m_EditorClassIdentifier: Assembly-CSharp::Spell
-  spellName: Increased Damage
+  spellName: Damage Increase
   icon: {fileID: -1400734978927520801, guid: 3c0e194af895b1b719f38362a36f141f, type: 3}
   castKey: 0
   cooldown: 0

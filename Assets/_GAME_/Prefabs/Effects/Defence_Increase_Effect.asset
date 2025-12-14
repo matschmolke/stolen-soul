@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d04a01c6ccc0509d799a29587967414d, type: 3}
-  m_Name: Armor_Increase_Effect
+  m_Name: Defence_Increase_Effect
   m_EditorClassIdentifier: Assembly-CSharp::Effect
-  effectName: Armor Increase
+  effectName: Defence Increase
   icon: {fileID: 8797615125318107055, guid: 8e22a9a3c96329a3d8b532dc023438b6, type: 3}
   duration: 0
