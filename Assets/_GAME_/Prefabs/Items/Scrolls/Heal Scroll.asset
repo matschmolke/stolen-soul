@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202138ce68f267141a12a3b5141394bf, type: 3}
+  m_Name: Heal Scroll
+  m_EditorClassIdentifier: Assembly-CSharp::Scroll
+  Id: de57163f-feaa-426b-8a9b-797e562f61d8
+  itemType: 8
+  itemName: Heal Scroll
+  itemSprite: {fileID: 107922871575362969, guid: f316fa7092eb29993829c8315fd4cea8, type: 3}
+  description: Grants player Heal spell. How cool is that?
+  isStackable: 0
+  maxStackSize: 1
+  isUnique: 0
+  dropChance: 100
+  value: 200
+  spellName: Heal
+  spellData: {fileID: 11400000, guid: 761941908e37f7e289b4436e8633417d, type: 2}

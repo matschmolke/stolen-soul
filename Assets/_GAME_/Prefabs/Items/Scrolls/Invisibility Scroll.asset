@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202138ce68f267141a12a3b5141394bf, type: 3}
+  m_Name: Invisibility Scroll
+  m_EditorClassIdentifier: Assembly-CSharp::Scroll
+  Id: dadb9ec9-c005-4c3e-b2d3-844bea2dad57
+  itemType: 8
+  itemName: Invisibility Scroll
+  itemSprite: {fileID: 2399374660203494495, guid: da14b33d8cd6c2e7a973b01068223188, type: 3}
+  description: Grants player Invisibility spell. How cool is that?
+  isStackable: 0
+  maxStackSize: 1
+  isUnique: 0
+  dropChance: 100
+  value: 200
+  spellName: Invisibility
+  spellData: {fileID: 11400000, guid: ec0956d226b6df576b4d476cf4dd9fd9, type: 2}
