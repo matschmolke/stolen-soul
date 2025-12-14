@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 202138ce68f267141a12a3b5141394bf, type: 3}
-  m_Name: Haste Scroll
+  m_Name: Damage Increase Scroll
   m_EditorClassIdentifier: Assembly-CSharp::Scroll
-  Id: 2faa3f1f-9196-4dd8-b438-5dce18864cb3
+  Id: 951887c6-dba2-44a6-b732-56650c925043
   itemType: 8
-  itemName: Haste Scroll
-  itemSprite: {fileID: -7285881667050420946, guid: 5f81f23022deb9901acc5327eaa11ddc, type: 3}
-  description: Grants player Haste effect. One time use only!
+  itemName: Damage Increase Scroll
+  itemSprite: {fileID: -5552602240969316136, guid: ab84be3d0579c99ddaa73151584f4454, type: 3}
+  description: Grants player Damage Increase effect. One time use only!
   isStackable: 0
   maxStackSize: 1
   isUnique: 0
   dropChance: 100
   value: 25
-  spellName: Haste
-  spellData: {fileID: 11400000, guid: c980771b27baa801894f559e1b37d289, type: 2}
+  spellName: Damage Increase
+  spellData: {fileID: 11400000, guid: 684d86553a62a72f1b53de0e7d5188d4, type: 2}
   isOneTimeUse: 1
