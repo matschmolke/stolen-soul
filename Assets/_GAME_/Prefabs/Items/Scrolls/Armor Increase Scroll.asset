@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 202138ce68f267141a12a3b5141394bf, type: 3}
-  m_Name: Haste Scroll
+  m_Name: Armor Increase Scroll
   m_EditorClassIdentifier: Assembly-CSharp::Scroll
-  Id: 2faa3f1f-9196-4dd8-b438-5dce18864cb3
+  Id: 85926ece-2a81-4a54-ba96-c28a5eac5c63
   itemType: 8
-  itemName: Haste Scroll
-  itemSprite: {fileID: -7285881667050420946, guid: 5f81f23022deb9901acc5327eaa11ddc, type: 3}
-  description: Grants player Haste effect. One time use only!
+  itemName: Armor Increase Scroll
+  itemSprite: {fileID: -2749020288004446187, guid: 569dbe9e066cce73ab9d35feea3025c7, type: 3}
+  description: Grants player Armor Increase effect. One time use only!
   isStackable: 0
   maxStackSize: 1
   isUnique: 0
   dropChance: 100
   value: 25
-  spellName: Haste
-  spellData: {fileID: 11400000, guid: c980771b27baa801894f559e1b37d289, type: 2}
+  spellName: Armor Increase
+  spellData: {fileID: 11400000, guid: 4f3b2a13873b08cf794c4cdd0779825e, type: 2}
   isOneTimeUse: 1
