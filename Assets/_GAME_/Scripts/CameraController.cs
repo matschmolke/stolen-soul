@@ -85,6 +85,11 @@ public class CameraController : MonoBehaviour
             ConstrainForest();
         }
 
+        if (SceneManager.GetActiveScene().name == "SwampDung")
+        {
+            ConstrainSwamp();
+        }
+
         transform.position = Vector3.Lerp(transform.position, desiredPos, smoothSpeed * Time.deltaTime);
     }
 
@@ -141,6 +146,12 @@ public class CameraController : MonoBehaviour
     private void ConstrainTraiding()
     {
         desiredPos.x = Mathf.Clamp(desiredPos.x, -12.5f, 14f);
-        desiredPos.y = Mathf.Clamp(desiredPos.y, -7.5f, 7.5f);
+        desiredPos.y = Mathf.Clamp(desiredPos.y, -11.5f, 7.5f);
+    }
+
+    private void ConstrainSwamp()
+    {
+        desiredPos.x = Mathf.Clamp(desiredPos.x, -14f, 4f);
+        desiredPos.y = Mathf.Clamp(desiredPos.y, -6.5f, 26.5f);
     }
 }
