@@ -33,6 +33,8 @@ public abstract class InventoryBase : MonoBehaviour
 {
     public Dictionary<int, InventoryItem> slots = new Dictionary<int, InventoryItem>();
 
+    public event Action OnInventoryChanged;
+
     public void AddItemAt(int index, ItemBase Item, int quantity)
     {
         slots[index] = new InventoryItem(Item, quantity);
@@ -82,7 +84,10 @@ public abstract class InventoryBase : MonoBehaviour
 
     public void RemoveItemAt(int index)
     {
+        if (slots[index].Item == null) return;
+
         slots[index] = new InventoryItem();
+        OnInventoryChanged?.Invoke();
     }
 
     public int RemoveItem(ItemBase item, int quantity)
@@ -165,6 +170,34 @@ public abstract class InventoryBase : MonoBehaviour
         return slots[index];
     }
 
+    public void SplitItemStack(int index)
+    {
+        ItemBase item = slots[index].Item;
+        int quantity = slots[index].Quantity;
+
+        if (item == null || item.maxStackSize <= 1) return;
+
+        int splitQuantity = quantity / 2;
+
+        if(splitQuantity == 0) return;
+
+        int freeSlotId = FindFreeSlot();
+
+        if (freeSlotId == -1) return;
+
+        AddItemAt(freeSlotId, item, splitQuantity);
+        ChangeQuantity(index, quantity - splitQuantity);
+
+        OnInventoryChanged?.Invoke();
+    }
+
+    public bool CanItemBeSplitted(int index) 
+    {
+        var item = slots[index].Item;
+        if (item == null) return false;
+        return slots[index].Quantity > 1;
+    }
+
     public int GetQuantityOf(ItemBase item)
     {
         int totalQuantity = 0;
@@ -181,4 +214,16 @@ public abstract class InventoryBase : MonoBehaviour
     }
 
     public abstract int SlotCount();
+
+    private int FindFreeSlot()
+    {
+        foreach(var key in slots.Keys)
+        {
+            if(key >= SlotCount()) continue;
+            if (slots[key].Item == null)
+                return key;
+        }
+
+        return -1;
+    }
 }
