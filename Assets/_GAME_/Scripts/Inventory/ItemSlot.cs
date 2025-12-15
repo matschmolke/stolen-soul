@@ -20,8 +20,6 @@ public class ItemSlot : MonoBehaviour,
 
     public int quantity => playerInventory.GetItem(slotId).Quantity;
 
-    //public bool IsFull => Item != null && quantity >= Item.maxStackSize;
-
     [SerializeField] private TMP_Text quantityText;
     [SerializeField] private Image itemImage;
     public GameObject selectedShader;
@@ -40,6 +38,7 @@ public class ItemSlot : MonoBehaviour,
     {
         inventoryManager = InventoryManager.Instance;
         playerInventory = PlayerInventory.Instance;
+        playerInventory.OnInventoryChanged += RefreshUI;
         canvas = GetComponentInParent<Canvas>();
         slotId = id;
     }
@@ -65,8 +64,6 @@ public class ItemSlot : MonoBehaviour,
 
     public void ClearSlot()
     {
-        playerInventory.RemoveItemAt(slotId);
-
         itemImage.sprite = null;
         itemImage.enabled = false;
 
@@ -108,7 +105,7 @@ public class ItemSlot : MonoBehaviour,
                     playerInventory.ChangeQuantity(slotId, quantity-1);
                     if (this.quantity <= 0)
                     {
-                        ClearSlot();
+                        playerInventory.RemoveItemAt(slotId);
                     }
                 }
                 RefreshUI();
@@ -123,6 +120,14 @@ public class ItemSlot : MonoBehaviour,
         {
             selectedShader.SetActive(false);
             thisItemSelected = false;
+
+            if(ItemContextMenu.Instance.IsActive)
+            {
+                ItemContextMenu.Instance.HideContextMenu();
+                return;
+            }
+
+            ItemContextMenu.Instance.ShowContextMenu(playerInventory, slotId, transform.position, Item != null);
         }
     }
 
