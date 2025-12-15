@@ -28,7 +28,16 @@ public class TradeSlot : MonoBehaviour,
     public ItemBase Item => Inventory.GetItem(slotId).Item;
     public int quantity => Inventory.GetItem(slotId).Quantity;
 
-    public InventoryBase Inventory { get; set; }
+    private InventoryBase inventory;
+
+    public InventoryBase Inventory { 
+        get { return inventory; }
+        set 
+        {
+            inventory = value;
+            inventory.OnInventoryChanged += RefreshUI;
+        }
+    }
 
     [SerializeField] private TMP_Text quantityText;
     [SerializeField] private Image itemImage;
@@ -102,6 +111,14 @@ public class TradeSlot : MonoBehaviour,
         {
             selectedShader.SetActive(false);
             thisItemSelected = false;
+
+            if (ItemContextMenu.Instance.IsActive)
+            {
+                ItemContextMenu.Instance.HideContextMenu();
+                return;
+            }
+
+            ItemContextMenu.Instance.ShowContextMenu(Inventory, slotId, transform.position, false);
         }
     }
 
