@@ -54,6 +54,10 @@ public class DialogueNPC : MonoBehaviour
         {
             inRange = false;
             DialogueChannel.RaiseEvent(false);
+            textFinished = false;
+            dialogueUI.SetActive(false);
+            text.text = string.Empty;
+            StopAllCoroutines();
         }
     }
 
