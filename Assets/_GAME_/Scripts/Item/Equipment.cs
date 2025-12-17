@@ -27,6 +27,9 @@ public class Equipment : ItemBase
     [Header("Sprites for Armor")]
     public SpriteLibraryAsset armorSpriteLibrary;
 
+    [Header("Sprites for Weapon")]
+    public SpriteLibraryAsset weaponSpriteLibrary;
+
     public void Awake()
     {
         Id = GenerateId();
