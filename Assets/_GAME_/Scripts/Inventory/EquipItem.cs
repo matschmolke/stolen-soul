@@ -7,12 +7,19 @@ public class EquipItem : MonoBehaviour
     private ItemSlot slot;
 
     private ChangeArmor armorChanger;
+    private ChangeWeapon weaponChanger;
 
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerStats = player.GetComponent<PlayerStats>();
         armorChanger = player.GetComponent<ChangeArmor>();
+        weaponChanger = player.GetComponent<ChangeWeapon>();
+
+        if(weaponChanger == null)
+        {
+            Debug.LogWarning("No ChangeWeapon component found on Player.");
+        }
 
         slot = transform.GetComponent<ItemSlot>();
 
@@ -32,6 +39,11 @@ public class EquipItem : MonoBehaviour
                 armorChanger.UpdateArmor(item);
             }
 
+            if ((slot.accaptableEquipmentTypes & EquipmentType.Weapon) != 0)
+            {
+                weaponChanger.UpdateWeapon(item);
+            }
+
             previousItem = null;
             return;
         }
@@ -44,6 +56,11 @@ public class EquipItem : MonoBehaviour
             if ((slot.accaptableEquipmentTypes & EquipmentType.Armor) != 0)
             {
                 armorChanger.UpdateArmor(item);
+            }
+
+            if ((slot.accaptableEquipmentTypes & EquipmentType.Weapon) != 0)
+            {
+                weaponChanger.UpdateWeapon(item);
             }
 
             previousItem = item;

@@ -55,7 +55,7 @@ public class ChangeWeapon : MonoBehaviour
 
     private void TryFindInventoryImage()
     {
-        if (invImage != null)
+        /*if (invImage != null)
             return;
 
         GameObject img = GameObject.FindGameObjectWithTag("InvPlayerImg");
@@ -66,6 +66,6 @@ public class ChangeWeapon : MonoBehaviour
         invImage = img.GetComponent<Image>();
 
         if (invImage == null)
-            return;
+            return;*/
     }
 }

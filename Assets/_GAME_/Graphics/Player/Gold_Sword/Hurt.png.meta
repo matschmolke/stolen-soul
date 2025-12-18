@@ -1,70 +1,67 @@
 fileFormatVersion: 2
-guid: 1b671da9ef8f84d4ba7903efce831837
+guid: 4e798380f23871d41820267a216adf6d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8448618005613174997
-    second: Attack_Walk_Sword_0
+      213: -2048800907179887802
+    second: Hurt_0
   - first:
-      213: 6765491165273642569
-    second: Attack_Walk_Sword_1
+      213: 490842205202310979
+    second: Hurt_1
   - first:
-      213: -5213805200017236074
-    second: Attack_Walk_Sword_2
+      213: -3720053754089064719
+    second: Hurt_2
   - first:
-      213: -6406631742647530173
-    second: Attack_Walk_Sword_3
+      213: 5649970053243570431
+    second: Hurt_3
   - first:
-      213: 746698776064703529
-    second: Attack_Walk_Sword_4
+      213: -371187646486735994
+    second: Hurt_4
   - first:
-      213: -7389139583119513512
-    second: Attack_Walk_Sword_5
+      213: 1177448812329152706
+    second: Hurt_5
   - first:
-      213: -5080596257076459692
-    second: Attack_Walk_Sword_6
+      213: 7933592967420663305
+    second: Hurt_6
   - first:
-      213: -4849316710502331749
-    second: Attack_Walk_Sword_7
+      213: 7273187483062910031
+    second: Hurt_7
   - first:
-      213: 5364034679373581466
-    second: Attack_Walk_Sword_8
+      213: -1817361991890795262
+    second: Hurt_8
   - first:
-      213: -7417491759734436071
-    second: Attack_Walk_Sword_9
+      213: -2270139407860209000
+    second: Hurt_9
   - first:
-      213: -2590699766055338207
-    second: Attack_Walk_Sword_10
+      213: -1530035385177744352
+    second: Hurt_10
   - first:
-      213: -5334918379119960026
-    second: Attack_Walk_Sword_11
+      213: -1594775402449041300
+    second: Hurt_11
   - first:
-      213: -7510548457429611410
-    second: Attack_Walk_Sword_12
+      213: 2613454359409402267
+    second: Hurt_12
   - first:
-      213: 5823244319683723619
-    second: Attack_Walk_Sword_13
+      213: 4456403835247727152
+    second: Hurt_13
   - first:
-      213: 9077501143417200003
-    second: Attack_Walk_Sword_14
+      213: -2919361725218032385
+    second: Hurt_14
   - first:
-      213: 1168584294079047463
-    second: Attack_Walk_Sword_15
+      213: -7596089925820088084
+    second: Hurt_15
   - first:
-      213: 5743977552054990486
-    second: Attack_Walk_Sword_16
+      213: -1127819593939285392
+    second: Hurt_16
   - first:
-      213: -6668953405469866319
-    second: Attack_Walk_Sword_17
+      213: 6905827832230521594
+    second: Hurt_17
   - first:
-      213: 667850614854702828
-    second: Attack_Walk_Sword_18
+      213: 981960596569526839
+    second: Hurt_18
   - first:
-      213: 5630383661433001189
-    second: Attack_Walk_Sword_19
-  - first:
-      213: -557743825665192998
-    second: Attack_Walk_Sword_20
+      213: -9071442512571043273
+    second: Hurt_19
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -160,7 +157,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack_Walk_Sword_0
+      name: Hurt_0
       rect:
         serializedVersion: 2
         x: 0
@@ -175,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2f1574cfaa70ca80800000000000000
-      internalID: -8448618005613174997
+      spriteID: 6437b001e623193e0800000000000000
+      internalID: -2048800907179887802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_1
+      name: Hurt_1
       rect:
         serializedVersion: 2
         x: 64
@@ -197,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 946dd25ae5ad3ed50800000000000000
-      internalID: 6765491165273642569
+      spriteID: 3476ad19262dfc600800000000000000
+      internalID: 490842205202310979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_2
+      name: Hurt_2
       rect:
         serializedVersion: 2
         x: 128
@@ -219,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69f53e46bc7d4a7b0800000000000000
-      internalID: -5213805200017236074
+      spriteID: 1f6b92202d6bf5cc0800000000000000
+      internalID: -3720053754089064719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_3
+      name: Hurt_3
       rect:
         serializedVersion: 2
         x: 192
@@ -241,14 +238,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34d80c4bf521717a0800000000000000
-      internalID: -6406631742647530173
+      spriteID: ff88d2f14d9b86e40800000000000000
+      internalID: 5649970053243570431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_4
+      name: Hurt_4
       rect:
         serializedVersion: 2
         x: 256
@@ -263,36 +260,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92c3e85a49ecc5a00800000000000000
-      internalID: 746698776064703529
+      spriteID: 683152a5dc649daf0800000000000000
+      internalID: -371187646486735994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8582260d2b0847990800000000000000
-      internalID: -7389139583119513512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_Walk_Sword_6
+      name: Hurt_5
       rect:
         serializedVersion: 2
         x: 0
@@ -307,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45747c15f981e79b0800000000000000
-      internalID: -5080596257076459692
+      spriteID: 2c0b518d473275010800000000000000
+      internalID: 1177448812329152706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_7
+      name: Hurt_6
       rect:
         serializedVersion: 2
         x: 64
@@ -329,14 +304,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9a84230524c3bcb0800000000000000
-      internalID: -4849316710502331749
+      spriteID: 90655a715c8c91e60800000000000000
+      internalID: 7933592967420663305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_8
+      name: Hurt_7
       rect:
         serializedVersion: 2
         x: 128
@@ -351,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9c40fafe11e07a40800000000000000
-      internalID: 5364034679373581466
+      spriteID: f4c38c81b7d8fe460800000000000000
+      internalID: 7273187483062910031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_9
+      name: Hurt_8
       rect:
         serializedVersion: 2
         x: 192
@@ -373,14 +348,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91f44a84b86cf0990800000000000000
-      internalID: -7417491759734436071
+      spriteID: 2058d0da5ee67c6e0800000000000000
+      internalID: -1817361991890795262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_10
+      name: Hurt_9
       rect:
         serializedVersion: 2
         x: 256
@@ -395,36 +370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12f7594f94cfb0cd0800000000000000
-      internalID: -2590699766055338207
+      spriteID: 89a60eb7c38de70e0800000000000000
+      internalID: -2270139407860209000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_11
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6202ad2ffff86f5b0800000000000000
-      internalID: -5334918379119960026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_Walk_Sword_12
+      name: Hurt_10
       rect:
         serializedVersion: 2
         x: 0
@@ -439,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e6ccc8678fb25c790800000000000000
-      internalID: -7510548457429611410
+      spriteID: 02cd3b47ce834cae0800000000000000
+      internalID: -1530035385177744352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_13
+      name: Hurt_11
       rect:
         serializedVersion: 2
         x: 64
@@ -461,14 +414,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3614f0b1bd150d050800000000000000
-      internalID: 5823244319683723619
+      spriteID: c688e7098383ed9e0800000000000000
+      internalID: -1594775402449041300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_14
+      name: Hurt_12
       rect:
         serializedVersion: 2
         x: 128
@@ -483,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38d959df133c9fd70800000000000000
-      internalID: 9077501143417200003
+      spriteID: b912b49a4ead44420800000000000000
+      internalID: 2613454359409402267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_15
+      name: Hurt_13
       rect:
         serializedVersion: 2
         x: 192
@@ -505,14 +458,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 727aeaa5935a73010800000000000000
-      internalID: 1168584294079047463
+      spriteID: 03211a75da358dd30800000000000000
+      internalID: 4456403835247727152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_16
+      name: Hurt_14
       rect:
         serializedVersion: 2
         x: 256
@@ -527,36 +480,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6963e049625b6bf40800000000000000
-      internalID: 5743977552054990486
+      spriteID: ff4f1857af75c77d0800000000000000
+      internalID: -2919361725218032385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_17
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b6465b163e1373a0800000000000000
-      internalID: -6668953405469866319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_Walk_Sword_18
+      name: Hurt_15
       rect:
         serializedVersion: 2
         x: 0
@@ -571,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce6d075889ea44900800000000000000
-      internalID: 667850614854702828
+      spriteID: ce002915574459690800000000000000
+      internalID: -7596089925820088084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_19
+      name: Hurt_16
       rect:
         serializedVersion: 2
         x: 64
@@ -593,14 +524,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e490e8eb14232e40800000000000000
-      internalID: 5630383661433001189
+      spriteID: 07a06840e0e2950f0800000000000000
+      internalID: -1127819593939285392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_20
+      name: Hurt_17
       rect:
         serializedVersion: 2
         x: 128
@@ -615,14 +546,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: adb0f8312fe7248f0800000000000000
-      internalID: -557743825665192998
+      spriteID: afa2b1423dd66df50800000000000000
+      internalID: 6905827832230521594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_21
+      name: Hurt_18
       rect:
         serializedVersion: 2
         x: 192
@@ -635,16 +566,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 553c0367de0252048a72f55ea534db71
-      internalID: -295430898
+      spriteID: 73215fdb5ff90ad00800000000000000
+      internalID: 981960596569526839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_Walk_Sword_22
+      name: Hurt_19
       rect:
         serializedVersion: 2
         x: 256
@@ -657,32 +588,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: df67bf5c32de22547b3efe808be7e4a7
-      internalID: -251842567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_Walk_Sword_23
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13e0cf98e8f2c144282746fd593b3dd3
-      internalID: 1347669956
+      spriteID: 73273dde813cb1280800000000000000
+      internalID: -9071442512571043273
       vertices: []
       indices: 
       edges: []
@@ -691,7 +600,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3d9144663b173914b8cc4fa91aae8985
+    spriteID: ceccc40c7bf1c3045999a6d79aceeed7
     internalID: 0
     vertices: []
     indices: 
@@ -701,32 +610,28 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":4.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":4.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Attack_Walk_Sword_0: -8448618005613174997
-      Attack_Walk_Sword_1: 6765491165273642569
-      Attack_Walk_Sword_10: -2590699766055338207
-      Attack_Walk_Sword_11: -5334918379119960026
-      Attack_Walk_Sword_12: -7510548457429611410
-      Attack_Walk_Sword_13: 5823244319683723619
-      Attack_Walk_Sword_14: 9077501143417200003
-      Attack_Walk_Sword_15: 1168584294079047463
-      Attack_Walk_Sword_16: 5743977552054990486
-      Attack_Walk_Sword_17: -6668953405469866319
-      Attack_Walk_Sword_18: 667850614854702828
-      Attack_Walk_Sword_19: 5630383661433001189
-      Attack_Walk_Sword_2: -5213805200017236074
-      Attack_Walk_Sword_20: -557743825665192998
-      Attack_Walk_Sword_21: -295430898
-      Attack_Walk_Sword_22: -251842567
-      Attack_Walk_Sword_23: 1347669956
-      Attack_Walk_Sword_3: -6406631742647530173
-      Attack_Walk_Sword_4: 746698776064703529
-      Attack_Walk_Sword_5: -7389139583119513512
-      Attack_Walk_Sword_6: -5080596257076459692
-      Attack_Walk_Sword_7: -4849316710502331749
-      Attack_Walk_Sword_8: 5364034679373581466
-      Attack_Walk_Sword_9: -7417491759734436071
+      Hurt_0: -2048800907179887802
+      Hurt_1: 490842205202310979
+      Hurt_10: -1530035385177744352
+      Hurt_11: -1594775402449041300
+      Hurt_12: 2613454359409402267
+      Hurt_13: 4456403835247727152
+      Hurt_14: -2919361725218032385
+      Hurt_15: -7596089925820088084
+      Hurt_16: -1127819593939285392
+      Hurt_17: 6905827832230521594
+      Hurt_18: 981960596569526839
+      Hurt_19: -9071442512571043273
+      Hurt_2: -3720053754089064719
+      Hurt_3: 5649970053243570431
+      Hurt_4: -371187646486735994
+      Hurt_5: 1177448812329152706
+      Hurt_6: 7933592967420663305
+      Hurt_7: 7273187483062910031
+      Hurt_8: -1817361991890795262
+      Hurt_9: -2270139407860209000
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

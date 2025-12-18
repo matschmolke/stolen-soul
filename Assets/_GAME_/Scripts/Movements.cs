@@ -9,6 +9,7 @@ public class Movements : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
+    [SerializeField]private Animator weaponAnim;
 
     private float walkSpeed = 3f;
     private float runSpeed = 6f;
@@ -68,9 +69,8 @@ public class Movements : MonoBehaviour
             lastDirection = inputVector;
         }
 
-        anim.SetFloat("xVelocity", velocity.x != 0 || velocity.y != 0 ? velocity.x : lastDirection.x);
-        anim.SetFloat("yVelocity", velocity.x != 0 || velocity.y != 0 ? velocity.y : lastDirection.y);
-        anim.SetFloat("speed", velocity.magnitude);
+        CountLastDirection(velocity, anim);
+        CountLastDirection(velocity, weaponAnim);
     }
 
     private void HandleAttack()
@@ -78,6 +78,7 @@ public class Movements : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
             anim.SetTrigger("isAttacking");
+            weaponAnim.SetTrigger("isAttacking");
 
             DealDamage();
         }
@@ -88,11 +89,13 @@ public class Movements : MonoBehaviour
     {
         //add slowing down player for a second
         anim.SetTrigger("isHurt");
+        weaponAnim.SetTrigger("isHurt");
     }
 
     public void Dead()
     {
         anim.SetTrigger("isDead");
+        weaponAnim.SetTrigger("isDead");
         rb.linearVelocity = Vector2.zero;
         isDead = true;
 
@@ -135,6 +138,13 @@ public class Movements : MonoBehaviour
                 Debug.Log(e.Message);
             }
         }
+    }
+
+    private void CountLastDirection(Vector2 velocity, Animator animator)
+    {
+        animator.SetFloat("xVelocity", velocity.x != 0 || velocity.y != 0 ? velocity.x : lastDirection.x);
+        animator.SetFloat("yVelocity", velocity.x != 0 || velocity.y != 0 ? velocity.y : lastDirection.y);
+        animator.SetFloat("speed", velocity.magnitude);
     }
 
     public float GetWalkSpeed() => walkSpeed;

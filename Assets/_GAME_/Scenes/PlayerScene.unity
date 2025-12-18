@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 559447768}
   - component: {fileID: 559447767}
   - component: {fileID: 559447766}
+  - component: {fileID: 559447769}
+  - component: {fileID: 559447770}
   m_Layer: 2
   m_Name: Weapon
   m_TagString: Untagged
@@ -165,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 4.8434204e-20
+  m_labelHash: 1.18935625e-11
   m_SpriteKey: 0
   m_SpriteHash: 500204112
 --- !u!114 &559447767
@@ -182,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: b6105b0a01863cc4197349bd56563039, type: 3}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 0bf19b7471ec85f428e7f33d6de3f7e9, type: 3}
 --- !u!212 &559447768
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -238,9 +240,44 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &559447769
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559447764}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a20c2f627db5beb4ca6f9d71697c75a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &559447770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559447764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c60a13ad009884694e4a93ccc172b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeWeapon
+  defaultWeaponLibrary: {fileID: 7108339969198208228, guid: 0bf19b7471ec85f428e7f33d6de3f7e9, type: 3}
 --- !u!1 &610602652
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +490,7 @@ SpriteRenderer:
   m_SortingLayerID: -974269111
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1321943522, guid: 61166a64c4c13194d9e9d4bf6214b8ec, type: 3}
+  m_Sprite: {fileID: 4723107735738678597, guid: 61166a64c4c13194d9e9d4bf6214b8ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -494,6 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3bc702ba2837264c816b4fb7085d6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movements
+  weaponAnim: {fileID: 559447769}
   canAttack: 1
   isDead: 0
   attackOrigin: {fileID: 1884425867}
@@ -654,8 +692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
-  m_CategoryHash: 2.7029406e-16
-  m_labelHash: 2.2983657e-30
+  m_CategoryHash: 4.8434204e-20
+  m_labelHash: 1.3971405e-28
   m_SpriteKey: 0
   m_SpriteHash: 941825359
 --- !u!114 &2091299009
@@ -671,7 +709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 2b4f647e9ee70154c9ebe57dfaa35495, type: 3}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: bd0d6ba49da78e94db2add9772359392, type: 3}
 --- !u!114 &2091299010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,7 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658d1576e6743804690001e324e02756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeArmor
-  defaultArmorLibrary: {fileID: 7108339969198208228, guid: 2b4f647e9ee70154c9ebe57dfaa35495, type: 3}
+  defaultArmorLibrary: {fileID: 7108339969198208228, guid: 8dce5090dd146974595e70e7bdefe398, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,79 +1,103 @@
 fileFormatVersion: 2
-guid: 48d08b2498ae9324790345e36c173323
+guid: 6fb051f18bf617b43aa47c40c212396e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1982970815230004084
-    second: Walk_Sword_0
+      213: 4944230376442633554
+    second: Run_0
   - first:
-      213: -3897328420427826678
-    second: Walk_Sword_1
+      213: -2274363484027164459
+    second: Run_1
   - first:
-      213: -7327886658245564226
-    second: Walk_Sword_2
+      213: 8284087734974297348
+    second: Run_2
   - first:
-      213: 8293366370183763197
-    second: Walk_Sword_3
+      213: 5304202850863732263
+    second: Run_3
   - first:
-      213: 3060552339796862147
-    second: Walk_Sword_4
+      213: 2833043080597125133
+    second: Run_4
   - first:
-      213: -3564062214187097052
-    second: Walk_Sword_5
+      213: -2217414122262695004
+    second: Run_5
   - first:
-      213: 4397371182799189166
-    second: Walk_Sword_6
+      213: -4440497016933152808
+    second: Run_6
   - first:
-      213: 5405650535616603143
-    second: Walk_Sword_7
+      213: 8676454946275842879
+    second: Run_7
   - first:
-      213: -2371834505770779365
-    second: Walk_Sword_8
+      213: -6351944509545543589
+    second: Run_8
   - first:
-      213: 5719242725480976955
-    second: Walk_Sword_9
+      213: 2158891789428380870
+    second: Run_9
   - first:
-      213: 3283313585754559623
-    second: Walk_Sword_10
+      213: 9151066736925549315
+    second: Run_10
   - first:
-      213: -3953724830183576172
-    second: Walk_Sword_11
+      213: -7266845314124737194
+    second: Run_11
   - first:
-      213: 5671335351041924563
-    second: Walk_Sword_12
+      213: -5168576596277122810
+    second: Run_12
   - first:
-      213: 5307443444162382730
-    second: Walk_Sword_13
+      213: -7303085922518154401
+    second: Run_13
   - first:
-      213: 862137433146670057
-    second: Walk_Sword_14
+      213: -3387832490922303652
+    second: Run_14
   - first:
-      213: 1424555302501489886
-    second: Walk_Sword_15
+      213: 2196459547150753776
+    second: Run_15
   - first:
-      213: 1229087311367162096
-    second: Walk_Sword_16
+      213: -2969576599511150121
+    second: Run_16
   - first:
-      213: -2220371352868929181
-    second: Walk_Sword_17
+      213: -1100304572229716114
+    second: Run_17
   - first:
-      213: -8469677912069955153
-    second: Walk_Sword_18
+      213: -1286830556838052669
+    second: Run_18
   - first:
-      213: -7567213990486881837
-    second: Walk_Sword_19
+      213: -4740722875278701659
+    second: Run_19
   - first:
-      213: 3324699979400076770
-    second: Walk_Sword_20
+      213: -6219685122133649782
+    second: Run_20
   - first:
-      213: -1101302728123451918
-    second: Walk_Sword_21
+      213: -5210376377794636309
+    second: Run_21
   - first:
-      213: 6230563672511826399
-    second: Walk_Sword_22
+      213: -227415817694919712
+    second: Run_22
   - first:
-      213: 3853631265439021949
-    second: Walk_Sword_23
+      213: 2448761691846615139
+    second: Run_23
+  - first:
+      213: -8619701624676006709
+    second: Run_24
+  - first:
+      213: -2187387491920451328
+    second: Run_25
+  - first:
+      213: -314372617269588817
+    second: Run_26
+  - first:
+      213: -1421584596269389621
+    second: Run_27
+  - first:
+      213: -3001407226067449113
+    second: Run_28
+  - first:
+      213: 2131885599912629922
+    second: Run_29
+  - first:
+      213: -3457748248120550607
+    second: Run_30
+  - first:
+      213: -1973870562292210929
+    second: Run_31
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -169,7 +193,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_Sword_0
+      name: Run_0
       rect:
         serializedVersion: 2
         x: 0
@@ -184,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c84bf3ebc821b74e0800000000000000
-      internalID: -1982970815230004084
+      spriteID: 25d1f8be45f6d9440800000000000000
+      internalID: 4944230376442633554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_1
+      name: Run_1
       rect:
         serializedVersion: 2
         x: 64
@@ -206,14 +230,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0a7d575378e9e9c0800000000000000
-      internalID: -3897328420427826678
+      spriteID: 5d8e07c1676df60e0800000000000000
+      internalID: -2274363484027164459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_2
+      name: Run_2
       rect:
         serializedVersion: 2
         x: 128
@@ -228,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb8e2fcb8ed1e4a90800000000000000
-      internalID: -7327886658245564226
+      spriteID: 405305b67edf6f270800000000000000
+      internalID: 8284087734974297348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_3
+      name: Run_3
       rect:
         serializedVersion: 2
         x: 192
@@ -250,14 +274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df459f606c4f71370800000000000000
-      internalID: 8293366370183763197
+      spriteID: 726d856d3605c9940800000000000000
+      internalID: 5304202850863732263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_4
+      name: Run_4
       rect:
         serializedVersion: 2
         x: 256
@@ -272,14 +296,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c425163324497a20800000000000000
-      internalID: 3060552339796862147
+      spriteID: d08be54fbadf05720800000000000000
+      internalID: 2833043080597125133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_5
+      name: Run_5
       rect:
         serializedVersion: 2
         x: 320
@@ -294,14 +318,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4246cf5ac48e98ec0800000000000000
-      internalID: -3564062214187097052
+      spriteID: 4a3f89aaa992a31e0800000000000000
+      internalID: -2217414122262695004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_6
+      name: Run_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d784876d7f2062c0800000000000000
+      internalID: -4440497016933152808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3bd376cdc5f86870800000000000000
+      internalID: 8676454946275842879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_8
       rect:
         serializedVersion: 2
         x: 0
@@ -316,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea4f840eac9960d30800000000000000
-      internalID: 4397371182799189166
+      spriteID: b588b836f1c59d7a0800000000000000
+      internalID: -6351944509545543589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_7
+      name: Run_9
       rect:
         serializedVersion: 2
         x: 64
@@ -338,14 +406,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 704e353958ab40b40800000000000000
-      internalID: 5405650535616603143
+      spriteID: 6c4d269e4ace5fd10800000000000000
+      internalID: 2158891789428380870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_8
+      name: Run_10
       rect:
         serializedVersion: 2
         x: 128
@@ -360,14 +428,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1db481651d851fd0800000000000000
-      internalID: -2371834505770779365
+      spriteID: 303275a76be1ffe70800000000000000
+      internalID: 9151066736925549315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_9
+      name: Run_11
       rect:
         serializedVersion: 2
         x: 192
@@ -382,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b32d78cf4f4de5f40800000000000000
-      internalID: 5719242725480976955
+      spriteID: 65512ed20baf62b90800000000000000
+      internalID: -7266845314124737194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_10
+      name: Run_12
       rect:
         serializedVersion: 2
         x: 256
@@ -404,14 +472,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7845d1d7f4ca09d20800000000000000
-      internalID: 3283313585754559623
+      spriteID: 609218058f68548b0800000000000000
+      internalID: -5168576596277122810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_11
+      name: Run_13
       rect:
         serializedVersion: 2
         x: 320
@@ -426,14 +494,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49d2445f63c8129c0800000000000000
-      internalID: -3953724830183576172
+      spriteID: f5346200c0a36aa90800000000000000
+      internalID: -7303085922518154401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_12
+      name: Run_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f9c0c8c400cf0d0800000000000000
+      internalID: -3387832490922303652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff9f6f12546b7e10800000000000000
+      internalID: 2196459547150753776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_16
       rect:
         serializedVersion: 2
         x: 0
@@ -448,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3dd18f82471a4be40800000000000000
-      internalID: 5671335351041924563
+      spriteID: 7d153d4f0d1f9c6d0800000000000000
+      internalID: -2969576599511150121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_13
+      name: Run_17
       rect:
         serializedVersion: 2
         x: 64
@@ -470,14 +582,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8b46c241b3d7a940800000000000000
-      internalID: 5307443444162382730
+      spriteID: e67728b32deeab0f0800000000000000
+      internalID: -1100304572229716114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_14
+      name: Run_18
       rect:
         serializedVersion: 2
         x: 128
@@ -492,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9eb364a7d6de6fb00800000000000000
-      internalID: 862137433146670057
+      spriteID: 3ccbc8d2d62442ee0800000000000000
+      internalID: -1286830556838052669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_15
+      name: Run_19
       rect:
         serializedVersion: 2
         x: 192
@@ -514,14 +626,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: edc1080008905c310800000000000000
-      internalID: 1424555302501489886
+      spriteID: 5abc17099a1953eb0800000000000000
+      internalID: -4740722875278701659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_16
+      name: Run_20
       rect:
         serializedVersion: 2
         x: 256
@@ -536,14 +648,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f8caffc5689e0110800000000000000
-      internalID: 1229087311367162096
+      spriteID: a861170b55d3fa9a0800000000000000
+      internalID: -6219685122133649782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_17
+      name: Run_21
       rect:
         serializedVersion: 2
         x: 320
@@ -558,14 +670,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3614bc2c408af21e0800000000000000
-      internalID: -2220371352868929181
+      spriteID: be5d6774a4601b7b0800000000000000
+      internalID: -5210376377794636309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_18
+      name: Run_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e34df9c48e08dcf0800000000000000
+      internalID: -227415817694919712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_23
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3602a1ed8cfbbf120800000000000000
+      internalID: 2448761691846615139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_24
       rect:
         serializedVersion: 2
         x: 0
@@ -580,14 +736,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa1291130d8a57a80800000000000000
-      internalID: -8469677912069955153
+      spriteID: bc4445f9a0ba06880800000000000000
+      internalID: -8619701624676006709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_19
+      name: Run_25
       rect:
         serializedVersion: 2
         x: 64
@@ -602,14 +758,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d9c9ade7fadbf690800000000000000
-      internalID: -7567213990486881837
+      spriteID: 009e2f55aa6d4a1e0800000000000000
+      internalID: -2187387491920451328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_20
+      name: Run_26
       rect:
         serializedVersion: 2
         x: 128
@@ -624,14 +780,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2edd3e82405b32e20800000000000000
-      internalID: 3324699979400076770
+      spriteID: fac498c25cf13abf0800000000000000
+      internalID: -314372617269588817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_21
+      name: Run_27
       rect:
         serializedVersion: 2
         x: 192
@@ -646,14 +802,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f57804f00367b0f0800000000000000
-      internalID: -1101302728123451918
+      spriteID: bc822317754854ce0800000000000000
+      internalID: -1421584596269389621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_22
+      name: Run_28
       rect:
         serializedVersion: 2
         x: 256
@@ -668,14 +824,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd9458236a8677650800000000000000
-      internalID: 6230563672511826399
+      spriteID: 7ea85ffa70cd856d0800000000000000
+      internalID: -3001407226067449113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Sword_23
+      name: Run_29
       rect:
         serializedVersion: 2
         x: 320
@@ -690,8 +846,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7bf4dfe739da7530800000000000000
-      internalID: 3853631265439021949
+      spriteID: 2a6109c68aaf59d10800000000000000
+      internalID: 2131885599912629922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b9b0cc94c9300d0800000000000000
+      internalID: -3457748248120550607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03e8fd7e276b94e0800000000000000
+      internalID: -1973870562292210929
       vertices: []
       indices: 
       edges: []
@@ -700,7 +900,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 69fbd13de1b17b9479760cc7f709b40f
+    spriteID: 786a7ec1c8c4dc8458bd5a522bd80b82
     internalID: 0
     vertices: []
     indices: 
@@ -710,32 +910,40 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":4.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":4.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Walk_Sword_0: -1982970815230004084
-      Walk_Sword_1: -3897328420427826678
-      Walk_Sword_10: 3283313585754559623
-      Walk_Sword_11: -3953724830183576172
-      Walk_Sword_12: 5671335351041924563
-      Walk_Sword_13: 5307443444162382730
-      Walk_Sword_14: 862137433146670057
-      Walk_Sword_15: 1424555302501489886
-      Walk_Sword_16: 1229087311367162096
-      Walk_Sword_17: -2220371352868929181
-      Walk_Sword_18: -8469677912069955153
-      Walk_Sword_19: -7567213990486881837
-      Walk_Sword_2: -7327886658245564226
-      Walk_Sword_20: 3324699979400076770
-      Walk_Sword_21: -1101302728123451918
-      Walk_Sword_22: 6230563672511826399
-      Walk_Sword_23: 3853631265439021949
-      Walk_Sword_3: 8293366370183763197
-      Walk_Sword_4: 3060552339796862147
-      Walk_Sword_5: -3564062214187097052
-      Walk_Sword_6: 4397371182799189166
-      Walk_Sword_7: 5405650535616603143
-      Walk_Sword_8: -2371834505770779365
-      Walk_Sword_9: 5719242725480976955
+      Run_0: 4944230376442633554
+      Run_1: -2274363484027164459
+      Run_10: 9151066736925549315
+      Run_11: -7266845314124737194
+      Run_12: -5168576596277122810
+      Run_13: -7303085922518154401
+      Run_14: -3387832490922303652
+      Run_15: 2196459547150753776
+      Run_16: -2969576599511150121
+      Run_17: -1100304572229716114
+      Run_18: -1286830556838052669
+      Run_19: -4740722875278701659
+      Run_2: 8284087734974297348
+      Run_20: -6219685122133649782
+      Run_21: -5210376377794636309
+      Run_22: -227415817694919712
+      Run_23: 2448761691846615139
+      Run_24: -8619701624676006709
+      Run_25: -2187387491920451328
+      Run_26: -314372617269588817
+      Run_27: -1421584596269389621
+      Run_28: -3001407226067449113
+      Run_29: 2131885599912629922
+      Run_3: 5304202850863732263
+      Run_30: -3457748248120550607
+      Run_31: -1973870562292210929
+      Run_4: 2833043080597125133
+      Run_5: -2217414122262695004
+      Run_6: -4440497016933152808
+      Run_7: 8676454946275842879
+      Run_8: -6351944509545543589
+      Run_9: 2158891789428380870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

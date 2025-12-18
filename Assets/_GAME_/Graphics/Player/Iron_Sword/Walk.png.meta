@@ -1,31 +1,79 @@
 fileFormatVersion: 2
-guid: 0b9f7e46b0bcadf4195569ea8b7a7c64
+guid: e30852177cf4a404c8a62afe97b81c55
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8439335492125225755
-    second: Death_Sword_0
+      213: 4035959289877228764
+    second: Walk_0
   - first:
-      213: -6926691776729839921
-    second: Death_Sword_1
+      213: -982904232830982447
+    second: Walk_1
   - first:
-      213: -2521683260263982522
-    second: Death_Sword_2
+      213: -350908408369970039
+    second: Walk_2
   - first:
-      213: -7058654939506284546
-    second: Death_Sword_3
+      213: -5409570386352685021
+    second: Walk_3
   - first:
-      213: -9145190133931049887
-    second: Death_Sword_4
+      213: 1553940418269799609
+    second: Walk_4
   - first:
-      213: 2871381952529004788
-    second: Death_Sword_5
+      213: 2416434504916517810
+    second: Walk_5
   - first:
-      213: 2233168376989806392
-    second: Death_Sword_6
+      213: -6428935122508569504
+    second: Walk_6
   - first:
-      213: -8544872392420242685
-    second: Death_Sword_7
+      213: 7144598999076838305
+    second: Walk_7
+  - first:
+      213: 7500509103958437945
+    second: Walk_8
+  - first:
+      213: 1008816216748069464
+    second: Walk_9
+  - first:
+      213: 11406907883527339
+    second: Walk_10
+  - first:
+      213: 8030128826893041618
+    second: Walk_11
+  - first:
+      213: 2315132830120601726
+    second: Walk_12
+  - first:
+      213: 7929438602540414932
+    second: Walk_13
+  - first:
+      213: 5250438378151091228
+    second: Walk_14
+  - first:
+      213: -1258472680374559522
+    second: Walk_15
+  - first:
+      213: 2155107402851330559
+    second: Walk_16
+  - first:
+      213: 7720552135500433751
+    second: Walk_17
+  - first:
+      213: -8953822836050947745
+    second: Walk_18
+  - first:
+      213: -6148190078763333420
+    second: Walk_19
+  - first:
+      213: -404497435793420480
+    second: Walk_20
+  - first:
+      213: 8198118753440594053
+    second: Walk_21
+  - first:
+      213: -7385022159944432617
+    second: Walk_22
+  - first:
+      213: 5662401404901316715
+    second: Walk_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,7 +169,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_Sword_0
+      name: Walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ec878b551571ea80800000000000000
-      internalID: -8439335492125225755
+      spriteID: cdce119379b920830800000000000000
+      internalID: 4035959289877228764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_1
+      name: Walk_1
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc6066b37827fdf90800000000000000
-      internalID: -6926691776729839921
+      spriteID: 1d6a1e1dec50c52f0800000000000000
+      internalID: -982904232830982447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_2
+      name: Walk_2
       rect:
         serializedVersion: 2
         x: 128
@@ -180,14 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64a9aeb6f6e210dd0800000000000000
-      internalID: -2521683260263982522
+      spriteID: 984096a69a2512bf0800000000000000
+      internalID: -350908408369970039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_3
+      name: Walk_3
       rect:
         serializedVersion: 2
         x: 192
@@ -202,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef7ebaa1bbe9a0e90800000000000000
-      internalID: -7058654939506284546
+      spriteID: 320c9fd05685de4b0800000000000000
+      internalID: -5409570386352685021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_4
+      name: Walk_4
       rect:
         serializedVersion: 2
         x: 256
@@ -224,14 +272,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16cf1a7c602c51180800000000000000
-      internalID: -9145190133931049887
+      spriteID: 9b4e719c394b09510800000000000000
+      internalID: 1553940418269799609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_5
+      name: Walk_5
       rect:
         serializedVersion: 2
         x: 320
@@ -246,36 +294,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f875fe2ca239d720800000000000000
-      internalID: 2871381952529004788
+      spriteID: 2b3cb802166e88120800000000000000
+      internalID: 2416434504916517810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 83fec1a9ececdfe10800000000000000
-      internalID: 2233168376989806392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_Sword_7
+      name: Walk_6
       rect:
         serializedVersion: 2
         x: 0
@@ -290,14 +316,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30bcfbee4d38a6980800000000000000
-      internalID: -8544872392420242685
+      spriteID: 06428da6195d7c6a0800000000000000
+      internalID: -6428935122508569504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_8
+      name: Walk_7
       rect:
         serializedVersion: 2
         x: 64
@@ -310,16 +336,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8db333605e488064da2223c97ad5e2a7
-      internalID: -1481886493
+      spriteID: 1ab169a9fe6b62360800000000000000
+      internalID: 7144598999076838305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_9
+      name: Walk_8
       rect:
         serializedVersion: 2
         x: 128
@@ -332,16 +358,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4acf537d31b0f30489ef40824f36e766
-      internalID: 2088480723
+      spriteID: 930b6086a49271860800000000000000
+      internalID: 7500509103958437945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_10
+      name: Walk_9
       rect:
         serializedVersion: 2
         x: 192
@@ -354,16 +380,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 83d72ee37b8af0f48b5cea3328bc1723
-      internalID: -1690762787
+      spriteID: 8521ce21109000e00800000000000000
+      internalID: 1008816216748069464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_11
+      name: Walk_10
       rect:
         serializedVersion: 2
         x: 256
@@ -376,16 +402,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7329bc121cf68cd4ebaf8fd5407ec04b
-      internalID: -305141624
+      spriteID: bac1264b586882000800000000000000
+      internalID: 11406907883527339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_12
+      name: Walk_11
       rect:
         serializedVersion: 2
         x: 320
@@ -398,38 +424,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b9dece0e6e4ea714794ea684c9d22cf6
-      internalID: 2013866582
+      spriteID: 2df75936f9fb07f60800000000000000
+      internalID: 8030128826893041618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_13
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16810258a9a2f4149a8942a8b483c912
-      internalID: 1480176241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_Sword_14
+      name: Walk_12
       rect:
         serializedVersion: 2
         x: 0
@@ -442,16 +446,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2b948ed1e12875c4687c82996af95905
-      internalID: -658849476
+      spriteID: e78ee2bfa01012020800000000000000
+      internalID: 2315132830120601726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_15
+      name: Walk_13
       rect:
         serializedVersion: 2
         x: 64
@@ -464,16 +468,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dcbf35dcd0bea564a8dd4f7343460556
-      internalID: 553103282
+      spriteID: 4d7f0b4a5660b0e60800000000000000
+      internalID: 7929438602540414932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_16
+      name: Walk_14
       rect:
         serializedVersion: 2
         x: 128
@@ -486,16 +490,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1c190b870911ff24899fbc9a5db0c696
-      internalID: -1120098568
+      spriteID: c1c16cc03ed4dd840800000000000000
+      internalID: 5250438378151091228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_17
+      name: Walk_15
       rect:
         serializedVersion: 2
         x: 192
@@ -508,16 +512,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2e1daadd24c945a4384260dd12e763e7
-      internalID: -529645506
+      spriteID: edc9dbec3c1098ee0800000000000000
+      internalID: -1258472680374559522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_18
+      name: Walk_16
       rect:
         serializedVersion: 2
         x: 256
@@ -530,16 +534,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0b4f3fc29b5fe2349a5cb1754ac92b4e
-      internalID: -573084600
+      spriteID: ff9a4cfb3ca78ed10800000000000000
+      internalID: 2155107402851330559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_19
+      name: Walk_17
       rect:
         serializedVersion: 2
         x: 320
@@ -552,38 +556,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f073a0e542ca7e54bb2317a88cccf7ed
-      internalID: 1459009480
+      spriteID: 75903621349e42b60800000000000000
+      internalID: 7720552135500433751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_20
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7e814a5a5ae1804e9480aeb5184298f
-      internalID: 1797212570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_Sword_21
+      name: Walk_18
       rect:
         serializedVersion: 2
         x: 0
@@ -596,16 +578,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9a7d651f63c6bb94b9436a767141104a
-      internalID: 965746747
+      spriteID: f51176be191adb380800000000000000
+      internalID: -8953822836050947745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_22
+      name: Walk_19
       rect:
         serializedVersion: 2
         x: 64
@@ -618,16 +600,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c15d7e92ff5e57b48a69a654879e3d44
-      internalID: 853069867
+      spriteID: 4d80bb7a2bd3daaa0800000000000000
+      internalID: -6148190078763333420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_23
+      name: Walk_20
       rect:
         serializedVersion: 2
         x: 128
@@ -640,16 +622,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2b4b4782195d83044be7b9de5abbfced
-      internalID: -2051998518
+      spriteID: 04f0afaa9bfe26af0800000000000000
+      internalID: -404497435793420480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_24
+      name: Walk_21
       rect:
         serializedVersion: 2
         x: 192
@@ -662,16 +644,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 392a74e3a73392641ac35479b1a05240
-      internalID: 1189388915
+      spriteID: 5887b4d129195c170800000000000000
+      internalID: 8198118753440594053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_25
+      name: Walk_22
       rect:
         serializedVersion: 2
         x: 256
@@ -684,16 +666,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7ddfb4c5ca91c5243a3227cae7392fdf
-      internalID: 1514035622
+      spriteID: 714cf1a1971238990800000000000000
+      internalID: -7385022159944432617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_26
+      name: Walk_23
       rect:
         serializedVersion: 2
         x: 320
@@ -706,32 +688,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3706518c0fb52344e97d65de9f4305f5
-      internalID: -1482209192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_Sword_27
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83b87cab6bec7344e8b2885285610bc3
-      internalID: 347928928
+      spriteID: b68d0dab314e49e40800000000000000
+      internalID: 5662401404901316715
       vertices: []
       indices: 
       edges: []
@@ -740,7 +700,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1066f4f6963a1914795f76612ba3d67c
+    spriteID: 8978184c6ad2e834e9ce08649ec7f8e7
     internalID: 0
     vertices: []
     indices: 
@@ -750,36 +710,32 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":4.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":4.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Death_Sword_0: -8439335492125225755
-      Death_Sword_1: -6926691776729839921
-      Death_Sword_10: -1690762787
-      Death_Sword_11: -305141624
-      Death_Sword_12: 2013866582
-      Death_Sword_13: 1480176241
-      Death_Sword_14: -658849476
-      Death_Sword_15: 553103282
-      Death_Sword_16: -1120098568
-      Death_Sword_17: -529645506
-      Death_Sword_18: -573084600
-      Death_Sword_19: 1459009480
-      Death_Sword_2: -2521683260263982522
-      Death_Sword_20: 1797212570
-      Death_Sword_21: 965746747
-      Death_Sword_22: 853069867
-      Death_Sword_23: -2051998518
-      Death_Sword_24: 1189388915
-      Death_Sword_25: 1514035622
-      Death_Sword_26: -1482209192
-      Death_Sword_27: 347928928
-      Death_Sword_3: -7058654939506284546
-      Death_Sword_4: -9145190133931049887
-      Death_Sword_5: 2871381952529004788
-      Death_Sword_6: 2233168376989806392
-      Death_Sword_7: -8544872392420242685
-      Death_Sword_8: -1481886493
-      Death_Sword_9: 2088480723
+      Walk_0: 4035959289877228764
+      Walk_1: -982904232830982447
+      Walk_10: 11406907883527339
+      Walk_11: 8030128826893041618
+      Walk_12: 2315132830120601726
+      Walk_13: 7929438602540414932
+      Walk_14: 5250438378151091228
+      Walk_15: -1258472680374559522
+      Walk_16: 2155107402851330559
+      Walk_17: 7720552135500433751
+      Walk_18: -8953822836050947745
+      Walk_19: -6148190078763333420
+      Walk_2: -350908408369970039
+      Walk_20: -404497435793420480
+      Walk_21: 8198118753440594053
+      Walk_22: -7385022159944432617
+      Walk_23: 5662401404901316715
+      Walk_3: -5409570386352685021
+      Walk_4: 1553940418269799609
+      Walk_5: 2416434504916517810
+      Walk_6: -6428935122508569504
+      Walk_7: 7144598999076838305
+      Walk_8: 7500509103958437945
+      Walk_9: 1008816216748069464
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

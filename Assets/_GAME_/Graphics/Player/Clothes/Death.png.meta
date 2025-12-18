@@ -3,89 +3,89 @@ guid: 7947f78c51cb3cb4ca39dc9c7f1785fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5730410250515692780
-    second: Swordsman_lvl1_Death_without_shadow_0
+      213: 6991849013916550155
+    second: Death_0
   - first:
-      213: -3516680639697003550
-    second: Swordsman_lvl1_Death_without_shadow_1
+      213: -276728812324164698
+    second: Death_1
   - first:
-      213: -1828190812602012932
-    second: Swordsman_lvl1_Death_without_shadow_2
+      213: 3156895337291164288
+    second: Death_2
   - first:
-      213: 8805036778364316310
-    second: Swordsman_lvl1_Death_without_shadow_3
+      213: 1400002288684528572
+    second: Death_3
   - first:
-      213: -4987107980942723018
-    second: Swordsman_lvl1_Death_without_shadow_4
+      213: -1891625820773287384
+    second: Death_4
   - first:
-      213: -2272000799859623240
-    second: Swordsman_lvl1_Death_without_shadow_5
+      213: -5789737788129074030
+    second: Death_5
   - first:
-      213: -5172407023562201331
-    second: Swordsman_lvl1_Death_without_shadow_6
+      213: 3968659893341466949
+    second: Death_6
   - first:
-      213: -5350914153164743928
-    second: Swordsman_lvl1_Death_without_shadow_7
+      213: 6495761399759928590
+    second: Death_7
   - first:
-      213: -8324640707227658880
-    second: Swordsman_lvl1_Death_without_shadow_8
+      213: 4800267807231483719
+    second: Death_8
   - first:
-      213: -4936324455881324036
-    second: Swordsman_lvl1_Death_without_shadow_9
+      213: -6126746645354384401
+    second: Death_9
   - first:
-      213: -6807097861484606521
-    second: Swordsman_lvl1_Death_without_shadow_10
+      213: 2990493390978864817
+    second: Death_10
   - first:
-      213: -1812255250316738378
-    second: Swordsman_lvl1_Death_without_shadow_11
+      213: -2786331238167018718
+    second: Death_11
   - first:
-      213: 4963165742326223759
-    second: Swordsman_lvl1_Death_without_shadow_12
+      213: -4444752178724111745
+    second: Death_12
   - first:
-      213: 8965959085200693804
-    second: Swordsman_lvl1_Death_without_shadow_13
+      213: 1782900873588056695
+    second: Death_13
   - first:
-      213: -3853393423682835339
-    second: Swordsman_lvl1_Death_without_shadow_14
+      213: -7152224470875533404
+    second: Death_14
   - first:
-      213: -5194440469234729741
-    second: Swordsman_lvl1_Death_without_shadow_15
+      213: 7483363142473959995
+    second: Death_15
   - first:
-      213: -1390536018087906808
-    second: Swordsman_lvl1_Death_without_shadow_16
+      213: 2223956272848545170
+    second: Death_16
   - first:
-      213: -6903062755003317324
-    second: Swordsman_lvl1_Death_without_shadow_17
+      213: -898221585893318736
+    second: Death_17
   - first:
-      213: -2627919426123273975
-    second: Swordsman_lvl1_Death_without_shadow_18
+      213: -5412344436964035232
+    second: Death_18
   - first:
-      213: 6456751855006216427
-    second: Swordsman_lvl1_Death_without_shadow_19
+      213: 8119540360339246775
+    second: Death_19
   - first:
-      213: -7470047567736792945
-    second: Swordsman_lvl1_Death_without_shadow_20
+      213: -9220036589329865605
+    second: Death_20
   - first:
-      213: -3903403978190113207
-    second: Swordsman_lvl1_Death_without_shadow_21
+      213: 4888307295420968313
+    second: Death_21
   - first:
-      213: -756476720593129273
-    second: Swordsman_lvl1_Death_without_shadow_22
+      213: 8255461209361531321
+    second: Death_22
   - first:
-      213: 8925361086039432866
-    second: Swordsman_lvl1_Death_without_shadow_23
+      213: 8942902939620416142
+    second: Death_23
   - first:
-      213: -5906153018576731615
-    second: Swordsman_lvl1_Death_without_shadow_24
+      213: 3213321072100643605
+    second: Death_24
   - first:
-      213: -8478788444123089257
-    second: Swordsman_lvl1_Death_without_shadow_25
+      213: -2010679181545164273
+    second: Death_25
   - first:
-      213: -8816869261642657043
-    second: Swordsman_lvl1_Death_without_shadow_26
+      213: 1339252702868872449
+    second: Death_26
   - first:
-      213: -3471615903514589675
-    second: Swordsman_lvl1_Death_without_shadow_27
+      213: 6683010304627739023
+    second: Death_27
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -177,19 +177,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -207,10 +194,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c4a9753fe029e2d4abe9dd156ddedcad
-      internalID: -1390711546
+      spriteID: b0449ad32a9080160800000000000000
+      internalID: 6991849013916550155
       vertices: []
       indices: 
       edges: []
@@ -229,10 +216,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 46b02228e0a5d69499829789040481ad
-      internalID: -1474975089
+      spriteID: 6ab6d428c9cd82cf0800000000000000
+      internalID: -276728812324164698
       vertices: []
       indices: 
       edges: []
@@ -251,10 +238,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 467271813df8c3d47b3a35f354f1a9a1
-      internalID: -861582983
+      spriteID: 08aa354559b8fcb20800000000000000
+      internalID: 3156895337291164288
       vertices: []
       indices: 
       edges: []
@@ -273,10 +260,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a9a0533d10fcc5647883bd3140f2dc54
-      internalID: 2034320884
+      spriteID: cb376cdf9aecd6310800000000000000
+      internalID: 1400002288684528572
       vertices: []
       indices: 
       edges: []
@@ -295,10 +282,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6450719659745fe459d72c3aafa35b69
-      internalID: 1259915832
+      spriteID: 82af9d896589fb5e0800000000000000
+      internalID: -1891625820773287384
       vertices: []
       indices: 
       edges: []
@@ -317,10 +304,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 973b61eac7e117d4f93fe705dbba2431
-      internalID: -823832337
+      spriteID: 29429e33828b6afa0800000000000000
+      internalID: -5789737788129074030
       vertices: []
       indices: 
       edges: []
@@ -339,10 +326,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e09c5a6f4c199594d8886970e011f058
-      internalID: -1782212587
+      spriteID: 54135f86523831730800000000000000
+      internalID: 3968659893341466949
       vertices: []
       indices: 
       edges: []
@@ -361,10 +348,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 047c132f4412736468aa1fe72068f74f
-      internalID: 2137976072
+      spriteID: e0d726ab394952a50800000000000000
+      internalID: 6495761399759928590
       vertices: []
       indices: 
       edges: []
@@ -383,10 +370,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 36bc7934acb7a7843afad5eb80bc4b9c
-      internalID: -107033270
+      spriteID: 74f96c4432afd9240800000000000000
+      internalID: 4800267807231483719
       vertices: []
       indices: 
       edges: []
@@ -405,10 +392,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 85e342b024fe0624da0e4f21a25cad07
-      internalID: 1589011577
+      spriteID: fe3f5de036c69faa0800000000000000
+      internalID: -6126746645354384401
       vertices: []
       indices: 
       edges: []
@@ -427,10 +414,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 992db6a447c7dbd429612dc29dbf152b
-      internalID: 914920442
+      spriteID: 1b6d27015ed508920800000000000000
+      internalID: 2990493390978864817
       vertices: []
       indices: 
       edges: []
@@ -449,10 +436,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7107c7df5f7df9448af4761caddd545d
-      internalID: 1254650188
+      spriteID: 2230b726086f459d0800000000000000
+      internalID: -2786331238167018718
       vertices: []
       indices: 
       edges: []
@@ -471,10 +458,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f528204f76a5df844824a809d07dbf01
-      internalID: 1090757037
+      spriteID: f7a718851711152c0800000000000000
+      internalID: -4444752178724111745
       vertices: []
       indices: 
       edges: []
@@ -493,10 +480,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bd320c314f5634c4e967a5f5ec234cf2
-      internalID: -1790347277
+      spriteID: 77223f7f5e22eb810800000000000000
+      internalID: 1782900873588056695
       vertices: []
       indices: 
       edges: []
@@ -515,10 +502,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 64946ea0d80189247b7fe258ba41d29f
-      internalID: -541916549
+      spriteID: 4af8b93ecb13ebc90800000000000000
+      internalID: -7152224470875533404
       vertices: []
       indices: 
       edges: []
@@ -537,10 +524,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b64afc19dd2a62149a6142c225f05f99
-      internalID: -1106483435
+      spriteID: b3a4968212f3ad760800000000000000
+      internalID: 7483363142473959995
       vertices: []
       indices: 
       edges: []
@@ -559,10 +546,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fb95c756f216771459c1f924987fc334
-      internalID: 1662817964
+      spriteID: 295a32772741dde10800000000000000
+      internalID: 2223956272848545170
       vertices: []
       indices: 
       edges: []
@@ -581,10 +568,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2185b18b45530554ea708c21b5c41da9
-      internalID: 1291079475
+      spriteID: 0bf9d330a30e883f0800000000000000
+      internalID: -898221585893318736
       vertices: []
       indices: 
       edges: []
@@ -603,10 +590,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5fe646a837af91540b46b8bb1ebe487b
-      internalID: -1313405245
+      spriteID: 06572b0196d73e4b0800000000000000
+      internalID: -5412344436964035232
       vertices: []
       indices: 
       edges: []
@@ -625,10 +612,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8cc1ac78d914b784b8fed29b715aec4a
-      internalID: 461974757
+      spriteID: 7bec77540f66ea070800000000000000
+      internalID: 8119540360339246775
       vertices: []
       indices: 
       edges: []
@@ -647,10 +634,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b60e4fb793ed8f749b583fd771aa3fad
-      internalID: -326342484
+      spriteID: b74a3e46299db0080800000000000000
+      internalID: -9220036589329865605
       vertices: []
       indices: 
       edges: []
@@ -669,10 +656,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 82ed7986a08fe1b459daeb6716149ecb
-      internalID: -1202514270
+      spriteID: 97d6488f591c6d340800000000000000
+      internalID: 4888307295420968313
       vertices: []
       indices: 
       edges: []
@@ -691,10 +678,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b60ac0335fbd98b4b8f5acd1e3c3852f
-      internalID: 1045967291
+      spriteID: 9b1c2090b3a419270800000000000000
+      internalID: 8255461209361531321
       vertices: []
       indices: 
       edges: []
@@ -713,10 +700,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1a9f81bce723f594ba818e96b6fe1d9a
-      internalID: -1455439993
+      spriteID: e8a1fd097d29b1c70800000000000000
+      internalID: 8942902939620416142
       vertices: []
       indices: 
       edges: []
@@ -735,10 +722,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1ae55a9ab40de7b4aba5a2427919269c
-      internalID: -1488959085
+      spriteID: 51316db7d72089c20800000000000000
+      internalID: 3213321072100643605
       vertices: []
       indices: 
       edges: []
@@ -757,10 +744,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4ddf1f09e630e7a4badc906f4b20bf32
-      internalID: -160879807
+      spriteID: f023abaffe1a814e0800000000000000
+      internalID: -2010679181545164273
       vertices: []
       indices: 
       edges: []
@@ -779,10 +766,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 992e7bdb7fc49264698ffff53c0a8f60
-      internalID: -1995059153
+      spriteID: 10d1bf2dc3bf59210800000000000000
+      internalID: 1339252702868872449
       vertices: []
       indices: 
       edges: []
@@ -801,10 +788,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 48b9f657c0f1aeb4bba84b68be1c90f3
-      internalID: -1147834644
+      spriteID: f898c95c672debc50800000000000000
+      internalID: 6683010304627739023
       vertices: []
       indices: 
       edges: []
@@ -813,7 +800,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 037859bc120da094d949ccdfed08dd66
+    spriteID: 5a070200e541742418e27d2e2dbcc6d6
     internalID: 0
     vertices: []
     indices: 
@@ -825,34 +812,34 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":4.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Death_0: -1390711546
-      Death_1: -1474975089
-      Death_10: 914920442
-      Death_11: 1254650188
-      Death_12: 1090757037
-      Death_13: -1790347277
-      Death_14: -541916549
-      Death_15: -1106483435
-      Death_16: 1662817964
-      Death_17: 1291079475
-      Death_18: -1313405245
-      Death_19: 461974757
-      Death_2: -861582983
-      Death_20: -326342484
-      Death_21: -1202514270
-      Death_22: 1045967291
-      Death_23: -1455439993
-      Death_24: -1488959085
-      Death_25: -160879807
-      Death_26: -1995059153
-      Death_27: -1147834644
-      Death_3: 2034320884
-      Death_4: 1259915832
-      Death_5: -823832337
-      Death_6: -1782212587
-      Death_7: 2137976072
-      Death_8: -107033270
-      Death_9: 1589011577
+      Death_0: 6991849013916550155
+      Death_1: -276728812324164698
+      Death_10: 2990493390978864817
+      Death_11: -2786331238167018718
+      Death_12: -4444752178724111745
+      Death_13: 1782900873588056695
+      Death_14: -7152224470875533404
+      Death_15: 7483363142473959995
+      Death_16: 2223956272848545170
+      Death_17: -898221585893318736
+      Death_18: -5412344436964035232
+      Death_19: 8119540360339246775
+      Death_2: 3156895337291164288
+      Death_20: -9220036589329865605
+      Death_21: 4888307295420968313
+      Death_22: 8255461209361531321
+      Death_23: 8942902939620416142
+      Death_24: 3213321072100643605
+      Death_25: -2010679181545164273
+      Death_26: 1339252702868872449
+      Death_27: 6683010304627739023
+      Death_3: 1400002288684528572
+      Death_4: -1891625820773287384
+      Death_5: -5789737788129074030
+      Death_6: 3968659893341466949
+      Death_7: 6495761399759928590
+      Death_8: 4800267807231483719
+      Death_9: -6126746645354384401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

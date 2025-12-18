@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: 52fe5d033ee44784ea3ec60c0a99c1f4
+guid: 4ecced755b503824a8aae7334d99d648
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8439335492125225755
-    second: Death_Sword_0
+      213: 6991849013916550155
+    second: Death_0
   - first:
-      213: -6926691776729839921
-    second: Death_Sword_1
+      213: -276728812324164698
+    second: Death_1
   - first:
-      213: -2521683260263982522
-    second: Death_Sword_2
+      213: 3156895337291164288
+    second: Death_2
   - first:
-      213: -7058654939506284546
-    second: Death_Sword_3
+      213: 1400002288684528572
+    second: Death_3
   - first:
-      213: -9145190133931049887
-    second: Death_Sword_4
+      213: -1891625820773287384
+    second: Death_4
   - first:
-      213: 2871381952529004788
-    second: Death_Sword_5
+      213: -5789737788129074030
+    second: Death_5
   - first:
-      213: 2233168376989806392
-    second: Death_Sword_6
+      213: 3968659893341466949
+    second: Death_6
   - first:
-      213: -8544872392420242685
-    second: Death_Sword_7
+      213: 6495761399759928590
+    second: Death_7
   - first:
-      213: 5633015677792084046
-    second: Death_Sword_8
+      213: 4800267807231483719
+    second: Death_8
   - first:
-      213: 2032107433493761518
-    second: Death_Sword_9
+      213: -6126746645354384401
+    second: Death_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -127,7 +127,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_Sword_0
+      name: Death_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ec878b551571ea80800000000000000
-      internalID: -8439335492125225755
+      spriteID: b0449ad32a9080160800000000000000
+      internalID: 6991849013916550155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_1
+      name: Death_1
       rect:
         serializedVersion: 2
         x: 64
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc6066b37827fdf90800000000000000
-      internalID: -6926691776729839921
+      spriteID: 6ab6d428c9cd82cf0800000000000000
+      internalID: -276728812324164698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_2
+      name: Death_2
       rect:
         serializedVersion: 2
         x: 128
@@ -186,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64a9aeb6f6e210dd0800000000000000
-      internalID: -2521683260263982522
+      spriteID: 08aa354559b8fcb20800000000000000
+      internalID: 3156895337291164288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_3
+      name: Death_3
       rect:
         serializedVersion: 2
         x: 192
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef7ebaa1bbe9a0e90800000000000000
-      internalID: -7058654939506284546
+      spriteID: cb376cdf9aecd6310800000000000000
+      internalID: 1400002288684528572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_4
+      name: Death_4
       rect:
         serializedVersion: 2
         x: 256
@@ -230,14 +230,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16cf1a7c602c51180800000000000000
-      internalID: -9145190133931049887
+      spriteID: 82af9d896589fb5e0800000000000000
+      internalID: -1891625820773287384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_5
+      name: Death_5
       rect:
         serializedVersion: 2
         x: 320
@@ -252,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f875fe2ca239d720800000000000000
-      internalID: 2871381952529004788
+      spriteID: 29429e33828b6afa0800000000000000
+      internalID: -5789737788129074030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_6
+      name: Death_6
       rect:
         serializedVersion: 2
         x: 384
@@ -274,14 +274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83fec1a9ececdfe10800000000000000
-      internalID: 2233168376989806392
+      spriteID: 54135f86523831730800000000000000
+      internalID: 3968659893341466949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_7
+      name: Death_7
       rect:
         serializedVersion: 2
         x: 0
@@ -296,14 +296,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30bcfbee4d38a6980800000000000000
-      internalID: -8544872392420242685
+      spriteID: e0d726ab394952a50800000000000000
+      internalID: 6495761399759928590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_8
+      name: Death_8
       rect:
         serializedVersion: 2
         x: 64
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e40e009f9ed7c2e40800000000000000
-      internalID: 5633015677792084046
+      spriteID: 74f96c4432afd9240800000000000000
+      internalID: 4800267807231483719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_9
+      name: Death_9
       rect:
         serializedVersion: 2
         x: 128
@@ -340,14 +340,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eed83d6b1fe733c10800000000000000
-      internalID: 2032107433493761518
+      spriteID: fe3f5de036c69faa0800000000000000
+      internalID: -6126746645354384401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_10
+      name: Death_10
       rect:
         serializedVersion: 2
         x: 192
@@ -362,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eb6be315e488f048992b859a8305a05
-      internalID: 1556963770
+      spriteID: cfa04afd217766b448ca24649ca0662c
+      internalID: -450073325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_11
+      name: Death_11
       rect:
         serializedVersion: 2
         x: 256
@@ -384,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1161412b79dea984d804a35e9cfef1f0
-      internalID: 1541172426
+      spriteID: d15d1c0d5ccdfc64d8924fde24739991
+      internalID: -1214498737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_12
+      name: Death_12
       rect:
         serializedVersion: 2
         x: 320
@@ -406,14 +406,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4260af883c06fca4592aec5e63effce4
-      internalID: -32116720
+      spriteID: 1dc09a9f41b20a143a87c90dd1b5091e
+      internalID: 875856451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_13
+      name: Death_13
       rect:
         serializedVersion: 2
         x: 384
@@ -428,14 +428,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aae5f747c90e0e44196148a607fcafeb
-      internalID: -1575812677
+      spriteID: c46c86c579a25e644a68ea7d0f96b019
+      internalID: -514210145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_14
+      name: Death_14
       rect:
         serializedVersion: 2
         x: 0
@@ -450,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d02a1e41c03a01d4a842274542f43750
-      internalID: -1650174645
+      spriteID: 83cee7bcd4ead694a86ec3eb675d497d
+      internalID: 1325405225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_15
+      name: Death_15
       rect:
         serializedVersion: 2
         x: 64
@@ -472,14 +472,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d07f9b2240dc066478389792d676ab3b
-      internalID: -1591897189
+      spriteID: e313795956e9af34f8b9611d0274c3e4
+      internalID: -336775832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_16
+      name: Death_16
       rect:
         serializedVersion: 2
         x: 128
@@ -494,14 +494,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77bc7b9545567ff4dbfb5d3eb6dcd4e8
-      internalID: 823192573
+      spriteID: 14843aefcc178924e8419e8d1b1a8528
+      internalID: 1651563286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_17
+      name: Death_17
       rect:
         serializedVersion: 2
         x: 192
@@ -516,14 +516,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc6eba6b523fcd14ab2f706b448c177a
-      internalID: 1419202364
+      spriteID: b9ba3351d064332469e09ecea930858e
+      internalID: -553114090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_18
+      name: Death_18
       rect:
         serializedVersion: 2
         x: 256
@@ -538,14 +538,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 493cafe69ec48dd43ba2b8e23cd3a2b4
-      internalID: 835222193
+      spriteID: 83742501449fdf644b99c311e130b3fd
+      internalID: 1211157350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_19
+      name: Death_19
       rect:
         serializedVersion: 2
         x: 320
@@ -560,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 442654cce59a3054a8bc6e5675cbc81c
-      internalID: -747302689
+      spriteID: 59ce9faf14570794ebc7b6c1ace2bf30
+      internalID: -486206180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_20
+      name: Death_20
       rect:
         serializedVersion: 2
         x: 384
@@ -582,14 +582,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00b8802e1c48b0a46a2e56e32601404f
-      internalID: -679250931
+      spriteID: 99d59a2b5a61d504eb97bcab552a0cdb
+      internalID: -182271981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_21
+      name: Death_21
       rect:
         serializedVersion: 2
         x: 0
@@ -604,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13993e2533f58354b9396b6a151ea076
-      internalID: -1975030312
+      spriteID: c9110928124ebbc479b2fe3253e91997
+      internalID: -594036397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_22
+      name: Death_22
       rect:
         serializedVersion: 2
         x: 64
@@ -626,14 +626,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc685a0f0c955ca4c93c0bd85923298c
-      internalID: -2071734714
+      spriteID: c03a75c001eed56449b3ad1310f3e121
+      internalID: 1577376489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_23
+      name: Death_23
       rect:
         serializedVersion: 2
         x: 128
@@ -648,14 +648,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a505a63379430e946966a08d2e2126cd
-      internalID: 1688481801
+      spriteID: 99a8a7a714709a54bbfdaf72d96db4a6
+      internalID: 1786440798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_24
+      name: Death_24
       rect:
         serializedVersion: 2
         x: 192
@@ -670,14 +670,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45d62a4e768dfd34494e3839804453c7
-      internalID: 1164408895
+      spriteID: bbfd4e817ea7f67448636c70ee7cfdd7
+      internalID: 1783819106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_25
+      name: Death_25
       rect:
         serializedVersion: 2
         x: 256
@@ -692,14 +692,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e0ea10b9fd06694db3bf275d8a9bfec
-      internalID: 1042324328
+      spriteID: a4096e5618f0a3c4ca0a621d981bd303
+      internalID: 812258758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_26
+      name: Death_26
       rect:
         serializedVersion: 2
         x: 320
@@ -714,14 +714,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 524090129085a7c418b2faebc4fa6dd9
-      internalID: 275117049
+      spriteID: 3ae0d357a485f4f439ae105201a61880
+      internalID: 1447484898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_Sword_27
+      name: Death_27
       rect:
         serializedVersion: 2
         x: 384
@@ -736,8 +736,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0665c75b16bbcd545bd179c8de59aefa
-      internalID: 376432821
+      spriteID: 979a4c274ee00e14d9225500be947a0b
+      internalID: 618737147
       vertices: []
       indices: 
       edges: []
@@ -746,7 +746,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4bc5afe587f6f1842a4659a0786882ba
+    spriteID: 2f5f696a1f47b234cb2d0d5f2d07ca11
     internalID: 0
     vertices: []
     indices: 
@@ -758,34 +758,34 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":4.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Death_Sword_0: -8439335492125225755
-      Death_Sword_1: -6926691776729839921
-      Death_Sword_10: 1556963770
-      Death_Sword_11: 1541172426
-      Death_Sword_12: -32116720
-      Death_Sword_13: -1575812677
-      Death_Sword_14: -1650174645
-      Death_Sword_15: -1591897189
-      Death_Sword_16: 823192573
-      Death_Sword_17: 1419202364
-      Death_Sword_18: 835222193
-      Death_Sword_19: -747302689
-      Death_Sword_2: -2521683260263982522
-      Death_Sword_20: -679250931
-      Death_Sword_21: -1975030312
-      Death_Sword_22: -2071734714
-      Death_Sword_23: 1688481801
-      Death_Sword_24: 1164408895
-      Death_Sword_25: 1042324328
-      Death_Sword_26: 275117049
-      Death_Sword_27: 376432821
-      Death_Sword_3: -7058654939506284546
-      Death_Sword_4: -9145190133931049887
-      Death_Sword_5: 2871381952529004788
-      Death_Sword_6: 2233168376989806392
-      Death_Sword_7: -8544872392420242685
-      Death_Sword_8: 5633015677792084046
-      Death_Sword_9: 2032107433493761518
+      Death_0: 6991849013916550155
+      Death_1: -276728812324164698
+      Death_10: -450073325
+      Death_11: -1214498737
+      Death_12: 875856451
+      Death_13: -514210145
+      Death_14: 1325405225
+      Death_15: -336775832
+      Death_16: 1651563286
+      Death_17: -553114090
+      Death_18: 1211157350
+      Death_19: -486206180
+      Death_2: 3156895337291164288
+      Death_20: -182271981
+      Death_21: -594036397
+      Death_22: 1577376489
+      Death_23: 1786440798
+      Death_24: 1783819106
+      Death_25: 812258758
+      Death_26: 1447484898
+      Death_27: 618737147
+      Death_3: 1400002288684528572
+      Death_4: -1891625820773287384
+      Death_5: -5789737788129074030
+      Death_6: 3968659893341466949
+      Death_7: 6495761399759928590
+      Death_8: 4800267807231483719
+      Death_9: -6126746645354384401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
