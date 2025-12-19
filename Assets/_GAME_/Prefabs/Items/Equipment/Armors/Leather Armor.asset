@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Leather Armor
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: 08a62fc4-1f12-444e-a07f-7f0fa030c043
+  Id: e9fda9e8-900c-46bb-be2c-b1d2ed18fb2a
   itemType: 4
   itemName: Leather Armor
   itemSprite: {fileID: -737033364027714852, guid: 1b5cc7631627362d0a8724654ff98cfc, type: 3}
@@ -26,4 +26,5 @@ MonoBehaviour:
   attackDmg: 0
   armorValue: 5
   effects: []
-  armorSpriteLibrary: {fileID: 7108339969198208228, guid: 4855eec0438e9ba429c73788f036feea, type: 3}
+  armorSpriteLibrary: {fileID: 7108339969198208228, guid: 8dce5090dd146974595e70e7bdefe398, type: 3}
+  weaponSpriteLibrary: {fileID: 0}

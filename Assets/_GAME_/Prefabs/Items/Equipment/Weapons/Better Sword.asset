@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Better Sword
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: 69f0e382-fe23-4ad7-84a1-02c51eae2fc4
+  Id: aeb6c851-0af4-4394-97c8-41cfb964811a
   itemType: 4
   itemName: Better Sword
   itemSprite: {fileID: 6155229623095598686, guid: 05a1ca93518204493b4180a2ab9ab906, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   armorValue: 0
   effects:
   - {fileID: 11400000, guid: 320e280422db51341be6ab9936fe9af6, type: 2}
+  armorSpriteLibrary: {fileID: 0}
+  weaponSpriteLibrary: {fileID: 7108339969198208228, guid: f0f1319a9066ae047bef82e9fcfba44e, type: 3}

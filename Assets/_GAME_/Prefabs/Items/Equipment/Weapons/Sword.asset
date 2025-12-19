@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: 9dbbe8a9-f028-4537-8cf9-f2965b7346ee
+  Id: f3b1730f-473b-42ef-bd0a-cd51be8760f8
   itemType: 4
   itemName: Sword
   itemSprite: {fileID: 4830313197683595641, guid: 57477dc566c862af48500b331cfe635a, type: 3}
@@ -26,3 +26,5 @@ MonoBehaviour:
   attackDmg: 10
   armorValue: 0
   effects: []
+  armorSpriteLibrary: {fileID: 0}
+  weaponSpriteLibrary: {fileID: 7108339969198208228, guid: 0bf19b7471ec85f428e7f33d6de3f7e9, type: 3}
