@@ -27727,11 +27727,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4160488649041838571, guid: 47776e398ba6c78498b0ae9b3b478e99, type: 3}
       propertyPath: m_AnchoredPosition.x
+<<<<<<< HEAD
       value: 1606
       objectReference: {fileID: 0}
     - target: {fileID: 4160488649041838571, guid: 47776e398ba6c78498b0ae9b3b478e99, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -815
+=======
+      value: 1694
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160488649041838571, guid: 47776e398ba6c78498b0ae9b3b478e99, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -757
+>>>>>>> sound
       objectReference: {fileID: 0}
     - target: {fileID: 4160488649041838571, guid: 47776e398ba6c78498b0ae9b3b478e99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -28637,9 +28645,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1353681025049165608, guid: 10eb0c4b06fb9fa49963476ede65dca5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1592239627}
+<<<<<<< HEAD
     - targetCorrespondingSourceObject: {fileID: 1353681025049165608, guid: 10eb0c4b06fb9fa49963476ede65dca5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1169823130}
+=======
+>>>>>>> sound
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10eb0c4b06fb9fa49963476ede65dca5, type: 3}
 --- !u!224 &4545673966549134259 stripped

@@ -71,6 +71,8 @@ public class Movements : MonoBehaviour
         anim.SetFloat("xVelocity", velocity.x != 0 || velocity.y != 0 ? velocity.x : lastDirection.x);
         anim.SetFloat("yVelocity", velocity.x != 0 || velocity.y != 0 ? velocity.y : lastDirection.y);
         anim.SetFloat("speed", velocity.magnitude);
+
+        float speed = anim.GetFloat("speed");
     }
 
     private void HandleAttack()
@@ -78,6 +80,7 @@ public class Movements : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
             anim.SetTrigger("isAttacking");
+            SoundManager.PlaySound(SoundType.SWORD);
 
             DealDamage();
         }
@@ -86,17 +89,22 @@ public class Movements : MonoBehaviour
     //for testing purposes
     public void Hurt()
     {
+        if (isDead) return;
         //add slowing down player for a second
+        SoundManager.PlaySound(SoundType.HURT);
         anim.SetTrigger("isHurt");
     }
 
     public void Dead()
     {
+        if (isDead) return;
+
+        SoundManager.PlaySound(SoundType.DEATH);
         anim.SetTrigger("isDead");
         rb.linearVelocity = Vector2.zero;
         isDead = true;
 
-        if(deadScreen) return;
+        if (deadScreen) return;
         deadScreen = true;
         StartCoroutine(WaitforDiedScene());
     }

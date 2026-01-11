@@ -57,14 +57,22 @@ public class InventoryManager : MonoBehaviour
             Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             menuActivated = false;
+            SoundManager.PlaySound(SoundType.INVENTORY_CLOSE);
+
             if (ItemTooltip.Instance != null)
                 ItemTooltip.Instance.HideTooltip();
+
+            playerStats.GetComponent<Movements>().canAttack = true;
         }
         else if (Input.GetKeyDown(KeyCode.E) && !menuActivated)
         {
+            playerStats.GetComponent<Movements>().canAttack = false;
+
             Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActivated = true;
+            SoundManager.PlaySound(SoundType.INVENTORY_OPEN);
+
             RefreshUI();
         }
     }
@@ -99,6 +107,7 @@ public class InventoryManager : MonoBehaviour
             {
                 Debug.Log($"Adding spell: {scroll.spellData.spellName}");
                 spellCaster.AddSpell(scroll.spellData);
+                SoundManager.PlaySound(SoundType.SCROLL_USE);
             }
             else spellCaster.CastUtilitySpell(scroll.spellData);
         }

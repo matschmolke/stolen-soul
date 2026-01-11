@@ -9,6 +9,7 @@ public class SceneTeleport : MonoBehaviour
     {
         if (collision.CompareTag("PlayerTriggerCollider"))
         {
+            SoundManager.PlaySound(SoundType.TELEPORT);
             SceneManager.LoadScene(targetScene);
             SceneManager.LoadSceneAsync("mod1", LoadSceneMode.Additive);
         }

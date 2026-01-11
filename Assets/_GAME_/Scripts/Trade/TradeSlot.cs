@@ -102,6 +102,7 @@ public class TradeSlot : MonoBehaviour,
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
+            SoundManager.PlaySound(SoundType.SELECT);
             manager.DeselectAllSlots();
             selectedShader.SetActive(true);
             thisItemSelected = true;

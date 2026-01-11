@@ -16,6 +16,8 @@ public class EnemyDeadState : CharacterState
     {
         enemy.isDead = true;
         enemy.anim.SetTrigger("isDead");
+        
+        SoundManager.PlaySound(SoundType.SKELETON_DEATH, 0.5f);
         enemy.StartCoroutine(DeathCoroutine());
     }
     

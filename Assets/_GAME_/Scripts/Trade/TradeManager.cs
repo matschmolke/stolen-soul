@@ -138,6 +138,8 @@ public class TradeManager : MonoBehaviour
                     slot.ClearSlot();
                 }
             }
+
+            SoundManager.PlaySound(SoundType.TRADE_DONE);
             RefreshUI();
         }
     }
