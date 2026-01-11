@@ -42,10 +42,10 @@ public class SoundManager : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {            
-        Debug.Log("Active scene: " + SceneManager.GetActiveScene().name);
-        Debug.Log("sceneName: " + scene.name);
-
-        int index = Array.FindIndex(sceneMusic, s => s.sceneName == SceneManager.GetActiveScene().name);
+        int index = Array.FindIndex(
+            sceneMusic,
+            s => s.sceneName == scene.name
+        );
 
         if (index != -1)
         {
@@ -55,17 +55,20 @@ public class SoundManager : MonoBehaviour
         else
         {
             Debug.Log("No music assigned for scene: " + scene.name);
-            StopMusic();
+            return;
         }
     }
     private void PlayMusic(SoundType music, float volume = 1f)
     {
-        Debug.LogWarning("PLaying music: " + music.ToString() + "\n Active scene: " + SceneManager.GetActiveScene().name);
+        if (currentMusic == music) return;
 
         currentMusic = music;
+
+        audioSource.Stop();
         audioSource.clip = soundList[(int)music];
         audioSource.volume = volume;
         audioSource.loop = true;
+        audioSource.time = 0f;
         audioSource.Play();
     }
     
