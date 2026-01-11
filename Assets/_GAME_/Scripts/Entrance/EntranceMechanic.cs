@@ -15,11 +15,13 @@ public class EntranceMechanic : MonoBehaviour
     
     public void EntranceOpen()
     {
+        SoundManager.PlaySound(SoundType.GATE_OPEN);
         entranceAnim.SetBool("open",true);
     }
 
     public void EntranceClose()
     {
+        SoundManager.PlaySound(SoundType.GATE_CLOSE);
         entranceAnim.SetBool("open", false);
     }
 

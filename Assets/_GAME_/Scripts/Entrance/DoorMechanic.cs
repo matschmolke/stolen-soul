@@ -35,6 +35,7 @@ public class DoorMechanic : MonoBehaviour
 
     private void OpenDoor()
     {
+        SoundManager.PlaySound(SoundType.DOOR_OPEN);
         isOpen = true;
         doorAnim.SetBool("open", true);
         DoorChannel.RaiseEvent(false,false);
@@ -42,6 +43,7 @@ public class DoorMechanic : MonoBehaviour
 
     private void CloseDoor()
     {
+        SoundManager.PlaySound(SoundType.DOOR_CLOSE);
         isOpen = false;
         doorAnim.SetBool("open", false);
     }
