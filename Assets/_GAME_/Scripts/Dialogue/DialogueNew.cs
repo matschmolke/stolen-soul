@@ -46,6 +46,7 @@ public class DialogueNew : MonoBehaviour
             else
             {
                 StopAllCoroutines();
+                SoundManager.StopTyping();
                 text.text = dialogue.lines[index];
             }
         }
@@ -71,12 +72,17 @@ public class DialogueNew : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        SoundManager.StartTyping(SoundType.TYPING, 1f);
+
         foreach (char c in dialogue.lines[index])
         {
             text.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+
+        SoundManager.StopTyping();
     }
+
 
     void NextLine()
     {

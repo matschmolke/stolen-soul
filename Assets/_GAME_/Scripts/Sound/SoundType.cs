@@ -42,5 +42,12 @@ public enum SoundType
     SCROLL_USE,
     INVENTORY_OPEN,
     INVENTORY_CLOSE,
-    BELL
+    BELL,
+    YOU_DIED_OST,
+    FINAL_BOSS_OST,
+    FINAL_BOSS_FIGHT_OST,
+    WHOOSH,
+    DRINK,
+    WHOOSH2,
+    PAPER
 }
