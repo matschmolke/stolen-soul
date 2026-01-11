@@ -91,9 +91,11 @@ public class InventoryManager : MonoBehaviour
             switch (consumable.resourceType)
             {
                 case ResourceType.Health:
+                    SoundManager.PlaySound(SoundType.DRINK);
                     playerStats.Heal(consumable.restoreAmount);
                     break;
                 case ResourceType.Mana:
+                    SoundManager.PlaySound(SoundType.DRINK);
                     playerStats.RestoreMana(consumable.restoreAmount);
                     break;
                 default:
@@ -109,7 +111,11 @@ public class InventoryManager : MonoBehaviour
                 spellCaster.AddSpell(scroll.spellData);
                 SoundManager.PlaySound(SoundType.SCROLL_USE);
             }
-            else spellCaster.CastUtilitySpell(scroll.spellData);
+            else
+            {
+                spellCaster.CastUtilitySpell(scroll.spellData);
+                SoundManager.PlaySound(SoundType.PAPER);
+            }
         }
     }
 

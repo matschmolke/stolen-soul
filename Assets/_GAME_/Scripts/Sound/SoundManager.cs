@@ -12,6 +12,8 @@ public class SoundManager : MonoBehaviour
 
     private static SoundManager instance;
     private AudioSource audioSource;
+    [SerializeField] private AudioSource typingSource;
+
     private SoundType? currentMusic;
 
     private void Awake()
@@ -77,4 +79,21 @@ public class SoundManager : MonoBehaviour
         if (instance == null) return;
         instance.audioSource.Stop();
     }
+
+    public static void StartTyping(SoundType sound, float volume = 1f)
+    {
+        if (instance.typingSource.isPlaying) return;
+
+        instance.typingSource.clip = instance.soundList[(int)sound];
+        instance.typingSource.volume = volume;
+        instance.typingSource.loop = true;
+        instance.typingSource.Play();
+    }
+
+    public static void StopTyping()
+    {
+        if (instance.typingSource.isPlaying)
+            instance.typingSource.Stop();
+    }
+
 }

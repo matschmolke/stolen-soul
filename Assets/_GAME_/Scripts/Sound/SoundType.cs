@@ -45,5 +45,9 @@ public enum SoundType
     BELL,
     YOU_DIED_OST,
     FINAL_BOSS_OST,
-    FINAL_BOSS_FIGHT_OST
+    FINAL_BOSS_FIGHT_OST,
+    WHOOSH,
+    DRINK,
+    WHOOSH2,
+    PAPER
 }

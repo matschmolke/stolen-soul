@@ -54,6 +54,7 @@ public class CharacterAppear : MonoBehaviour
             FreezeScene();
 
             hasAppeared = true;
+            SoundManager.PlaySound(SoundType.WHOOSH);
             appearEffect.SetTrigger("appear");
         }
 
@@ -111,6 +112,7 @@ public class CharacterAppear : MonoBehaviour
     public IEnumerator Disappear()
     {
         yield return new WaitForSeconds(2f);
+        SoundManager.PlaySound(SoundType.WHOOSH2);
         appearEffect.SetTrigger("appear");
 
         yield return new WaitForSeconds(0.3f);
