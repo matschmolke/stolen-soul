@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c556e9b12c782a448c70c85d084dd1e, type: 3}
+  m_Name: MushroomLootTable
+  m_EditorClassIdentifier: Assembly-CSharp::LootTable
+  items:
+  - {fileID: 11400000, guid: 324e027ecc2191c4c9e1042002908965, type: 2}
+  - {fileID: 11400000, guid: 95f446a5cb38b8145a4f2ac673504b0b, type: 2}
+  - {fileID: 11400000, guid: f5e705048de268e4eb7fb8dcde9212b9, type: 2}
+  - {fileID: 11400000, guid: d2176e804573c664392c62e832844b61, type: 2}
