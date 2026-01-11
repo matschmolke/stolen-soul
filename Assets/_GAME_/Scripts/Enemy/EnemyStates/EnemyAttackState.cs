@@ -13,6 +13,7 @@ public class EnemyAttackState : CharacterState
     {
         enemy.canAttack = false;
         enemy.anim.SetTrigger("isAttacking");
+        SoundManager.PlaySound(enemy.Data.soundAttach);
 
         enemy.rb.linearVelocity = Vector2.zero;
     }

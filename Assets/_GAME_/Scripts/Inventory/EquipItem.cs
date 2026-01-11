@@ -29,7 +29,12 @@ public class EquipItem : MonoBehaviour
 
             if ((slot.accaptableEquipmentTypes & EquipmentType.Armor) != 0)
             {
+                SoundManager.PlaySound(SoundType.EQUIP_ARMOR);
                 armorChanger.UpdateArmor(item);
+            }
+            else if ((slot.accaptableEquipmentTypes & EquipmentType.Weapon) != 0)
+            {
+                SoundManager.PlaySound(SoundType.EQUIP_SWORD);
             }
 
             previousItem = null;
@@ -43,7 +48,12 @@ public class EquipItem : MonoBehaviour
 
             if ((slot.accaptableEquipmentTypes & EquipmentType.Armor) != 0)
             {
+                SoundManager.PlaySound(SoundType.EQUIP_ARMOR);
                 armorChanger.UpdateArmor(item);
+            }
+            else if ((slot.accaptableEquipmentTypes & EquipmentType.Weapon) != 0)
+            {
+                SoundManager.PlaySound(SoundType.EQUIP_SWORD);
             }
 
             previousItem = item;

@@ -133,6 +133,7 @@ public class EnemyAI : CharacterAI
         if (isDead) return;
 
         currentHealth -= dmg;
+        SoundManager.PlaySound(Data.soundHurt);
         anim.SetTrigger("isHurt");
 
         if (currentHealth <= 0)

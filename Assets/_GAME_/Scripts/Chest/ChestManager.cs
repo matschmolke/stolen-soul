@@ -51,6 +51,7 @@ public class ChestManager : MonoBehaviour
         }
         RefreshUI();
         Time.timeScale = 0;
+        SoundManager.PlaySound(SoundType.CHEST_OPEN);
         ChestMenu.SetActive(true);
         menuActivated = true;
     }
@@ -59,6 +60,7 @@ public class ChestManager : MonoBehaviour
     {
         Time.timeScale = 1;
         ChestMenu.SetActive(false);
+        SoundManager.PlaySound(SoundType.CHEST_CLOSE);
         menuActivated = false;
         if (ItemTooltip.Instance != null)
             ItemTooltip.Instance.HideTooltip();

@@ -23,6 +23,9 @@ public class Spell : ScriptableObject
     public bool isProjectile = true;
     public Effect effect;
 
+    [Header("Sound")]
+    public SoundType sound;
+
     public void ApplyEffect(GameObject target)
     {
         switch (spellName)

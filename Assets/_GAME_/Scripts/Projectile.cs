@@ -35,6 +35,7 @@ public class Projectile : MonoBehaviour
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+            SoundManager.PlaySound(enemy.Data.soundHurt);
             Destroy(gameObject);
             return;
         }

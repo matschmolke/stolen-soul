@@ -41,12 +41,15 @@ public class LeverMechanic : MonoBehaviour
         isOpen = true;
         leverAnim.SetBool("turnOn", true);
         EntranceChannel.RaiseEvent(false);
+        SoundManager.PlaySound(SoundType.LEVER_ON);
     }
 
     private void TurnOffLever()
     {
         isOpen = false;
         leverAnim.SetBool("turnOn", false);
+        SoundManager.PlaySound(SoundType.LEVER_OFF);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
