@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
-  m_Name: Sword
+  m_Name: Machete
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: 0da4de6b-2f21-4954-a9da-85ba6f129959
+  Id: 758cda04-ea12-4994-a5e2-0ee5fa039964
   itemType: 4
-  itemName: Sword
-  itemSprite: {fileID: -8209883049243496879, guid: 96c767df88312ae2e8bfbaf401028cd1, type: 3}
-  description: Grants <b>+5</b> attack damage.
+  itemName: Machete
+  itemSprite: {fileID: 4165118276809613700, guid: 99d0b50a38ce5c4b1a360926afb24eee, type: 3}
+  description: Grants <b>+7</b> attack damage.
   isStackable: 0
   maxStackSize: 1
   isUnique: 0
-  dropChance: 30
-  value: 10
+  dropChance: 100
+  value: 50
   equipmentType: 1
-  attackDmg: 5
+  attackDmg: 7
   armorValue: 0
   effects: []
   armorSpriteLibrary: {fileID: 0}

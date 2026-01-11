@@ -24,7 +24,7 @@ public class Movements : MonoBehaviour
     public float attackRadius = 1.5f;
     public LayerMask enemyMask;
 
-    public int attackDamage = 15;
+    public int attackDamage = 5;
 
     private bool deadScreen = false;
 

@@ -15,10 +15,14 @@ MonoBehaviour:
   characterName: Lich
   animatorController: {fileID: 9100000, guid: 69f1fa0f465f38b428d86fc9709b27eb, type: 2}
   sprite: {fileID: -7609705071967287543, guid: 05bc57db3d0c3f6449c39301f6591927, type: 3}
-  maxHealth: 100
+  maxHealth: 800
   walkSpeed: 6
   runSpeed: 9
+  soundHurt: 0
+  soundFootSteps: 0
+  soundAttach: 0
+  souncDeath: 0
   attackRange: 3
-  attackDamage: 10
+  attackDamage: 75
   visionRange: 8
   lootTable: {fileID: 11400000, guid: 7de271bc8b3349040a40c72c4327f3d1, type: 2}

@@ -378,7 +378,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 128
-  attackDamage: 10
+  attackDamage: 5
 --- !u!95 &2091298999
 Animator:
   serializedVersion: 7
@@ -478,6 +478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats1
   currentHealth: 0
   currentMana: 0
+  playerScript: {fileID: 0}
   canRegenerateMana: 1
   attackDamageMultiplier: 1
   spellEffectMultiplier: 1

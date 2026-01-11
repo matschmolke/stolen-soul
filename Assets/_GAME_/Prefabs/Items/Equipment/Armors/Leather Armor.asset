@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Leather Armor
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: 08a62fc4-1f12-444e-a07f-7f0fa030c043
+  Id: 63337b52-edc0-44e4-a327-9b48e0794218
   itemType: 4
   itemName: Leather Armor
   itemSprite: {fileID: -737033364027714852, guid: 1b5cc7631627362d0a8724654ff98cfc, type: 3}
-  description: Negates <b>+5</b> damage.
+  description: Negates <b>+3</b> damage.
   isStackable: 0
   maxStackSize: 1
   isUnique: 0
@@ -24,6 +24,6 @@ MonoBehaviour:
   value: 15
   equipmentType: 2
   attackDmg: 0
-  armorValue: 5
+  armorValue: 3
   effects: []
   armorSpriteLibrary: {fileID: 7108339969198208228, guid: 4855eec0438e9ba429c73788f036feea, type: 3}

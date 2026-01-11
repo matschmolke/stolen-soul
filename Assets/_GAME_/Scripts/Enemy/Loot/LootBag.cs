@@ -1,11 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Linq;
 
 public class LootBag : MonoBehaviour
 {
     public GameObject lootPrefab;
-
     private LootTable loot;
 
     public void SetLoot(LootTable lootTable)
@@ -15,24 +13,30 @@ public class LootBag : MonoBehaviour
 
     public void DropLoot(Vector2 position)
     {
-        ItemBase droppedItem = loot.GetLoot();
+        List<ItemBase> droppedItems = loot.GetLoot();
 
-        if (droppedItem == null)
+        if (droppedItems.Count == 0)
         {
-            Debug.Log("No item dropped.");
+            Debug.Log("No loot dropped.");
             return;
         }
 
-        Debug.Log("Dropped: " + droppedItem.itemName);
+        float spread = 0.5f;
 
-        GameObject lootObject = Instantiate(lootPrefab, position, Quaternion.identity);
-
-        SpriteRenderer sr = lootObject.GetComponent<SpriteRenderer>();
-        if (sr != null)
+        for (int i = 0; i < droppedItems.Count; i++)
         {
-            sr.sortingOrder = 1;
-        }
+            ItemBase item = droppedItems[i];
 
-        lootObject.GetComponent<PickUpLogic>().item = droppedItem; 
+            Vector2 offset = Random.insideUnitCircle * spread;
+            GameObject lootObject = Instantiate(lootPrefab, position + offset, Quaternion.identity);
+
+            SpriteRenderer sr = lootObject.GetComponent<SpriteRenderer>();
+            if (sr != null)
+                sr.sortingOrder = 1;
+
+            lootObject.GetComponent<PickUpLogic>().item = item;
+
+            Debug.Log("Dropped: " + item.itemName);
+        }
     }
 }

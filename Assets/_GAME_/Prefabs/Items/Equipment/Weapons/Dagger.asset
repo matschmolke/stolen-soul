@@ -10,22 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
-  m_Name: Better Sword
+  m_Name: Dagger
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: 69f0e382-fe23-4ad7-84a1-02c51eae2fc4
+  Id: 855e4890-e366-442a-bb23-2be16c891b2b
   itemType: 4
-  itemName: Better Sword
-  itemSprite: {fileID: 6155229623095598686, guid: 05a1ca93518204493b4180a2ab9ab906, type: 3}
-  description: 'Grants <b>+20</b> attack damage.
-
-    Increases Spell Power by 25%'
+  itemName: Dagger
+  itemSprite: {fileID: 8962610242271416363, guid: 44608c0758e901861ad91436b5196192, type: 3}
+  description: Grants <b>+3</b> attack damage.
   isStackable: 0
   maxStackSize: 1
   isUnique: 0
-  dropChance: 25
-  value: 40
+  dropChance: 40
+  value: 5
   equipmentType: 1
-  attackDmg: 20
+  attackDmg: 3
   armorValue: 0
-  effects:
-  - {fileID: 11400000, guid: 320e280422db51341be6ab9936fe9af6, type: 2}
+  effects: []
+  armorSpriteLibrary: {fileID: 0}

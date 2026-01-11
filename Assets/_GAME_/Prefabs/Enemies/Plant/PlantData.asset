@@ -15,10 +15,14 @@ MonoBehaviour:
   characterName: Plant
   animatorController: {fileID: 9100000, guid: 8fe152aeae33a8044a2f7696d32d2001, type: 2}
   sprite: {fileID: -2203154773615443292, guid: 6aa8423921a7f8c45b197fbd530bed94, type: 3}
-  maxHealth: 30
+  maxHealth: 40
   walkSpeed: 6
   runSpeed: 9
+  soundHurt: 0
+  soundFootSteps: 0
+  soundAttach: 0
+  souncDeath: 0
   attackRange: 1.5
-  attackDamage: 4
+  attackDamage: 34
   visionRange: 8
   lootTable: {fileID: 11400000, guid: c3d05aa39bab09a439d4ea83c8b53926, type: 2}

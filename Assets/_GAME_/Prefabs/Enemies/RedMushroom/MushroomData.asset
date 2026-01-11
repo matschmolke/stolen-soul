@@ -15,10 +15,14 @@ MonoBehaviour:
   characterName: Mushroom
   animatorController: {fileID: 9100000, guid: ea9fe0855b839f54dbf942bd71001d0e, type: 2}
   sprite: {fileID: -7321918145148433313, guid: 01bb525728f3a4249a7aabebab5b2c54, type: 3}
-  maxHealth: 100
+  maxHealth: 35
   walkSpeed: 6
   runSpeed: 9
+  soundHurt: 0
+  soundFootSteps: 0
+  soundAttach: 0
+  souncDeath: 0
   attackRange: 1.5
-  attackDamage: 2
+  attackDamage: 20
   visionRange: 8
   lootTable: {fileID: 11400000, guid: 5e84d536fc1eb8a40a117ab890a1ee3a, type: 2}

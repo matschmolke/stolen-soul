@@ -15,10 +15,14 @@ MonoBehaviour:
   characterName: Ent
   animatorController: {fileID: 9100000, guid: cef7a5ed2791b184e972399e62bc25e1, type: 2}
   sprite: {fileID: -128289534294595106, guid: b8e628bb6c843ee419b41bf33604e7f2, type: 3}
-  maxHealth: 50
+  maxHealth: 100
   walkSpeed: 6
   runSpeed: 9
+  soundHurt: 0
+  soundFootSteps: 0
+  soundAttach: 0
+  souncDeath: 0
   attackRange: 1.5
-  attackDamage: 5
+  attackDamage: 30
   visionRange: 8
   lootTable: {fileID: 11400000, guid: 7c72ad1e3497fbf45b9dcb6353a8b313, type: 2}
