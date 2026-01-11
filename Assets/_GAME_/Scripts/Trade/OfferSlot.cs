@@ -81,6 +81,7 @@ public class OfferSlot : MonoBehaviour,
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
+            SoundManager.PlaySound(SoundType.SELECT);
             manager.DeselectAllSlots();
             selectedShader.SetActive(true);
             thisItemSelected = true;
@@ -117,32 +118,32 @@ public class OfferSlot : MonoBehaviour,
             Destroy(dragImage.gameObject);
     }
 
-    // Obs³uga wyrzucenia na OfferSlot:
-    // - jeœli origin jest TradeSlot (czyli item pochodzi z inventory), kopiujemy item do OfferSlot
+    // Obsï¿½uga wyrzucenia na OfferSlot:
+    // - jeï¿½li origin jest TradeSlot (czyli item pochodzi z inventory), kopiujemy item do OfferSlot
     //   i usuwamy go z inventory (origin.ClearSlot() lub inventory.RemoveItemAt(...))
-    // - jeœli origin jest OfferSlot (przenoszenie wewn¹trz ofert), wykonujemy normalne swap/stack
+    // - jeï¿½li origin jest OfferSlot (przenoszenie wewnï¿½trz ofert), wykonujemy normalne swap/stack
     public void OnDrop(PointerEventData eventData)
     {
         var originTradeSlot = eventData.pointerDrag?.GetComponent<TradeSlot>();
         var originOfferSlot = eventData.pointerDrag?.GetComponent<OfferSlot>();
 
-        // Nie ma sk¹d braæ
+        // Nie ma skï¿½d braï¿½
         if (originTradeSlot == null && originOfferSlot == null) return;
 
         // PRZYPADek: TradeSlot -> OfferSlot (przenosimy przedmiot z inventory do oferty)
         if (originTradeSlot != null)
         {
-            // wymagamy zgodnoœci w³aœciciela (np. nie wrzucamy przedmiotów gracza do oferty tradera)
+            // wymagamy zgodnoï¿½ci wï¿½aï¿½ciciela (np. nie wrzucamy przedmiotï¿½w gracza do oferty tradera)
             if (originTradeSlot.Owner != this.Owner) return;
 
-            // Jeœli OfferSlot jest pusty — przenieœ ca³y stos (kopiuj do oferty i usuñ z inventory)
+            // Jeï¿½li OfferSlot jest pusty ï¿½ przenieï¿½ caï¿½y stos (kopiuj do oferty i usuï¿½ z inventory)
             if (Item == null)
             {
                 Item = originTradeSlot.Item;
                 quantity = originTradeSlot.quantity;
 
-                // usuñ z inventory Ÿród³owego
-                originTradeSlot.ClearSlot(); // ClearSlot ju¿ wywo³uje inventory.RemoveItemAt
+                // usuï¿½ z inventory ï¿½rï¿½dï¿½owego
+                originTradeSlot.ClearSlot(); // ClearSlot juï¿½ wywoï¿½uje inventory.RemoveItemAt
             }
             // Ten sam item -> stackuj w OfferSlot (do maxStack)
             else if (Item == originTradeSlot.Item)
@@ -161,21 +162,21 @@ public class OfferSlot : MonoBehaviour,
                     originTradeSlot.RefreshUI();
                 }
             }
-            // Ró¿ny item -> zamieñ miejscami (przedmiot z oferty wraca do inventory w tym samym slotId)
+            // Rï¿½ny item -> zamieï¿½ miejscami (przedmiot z oferty wraca do inventory w tym samym slotId)
             else
             {
-                // przenieœ item z inventory (originTradeSlot) do oferty tymczasowo
+                // przenieï¿½ item z inventory (originTradeSlot) do oferty tymczasowo
                 ItemBase tradeItem = originTradeSlot.Item;
                 int tradeQty = originTradeSlot.quantity;
 
-                // umieœæ item oferty z powrotem do inventory (w tym samym slotId)
+                // umieï¿½ï¿½ item oferty z powrotem do inventory (w tym samym slotId)
                 originTradeSlot.Inventory.AddItemAt(originTradeSlot.slotId, this.Item, this.quantity);
 
                 // ustaw offer na nowy item
                 this.Item = tradeItem;
                 this.quantity = tradeQty;
 
-                // jeœli inventory.AddItemAt nadpisa³o UI, odœwie¿ origin i siebie
+                // jeï¿½li inventory.AddItemAt nadpisaï¿½o UI, odï¿½wieï¿½ origin i siebie
                 originTradeSlot.RefreshUI();
             }
 
@@ -186,7 +187,7 @@ public class OfferSlot : MonoBehaviour,
             return;
         }
 
-        // PRZYPADek: OfferSlot -> OfferSlot (zamiana/stack w obrêbie ofert tego samego w³aœciciela)
+        // PRZYPADek: OfferSlot -> OfferSlot (zamiana/stack w obrï¿½bie ofert tego samego wï¿½aï¿½ciciela)
         if (originOfferSlot != null)
         {
             if (originOfferSlot.Owner != this.Owner) return;

@@ -89,17 +89,22 @@ public class Movements : MonoBehaviour
     //for testing purposes
     public void Hurt()
     {
+        if (isDead) return;
         //add slowing down player for a second
+        SoundManager.PlaySound(SoundType.HURT);
         anim.SetTrigger("isHurt");
     }
 
     public void Dead()
     {
+        if (isDead) return;
+
+        SoundManager.PlaySound(SoundType.DEATH);
         anim.SetTrigger("isDead");
         rb.linearVelocity = Vector2.zero;
         isDead = true;
 
-        if(deadScreen) return;
+        if (deadScreen) return;
         deadScreen = true;
         StartCoroutine(WaitforDiedScene());
     }

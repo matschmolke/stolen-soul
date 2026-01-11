@@ -41,5 +41,6 @@ public enum SoundType
     TYPING,
     SCROLL_USE,
     INVENTORY_OPEN,
-    INVENTORY_CLOSE
+    INVENTORY_CLOSE,
+    BELL
 }

@@ -35,6 +35,7 @@ public class NPCTalkState : CharacterState
     {        
         if (!isTradeOpen)
         {
+            SoundManager.PlaySound(SoundType.BELL);
             if (TradeManager.Instance != null)
             {
                 TradeManager.Instance.OpenWindow(inventory);

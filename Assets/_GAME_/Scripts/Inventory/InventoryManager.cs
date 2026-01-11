@@ -61,9 +61,13 @@ public class InventoryManager : MonoBehaviour
 
             if (ItemTooltip.Instance != null)
                 ItemTooltip.Instance.HideTooltip();
+
+            playerStats.GetComponent<Movements>().canAttack = true;
         }
         else if (Input.GetKeyDown(KeyCode.E) && !menuActivated)
         {
+            playerStats.GetComponent<Movements>().canAttack = false;
+
             Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActivated = true;

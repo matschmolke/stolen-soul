@@ -44,6 +44,8 @@ public class ChestManager : MonoBehaviour
 
     public void OpenChestUI(ChestInventory chestInv)
     {
+        playerInventory.GetComponent<Movements>().canAttack = false;
+
         chestInventory = chestInv;
         for (int i = 0; i < ChestInvSlots.Length; i++)
         {
@@ -64,6 +66,8 @@ public class ChestManager : MonoBehaviour
         menuActivated = false;
         if (ItemTooltip.Instance != null)
             ItemTooltip.Instance.HideTooltip();
+
+        playerInventory.GetComponent<Movements>().canAttack = true;
     }
 
     public void RefreshUI()

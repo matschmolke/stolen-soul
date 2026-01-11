@@ -67,10 +67,13 @@ public class EnemyAI : CharacterAI
 
     public override void ChangeState(CharacterState newState)
     {
+        if (isDead && newState != deadState) return;
+
         currentState?.Exit();
-        currentState = newState;        
+        currentState = newState;
         currentState.Enter();
     }
+
 
     public void Init(EnemyData enemyData)
     {
