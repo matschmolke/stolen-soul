@@ -60,6 +60,8 @@ public class SoundManager : MonoBehaviour
     }
     private void PlayMusic(SoundType music, float volume = 1f)
     {
+        Debug.LogWarning("PLaying music: " + music.ToString() + "\n Active scene: " + SceneManager.GetActiveScene().name);
+
         currentMusic = music;
         audioSource.clip = soundList[(int)music];
         audioSource.volume = volume;
