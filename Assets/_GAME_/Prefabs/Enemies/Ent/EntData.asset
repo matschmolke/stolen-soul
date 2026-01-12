@@ -18,10 +18,10 @@ MonoBehaviour:
   maxHealth: 100
   walkSpeed: 6
   runSpeed: 9
-  soundHurt: 0
-  soundFootSteps: 0
-  soundAttach: 0
-  souncDeath: 0
+  soundHurt: 51
+  soundFootSteps: 50
+  soundAttach: 52
+  souncDeath: 53
   attackRange: 1.5
   attackDamage: 30
   visionRange: 8
