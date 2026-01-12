@@ -115,6 +115,8 @@ public class TradeManager : MonoBehaviour
         windowActivated = false;
         if (ItemTooltip.Instance != null)
             ItemTooltip.Instance.HideTooltip();
+        if (ItemContextMenu.Instance != null)
+            ItemContextMenu.Instance.HideContextMenu();
     }
 
     public void Trade()

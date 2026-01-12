@@ -18,8 +18,8 @@ public class HudManager : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerStats = player.GetComponent<PlayerStats>();
 
-        UpdateHealthUI(playerStats.MaxHealth, playerStats.MaxHealth);
-        UpdateManaUI(playerStats.MaxMana, playerStats.MaxMana);
+        UpdateHealthUI(playerStats.currentHealth, playerStats.MaxHealth);
+        UpdateManaUI(playerStats.currentMana, playerStats.MaxMana);
 
         playerStats.OnHealthChanged += UpdateHealthUI;
         playerStats.OnManaChanged += UpdateManaUI;

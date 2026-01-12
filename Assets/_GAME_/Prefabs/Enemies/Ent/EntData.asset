@@ -22,7 +22,7 @@ MonoBehaviour:
   soundFootSteps: 50
   soundAttach: 52
   souncDeath: 53
-  attackRange: 1.5
+  attackRange: 4.5
   attackDamage: 30
   visionRange: 8
   lootTable: {fileID: 11400000, guid: 7c72ad1e3497fbf45b9dcb6353a8b313, type: 2}
