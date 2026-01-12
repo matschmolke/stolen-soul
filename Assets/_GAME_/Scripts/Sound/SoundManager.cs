@@ -96,4 +96,14 @@ public class SoundManager : MonoBehaviour
             instance.typingSource.Stop();
     }
 
+    public static void PlaySoundAtPosition(SoundType sound, Vector3 position, Transform listener, float maxDistance = 10f)
+    {
+        if (instance == null || listener == null) return;
+
+        float distance = Vector3.Distance(listener.position, position);
+
+        float volume = Mathf.Clamp01(1 - (distance / maxDistance));
+
+        instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume);
+    }
 }
