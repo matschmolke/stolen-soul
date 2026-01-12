@@ -72,7 +72,13 @@ public class EnemyChaseState : CharacterState
         float speed = enemy.anim.GetFloat("speed");
         if (speed > 0.1f && footstepTimer <= 0f)
         {
-            SoundManager.PlaySound(enemy.Data.soundFootSteps, 0.5f);
+            SoundManager.PlaySoundAtPosition(
+                enemy.Data.soundFootSteps,
+                enemy.transform.position,
+                enemy.player,    
+                10f        
+            );            
+            
             footstepTimer = footstepInterval;
         }
     }
