@@ -33284,6 +33284,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 214231749}
     m_Modifications:
     - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
+      propertyPath: chestId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 799452919726477008, guid: 66577ab887ee27748a74011c7cce54d1, type: 3}
       propertyPath: items.Array.size
       value: 8
       objectReference: {fileID: 0}

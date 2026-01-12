@@ -16,6 +16,12 @@ public static class RestoreSavedChests
                 continue;
             }
 
+            //clear default items in chest
+            for (int i = 0; i < chest.items.Count; i++)
+            {
+                chest.slots[i] = new InventoryItem();
+            }
+
             foreach (var item in data.items)
             {
                 ItemBase itemBase = ItemDatabase.Instance.GetItemByName(item.itemName); 
