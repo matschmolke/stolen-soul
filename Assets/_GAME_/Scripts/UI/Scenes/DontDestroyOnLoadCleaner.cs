@@ -13,8 +13,12 @@ public static class DontDestroyOnLoadCleaner
 
         foreach (GameObject obj in roots)
         {
+            if (obj.GetComponent<SoundManager>() != null)
+                continue;
+
             Object.Destroy(obj);
         }
+
     }
 
     private static Scene GetDontDestroyOnLoadScene()

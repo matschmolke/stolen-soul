@@ -4,6 +4,8 @@ public class EnemyChaseState : CharacterState
 {
     private EnemyAI enemy;
     private Breadcrumb targetBreadcrumb = null;
+    private float footstepTimer = 0f;
+    private float footstepInterval = 0.5f;
 
     public EnemyChaseState(EnemyAI enemy) : base(enemy)
     {
@@ -65,6 +67,20 @@ public class EnemyChaseState : CharacterState
 
         Vector2 dir = (targetPos - enemy.GetMyPos()).normalized;
         enemy.Move(dir, enemy.Data.walkSpeed);
+
+        footstepTimer -= Time.deltaTime;
+        float speed = enemy.anim.GetFloat("speed");
+        if (speed > 0.1f && footstepTimer <= 0f)
+        {
+            SoundManager.PlaySoundAtPosition(
+                enemy.Data.soundFootSteps,
+                enemy.transform.position,
+                enemy.player,    
+                10f        
+            );            
+            
+            footstepTimer = footstepInterval;
+        }
     }
     
     private Breadcrumb FindNextBreadcrumb()

@@ -113,6 +113,7 @@ public class ItemSlot : MonoBehaviour,
 
             inventoryManager.DeselectAllSlots();
             selectedShader.SetActive(true);
+            SoundManager.PlaySound(SoundType.SELECT);
             thisItemSelected = true;
         }
 

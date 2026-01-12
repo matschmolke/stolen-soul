@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
+  m_Name: Machete
+  m_EditorClassIdentifier: Assembly-CSharp::Equipment
+  Id: 758cda04-ea12-4994-a5e2-0ee5fa039964
+  itemType: 4
+  itemName: Machete
+  itemSprite: {fileID: 4165118276809613700, guid: 99d0b50a38ce5c4b1a360926afb24eee, type: 3}
+  description: Grants <b>+7</b> attack damage.
+  isStackable: 0
+  maxStackSize: 1
+  isUnique: 0
+  dropChance: 100
+  value: 50
+  equipmentType: 1
+  attackDmg: 7
+  armorValue: 0
+  effects: []
+  armorSpriteLibrary: {fileID: 0}

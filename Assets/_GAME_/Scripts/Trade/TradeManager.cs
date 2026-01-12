@@ -115,6 +115,8 @@ public class TradeManager : MonoBehaviour
         windowActivated = false;
         if (ItemTooltip.Instance != null)
             ItemTooltip.Instance.HideTooltip();
+        if (ItemContextMenu.Instance != null)
+            ItemContextMenu.Instance.HideContextMenu();
     }
 
     public void Trade()
@@ -138,6 +140,8 @@ public class TradeManager : MonoBehaviour
                     slot.ClearSlot();
                 }
             }
+
+            SoundManager.PlaySound(SoundType.TRADE_DONE);
             RefreshUI();
         }
     }

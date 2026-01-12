@@ -8,6 +8,7 @@ public class Teleport : MonoBehaviour
     {
         if (collision.CompareTag("PlayerTriggerCollider"))
         {
+            SoundManager.PlaySound(SoundType.TELEPORT);
             var player = collision.transform.parent.gameObject;
             //collision.transform.position = destination.position;
             player.transform.position = destination.position;

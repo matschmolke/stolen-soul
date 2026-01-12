@@ -25,6 +25,7 @@ public class PickUpLogic : MonoBehaviour
             if (inventoryManager != null)
             {
                 bool wasAdded = inventoryManager.AddItem(item, 1);
+                SoundManager.PlaySound(SoundType.PICKUP);
                 if(wasAdded) Destroy(gameObject);
             }
             else

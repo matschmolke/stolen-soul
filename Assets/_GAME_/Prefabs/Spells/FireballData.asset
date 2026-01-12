@@ -22,3 +22,5 @@ MonoBehaviour:
   damage: 25
   speed: 10
   isProjectile: 1
+  effect: {fileID: 0}
+  sound: 15

@@ -11,8 +11,12 @@ public class EnemyAttackState : CharacterState
 
     public override void Enter()
     {
+        var playerMovements = enemy.player.GetComponent<Movements>();
+        if (playerMovements != null && playerMovements.isDead) return;
+
         enemy.canAttack = false;
         enemy.anim.SetTrigger("isAttacking");
+        SoundManager.PlaySound(enemy.Data.soundAttach);
 
         enemy.rb.linearVelocity = Vector2.zero;
     }

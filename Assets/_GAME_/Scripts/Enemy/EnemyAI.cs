@@ -71,10 +71,13 @@ public class EnemyAI : CharacterAI
 
     public override void ChangeState(CharacterState newState)
     {
+        if (isDead && newState != deadState) return;
+
         currentState?.Exit();
-        currentState = newState;        
+        currentState = newState;
         currentState.Enter();
     }
+
 
     public void Init(EnemyData enemyData)
     {
@@ -137,6 +140,7 @@ public class EnemyAI : CharacterAI
         if (isDead) return;
 
         currentHealth -= dmg;
+        SoundManager.PlaySound(Data.soundHurt);
         anim.SetTrigger("isHurt");
 
         if (currentHealth <= 0)

@@ -100,6 +100,7 @@ public class SpellCaster : MonoBehaviour
 
     void CastProjectileSpell(Spell spell, Vector3 target)
     {
+        SoundManager.PlaySound(spell.sound);
         GameObject proj = Instantiate(spell.spellPrefab, transform.position, Quaternion.identity);
 
         RotateProjectile(proj, spell, target);
@@ -144,7 +145,10 @@ public class SpellCaster : MonoBehaviour
         Debug.Log("Cast Utility Spell " +  spell.spellName);
         if (spell.effect != null)
             EffectsManager.Instance.AddEffect(spell.effect, spell.duration);
-
+        
+        if (spell.sound != SoundType.MENU)
+            SoundManager.PlaySound(spell.sound);
+            
         spell.ApplyEffect(this.gameObject);
     }
 

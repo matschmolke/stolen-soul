@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bbd8d7b68ae1e49a7f9f399504b4cc, type: 3}
+  m_Name: MushroomData
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
+  characterName: Mushroom
+  animatorController: {fileID: 9100000, guid: ea9fe0855b839f54dbf942bd71001d0e, type: 2}
+  sprite: {fileID: -7321918145148433313, guid: 01bb525728f3a4249a7aabebab5b2c54, type: 3}
+  maxHealth: 35
+  walkSpeed: 6
+  runSpeed: 9
+  soundHurt: 63
+  soundFootSteps: 62
+  soundAttach: 64
+  souncDeath: 65
+  attackRange: 1.5
+  attackDamage: 20
+  visionRange: 8
+  lootTable: {fileID: 11400000, guid: 5e84d536fc1eb8a40a117ab890a1ee3a, type: 2}

@@ -136,7 +136,7 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        currentHealth -= dmg;
+        currentHealth -= Math.Max(dmg - Defence, 1);
 
         if (currentHealth <= 0) KillPlayer();
 

@@ -12,17 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: 9dbbe8a9-f028-4537-8cf9-f2965b7346ee
+  Id: 0da4de6b-2f21-4954-a9da-85ba6f129959
   itemType: 4
   itemName: Sword
-  itemSprite: {fileID: 4830313197683595641, guid: 57477dc566c862af48500b331cfe635a, type: 3}
-  description: Grants <b>+10</b> attack damage.
+  itemSprite: {fileID: -8209883049243496879, guid: 96c767df88312ae2e8bfbaf401028cd1, type: 3}
+  description: Grants <b>+5</b> attack damage.
   isStackable: 0
   maxStackSize: 1
   isUnique: 0
   dropChance: 30
-  value: 15
+  value: 10
   equipmentType: 1
-  attackDmg: 10
+  attackDmg: 5
   armorValue: 0
   effects: []
+  armorSpriteLibrary: {fileID: 0}

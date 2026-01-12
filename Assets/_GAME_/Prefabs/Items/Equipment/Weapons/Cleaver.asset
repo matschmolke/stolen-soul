@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
+  m_Name: Cleaver
+  m_EditorClassIdentifier: Assembly-CSharp::Equipment
+  Id: 13d91ef6-71c0-4d39-94d4-8d70842c59e6
+  itemType: 4
+  itemName: Cleaver
+  itemSprite: {fileID: -218306613445313016, guid: fd33cbc6acea8e682bbdb79e1317b8b6, type: 3}
+  description: Grants <b>+9</b> attack damage.
+  isStackable: 0
+  maxStackSize: 1
+  isUnique: 0
+  dropChance: 50
+  value: 25
+  equipmentType: 1
+  attackDmg: 9
+  armorValue: 0
+  effects: []
+  armorSpriteLibrary: {fileID: 0}
