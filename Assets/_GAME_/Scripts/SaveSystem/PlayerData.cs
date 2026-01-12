@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+
+[System.Serializable]
+public class PlayerData
+{
+    public float posX;
+    public float posY;
+    public float posZ;
+
+    public int health;
+    public int mana;
+
+    public string sceneName = "MainScene";
+
+    public List<InventoryItemData> inventoryItems = new List<InventoryItemData>();
+    public List<ChestData> chests = new();
+
+
+}

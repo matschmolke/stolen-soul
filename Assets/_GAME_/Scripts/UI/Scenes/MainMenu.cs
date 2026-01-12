@@ -9,9 +9,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
-    public void LoadGame()
+    public void Continue()
     {
-        Debug.Log("Loading game");
+        SaveLoad.ContinueGame();
     }
 
     public void ExitGame()

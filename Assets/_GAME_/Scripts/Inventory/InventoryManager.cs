@@ -45,6 +45,13 @@ public class InventoryManager : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerStats = player.GetComponent<PlayerStats>();
         spellCaster = player.GetComponent<SpellCaster>();
+
+        // Restore saved inventory
+        if (SaveLoad.restoreInventory)
+        {
+            var data = SaveSystem.LoadPlayer();
+            AddSavedItems.RestoreInventory(data);
+        }
     }
 
     // Update is called once per frame

@@ -207,4 +207,14 @@ public class PlayerStats : MonoBehaviour
             KillPlayer();
         }
     }
+
+    public void ApplyLoadedStats(int health, int mana)
+    {
+        currentHealth = health;
+        currentMana = mana;
+
+        OnHealthChanged?.Invoke(currentHealth, MaxHealth);
+        OnManaChanged?.Invoke(currentMana, MaxMana);
+    }
+
 }

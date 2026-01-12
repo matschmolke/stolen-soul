@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public static class DontDestroyOnLoadCleaner
 {
+
     public static void Clear()
     {
         Scene persistentScene = GetDontDestroyOnLoadScene();

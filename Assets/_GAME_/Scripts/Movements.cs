@@ -7,6 +7,8 @@ using Debug = UnityEngine.Debug;
 
 public class Movements : MonoBehaviour
 {
+    public static Movements Instance;
+
     private Rigidbody2D rb;
     private Animator anim;
 
@@ -34,10 +36,25 @@ public class Movements : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void Awake()
+    void Awake() 
     {
-        DontDestroyOnLoad(gameObject);
+        Debug.Log("Movements Awake: " + gameObject.scene.name); 
+
+        if (Instance != null && Instance != this) 
+        { 
+            Debug.Log("Duplicate player destroyed"); 
+            Destroy(gameObject); return; 
+        } 
+
+        Instance = this; DontDestroyOnLoad(gameObject); 
     }
+
+    void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
+    }
+
     private void Update()
     {
         if (isDead)

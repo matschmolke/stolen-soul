@@ -42,6 +42,19 @@ public class ChestManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        //restore chests from save
+        if (SaveLoad.restoreInventory)
+        {
+            var data = SaveSystem.LoadPlayer();
+            if (data != null && data.chests != null && data.chests.Count > 0)
+            {
+                RestoreSavedChests.Restore(data.chests);
+            }
+        }
+    }
+
     public void OpenChestUI(ChestInventory chestInv)
     {
         chestInventory = chestInv;

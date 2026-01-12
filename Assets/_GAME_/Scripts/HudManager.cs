@@ -13,17 +13,18 @@ public class HudManager : MonoBehaviour
     private PlayerStats playerStats;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        playerStats = player.GetComponent<PlayerStats>();
-
-        UpdateHealthUI(playerStats.MaxHealth, playerStats.MaxHealth);
-        UpdateManaUI(playerStats.MaxMana, playerStats.MaxMana);
+        playerStats = PlayerStats.Instance;
 
         playerStats.OnHealthChanged += UpdateHealthUI;
         playerStats.OnManaChanged += UpdateManaUI;
+
+        UpdateHealthUI(playerStats.currentHealth, playerStats.MaxHealth);
+        UpdateManaUI(playerStats.currentMana, playerStats.MaxMana);
     }
+
 
     private void UpdateHealthUI(int currentHealth, int maxHealth)
     {
