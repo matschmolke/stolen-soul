@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Iron Armor
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: 2ba08b90-07c6-48ed-b000-0f7b44d20789
+  Id: 9aeba156-5014-4fc3-9274-420844a808f9
   itemType: 4
   itemName: Iron Armor
   itemSprite: {fileID: 7397270247603054716, guid: 6af47418e7d76ee3ca678c54482ab860, type: 3}
@@ -25,6 +25,5 @@ MonoBehaviour:
   equipmentType: 2
   attackDmg: 0
   armorValue: 6
-  effects:
-  - {fileID: 0}
+  effects: []
   armorSpriteLibrary: {fileID: 7108339969198208228, guid: f12b16b5cdc34c940923b449d8aa898f, type: 3}
