@@ -34,10 +34,13 @@ public class SaveLoad : MonoBehaviour
 
         DontDestroyOnLoadCleaner.Clear();
 
-        SceneManager.LoadScene("MainScene");
+        SceneLoader.StartStatic();
+        SceneManager.LoadScene(cachedData.sceneName);
+        SceneManager.LoadSceneAsync("mod1", LoadSceneMode.Additive);
+
     }
 
-    
+
     public static void ApplyLoadedGame()
     {
         if (!PendingLoad || cachedData == null)

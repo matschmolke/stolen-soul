@@ -11,7 +11,7 @@ public class PlayerData
     public int health;
     public int mana;
 
-    public string sceneName = "MainScene";
+    public string sceneName;
 
     public List<InventoryItemData> inventoryItems = new List<InventoryItemData>();
     public List<ChestData> chests = new();
