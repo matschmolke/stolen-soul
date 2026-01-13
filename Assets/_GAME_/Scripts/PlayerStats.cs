@@ -43,7 +43,7 @@ public class PlayerStats : MonoBehaviour
             OnAttackDamageChanged?.Invoke(value);
         }
     }
-    private int defence = 5;
+    private int defence = 0;
 
     public int Defence
     {

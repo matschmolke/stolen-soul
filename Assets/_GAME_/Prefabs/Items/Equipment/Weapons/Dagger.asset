@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Dagger
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: 855e4890-e366-442a-bb23-2be16c891b2b
+  Id: 8ac606ea-e1b9-4f21-9329-b2a2a6e74b4d
   itemType: 4
   itemName: Dagger
   itemSprite: {fileID: 8962610242271416363, guid: 44608c0758e901861ad91436b5196192, type: 3}
@@ -20,7 +20,7 @@ MonoBehaviour:
   isStackable: 0
   maxStackSize: 1
   isUnique: 0
-  dropChance: 40
+  dropChance: 35
   value: 5
   equipmentType: 1
   attackDmg: 3

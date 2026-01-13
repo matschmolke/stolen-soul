@@ -23,6 +23,6 @@ MonoBehaviour:
   soundAttach: 9
   souncDeath: 10
   attackRange: 1.5
-  attackDamage: 12
+  attackDamage: 6
   visionRange: 8
   lootTable: {fileID: 11400000, guid: 4f19dffd6bcbaad44b95fdca491192ab, type: 2}

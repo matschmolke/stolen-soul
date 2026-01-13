@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spell
   spellName: Fireball
   icon: {fileID: 396921133626115911, guid: 5646a03da40a820eea351f4184e86efc, type: 3}
-  castKey: 1
+  castKey: 2
   cooldown: 5
-  manaCost: 10
+  manaCost: 15
   duration: 0
   spellPrefab: {fileID: 5842135501919683830, guid: 2a110f1bd0620296fadbed4a86ba25eb, type: 3}
-  damage: 25
+  damage: 15
   speed: 10
   isProjectile: 1
   effect: {fileID: 0}
