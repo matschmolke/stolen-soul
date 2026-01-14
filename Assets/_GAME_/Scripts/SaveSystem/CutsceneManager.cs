@@ -10,7 +10,7 @@ public class CutsceneManager : MonoBehaviour
     }
     public static void ShowCutsceneObject(GameObject obj)
     {
-        /*if (SaveLoad.restoreInventory == true)
+        if (GameState.RestoreFromSave)
         {
             obj.SetActive(false);
 
@@ -20,6 +20,7 @@ public class CutsceneManager : MonoBehaviour
         else
         {
             obj.SetActive(true);
-        }*/
+        }
+        
     }
 }

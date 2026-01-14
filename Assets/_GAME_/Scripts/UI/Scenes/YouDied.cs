@@ -5,6 +5,7 @@ public class YouDied : MonoBehaviour
 {
     public void RestartLevel()
     {
+        GameState.Clear();
         DontDestroyOnLoadCleaner.Clear();
         SceneManager.LoadScene("MainScene");
     }
