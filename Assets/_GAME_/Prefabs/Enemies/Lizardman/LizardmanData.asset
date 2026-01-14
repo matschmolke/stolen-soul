@@ -15,7 +15,7 @@ MonoBehaviour:
   characterName: Lizardman
   animatorController: {fileID: 9100000, guid: 3c80475d59169974385a98c5cba64b26, type: 2}
   sprite: {fileID: 6070197718616819353, guid: c4415f38e2f2b8946889715795d1ec75, type: 3}
-  maxHealth: 150
+  maxHealth: 120
   walkSpeed: 6
   runSpeed: 9
   soundHurt: 55
@@ -23,6 +23,6 @@ MonoBehaviour:
   soundAttach: 56
   souncDeath: 57
   attackRange: 1.5
-  attackDamage: 50
+  attackDamage: 25
   visionRange: 8
   lootTable: {fileID: 11400000, guid: f4c45a5724635f94c941cfa4e4cc1106, type: 2}

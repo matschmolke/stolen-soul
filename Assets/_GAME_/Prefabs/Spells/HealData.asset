@@ -15,8 +15,8 @@ MonoBehaviour:
   spellName: Heal
   icon: {fileID: 4971734851904434038, guid: ad5b5e611903e8f51ba16a74ac80c3af, type: 3}
   castKey: 4
-  cooldown: 5
-  manaCost: 10
+  cooldown: 15
+  manaCost: 5
   duration: 0
   spellPrefab: {fileID: 0}
   damage: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617eee184f964f447bdb1e1da1da7f05, type: 3}
   m_Name: Lost Sword
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  Id: fc73616a-d223-4bbb-b084-84b2a7fcffa6
+  Id: f43ea93e-afcf-4e38-8fce-6acc194be46e
   itemType: 4
   itemName: Lost Sword
   itemSprite: {fileID: -7316795087741336868, guid: 68df1c8342e80447a941d9ea0aeba978, type: 3}
@@ -26,7 +26,7 @@ MonoBehaviour:
   maxStackSize: 1
   isUnique: 0
   dropChance: 100
-  value: 40
+  value: 200
   equipmentType: 1
   attackDmg: 12
   armorValue: 0

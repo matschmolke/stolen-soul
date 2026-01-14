@@ -15,11 +15,11 @@ MonoBehaviour:
   spellName: Ice Shard
   icon: {fileID: 8878405948326257296, guid: 7dae4c0d3b306d7a38369a8199e5d710, type: 3}
   castKey: 3
-  cooldown: 5
-  manaCost: 10
+  cooldown: 8
+  manaCost: 17
   duration: 0
   spellPrefab: {fileID: 5514221700129332099, guid: f442d1cd001f1ca5ea6d5b86da5eb3e1, type: 3}
-  damage: 40
+  damage: 25
   speed: 10
   isProjectile: 1
   effect: {fileID: 0}
