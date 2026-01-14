@@ -4,9 +4,6 @@ using static EnemySaveData;
 
 public class EnemyAI : CharacterAI
 {
-    //data for save/load
-    public string enemyId;
-
     public EnemyData Data;
 
     // States
@@ -154,35 +151,5 @@ public class EnemyAI : CharacterAI
         player = p;
     }
 
-    // save/load methods
-    public EnemyStateType GetSaveState()
-    {
-        if (currentState == idleState) return EnemyStateType.Idle;
-        if (currentState == chaseState) return EnemyStateType.Chase;
-        if (currentState == attackState) return EnemyStateType.Attack;
-        if (currentState == deadState) return EnemyStateType.Dead;
-
-        return EnemyStateType.Idle;
-    }
-
-    public void RestoreState(EnemyStateType state)
-    {
-        switch (state)
-        {
-            case EnemyStateType.Idle:
-                ChangeState(idleState);
-                break;
-            case EnemyStateType.Chase:
-                ChangeState(chaseState);
-                break;
-            case EnemyStateType.Attack:
-                ChangeState(attackState);
-                break;
-            case EnemyStateType.Dead:
-                ChangeState(deadState);
-                isDead = true;
-                break;
-        }
-    }
-
+   
 }

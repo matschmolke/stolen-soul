@@ -6,13 +6,22 @@ public class MainMenu : MonoBehaviour
 {
     public void NewGame()
     {
+        GameState.Clear();
         DontDestroyOnLoadCleaner.Clear();
         SceneManager.LoadScene("MainScene");
     }
 
     public void Continue()
     {
-        SaveLoad.ContinueGame();
+        if (GameState.TryLoadGame())
+        {
+            SaveLoad.StartContinue();
+        }
+        else
+        {
+            Debug.Log("Save not found - starting new game");
+            NewGame();
+        }
     }
 
     public void ExitGame()

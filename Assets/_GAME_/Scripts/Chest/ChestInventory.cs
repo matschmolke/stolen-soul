@@ -32,6 +32,13 @@ public class ChestInventory : InventoryBase
         {
             slots.Add(i, items[i]);
         }
+
+        //restore chests from save
+        if (GameState.RestoreFromSave && GameState.LoadedData != null)
+        {
+            RestoreSavedChests.Restore(GameState.LoadedData.chests);
+        }
+        
     }
 
     public override int SlotCount()

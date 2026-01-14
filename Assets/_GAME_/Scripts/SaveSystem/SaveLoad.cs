@@ -5,76 +5,53 @@ using UnityEngine.SceneManagement;
 
 public class SaveLoad : MonoBehaviour
 {
-    //load save flag
-    public static bool PendingLoad = false;
-    public static bool restoreInventory = false;
+    public static bool PendingLoad { get; private set; }
 
-    private static PlayerData cachedData;
-
-    public static List<InventoryItemData> GetSavedInventory()
+    public static void StartContinue()
     {
-        return cachedData?.inventoryItems;
-    }
-
-    public static void SaveGame()
-    {
-        SaveSystem.SavePlayer();
-    }
-
-    public static void ContinueGame()
-    {
-        cachedData = SaveSystem.LoadPlayer();
-        if (cachedData == null)
-        {
-            Debug.LogWarning("No save file to load");
-            return;
-        }
-
         PendingLoad = true;
 
         DontDestroyOnLoadCleaner.Clear();
 
         SceneLoader.StartStatic();
-        SceneManager.LoadScene(cachedData.sceneName);
+        SceneManager.LoadScene(GameState.LoadedData.sceneName);
         SceneManager.LoadSceneAsync("mod1", LoadSceneMode.Additive);
-
     }
-
 
     public static void ApplyLoadedGame()
     {
-        if (!PendingLoad || cachedData == null)
+        if (!PendingLoad || !GameState.RestoreFromSave)
             return;
 
-        PendingLoad = false;
-        restoreInventory = true;
+        var data = GameState.LoadedData;
+        if (data == null) return;
 
         var player = Movements.Instance;
         var stats = PlayerStats.Instance;
 
         if (player == null || stats == null)
-        {
-            Debug.LogWarning("ApplyLoadedGame waiting for player/stats");
             return;
-        }
 
-        //player position
+        PendingLoad = false;
+
+        // position
         player.transform.position = new Vector3(
-            cachedData.posX,
-            cachedData.posY,
-            cachedData.posZ
+            data.posX, data.posY, data.posZ
         );
 
-        //player stats
-        stats.ApplyLoadedStats(
-            cachedData.health,
-            cachedData.mana
-        );
+        // stats
+        stats.ApplyLoadedStats(data.health, data.mana);
 
-        //chests
-        RestoreSavedChests.Restore(cachedData.chests);
+        // Enemies
+        //RestoreEnemies.Cache(data.enemies);
 
-        Debug.Log("Save game applied successfully");
+        Debug.Log("Save game applied");
+    }
+
+
+    public static void SaveGame()
+    {
+        SaveSystem.SavePlayer();
     }
 
 }

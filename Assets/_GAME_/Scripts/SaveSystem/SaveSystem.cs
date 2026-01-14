@@ -45,6 +45,10 @@ public static class SaveSystem
         // Chests
         data.chests = SaveChests();
 
+        // Enemies
+        data.enemies = SaveEnemies();
+
+
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(SavePath, json);
 
@@ -94,5 +98,28 @@ public static class SaveSystem
 
         return result;
     }
+
+    public static List<EnemySaveData> SaveEnemies()
+    {
+        var result = new List<EnemySaveData>();
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        foreach (var enemy in Object.FindObjectsOfType<EnemyAI>())
+        {
+            if (enemy.isDead)
+                continue;
+
+            result.Add(new EnemySaveData
+            {
+                enemyName = enemy.Data.characterName,
+                position = enemy.transform.position,
+                health = enemy.currentHealth,
+                sceneName = currentScene
+            });
+        }
+
+        return result;
+    }
+
 
 }

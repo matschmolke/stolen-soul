@@ -11,7 +11,12 @@ public class SpawnEnemies : MonoBehaviour
 
     void Start()
     {
-        foreach(Transform spawnPoint in transform)
+        if (GameState.RestoreFromSave && GameState.LoadedData != null)
+        {
+            RestoreEnemies.Cache(GameState.LoadedData.enemies);
+        }
+
+        foreach (Transform spawnPoint in transform)
         {
             if(spawnPoint.CompareTag("EnemySpawnPoint"))
                 SpawnEnemyAt(spawnPoint);
@@ -20,16 +25,45 @@ public class SpawnEnemies : MonoBehaviour
 
     private void SpawnEnemyAt(Transform spawnPoint)
     {
+        Debug.Log($"Spawning enemy");
+         
         EnemyData enemyData = GetRandomEnemy();
-        if (enemyData != null)
+        if (enemyData == null)
+            return;
+
+        //check for saved enemy state
+        if (GameState.RestoreFromSave &&
+            RestoreEnemies.TryGetEnemy(enemyData.characterName, out var savedEnemy))
         {
-            GameObject enemyInstance = Instantiate(EnemyPrefab, spawnPoint.position, spawnPoint.rotation);
-            EnemyAI enemyComponent = enemyInstance.GetComponent<EnemyAI>();
-            if (enemyComponent != null)
-            {
-                enemyComponent.Init(enemyData);
-            }
+            Debug.Log($"Restoring saved enemy: {enemyData.characterName}");
+            //do not respawn dead enemies
+            if (savedEnemy.health <= 0)
+                return;
+
+            GameObject enemyInstance = Instantiate(
+                EnemyPrefab,
+                savedEnemy.position,
+                spawnPoint.rotation
+            );
+
+            EnemyAI enemy = enemyInstance.GetComponent<EnemyAI>();
+            enemy.Init(enemyData);
+            enemy.currentHealth = savedEnemy.health;
+
+            return;
         }
+
+        Debug.Log($"Default Spawning enemy");
+        //default spawn
+        GameObject instance = Instantiate(
+            EnemyPrefab,
+            spawnPoint.position,
+            spawnPoint.rotation
+        );
+
+        EnemyAI component = instance.GetComponent<EnemyAI>();
+        component.Init(enemyData);
+
     }
 
     private EnemyData GetRandomEnemy()

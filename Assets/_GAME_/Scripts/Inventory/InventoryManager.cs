@@ -47,10 +47,9 @@ public class InventoryManager : MonoBehaviour
         spellCaster = player.GetComponent<SpellCaster>();
 
         // Restore saved inventory
-        if (SaveLoad.restoreInventory)
+        if (GameState.RestoreFromSave)
         {
-            var data = SaveSystem.LoadPlayer();
-            AddSavedItems.RestoreInventory(data);
+            AddSavedItems.RestoreInventory(GameState.LoadedData);
         }
     }
 

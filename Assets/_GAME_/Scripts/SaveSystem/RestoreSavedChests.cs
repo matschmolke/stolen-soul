@@ -3,39 +3,47 @@ using UnityEngine;
 
 public static class RestoreSavedChests 
 {
-    public static void Restore(List<ChestData> chestData)
+    public static void Restore(List<ChestData> chestsData)
     {
-        if (chestData == null || chestData.Count == 0)
-            return;
-
-        foreach (var data in chestData)
+        if (chestsData == null || chestsData.Count == 0)
         {
-            if (!ChestInventory.AllChests.TryGetValue(data.chestId, out var chest))
+            Debug.Log("No chests to restore.");
+            return;
+        }
+
+        foreach (var chestData in chestsData)
+        {
+            if (!ChestInventory.AllChests.TryGetValue(chestData.chestId, out var chest))
             {
-                Debug.LogWarning($"Chest not found: {data.chestId}");
+                Debug.LogWarning($"Chest not found in scene: {chestData.chestId}");
                 continue;
             }
 
-            //clear default items in chest
-            for (int i = 0; i < chest.items.Count; i++)
+            // Clear chest
+            for (int i = 0; i < chest.SlotCount(); i++)
             {
-                chest.slots[i] = new InventoryItem();
+                chest.RemoveItemAt(i);
             }
 
-            foreach (var item in data.items)
+            // Restore items
+            foreach (var itemData in chestData.items)
             {
-                ItemBase itemBase = ItemDatabase.Instance.GetItemByName(item.itemName); 
-                if (itemBase == null)
+                ItemBase item = ItemDatabase.Instance.GetItemByName(itemData.itemName);
+                if (item == null)
                 {
-                    Debug.LogWarning($"Item not found: {item.itemName}");
+                    Debug.LogWarning($"Item not found in database: {itemData.itemName}");
                     continue;
                 }
 
-                chest.AddItemAt(item.slotId, itemBase, item.quantity);
+                chest.AddItemAt(
+                    itemData.slotId,
+                    item,
+                    itemData.quantity
+                );
             }
-
         }
 
-        Debug.Log("Chests restored");
+        Debug.Log("All chests restored from save.");
     }
+
 }
