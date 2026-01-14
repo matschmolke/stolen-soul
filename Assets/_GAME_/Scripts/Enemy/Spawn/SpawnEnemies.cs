@@ -26,7 +26,21 @@ public class SpawnEnemies : MonoBehaviour
     private void SpawnEnemyAt(Transform spawnPoint)
     {
         Debug.Log($"Spawning enemy");
-         
+
+        var spawnPointData = spawnPoint.GetComponent<EnemySpawnPoint>();
+        if (spawnPointData == null)
+        {
+            Debug.LogError("EnemySpawnPoint missing");
+            return;
+        }
+
+        if (GameState.RestoreFromSave &&
+            EnemyProgress.IsSpawnCleared(spawnPointData.spawnId))
+        {
+            Debug.Log($"Spawn {spawnPointData.spawnId} already cleared");
+            return;
+        }
+
         EnemyData enemyData = GetRandomEnemy();
         if (enemyData == null)
             return;
@@ -47,6 +61,7 @@ public class SpawnEnemies : MonoBehaviour
             );
 
             EnemyAI enemy = enemyInstance.GetComponent<EnemyAI>();
+            enemy.spawnId = spawnPointData.spawnId;
             enemy.Init(enemyData);
             enemy.currentHealth = savedEnemy.health;
 
@@ -62,6 +77,7 @@ public class SpawnEnemies : MonoBehaviour
         );
 
         EnemyAI component = instance.GetComponent<EnemyAI>();
+        component.spawnId = spawnPointData.spawnId;
         component.Init(enemyData);
 
     }

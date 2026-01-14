@@ -9,7 +9,7 @@ public static class RestoreEnemies
     public static void Cache(List<EnemySaveData> enemiesData)
     {
         Debug.Log("Caching enemies for restoration");
-
+        
         cachedEnemies = new Dictionary<string, List<EnemySaveData>>();
 
         if (enemiesData == null)

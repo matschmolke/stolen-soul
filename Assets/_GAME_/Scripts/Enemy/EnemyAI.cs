@@ -4,6 +4,9 @@ using static EnemySaveData;
 
 public class EnemyAI : CharacterAI
 {
+    //for save/load
+    public string spawnId;
+
     public EnemyData Data;
 
     // States

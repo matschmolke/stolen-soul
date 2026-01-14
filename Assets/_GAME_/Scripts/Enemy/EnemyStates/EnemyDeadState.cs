@@ -41,6 +41,8 @@ public class EnemyDeadState : CharacterState
 
         enemy.lootBag.DropLoot(enemy.transform.position);
 
+        EnemyProgress.MarkSpawnCleared(enemy.spawnId);
+
         Object.Destroy(enemy.gameObject);
     }
 }

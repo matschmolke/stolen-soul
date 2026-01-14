@@ -17,4 +17,6 @@ public class PlayerData
     public List<ChestData> chests = new();
 
     public List<EnemySaveData> enemies = new();
+    public List<string> clearedEnemySpawns = new();
+
 }

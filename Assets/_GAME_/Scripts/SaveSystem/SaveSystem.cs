@@ -27,7 +27,10 @@ public static class SaveSystem
             posZ = player.transform.position.z,
             health = stats.currentHealth,
             mana = stats.currentMana,
-            sceneName = SceneManager.GetActiveScene().name
+            sceneName = SceneManager.GetActiveScene().name,
+
+            clearedEnemySpawns = new List<string>(
+            GameState.LoadedData?.clearedEnemySpawns ?? new List<string>())
         };
 
         // Inventory
@@ -111,6 +114,7 @@ public static class SaveSystem
 
             result.Add(new EnemySaveData
             {
+                spawnId = enemy.spawnId,
                 enemyName = enemy.Data.characterName,
                 position = enemy.transform.position,
                 health = enemy.currentHealth,
