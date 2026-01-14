@@ -13,7 +13,7 @@ public class SpawnEnemies : MonoBehaviour
     {
         if (GameState.RestoreFromSave && GameState.LoadedData != null)
         {
-            RestoreEnemies.Cache(GameState.LoadedData.enemies);
+            RestoreEnemies.Cache(GameState.LoadedData);
         }
 
         foreach (Transform spawnPoint in transform)

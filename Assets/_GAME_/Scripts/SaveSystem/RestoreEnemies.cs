@@ -6,28 +6,23 @@ public static class RestoreEnemies
 {
     private static Dictionary<string, List<EnemySaveData>> cachedEnemies;
 
-    public static void Cache(List<EnemySaveData> enemiesData)
+    public static void Cache(PlayerData data)
     {
-        Debug.Log("Caching enemies for restoration");
-        
         cachedEnemies = new Dictionary<string, List<EnemySaveData>>();
 
-        if (enemiesData == null)
+        if (data == null)
             return;
 
-        string currentScene = SceneManager.GetActiveScene().name;
+        string scene = SceneManager.GetActiveScene().name;
 
-        if (cachedEnemies.Count == 0)
+        var sceneData = data.enemiesPerScene
+            .Find(e => e.sceneName == scene);
+
+        if (sceneData == null)
+            return;
+
+        foreach (var enemy in sceneData.enemies)
         {
-            Debug.Log($"No saved enemies for scene {currentScene}");
-        }
-
-
-        foreach (var enemy in enemiesData)
-        {
-            if (enemy.sceneName != currentScene)
-                continue;
-
             if (!cachedEnemies.TryGetValue(enemy.enemyName, out var list))
             {
                 list = new List<EnemySaveData>();
@@ -37,6 +32,7 @@ public static class RestoreEnemies
             list.Add(enemy);
         }
     }
+
 
     public static bool TryGetEnemy(string enemyName, out EnemySaveData data)
     {

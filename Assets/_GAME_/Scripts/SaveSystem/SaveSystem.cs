@@ -49,7 +49,9 @@ public static class SaveSystem
         data.chests = SaveChests();
 
         // Enemies
-        data.enemies = SaveEnemies();
+        //data.enemies = SaveEnemies();
+        
+        SaveEnemiesForScene(data);
 
 
         string json = JsonUtility.ToJson(data, true);
@@ -125,5 +127,33 @@ public static class SaveSystem
         return result;
     }
 
+    public static void SaveEnemiesForScene(PlayerData data)
+    {
+        string scene = SceneManager.GetActiveScene().name;
+
+        data.enemiesPerScene.RemoveAll(e => e.sceneName == scene);
+
+        SceneEnemyData sceneData = new SceneEnemyData
+        {
+            sceneName = scene
+        };
+
+        foreach (var enemy in Object.FindObjectsOfType<EnemyAI>())
+        {
+            if (enemy.isDead)
+                continue;
+
+            sceneData.enemies.Add(new EnemySaveData
+            {
+                spawnId = enemy.spawnId,
+                enemyName = enemy.Data.characterName,
+                position = enemy.transform.position,
+                health = enemy.currentHealth,
+                sceneName = scene
+            });
+        }
+
+        data.enemiesPerScene.Add(sceneData);
+    }
 
 }
