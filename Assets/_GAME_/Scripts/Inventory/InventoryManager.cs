@@ -65,6 +65,8 @@ public class InventoryManager : MonoBehaviour
             menuActivated = false;
             SoundManager.PlaySound(SoundType.INVENTORY_CLOSE);
 
+            DragCleanup.ClearDragImage();
+
             if (ItemTooltip.Instance != null)
                 ItemTooltip.Instance.HideTooltip();
 

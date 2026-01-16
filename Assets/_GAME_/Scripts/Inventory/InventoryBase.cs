@@ -35,6 +35,8 @@ public abstract class InventoryBase : MonoBehaviour
 
     public event Action OnInventoryChanged;
 
+    public bool IsFull => FindFreeSlot() == -1;
+
     public void AddItemAt(int index, ItemBase Item, int quantity)
     {
         slots[index] = new InventoryItem(Item, quantity);

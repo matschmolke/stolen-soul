@@ -75,27 +75,6 @@ public class TradeManager : MonoBehaviour
             slot.OnItemChanged += CalculateTraderOfferValue;
         }
     }
-
-    void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.B) && windowActivated)
-        //{
-        //    ReturnAllItemsFromOffers();
-        //    Time.timeScale = 1;
-        //    TradeWindow.SetActive(false);
-        //    windowActivated = false;
-        //    if (ItemTooltip.Instance != null)
-        //        ItemTooltip.Instance.HideTooltip();
-        //}
-        //else if (Input.GetKeyDown(KeyCode.B) && !windowActivated)
-        //{
-        //    Time.timeScale = 0;
-        //    TradeWindow.SetActive(true);
-        //    windowActivated = true;
-        //    RefreshUI();
-        //}
-    }
-
     public void OpenWindow(TraderInventory inventory)
     {
         traderInventory = inventory;
@@ -113,6 +92,9 @@ public class TradeManager : MonoBehaviour
         Time.timeScale = 1;
         TradeWindow.SetActive(false);
         windowActivated = false;
+
+        DragCleanup.ClearDragImage();
+
         if (ItemTooltip.Instance != null)
             ItemTooltip.Instance.HideTooltip();
         if (ItemContextMenu.Instance != null)
@@ -123,6 +105,11 @@ public class TradeManager : MonoBehaviour
     {
         if(playerOfferValue == traderOfferValue)
         {
+            if(playerInventory.IsFull || traderInventory.IsFull)
+            {
+                return;
+            }
+
             foreach (OfferSlot slot in playerOfferSlots) 
             {
                 if(slot.Item != null)
