@@ -92,9 +92,6 @@ public class PlayerStats : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnManaChanged?.Invoke(currentMana, maxMana);
 
-        //OnAttackDamageChanged?.Invoke(attack);
-        //OnDefenceChanged?.Invoke(defence);
-
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerScript = player.GetComponent<Movements>();
 
@@ -112,17 +109,6 @@ public class PlayerStats : MonoBehaviour
                 RestoreMana(1);
             }
         }
-    }
-    public void SetHealth(int newHealth)
-    {
-        //currentHealth = Mathf.Clamp(newHealth, 0, maxHealth);
-        //UpdateVisual();
-    }
-
-    public void SetMana(int newHealth)
-    {
-        //currentHealth = Mathf.Clamp(newHealth, 0, maxHealth);
-        //UpdateVisual();
     }
 
     public void Heal(int amount)
@@ -180,32 +166,6 @@ public class PlayerStats : MonoBehaviour
         canRegenerateMana = false;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnManaChanged?.Invoke(currentMana, maxMana);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Temporary
-        if (Keyboard.current.rKey.wasPressedThisFrame)
-        {
-            TakeDamage(1);
-        }
-        else if (Keyboard.current.pKey.wasPressedThisFrame)
-        {
-            RefillAll();
-        }
-        else if (Keyboard.current.tKey.wasPressedThisFrame)
-        {
-            Heal(1);
-        }
-        else if (Keyboard.current.fKey.wasPressedThisFrame)
-        {
-            UseMana(1);
-        }
-        else if (Keyboard.current.zKey.wasPressedThisFrame)
-        {
-            KillPlayer();
-        }
     }
 
     public void ApplyLoadedStats(int health, int mana)
