@@ -19,7 +19,7 @@ public class SceneTeleport : MonoBehaviour
             SceneManager.LoadScene(targetScene);
             SceneManager.LoadSceneAsync("mod1", LoadSceneMode.Additive);
 
-            if (changeLocationIndex) LocationManager.LocationIndex++;
+            if (changeLocationIndex) LocationManager.LocationIndex += 1;
         }
     }
 }
