@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class ScreenFader : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
+    public GameObject blackScreen;
     private float fadeDuration = 2.4f;
 
     public void FadeToBlack()
@@ -20,6 +21,7 @@ public class ScreenFader : MonoBehaviour
     IEnumerator Fade(float startAlpha, float endAlpha)
     {
         float time = 0f;
+        blackScreen.transform.position = new Vector3(-910f,-490f,0f);
 
         yield return new WaitForSeconds(1f);
 
