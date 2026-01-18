@@ -22,7 +22,6 @@ public class ItemSlot : MonoBehaviour,
 
     [SerializeField] private TMP_Text quantityText;
     [SerializeField] private Image itemImage;
-    public GameObject selectedShader;
     public bool thisItemSelected;
     public ItemType acceptableTypes;
     public EquipmentType accaptableEquipmentTypes = EquipmentType.Weapon | EquipmentType.Armor;
@@ -112,14 +111,12 @@ public class ItemSlot : MonoBehaviour,
             }
 
             inventoryManager.DeselectAllSlots();
-            selectedShader.SetActive(true);
             SoundManager.PlaySound(SoundType.SELECT);
             thisItemSelected = true;
         }
 
         if (eventData.button == PointerEventData.InputButton.Right)
         {
-            selectedShader.SetActive(false);
             thisItemSelected = false;
 
             if(ItemContextMenu.Instance.IsActive)

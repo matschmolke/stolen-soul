@@ -87,13 +87,11 @@ public class ChestManager : MonoBehaviour
     {
         for (int i = 0; i < PlayerInvSlots.Length; i++)
         {
-            PlayerInvSlots[i].selectedShader.SetActive(false);
             PlayerInvSlots[i].thisItemSelected = false;
         }
 
         for (int i = 0; i < ChestInvSlots.Length; i++)
         {
-            ChestInvSlots[i].selectedShader.SetActive(false);
             ChestInvSlots[i].thisItemSelected = false;
         }
     }

@@ -35,12 +35,15 @@ public class SpellHUD : MonoBehaviour
     }
     void RefreshSlots()
     {
-        foreach (var s in slotInstances)
-            Destroy(s.gameObject);
+        for (int i = slotInstances.Count - 1; i >= 0; i--)
+        {
+            if (slotInstances[i] != null)
+                Destroy(slotInstances[i].gameObject);
+        }
 
         slotInstances.Clear();
 
-        if (spellCaster.spells.Count == 0)
+        if (spellCaster == null || spellCaster.spells.Count == 0)
         {
             slotsContainer.gameObject.SetActive(false);
             return;
@@ -51,30 +54,22 @@ public class SpellHUD : MonoBehaviour
         for (int i = 0; i < spellCaster.spells.Count; i++)
         {
             SpellSlotUI slot = Instantiate(slotPrefab, slotsContainer);
-            Debug.Log("Adding spell slot for " + spellCaster.spells[i].spellName);
-
             slot.SetSpell(spellCaster.spells[i], i + 1);
-            Debug.Log("Set spell slot for " + spellCaster.spells[i].spellName);
-
             slotInstances.Add(slot);
-
-            Debug.Log(
-                "Slot: " + slot.name +
-                " scale=" + slot.transform.localScale +
-                " icon=" + (slot.icon != null) +
-                " key=" + (slot.keyText != null) +
-                " overlay=" + (slot.cooldownOverlay != null)
-            );
         }
     }
     void UpdateCooldowns()
     {
         for (int i = 0; i < slotInstances.Count; i++)
         {
+            if (slotInstances[i] == null)
+                continue;
+
             float fill = spellCaster.GetCooldownFill(i);
             slotInstances[i].SetCooldown(fill);
         }
     }
+
 
     void CreateSlotUI()
     {
@@ -83,5 +78,11 @@ public class SpellHUD : MonoBehaviour
         slotObj = Instantiate(new GameObject("SpellSlotUI"), transform);
         slotObj.AddComponent<RectTransform>();
         slotObj.AddComponent<SpellSlotUI>();
+    }
+
+    private void OnDestroy()
+    {
+        if (spellCaster != null)
+            spellCaster.OnSpellsChanged -= RefreshSlots;
     }
 }

@@ -20,7 +20,6 @@ public class OfferSlot : MonoBehaviour,
 
     [SerializeField] private TMP_Text quantityText;
     [SerializeField] private Image itemImage;
-    public GameObject selectedShader;
     public bool thisItemSelected;
 
     public InventoryBase Inventory;
@@ -83,13 +82,11 @@ public class OfferSlot : MonoBehaviour,
         {
             SoundManager.PlaySound(SoundType.SELECT);
             manager.DeselectAllSlots();
-            selectedShader.SetActive(true);
             thisItemSelected = true;
         }
 
         if (eventData.button == PointerEventData.InputButton.Right)
         {
-            selectedShader.SetActive(false);
             thisItemSelected = false;
         }
     }
