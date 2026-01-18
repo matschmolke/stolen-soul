@@ -41,7 +41,6 @@ public class TradeSlot : MonoBehaviour,
 
     [SerializeField] private TMP_Text quantityText;
     [SerializeField] private Image itemImage;
-    public GameObject selectedShader;
     public bool thisItemSelected;
 
     private TradeManager manager;
@@ -104,13 +103,11 @@ public class TradeSlot : MonoBehaviour,
         {
             SoundManager.PlaySound(SoundType.SELECT);
             manager.DeselectAllSlots();
-            selectedShader.SetActive(true);
             thisItemSelected = true;
         }
 
         if (eventData.button == PointerEventData.InputButton.Right)
         {
-            selectedShader.SetActive(false);
             thisItemSelected = false;
 
             if (ItemContextMenu.Instance.IsActive)

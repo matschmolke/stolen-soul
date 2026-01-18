@@ -247,13 +247,11 @@ public class TradeManager : MonoBehaviour
     {
         foreach (TradeSlot slot in allTradeSlots)
         {
-            slot.selectedShader.SetActive(false);
             slot.thisItemSelected = false;
         }
 
         foreach (OfferSlot slot in allOfferSlots)
         {
-            slot.selectedShader.SetActive(false);
             slot.thisItemSelected = false;
         }
     }
