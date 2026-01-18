@@ -35860,6 +35860,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a27574ea7fb1de042a8108306b293bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkeletonBossResurrection
+--- !u!114 &1144616621 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1291387647490707295, guid: a7f3188662be1b74abc3d744fb52a9d4, type: 3}
+  m_PrefabInstance: {fileID: 1144616617}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144616619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4cdac66c6294f4b9c047f8e6b074e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
 --- !u!1 &1185278987
 GameObject:
   m_ObjectHideFlags: 0
@@ -37394,6 +37405,7 @@ GameObject:
   - component: {fileID: 1428521431}
   - component: {fileID: 1428521432}
   - component: {fileID: 1428521433}
+  - component: {fileID: 1428521434}
   m_Layer: 0
   m_Name: TeleportToTraiding
   m_TagString: Untagged
@@ -37475,6 +37487,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTeleport
   targetScene: TraidingScene
+  canTeleport: 0
+  changeLocationIndex: 1
+--- !u!114 &1428521434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428521430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d76f4bc3a865841b0c4e320be01ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActivateAfterBossDefeat
+  BossAI: {fileID: 1144616621}
 --- !u!1 &1437428961
 GameObject:
   m_ObjectHideFlags: 0
