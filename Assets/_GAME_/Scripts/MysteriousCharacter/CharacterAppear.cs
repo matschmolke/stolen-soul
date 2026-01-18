@@ -25,6 +25,8 @@ public class CharacterAppear : MonoBehaviour
 
     public DialogueEndEventChannel dialogueEndEvent;
 
+    public static bool StartCutscene = false;
+
     void Start()
     {
         appearEffect = GetComponent<Animator>();
@@ -44,7 +46,7 @@ public class CharacterAppear : MonoBehaviour
 
     void Update()
     {
-        if (Input.anyKeyDown && !hasAppeared)
+        if (StartCutscene && !hasAppeared)
         {
             playerRb.linearVelocity = Vector2.zero;
 
@@ -53,16 +55,22 @@ public class CharacterAppear : MonoBehaviour
 
             FreezeGame.LockForDialogue();
             //FreezeScene();
-
+            StartCoroutine(WaitBeforeStart(3f));
             hasAppeared = true;
-            SoundManager.PlaySound(SoundType.WHOOSH);
-            appearEffect.SetTrigger("appear");
+            
         }
 
         if(isWalking)
         {
             CharacterWalking();
         }
+    }
+
+    private IEnumerator WaitBeforeStart(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+        SoundManager.PlaySound(SoundType.WHOOSH);
+        appearEffect.SetTrigger("appear");
     }
 
     public void CharacterWalking()
