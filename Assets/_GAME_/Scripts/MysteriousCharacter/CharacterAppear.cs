@@ -51,7 +51,8 @@ public class CharacterAppear : MonoBehaviour
             playerAnim.SetFloat("speed", 0f);      
             playerAnim.SetFloat("yVelocity", -1f);
 
-            FreezeScene();
+            FreezeGame.LockForDialogue();
+            //FreezeScene();
 
             hasAppeared = true;
             SoundManager.PlaySound(SoundType.WHOOSH);
@@ -121,7 +122,8 @@ public class CharacterAppear : MonoBehaviour
         yield return new WaitForSeconds(2f);
         cam.Initialize();
 
-        UnfreezeScene();
+        FreezeGame.UnlockAfterDialogue();
+        //UnfreezeScene();
     }
 
     private IEnumerator StartDialogue()

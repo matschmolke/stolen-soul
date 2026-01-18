@@ -27,6 +27,12 @@ public class PickUpLogic : MonoBehaviour
                 bool wasAdded = inventoryManager.AddItem(item, 1);
                 SoundManager.PlaySound(SoundType.PICKUP);
                 if(wasAdded) Destroy(gameObject);
+
+                if(item.itemName == "Memory Orb")
+                {
+                    EndGameScene endGameScene = FindFirstObjectByType<EndGameScene>();
+                    endGameScene.PickUpMemoryOrb();
+                }
             }
             else
             {

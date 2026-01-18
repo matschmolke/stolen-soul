@@ -57,6 +57,16 @@ public class Movements : MonoBehaviour
 
     private void Update()
     {
+        if (FreezeGame.DialogueActive)
+        {
+            rb.linearVelocity = Vector2.zero;
+            lastDirection = Vector2.down;
+            anim.SetFloat("yVelocity", lastDirection.y);
+            anim.SetFloat("speed", 0f);
+            return;
+        }
+            
+
         if (isDead)
         {
             rb.linearVelocity = Vector2.zero; 

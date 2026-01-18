@@ -5,6 +5,16 @@ public class PauseButton : MonoBehaviour
 {
     public static bool pause = false;
 
+    public GameObject pauseButton;
+
+    private void Update()
+    {
+        if(FreezeGame.DialogueActive)
+            pauseButton.SetActive(false);
+        else
+            pauseButton.SetActive(true);
+    }
+
     public void PauseGame(bool pause)
     {
         if (pause)

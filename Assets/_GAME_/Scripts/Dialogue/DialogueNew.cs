@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,6 +19,9 @@ public class DialogueNew : MonoBehaviour
     private int index;
 
     [SerializeField] private DialogueTransition transition;
+
+    public Text spaceText;
+    private static bool dialogTut = true;
 
     private void Awake()
     {
@@ -51,6 +55,12 @@ public class DialogueNew : MonoBehaviour
             }
         }
 
+        if (index == 1 && dialogTut)
+        {
+            dialogTut = false;
+            spaceText.text = "";
+        }
+
     }
 
     public void LoadDialogue(DialogueData data)
@@ -78,6 +88,11 @@ public class DialogueNew : MonoBehaviour
         {
             text.text += c;
             yield return new WaitForSeconds(textSpeed);
+        }
+
+        if(spaceText.text == "" && dialogTut)
+        {
+            spaceText.text = "Press SPACE to continue...";
         }
 
         SoundManager.StopTyping();

@@ -56,6 +56,9 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (FreezeGame.DialogueActive)
+            return;
+
         if (!CanOpenInventory) return; 
         
         if (Input.GetKeyDown(KeyCode.E) && menuActivated)
