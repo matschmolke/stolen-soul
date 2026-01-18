@@ -15,6 +15,22 @@ public class EnemyChaseState : CharacterState
     public override void Enter()
     {
         enemy.moveSpeed = enemy.Data.runSpeed;
+
+        if (enemy.Data.bossType != BossType.None && !enemy.bossMusicStarted)
+        {
+            enemy.bossMusicStarted = true;
+
+            switch (enemy.Data.bossType)
+            {
+                case BossType.Basic:
+                    SoundManager.PlayBossMusic(BossType.Basic);
+                    break;
+
+                case BossType.Final:
+                    SoundManager.PlayBossMusic(BossType.Final);
+                    break;
+            }
+        }
     }
 
     public override void Update()
