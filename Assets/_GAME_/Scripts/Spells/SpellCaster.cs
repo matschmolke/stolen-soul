@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SpellCaster : MonoBehaviour
 {
     public List<Spell> spells;
-    private float[] cooldownTimers;
+    private List<float> cooldownTimers;
     private Camera mainCam;
     public event Action OnSpellsChanged;
 
@@ -15,8 +15,11 @@ public class SpellCaster : MonoBehaviour
     {
         FindCamera();
         SceneManager.sceneLoaded += OnSceneLoaded;
-        
-        cooldownTimers = new float[spells.Count];
+
+        cooldownTimers = new List<float>();
+
+        for (int i = 0; i < spells.Count; i++)
+            cooldownTimers.Add(0f);
     }
 
     private void OnDestroy()
@@ -40,7 +43,7 @@ public class SpellCaster : MonoBehaviour
     {
         newSpell.castKey = (spells.Count + 1).ToString();
         spells.Add(newSpell);
-        cooldownTimers =  new float[spells.Count];
+        cooldownTimers.Add(0f);
         OnSpellsChanged?.Invoke();
     }
 
@@ -53,9 +56,10 @@ public class SpellCaster : MonoBehaviour
 
     void HandleCooldowns()
     {
-        for (int i = 0; i < cooldownTimers.Length; i++)
+        for (int i = 0; i < cooldownTimers.Count; i++)
         {
-            if (cooldownTimers[i] > 0) cooldownTimers[i] -= Time.deltaTime;
+            if (cooldownTimers[i] > 0)
+                cooldownTimers[i] -= Time.deltaTime;
         }
     }
 
@@ -154,7 +158,9 @@ public class SpellCaster : MonoBehaviour
 
     public float GetCooldownFill(int index)
     {
-        if (index < 0 || index >= cooldownTimers.Length) return 0f;
+        if (index < 0 || index >= cooldownTimers.Count) 
+            return 0f;
+            
         return cooldownTimers[index] / spells[index].cooldown;
     }
 }

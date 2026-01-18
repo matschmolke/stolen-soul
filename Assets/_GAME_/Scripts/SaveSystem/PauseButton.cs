@@ -7,9 +7,15 @@ public class PauseButton : MonoBehaviour
 
     public GameObject pauseButton;
 
+    private void Start()
+    {
+        if (pauseButton == null)
+            pauseButton = GameObject.FindGameObjectWithTag("PauseButton");
+    }
+
     private void Update()
     {
-        if(FreezeGame.DialogueActive)
+        if (FreezeGame.DialogueActive)
             pauseButton.SetActive(false);
         else
             pauseButton.SetActive(true);
