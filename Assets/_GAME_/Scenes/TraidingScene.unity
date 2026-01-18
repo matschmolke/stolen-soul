@@ -28082,6 +28082,10 @@ PrefabInstance:
       propertyPath: canTeleport
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2737475942544044852, guid: 5ebe0c10843ebfe42ad25890a0030e17, type: 3}
+      propertyPath: targetScene
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3296971272683883535, guid: 5ebe0c10843ebfe42ad25890a0030e17, type: 3}
       propertyPath: m_Name
       value: Teleporter
