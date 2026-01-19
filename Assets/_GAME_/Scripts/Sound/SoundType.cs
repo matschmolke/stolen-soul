@@ -69,5 +69,7 @@ public enum SoundType
     PLANT_FOOTSTEPS,
     PLANT_HURT,
     PLANT_ATTACK,
-    PLANT_DEATH
+    PLANT_DEATH,
+    END_OST,
+    BASIC_BOSS_OST
 }

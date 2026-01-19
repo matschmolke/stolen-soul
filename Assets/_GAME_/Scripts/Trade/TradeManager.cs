@@ -103,12 +103,14 @@ public class TradeManager : MonoBehaviour
 
     public void Trade()
     {
-        if(playerOfferValue == traderOfferValue)
+        if (playerOfferValue == traderOfferValue)
         {
-            if(playerInventory.IsFull || traderInventory.IsFull)
+            if (playerInventory.IsFull || traderInventory.IsFull)
             {
                 return;
             }
+
+            SoundManager.PlaySound(SoundType.TRADE_DONE);
 
             foreach (OfferSlot slot in playerOfferSlots) 
             {
@@ -128,7 +130,6 @@ public class TradeManager : MonoBehaviour
                 }
             }
 
-            SoundManager.PlaySound(SoundType.TRADE_DONE);
             RefreshUI();
         }
     }

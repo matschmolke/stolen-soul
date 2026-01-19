@@ -19,6 +19,7 @@ public class EnemyAI : CharacterAI
     [HideInInspector] public float currentHealth;
     [HideInInspector] public bool canAttack = true;
     [HideInInspector] public bool isDead = false;
+    [HideInInspector] public bool bossMusicStarted = false;
 
     public static event System.Action<EnemyAI> OnEnemyAttack;
 

@@ -125,4 +125,25 @@ public class SoundManager : MonoBehaviour
         if (activeSounds.ContainsKey(sound))
             activeSounds[sound] = Mathf.Max(0, activeSounds[sound] - 1);
     }
+
+    public static void PlayBossMusic(BossType bossType)
+    {
+        switch (bossType)
+        {
+            case BossType.Basic:
+                instance.PlayMusic(SoundType.BASIC_BOSS_OST, 0.6f);
+                break;
+
+            case BossType.Final:
+                instance.PlayMusic(SoundType.FINAL_BOSS_FIGHT_OST, 0.7f);
+                break;
+        }
+    }
+
+    public static void RestoreSceneMusic(Scene scene)
+    {
+        int index = Array.FindIndex(instance.sceneMusic, s => s.sceneName == scene.name);
+        if (index != -1)
+            instance.PlayMusic(instance.sceneMusic[index].music, 0.5f);
+    }
 }

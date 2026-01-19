@@ -14,10 +14,19 @@ public class EnemyDeadState : CharacterState
 
     public override void Enter()
     {
+
+        if (enemy.Data.bossType != BossType.None)
+        {
+            SoundManager.RestoreSceneMusic(
+                UnityEngine.SceneManagement.SceneManager.GetActiveScene()
+            );
+        }
+        
         enemy.isDead = true;
         enemy.anim.SetTrigger("isDead");
         
         SoundManager.PlaySound(enemy.Data.souncDeath, 0.5f);
+
         enemy.StartCoroutine(DeathCoroutine());
     }
     
