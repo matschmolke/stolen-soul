@@ -92,8 +92,8 @@ public class PlayerStats : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnManaChanged?.Invoke(currentMana, maxMana);
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        playerScript = player.GetComponent<Movements>();
+        //GameObject player = GameObject.FindGameObjectWithTag("Player");
+        playerScript = GetComponent<Movements>();
 
         manaRegenRoutine = StartCoroutine(RegenerateMana());
     }
@@ -177,4 +177,37 @@ public class PlayerStats : MonoBehaviour
         OnManaChanged?.Invoke(currentMana, MaxMana);
     }
 
+    public void Equip(ItemBase item)
+    {
+        if (item is Equipment eq)
+        {
+            Attack += eq.attackDmg;
+            Defence += eq.armorValue;
+
+            if (eq.effects != null)
+            {
+                foreach (var effect in eq.effects)
+                {
+                    effect.Apply(this);
+                }
+            }
+        }
+    }
+
+    public void UnEquip(ItemBase item)
+    {
+        if (item is Equipment eq)
+        {
+            Attack -= eq.attackDmg;
+            Defence -= eq.armorValue;
+
+            if (eq.effects != null)
+            {
+                foreach (var effect in eq.effects)
+                {
+                    effect.Remove(this);
+                }
+            }
+        }
+    }
 }

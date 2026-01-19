@@ -1,3 +1,4 @@
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class EquipItem : MonoBehaviour
@@ -6,15 +7,30 @@ public class EquipItem : MonoBehaviour
     private ItemSlot slot;
 
     private ChangeArmor armorChanger;
+    private PlayerStats stats;
 
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         armorChanger = player.GetComponent<ChangeArmor>();
+        stats = PlayerStats.Instance;
 
         slot = transform.GetComponent<ItemSlot>();
 
         slot.OnItemChanged += HandleEquip;
+
+        if (GameState.RestoreFromSave)
+        {
+            switch (slot.accaptableEquipmentTypes)
+            {
+                case EquipmentType.Weapon:
+                    previousItem = GameState.LoadedData.equippedWeapon;
+                    break;
+                case EquipmentType.Armor:
+                    previousItem = GameState.LoadedData.equippedArmor;
+                    break;
+            }
+        }
     }
 
     private void HandleEquip(ItemBase item)
@@ -23,7 +39,7 @@ public class EquipItem : MonoBehaviour
 
         if(item == null && previousItem != null)
         {
-            UnEquip(previousItem);
+            stats.UnEquip(previousItem);
 
             if ((slot.accaptableEquipmentTypes & EquipmentType.Armor) != 0)
             {
@@ -41,8 +57,8 @@ public class EquipItem : MonoBehaviour
 
         if(item != null)
         {
-            if(previousItem != null) UnEquip(previousItem);
-            Equip(item);
+            if(previousItem != null) stats.UnEquip(previousItem);
+            stats.Equip(item);
 
             if ((slot.accaptableEquipmentTypes & EquipmentType.Armor) != 0)
             {
@@ -57,42 +73,4 @@ public class EquipItem : MonoBehaviour
             previousItem = item;
         }
     }
-
-    public static void Equip(ItemBase item)
-    {
-        var playerStats = PlayerStats.Instance;
-        if (item is Equipment eq)
-        {
-            playerStats.Attack += eq.attackDmg;
-            playerStats.Defence += eq.armorValue;
-
-            if(eq.effects != null)
-            {
-                foreach(var effect in eq.effects)
-                {
-                    effect.Apply(playerStats);
-                }
-            }
-        }
-    }
-
-    public static void UnEquip(ItemBase item)
-    {
-        var playerStats = PlayerStats.Instance;
-
-        if (item is Equipment eq)
-        {
-            playerStats.Attack -= eq.attackDmg;
-            playerStats.Defence -= eq.armorValue;
-
-            if (eq.effects != null)
-            {
-                foreach (var effect in eq.effects)
-                {
-                    effect.Remove(playerStats);
-                }
-            }
-        }
-    }
-
 }

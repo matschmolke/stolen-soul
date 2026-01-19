@@ -21,4 +21,7 @@ public class PlayerData
 
     public int ProgressIndex;
     public List<Spell> learnedSpells = new();
+
+    public ItemBase equippedArmor;
+    public ItemBase equippedWeapon;
 }

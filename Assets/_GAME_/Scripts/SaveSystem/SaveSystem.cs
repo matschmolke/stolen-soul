@@ -49,6 +49,9 @@ public static class SaveSystem
                 slot.Value.Quantity,
                 slot.Key
             ));
+
+            if (slot.Key == 24 && slot.Value.Item != null) data.equippedWeapon = slot.Value.Item;
+            if (slot.Key == 25 && slot.Value.Item != null) data.equippedArmor = slot.Value.Item;
         }
 
         // Chests

@@ -21,6 +21,14 @@ public class ChangeArmor : MonoBehaviour
         UpdateInventoryImage(defaultArmorLibrary);
     }
 
+    private void Start()
+    {
+        if (GameState.RestoreFromSave)
+        {
+            UpdateArmor(GameState.LoadedData.equippedArmor);
+        }
+    }
+
     public void UpdateArmor(ItemBase item)
     {
         SpriteLibraryAsset chosenLibrary;

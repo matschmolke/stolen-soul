@@ -12,6 +12,7 @@ public static class AddSavedItems
 
         var playerInventory = PlayerInventory.Instance;
         var inventoryManager = InventoryManager.Instance;
+        var playerStats = PlayerStats.Instance;
 
         if (playerInventory == null || inventoryManager == null)
         {
@@ -33,6 +34,11 @@ public static class AddSavedItems
                 item,
                 itemData.quantity
             );
+
+            if(itemData.slotId == 24 || itemData.slotId == 25)
+            {
+                playerStats.Equip(item);
+            }
 
             //the same result
             //inventoryManager.AddItem(item, itemData.quantity);
