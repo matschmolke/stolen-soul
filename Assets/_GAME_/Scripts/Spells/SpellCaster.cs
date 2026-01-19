@@ -6,10 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class SpellCaster : MonoBehaviour
 {
+    public static SpellCaster Instance;
+
     public List<Spell> spells;
     private List<float> cooldownTimers;
     private Camera mainCam;
     public event Action OnSpellsChanged;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {

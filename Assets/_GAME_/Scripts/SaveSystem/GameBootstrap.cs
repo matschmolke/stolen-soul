@@ -7,7 +7,9 @@ public class GameBootstrap : MonoBehaviour
     {
         yield return new WaitUntil(() =>
             Movements.Instance != null &&
-            PlayerStats.Instance != null
+            PlayerStats.Instance != null &&
+            SpellCaster.Instance != null &&
+            ProgressManager.Instance != null
         );
 
         SaveLoad.ApplyLoadedGame();

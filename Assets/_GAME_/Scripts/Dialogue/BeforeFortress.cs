@@ -15,7 +15,7 @@ public class BeforeFortress : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && playOnce 
-            && LocationManager.GetCurrentLocation() == "FinalBossDung")
+            && ProgressManager.Instance.GetCurrentLocation() == "FinalBossDung")
         {
             playOnce = false;
             StartDialogue();

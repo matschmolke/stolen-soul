@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,8 +14,9 @@ public static class SaveSystem
         var player = Movements.Instance;
         var stats = PlayerStats.Instance;
         var inventory = PlayerInventory.Instance;
+        var spellCaster = SpellCaster.Instance;
 
-        if (player == null || stats == null || inventory == null)
+        if (player == null || stats == null || inventory == null || spellCaster == null)
         {
             Debug.LogError("Save failed: Player, PlayerStats, or Inventory is null");
             return;
@@ -30,7 +32,11 @@ public static class SaveSystem
             sceneName = SceneManager.GetActiveScene().name,
 
             clearedEnemySpawns = new List<string>(
-            GameState.LoadedData?.clearedEnemySpawns ?? new List<string>())
+            GameState.LoadedData?.clearedEnemySpawns ?? new List<string>()),
+
+            ProgressIndex = ProgressManager.Instance.LocationIndex,
+
+            learnedSpells = spellCaster.spells,
         };
 
         // Inventory

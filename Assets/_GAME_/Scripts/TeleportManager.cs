@@ -19,7 +19,7 @@ public class TeleportManager : MonoBehaviour
 
     public void Start()
     {
-        teleport.targetScene = LocationManager.GetCurrentLocation();
-        signText.text = LocationManager.GetCurrentLocationName();
+        teleport.targetScene = ProgressManager.Instance.GetCurrentLocation();
+        signText.text = ProgressManager.Instance.GetCurrentLocationName();
     }
 }

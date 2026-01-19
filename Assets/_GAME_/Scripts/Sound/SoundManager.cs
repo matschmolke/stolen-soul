@@ -57,12 +57,12 @@ public class SoundManager : MonoBehaviour
 
         if (index != -1)
         {
-            Debug.Log("Found music for!");
+            //Debug.Log("Found music for!");
             PlayMusic(sceneMusic[index].music, 0.5f);
         }
         else
         {
-            Debug.Log("No music assigned for scene: " + scene.name);
+            //Debug.Log("No music assigned for scene: " + scene.name);
             return;
         }
     }

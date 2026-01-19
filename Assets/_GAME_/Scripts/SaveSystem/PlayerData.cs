@@ -19,4 +19,6 @@ public class PlayerData
     public List<SceneEnemyData> enemiesPerScene = new();
     public List<string> clearedEnemySpawns = new();
 
+    public int ProgressIndex;
+    public List<Spell> learnedSpells = new();
 }

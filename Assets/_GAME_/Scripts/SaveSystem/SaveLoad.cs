@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,6 +29,7 @@ public class SaveLoad : MonoBehaviour
 
         var player = Movements.Instance;
         var stats = PlayerStats.Instance;
+        var spellCater = SpellCaster.Instance;
 
         if (player == null || stats == null)
             return;
@@ -44,6 +46,12 @@ public class SaveLoad : MonoBehaviour
 
         // Enemies
         //RestoreEnemies.Cache(data.enemies);
+
+        foreach(var spell in data.learnedSpells)
+        {
+            spellCater.AddSpell(spell);
+            Debug.Log("Loaded " + spell.spellName + " spell");
+        }
 
         Debug.Log("Save game applied");
     }
