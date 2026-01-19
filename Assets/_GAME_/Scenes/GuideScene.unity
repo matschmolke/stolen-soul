@@ -750,6 +750,7 @@ MonoBehaviour:
   firstDialogue: 0
   dialogueEnded: 0
   dialogueEndEvent: {fileID: 11400000, guid: 5b18cab4f4ca07243b7943ca05da46bb, type: 2}
+  FortressEndEvent: {fileID: 11400000, guid: 1bfd25adab13f8f46a88f0db344eb2a7, type: 2}
 --- !u!1 &2124884967
 GameObject:
   m_ObjectHideFlags: 0

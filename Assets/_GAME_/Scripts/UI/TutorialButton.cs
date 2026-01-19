@@ -1,16 +1,16 @@
+using System.Collections;
 using UnityEngine;
 
 public class TutorialButton : MonoBehaviour
 {
     public GameObject tutorialWindow;
-    public static bool tutorialActive = true;
+    public static bool tutorialActive = false;
+
+    public static bool tutorialEnabled = false;
 
     private void Start()
     {
-        if (GameState.RestoreFromSave)
-           tutorialWindow.SetActive(false);
-        else
-           tutorialWindow.SetActive(true);
+        StartCoroutine(waitToShow(3f));
     }
 
     public void ShowTutorial()
@@ -27,5 +27,19 @@ public class TutorialButton : MonoBehaviour
             tutorialActive = false;
             Time.timeScale = 1f;
         }
+    }
+
+    private IEnumerator waitToShow(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+
+        if (BeforeCutScene.showTutoialFirstTime && !GameState.RestoreFromSave)
+        {
+            BeforeCutScene.showTutoialFirstTime = false;
+            ShowTutorial();
+
+            tutorialEnabled = true;
+        }
+        
     }
 }

@@ -11,6 +11,7 @@ public class DialogueTransition : MonoBehaviour
     public bool dialogueEnded = false;
 
     public DialogueEndEventChannel dialogueEndEvent;
+    public DialogueEndEventChannel FortressEndEvent;
 
     void Update()
     {
@@ -30,6 +31,7 @@ public class DialogueTransition : MonoBehaviour
     {
         dialogeImg.SetBool("show", false);
         dialogueEndEvent.RaiseEvent();
+        FortressEndEvent.RaiseEvent();
     }
 
     public void hideDialogueWin()

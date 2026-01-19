@@ -15,7 +15,7 @@ public class PauseButton : MonoBehaviour
 
     private void Update()
     {
-        if (FreezeGame.DialogueActive)
+        if (FreezeGame.DialogueActive || BeforeFortress.hidePauseButton)
             pauseButton.SetActive(false);
         else
             pauseButton.SetActive(true);

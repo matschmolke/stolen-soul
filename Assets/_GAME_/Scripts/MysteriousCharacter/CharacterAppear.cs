@@ -29,6 +29,7 @@ public class CharacterAppear : MonoBehaviour
 
     void Start()
     {
+        
         appearEffect = GetComponent<Animator>();
         character.enabled = false;
 
@@ -42,6 +43,7 @@ public class CharacterAppear : MonoBehaviour
         {
             Debug.LogError("Player not found in the scene.");
         }
+
     }
 
     void Update()
