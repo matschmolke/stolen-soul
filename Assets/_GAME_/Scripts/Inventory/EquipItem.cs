@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class EquipItem : MonoBehaviour
 {
-    private PlayerStats playerStats;
     private ItemBase previousItem = null;
     private ItemSlot slot;
 
@@ -11,7 +10,6 @@ public class EquipItem : MonoBehaviour
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        playerStats = player.GetComponent<PlayerStats>();
         armorChanger = player.GetComponent<ChangeArmor>();
 
         slot = transform.GetComponent<ItemSlot>();
@@ -60,9 +58,10 @@ public class EquipItem : MonoBehaviour
         }
     }
 
-    private void Equip(ItemBase item)
+    public static void Equip(ItemBase item)
     {
-        if(item is Equipment eq)
+        var playerStats = PlayerStats.Instance;
+        if (item is Equipment eq)
         {
             playerStats.Attack += eq.attackDmg;
             playerStats.Defence += eq.armorValue;
@@ -77,8 +76,10 @@ public class EquipItem : MonoBehaviour
         }
     }
 
-    private void UnEquip(ItemBase item)
+    public static void UnEquip(ItemBase item)
     {
+        var playerStats = PlayerStats.Instance;
+
         if (item is Equipment eq)
         {
             playerStats.Attack -= eq.attackDmg;
