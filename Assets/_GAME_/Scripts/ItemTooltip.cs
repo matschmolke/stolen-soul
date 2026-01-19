@@ -16,20 +16,32 @@ public class ItemTooltip : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
-        tooltipObject.SetActive(false);
+
         rectTransform = GetComponent<RectTransform>();
+
+        // Check if tooltip is not null
+        if (tooltipObject != null)
+            tooltipObject.SetActive(false);
     }
 
     private void Update()
     {
-        if (!isVisable) return;
+        if (this == null || !isVisable || tooltipObject == null) return;
 
         FollowMouse();
     }
 
     public void ShowTooltip(ItemBase item, Vector3 pos)
     {
+        // Check references
+        if (tooltipObject == null || titleText == null) return;
+
         titleText.text = item.itemName;
         descriptionText.text = item.description;
         valueText.text = $"{item.value}";
@@ -40,12 +52,25 @@ public class ItemTooltip : MonoBehaviour
 
     public void HideTooltip()
     {
-        tooltipObject.SetActive(false);
+        if (tooltipObject != null)
+        {
+            tooltipObject.SetActive(false);
+        }
         isVisable = false;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
 
     private void FollowMouse()
     {
+        if (rectTransform == null) return;
+
         Vector2 mousePos = Input.mousePosition;
         Vector2 pivot = new Vector2(0f, 1f);
 
@@ -58,7 +83,6 @@ public class ItemTooltip : MonoBehaviour
             pivot.y = 0f;
 
         rectTransform.pivot = pivot;
-
         rectTransform.position = mousePos;
     }
 }
