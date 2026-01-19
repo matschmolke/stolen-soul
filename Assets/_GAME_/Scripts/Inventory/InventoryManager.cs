@@ -1,6 +1,5 @@
 using System.ComponentModel;
 using UnityEngine;
-using static UnityEditor.Progress;
 using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
