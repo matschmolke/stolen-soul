@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -6309646022957013912}
   - component: {fileID: 1291387647490707295}
   - component: {fileID: 6000177618246012803}
+  - component: {fileID: -6028428705217633722}
   m_Layer: 7
   m_Name: EnemyPrefab
   m_TagString: Enemy
@@ -193,7 +194,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -974269111
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -240,17 +241,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e4cdac66c6294f4b9c047f8e6b074e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  Data: {fileID: 0}
-  obsticleLayerMask:
-    serializedVersion: 2
-    m_Bits: 8
+  rb: {fileID: 0}
+  anim: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  lootBag: {fileID: 0}
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  obsticleLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  currentState: 0
+  moveSpeed: 2
+  spawnId: 
+  isObstacleInTheWay: 0
+  Data: {fileID: 0}
+  currentHealth: 0
+  canAttack: 1
+  isDead: 0
+  bossMusicStarted: 0
+  breadcrumbTrail: {fileID: 0}
 --- !u!114 &6000177618246012803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,3 +277,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LootBag
   lootPrefab: {fileID: 2507833350463462697, guid: 6cb29b33131314d4d933784b32c27cdc, type: 3}
+--- !u!114 &-6028428705217633722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859642201778251962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138d88b67697f0248a833b1e9984c06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackRaycast
+  obstaclesLayerMask:
+    serializedVersion: 2
+    m_Bits: 521
+  enemyAI: {fileID: 1291387647490707295}

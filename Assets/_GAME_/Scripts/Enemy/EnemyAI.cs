@@ -7,6 +7,9 @@ public class EnemyAI : CharacterAI
     //for save/load
     public string spawnId;
 
+    //do not attack through walls
+    public bool isObstacleInTheWay = false;
+
     public EnemyData Data;
 
     // States

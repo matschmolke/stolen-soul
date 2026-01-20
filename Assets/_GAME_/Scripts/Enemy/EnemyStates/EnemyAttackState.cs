@@ -31,7 +31,7 @@ public class EnemyAttackState : CharacterState
             return;
         }
 
-        if (enemy.canAttack)
+        if (enemy.canAttack && !enemy.isObstacleInTheWay)
         {
             enemy.TriggerAttack();
 
