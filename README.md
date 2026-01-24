@@ -20,12 +20,26 @@
 ---
 
 ### 2. Game Installation
-1. Go to the repository:  
-   **matschmolke/stolen-soul: A dark dungeon crawler/roguelike game built in Unity as part of the "Team Project of IT System" course**
-2. Download the **Windows** or **Linux** folder (depending on your operating system) from the **Release** directory.
-3. The game is ready to run.
+1. Go to the repository's **Releases** section on the right side of the screen.
+2. From the list of available files **(Assets)**, download the appropriate zip package for your operating system **(Windows or Linux)**
+3. Extract the downloaded folder to your disk.
+4. The game is ready to run.
 
 ---
 
 ### 3. Running the Game
-The game can be launched by double-clicking the **StolenSoul** icon located in the **Windows** or **Linux** folder.
+The game can be launched by double-clicking the **StolenSoul** icon located in the **Windows** or **Linux** folder. Upon launching, the main menu provides options to start a new game, continue from the last save, or exit
+
+---
+
+### 4. Controls
+- **Movement:** W, A, S, D keys 
+- **Attack:** Left Mouse Button 
+- **Interaction:** Space key 
+- **Inventory:** E key
+- **Spells:** 1, 2, 3, 4 keys
+
+---
+
+### 5. Project Info
+Created as a team project for the **"Team Project of IT System"** course at **Opole University of Technology**.
